@@ -1,0 +1,266 @@
+{
+ "class": "Lbiweekly/io/json/JCalDeserializer;",
+ "super": "Lcom/fasterxml/jackson/databind/JsonDeserializer;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;-><init>()V",
+   "access": 65537,
+   "offset": 2780228,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/databind/JsonDeserializer;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Lbiweekly/ICalendar;",
+   "access": 1,
+   "offset": 2780128,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6140596,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;-><init>(Lcom/fasterxml/jackson/core/JsonParser;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lbiweekly/io/StreamReader;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/StreamReader;->readNext()Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;",
+   "access": 4161,
+   "offset": 2780200,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalDeserializer;->deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->getScribeIndex()Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 1,
+   "offset": 2780176,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->registerScribe(Lbiweekly/io/scribe/property/ICalPropertyScribe;)V",
+   "access": 1,
+   "offset": 2780268,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalDeserializer;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V",
+   "access": 1,
+   "offset": 2780296,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalDeserializer;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

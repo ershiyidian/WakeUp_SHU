@@ -1,0 +1,511 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->SAFE_BASE64_PATH:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->isAegisBase64LibraryLoaded:Z",
+   "access": 74
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;-><init>()V",
+   "access": 65537,
+   "offset": 3764124,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->checkCompatible(Ljava/lang/String;)Z",
+   "access": 10,
+   "offset": 3763852,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;"
+    },
+    {
+     "label": "L000f",
+     "op": "monitor-enter",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->isAegisBase64LibraryLoaded:Z"
+    },
+    {
+     "label": "L0013",
+     "op": "monitor-exit",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "monitor-exit",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000a",
+     "end": "L0010",
+     "handler": "H1"
+    },
+    {
+     "start": "L0011",
+     "end": "L0017",
+     "handler": "H5"
+    },
+    {
+     "start": "L0017",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/ClassNotFoundException;",
+       "target": "L0018"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [],
+     "all": "L0015"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->decode(Ljava/lang/String;I)[B",
+   "access": 9,
+   "offset": 3763952,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->isAegisBase64LibraryLoaded:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.secure.android.common.util.SafeBase64"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/util/Base64;->decode(Ljava/lang/String;I)[B"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/secure/android/common/util/SafeBase64;->decode(Ljava/lang/String;I)[B"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000d",
+     "end": "L0011",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0012"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->encodeToString([BI)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3764040,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->isAegisBase64LibraryLoaded:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.secure.android.common.util.SafeBase64"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/secure/android/common/util/SafeBase64;->encodeToString([BI)Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000d",
+     "end": "L0011",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0012"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

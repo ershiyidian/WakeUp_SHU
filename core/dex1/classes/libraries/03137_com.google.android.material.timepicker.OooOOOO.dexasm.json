@@ -1,0 +1,216 @@
+{
+ "class": "Lcom/google/android/material/timepicker/OooOOOO;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/google/android/material/timepicker/OooOOOO;->OooO00o:I",
+   "access": 17
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/google/android/material/timepicker/OooOOOO;-><init>(I)V",
+   "access": 65537,
+   "offset": 3332104,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/google/android/material/timepicker/OooOOOO;->OooO00o:I"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/android/material/timepicker/OooOOOO;->filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;",
+   "access": 17,
+   "offset": 3332004,
+   "registers": 8,
+   "inputs": 7,
+   "outputs": 4,
+   "debug_offset": 6117942,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/CharSequence;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6,
+      7,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lcom/google/android/material/timepicker/OooOOOO;->OooO00o:I"
+    },
+    {
+     "label": "L001a",
+     "op": "if-gt",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0020",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L001a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L001e"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

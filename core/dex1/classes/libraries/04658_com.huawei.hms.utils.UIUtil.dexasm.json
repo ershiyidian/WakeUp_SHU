@@ -1,0 +1,1760 @@
+{
+ "class": "Lcom/huawei/hms/utils/UIUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3901020,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->a(Landroid/content/Context;)I",
+   "access": 10,
+   "offset": 3900784,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Context;->getResources()Landroid/content/res/Resources;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "androidhwext:style/Theme.Emui"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      1,
+      1
+     ],
+     "method": "Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->getActiveActivity(Landroid/app/Activity;Landroid/content/Context;)Landroid/app/Activity;",
+   "access": 9,
+   "offset": 3900108,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6111252,
+   "end": "L004f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/UIUtil;->isBackground(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "UIUtil"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "isBackground"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/UIUtil;->isBackground(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "activity is null"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0026",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/support/common/ActivityMgr;->INST:Lcom/huawei/hms/support/common/ActivityMgr;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/common/ActivityMgr;->getCurrentActivity()Landroid/app/Activity;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/app/Activity;->isFinishing()Z"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L004e"
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "activity isFinishing is "
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/app/Activity;->isFinishing()Z"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0048",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/support/common/ActivityMgr;->INST:Lcom/huawei/hms/support/common/ActivityMgr;"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/common/ActivityMgr;->getCurrentActivity()Landroid/app/Activity;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->getDialogThemeId(Landroid/app/Activity;)I",
+   "access": 9,
+   "offset": 3900832,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/UIUtil;->a(Landroid/content/Context;)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Context;->getResources()Landroid/content/res/Resources;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Landroid/content/res/Configuration;->uiMode:I"
+    },
+    {
+     "label": "L0016",
+     "op": "and-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 48
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L001a",
+     "op": "if-ne",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L001d",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->getProcessName(Landroid/content/Context;I)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3900912,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "activity"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/app/ActivityManager;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/app/ActivityManager$RunningAppProcessInfo;"
+    },
+    {
+     "label": "L0025",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I"
+    },
+    {
+     "label": "L0027",
+     "op": "if-ne",
+     "registers": [
+      2,
+      4
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->isActivityFullscreen(Landroid/app/Activity;)Z",
+   "access": 9,
+   "offset": 3900428,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "UIUtil"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "activity is null"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/app/Activity;->getWindow()Landroid/view/Window;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Landroid/view/WindowManager$LayoutParams;->flags:I"
+    },
+    {
+     "label": "L0015",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0017",
+     "op": "and-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-ne",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->isBackground(Landroid/content/Context;)Z",
+   "access": 9,
+   "offset": 3900504,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6112844,
+   "end": "L0083",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "activity"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/app/ActivityManager;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "keyguard"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/app/KeyguardManager;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0018",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "method": "Landroid/os/Process;->myPid()I"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/UIUtil;->getProcessName(Landroid/content/Context;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/app/ActivityManager$RunningAppProcessInfo;"
+    },
+    {
+     "label": "L0038",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0040",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0042",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "appProcess.importance is "
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0047",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L004f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0050",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "UIUtil"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0055",
+     "op": "iget",
+     "registers": [
+      6,
+      3
+     ],
+     "field": "Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I"
+    },
+    {
+     "label": "L0057",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 100
+    },
+    {
+     "label": "L0059",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L005a",
+     "op": "if-ne",
+     "registers": [
+      6,
+      3
+     ],
+     "target": "L005e"
+    },
+    {
+     "label": "L005c",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L005d",
+     "op": "goto",
+     "target": "L005f"
+    },
+    {
+     "label": "L005e",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/app/KeyguardManager;->isKeyguardLocked()Z"
+    },
+    {
+     "label": "L0062",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0065",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "isForground is "
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006d",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "***  isLockedState is "
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0078",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0079",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007c",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L007e",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0081"
+    },
+    {
+     "label": "L0080",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0081",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0082",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/UIUtil;->modifyIntentBehaviorsSafe(Landroid/content/Intent;)Landroid/content/Intent;",
+   "access": 9,
+   "offset": 3900284,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.intent.action.SEND"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.intent.action.SEND_MULTIPLE"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.IMAGE_CAPTURE"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.IMAGE_CAPTURE_SECURE"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.VIDEO_CAPTURE"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0030",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.intent.action.VIEW"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;->getFlags()I"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "and-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": -196
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

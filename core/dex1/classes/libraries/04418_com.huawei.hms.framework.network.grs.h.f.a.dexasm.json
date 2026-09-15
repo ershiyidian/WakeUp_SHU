@@ -1,0 +1,604 @@
+{
+ "class": "Lcom/huawei/hms/framework/network/grs/h/f/a;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/h/f/a;->a(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)Ljavax/net/ssl/HttpsURLConnection;",
+   "access": 9,
+   "offset": 3802432,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113635,
+   "end": "L0060",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/net/URL;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/net/URL;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/net/URL;->openConnection()Ljava/net/URLConnection;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljavax/net/ssl/HttpsURLConnection;"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "URLConnectionHelper"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L005a"
+    },
+    {
+     "label": "L0017",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljavax/net/ssl/HttpsURLConnection;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/h/g/a;->a(Landroid/content/Context;)Ljavax/net/ssl/SSLSocketFactory;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/network/grs/h/g/a;->a()Ljavax/net/ssl/HostnameVerifier;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljavax/net/ssl/HttpsURLConnection;->setHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "goto",
+     "target": "L002d"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "init https ssl socket failed."
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 10000
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/net/URLConnection;->setConnectTimeout(I)V"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/net/URLConnection;->setReadTimeout(I)V"
+    },
+    {
+     "label": "L0035",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/net/URLConnection;->setDoOutput(Z)V"
+    },
+    {
+     "label": "L0039",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/net/URLConnection;->setUseCaches(Z)V"
+    },
+    {
+     "label": "L003d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "NetworkKit-grs"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/h/a;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0045",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "request to grs server with a User-Agent header is: "
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->d(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0054",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "User-Agent"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      5,
+      4
+     ],
+     "method": "Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0059",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "urlConnection is not an instance of HttpsURLConnection"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L005f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0019",
+     "end": "L0027",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L0028"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/h/f/a;->a(Ljavax/net/ssl/HttpsURLConnection;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3802656,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110321,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "URLConnectionHelper"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "sendHttpBody: The Body Data is Null"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->i(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "sendHttpBody: HttpsURLConnection is Null"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/io/OutputStream;->write([B)V"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/OutputStream;->flush()V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/IoUtils;->closeSecure(Ljava/io/OutputStream;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-void"
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L0025",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/IoUtils;->closeSecure(Ljava/io/OutputStream;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000f",
+     "end": "L0013",
+     "handler": "H1"
+    },
+    {
+     "start": "L0013",
+     "end": "L001f",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0025"
+    },
+    {
+     "id": "H3",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  }
+ ]
+}

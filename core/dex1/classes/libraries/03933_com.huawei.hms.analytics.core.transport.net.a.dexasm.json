@@ -1,0 +1,87 @@
+{
+ "class": "Lcom/huawei/hms/analytics/core/transport/net/a;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/core/transport/net/a;->a(Ljava/io/Closeable;)V",
+   "access": 9,
+   "offset": 3569088,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/Closeable;->close()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "StreamToolsKit"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "closeQuietly(): Exception when closing the closeable!"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0005",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0006"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

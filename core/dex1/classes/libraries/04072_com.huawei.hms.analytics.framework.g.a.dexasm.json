@@ -1,0 +1,307 @@
+{
+ "class": "Lcom/huawei/hms/analytics/framework/g/a;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/g/a;->a(Ljava/io/OutputStream;)V",
+   "access": 10,
+   "offset": 3645420,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/OutputStream;->close()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "StreamToolsKit"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "closeStream(): Exception: close OutputStream error!"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0003",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0004"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/g/a;->a([B)[B",
+   "access": 9,
+   "offset": 3645280,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6110395,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/ByteArrayOutputStream;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/ByteArrayOutputStream;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/zip/Deflater;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/zip/Deflater;-><init>()V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/util/zip/Deflater;->setInput([B)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/zip/Deflater;->finish()V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0012",
+     "op": "new-array",
+     "registers": [
+      4,
+      4
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/zip/Deflater;->finished()Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/util/zip/Deflater;->deflate([B)I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      3,
+      2
+     ],
+     "method": "Ljava/io/ByteArrayOutputStream;->write([BII)V"
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0030"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/ByteArrayOutputStream;->toByteArray()[B"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/zip/Deflater;->end()V"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/framework/g/a;->a(Ljava/io/OutputStream;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/zip/Deflater;->end()V"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/framework/g/a;->a(Ljava/io/OutputStream;)V"
+    },
+    {
+     "label": "L0036",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000a",
+     "end": "L0029",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  }
+ ]
+}

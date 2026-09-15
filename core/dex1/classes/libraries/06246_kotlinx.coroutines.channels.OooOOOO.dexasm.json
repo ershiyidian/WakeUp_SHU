@@ -1,0 +1,1342 @@
+{
+ "class": "Lkotlinx/coroutines/channels/OooOOOO;",
+ "super": "Lkotlinx/coroutines/channels/OooO0O0;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;->OooOOo0:Lkotlinx/coroutines/channels/BufferOverflow;",
+   "access": 17
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;-><init>(ILkotlinx/coroutines/channels/BufferOverflow;)V",
+   "access": 65537,
+   "offset": 4950628,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L0046",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;-><init>(I)V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooOOOO;->OooOOo0:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/channels/BufferOverflow;->SUSPEND:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eq",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "if-lt",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "Buffered channel capacity must be at least 1, but "
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": " was specified"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0O(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "This implementation does not support suspension for senders, use "
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0026",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooO0O0;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lkotlin/jvm/internal/OooOOO;->OooO00o(Ljava/lang/Class;)Lkotlin/jvm/internal/OooO0O0;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lkotlin/jvm/internal/OooO0O0;->OooO0OO()Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": " instead"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0045",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;->OooO0o0(Ljava/lang/Object;Lo00OOOo/oo000o;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 4950152,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooOOOO;->Oooo00o(Ljava/lang/Object;Z)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "instance-of",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0;"
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lo00OOOO/o00Oo0;->OooO00o:Lo00OOOO/o00Oo0;"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOOo0()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;->OooO0oo(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 4950204,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooOOOO;->Oooo00o(Ljava/lang/Object;Z)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;->OooOo0O()Z",
+   "access": 17,
+   "offset": 4950116,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooOOOO;->OooOOo0:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lkotlinx/coroutines/channels/BufferOverflow;->DROP_OLDEST:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0004",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/channels/OooOOOO;->Oooo00o(Ljava/lang/Object;Z)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 4950232,
+   "registers": 19,
+   "inputs": 3,
+   "outputs": 8,
+   "debug_offset": 6111252,
+   "end": "L00bd",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "move-object/from16",
+     "registers": [
+      0,
+      16
+     ]
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lkotlinx/coroutines/channels/BufferOverflow;->DROP_LATEST:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      8
+     ],
+     "field": "Lo00OOOO/o00Oo0;->OooO00o:Lo00OOOO/o00Oo0;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooOOOO;->OooOOo0:Lkotlinx/coroutines/channels/BufferOverflow;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-ne",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-super/range",
+     "registers": [
+      16,
+      17
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooO0oo(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "instance-of",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0O;"
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0012",
+     "op": "instance-of",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0016",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooO0OO;->OooO0Oo:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L001b",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooO0O0;->OooOO0o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOOO;"
+    },
+    {
+     "label": "L0023",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooO0O0;->OooO0oo:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "const-wide",
+     "registers": [
+      4
+     ],
+     "literal": 1152921504606846975
+    },
+    {
+     "label": "L002e",
+     "op": "and-long/2addr",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3,
+      7
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOo00(JZ)Z"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "sget",
+     "registers": [
+      9
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooO0OO;->OooO0O0:I"
+    },
+    {
+     "label": "L0036",
+     "op": "int-to-long",
+     "registers": [
+      10,
+      9
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "div-long",
+     "registers": [
+      2,
+      4,
+      10
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "rem-long",
+     "registers": [
+      12,
+      4,
+      10
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "long-to-int",
+     "registers": [
+      13,
+      12
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "iget-wide",
+     "registers": [
+      14,
+      1
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L003e",
+     "op": "cmp-long",
+     "registers": [
+      12,
+      14,
+      2
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "if-eqz",
+     "registers": [
+      12
+     ],
+     "target": "L0055"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooO00o(Lkotlinx/coroutines/channels/OooO0O0;JLkotlinx/coroutines/channels/OooOOO;)Lkotlinx/coroutines/channels/OooOOO;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L0048",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOOo0()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0;"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooOO0;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0053",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "move-object",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "move-object/from16",
+     "registers": [
+      3,
+      17
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "move",
+     "registers": [
+      2,
+      13
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-static/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooO0Oo(Lkotlinx/coroutines/channels/OooO0O0;Lkotlinx/coroutines/channels/OooOOO;ILjava/lang/Object;JLjava/lang/Object;Z)I"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "if-eqz",
+     "registers": [
+      12
+     ],
+     "target": "L00b9"
+    },
+    {
+     "label": "L005e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L005f",
+     "op": "if-eq",
+     "registers": [
+      12,
+      3
+     ],
+     "target": "L00b8"
+    },
+    {
+     "label": "L0061",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0062",
+     "op": "if-eq",
+     "registers": [
+      12,
+      3
+     ],
+     "target": "L0091"
+    },
+    {
+     "label": "L0064",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0065",
+     "op": "if-eq",
+     "registers": [
+      12,
+      2
+     ],
+     "target": "L0089"
+    },
+    {
+     "label": "L0067",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0068",
+     "op": "if-eq",
+     "registers": [
+      12,
+      2
+     ],
+     "target": "L0072"
+    },
+    {
+     "label": "L006a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L006b",
+     "op": "if-eq",
+     "registers": [
+      12,
+      2
+     ],
+     "target": "L006e"
+    },
+    {
+     "label": "L006d",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L006e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0O0()V"
+    },
+    {
+     "label": "L0071",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L0072",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lkotlinx/coroutines/channels/OooO0O0;->OooO:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->get(Ljava/lang/Object;)J"
+    },
+    {
+     "label": "L0077",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "cmp-long",
+     "registers": [
+      6,
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "if-gez",
+     "registers": [
+      6
+     ],
+     "target": "L007f"
+    },
+    {
+     "label": "L007c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0O0()V"
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOOo0()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L0082",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0083",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0;"
+    },
+    {
+     "label": "L0085",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooOO0;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0088",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0089",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L008b",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "unexpected"
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0090",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0091",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L00a0"
+    },
+    {
+     "label": "L0093",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooO()V"
+    },
+    {
+     "label": "L0096",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOOo0()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L0099",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L009a",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lkotlinx/coroutines/channels/OooOO0;"
+    },
+    {
+     "label": "L009c",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooOO0;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L009f",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00a0",
+     "op": "instance-of",
+     "registers": [
+      3,
+      6
+     ],
+     "type": "Lo00OoO0/o00OO000;"
+    },
+    {
+     "label": "L00a2",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L00a7"
+    },
+    {
+     "label": "L00a4",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lo00OoO0/o00OO000;"
+    },
+    {
+     "label": "L00a6",
+     "op": "goto",
+     "target": "L00a8"
+    },
+    {
+     "label": "L00a7",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L00a8",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00af"
+    },
+    {
+     "label": "L00aa",
+     "op": "add-int",
+     "registers": [
+      13,
+      2,
+      9
+     ]
+    },
+    {
+     "label": "L00ac",
+     "op": "invoke-interface",
+     "registers": [
+      6,
+      1,
+      13
+     ],
+     "method": "Lo00OoO0/o00OO000;->OooO00o(Lo00OoO/o00Ooo;I)V"
+    },
+    {
+     "label": "L00af",
+     "op": "iget-wide",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L00b1",
+     "op": "mul-long",
+     "registers": [
+      3,
+      3,
+      10
+     ]
+    },
+    {
+     "label": "L00b3",
+     "op": "int-to-long",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L00b4",
+     "op": "add-long/2addr",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L00b5",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Lkotlinx/coroutines/channels/OooO0O0;->OooOOO0(J)V"
+    },
+    {
+     "label": "L00b8",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L00b9",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0O0()V"
+    },
+    {
+     "label": "L00bc",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/g;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/g;-><init>()V",
+   "access": 65537,
+   "offset": 3427788,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/g;->createException(Landroid/content/Context;)V",
+   "access": 1,
+   "offset": 3427812,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/a;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "The default CrashHandler is not AGC"
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/widget/Toast;->show()V"
+    },
+    {
+     "label": "L0022",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/NullPointerException;"
+    },
+    {
+     "label": "L0024",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/g;->enableCrashCollection(Z)V",
+   "access": 1,
+   "offset": 3427912,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/crash/internal/d;->a()Lcom/huawei/agconnect/crash/internal/d;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/d;->a(Z)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

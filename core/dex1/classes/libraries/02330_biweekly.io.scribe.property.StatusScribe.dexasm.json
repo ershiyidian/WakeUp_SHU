@@ -1,0 +1,396 @@
+{
+ "class": "Lbiweekly/io/scribe/property/StatusScribe;",
+ "super": "Lbiweekly/io/scribe/property/TextPropertyScribe;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;-><init>()V",
+   "access": 65537,
+   "offset": 2831632,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "STATUS"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/TextPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;->_writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 4161,
+   "offset": 2831508,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/StatusScribe;->_writeText(Lbiweekly/property/Status;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;->_writeText(Lbiweekly/property/Status;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2831540,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6142337,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/property/Status;->isNeedsAction()Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "NEEDS ACTION"
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-super",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/TextPropertyScribe;->_writeText(Lbiweekly/property/TextProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;->_writeText(Lbiweekly/property/TextProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 4161,
+   "offset": 2831600,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/StatusScribe;->_writeText(Lbiweekly/property/Status;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;->newInstance(Ljava/lang/String;Lbiweekly/ICalVersion;)Lbiweekly/property/Status;",
+   "access": 1,
+   "offset": 2831416,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6142329,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "NEEDS ACTION"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "method": "Lbiweekly/property/Status;->needsAction()Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/property/Status;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/StatusScribe;->newInstance(Ljava/lang/String;Lbiweekly/ICalVersion;)Lbiweekly/property/TextProperty;",
+   "access": 4161,
+   "offset": 2831480,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/StatusScribe;->newInstance(Ljava/lang/String;Lbiweekly/ICalVersion;)Lbiweekly/property/Status;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

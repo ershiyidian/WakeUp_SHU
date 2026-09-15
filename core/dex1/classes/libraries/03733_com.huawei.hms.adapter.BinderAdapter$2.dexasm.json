@@ -1,0 +1,229 @@
+{
+ "class": "Lcom/huawei/hms/adapter/BinderAdapter$2;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/adapter/BinderAdapter$2;->a:Lcom/huawei/hms/adapter/BinderAdapter;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/adapter/BinderAdapter$2;-><init>(Lcom/huawei/hms/adapter/BinderAdapter;)V",
+   "access": 65537,
+   "offset": 3508740,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/adapter/BinderAdapter$2;->a:Lcom/huawei/hms/adapter/BinderAdapter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/BinderAdapter$2;->handleMessage(Landroid/os/Message;)Z",
+   "access": 1,
+   "offset": 3508644,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Landroid/os/Message;->what:I"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/adapter/BinderAdapter$2;->a:Lcom/huawei/hms/adapter/BinderAdapter;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/adapter/BinderAdapter;->getMsgDelayDisconnect()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eq",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "BinderAdapter"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "The serviceConnection has been bind for 1800s, need to unbind."
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/adapter/BinderAdapter$2;->a:Lcom/huawei/hms/adapter/BinderAdapter;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/adapter/BinderAdapter;->unBind()V"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/adapter/BinderAdapter$2;->a:Lcom/huawei/hms/adapter/BinderAdapter;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/adapter/BinderAdapter;->b(Lcom/huawei/hms/adapter/BinderAdapter;)Lcom/huawei/hms/adapter/BinderAdapter$BinderCallBack;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/adapter/BinderAdapter$BinderCallBack;->onTimedDisconnected()V"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0025",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

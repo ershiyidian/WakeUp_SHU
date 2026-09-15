@@ -1,0 +1,224 @@
+{
+ "class": "Lcom/huawei/agconnect/core/a/a;",
+ "super": "Lcom/huawei/agconnect/AGCInitFinishManager;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/core/a/a;->a:Ljava/util/List;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/core/a/a;-><clinit>()V",
+   "access": 65544,
+   "offset": 3404936,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/CopyOnWriteArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/core/a/a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/core/a/a;-><init>()V",
+   "access": 65537,
+   "offset": 3404968,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/AGCInitFinishManager;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/core/a/a;->a()V",
+   "access": 9,
+   "offset": 3404992,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/core/a/a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/AGCInitFinishManager$AGCInitFinishCallback;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/AGCInitFinishManager$AGCInitFinishCallback;->onFinish()V"
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/core/a/a;->addAGCInitFinishCallback(Lcom/huawei/agconnect/AGCInitFinishManager$AGCInitFinishCallback;)V",
+   "access": 1,
+   "offset": 3405056,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/core/a/a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

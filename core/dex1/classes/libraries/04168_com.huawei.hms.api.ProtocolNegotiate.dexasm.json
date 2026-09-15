@@ -1,0 +1,364 @@
+{
+ "class": "Lcom/huawei/hms/api/ProtocolNegotiate;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->MAX_VERSION:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->instance:Lcom/huawei/hms/api/ProtocolNegotiate;",
+   "access": 10
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;-><clinit>()V",
+   "access": 65544,
+   "offset": 3684212,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/api/ProtocolNegotiate;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/ProtocolNegotiate;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->instance:Lcom/huawei/hms/api/ProtocolNegotiate;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;-><init>()V",
+   "access": 65537,
+   "offset": 3684244,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0004",
+     "op": "iput",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->getInstance()Lcom/huawei/hms/api/ProtocolNegotiate;",
+   "access": 9,
+   "offset": 3684064,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->instance:Lcom/huawei/hms/api/ProtocolNegotiate;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->getVersion()I",
+   "access": 1,
+   "offset": 3684088,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/ProtocolNegotiate;->negotiate(Ljava/util/List;)I",
+   "access": 1,
+   "offset": 3684112,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Ljava/util/List;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooO0oO(Ljava/util/List;I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "iput",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L0024"
+    },
+    {
+     "label": "L0022",
+     "op": "iput",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0024",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0026",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "iput",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/ProtocolNegotiate;->version:I"
+    },
+    {
+     "label": "L0029",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

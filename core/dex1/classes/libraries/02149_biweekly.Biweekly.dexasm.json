@@ -1,0 +1,1116 @@
+{
+ "class": "Lbiweekly/Biweekly;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lbiweekly/Biweekly;->ARTIFACT_ID:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->GROUP_ID:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->URL:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->VERSION:Ljava/lang/String;",
+   "access": 25
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/Biweekly;-><clinit>()V",
+   "access": 65544,
+   "offset": 2736416,
+   "registers": 3,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0042",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/Biweekly;"
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "biweekly.properties"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Class;->getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/Properties;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Properties;-><init>()V"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/Properties;->load(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "version"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "sput-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/Biweekly;->VERSION:Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "groupId"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "sput-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/Biweekly;->GROUP_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "artifactId"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "sput-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/Biweekly;->ARTIFACT_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L0029",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "url"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "sput-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/Biweekly;->URL:Ljava/lang/String;"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "return-void"
+    },
+    {
+     "label": "L0035",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L0037",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/RuntimeException;"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0031",
+     "handler": "H1"
+    },
+    {
+     "start": "L0038",
+     "end": "L003e",
+     "handler": "H6"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0037"
+      }
+     ],
+     "all": "L0035"
+    },
+    {
+     "id": "H6",
+     "catches": [],
+     "all": "L0035"
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/Biweekly;-><init>()V",
+   "access": 65538,
+   "offset": 2736588,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parse(Ljava/io/File;)Lbiweekly/io/chain/ChainingTextParser;",
+   "access": 9,
+   "offset": 2736036,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextParser;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parse(Ljava/io/InputStream;)Lbiweekly/io/chain/ChainingTextParser;",
+   "access": 9,
+   "offset": 2736064,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextParser;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parse(Ljava/io/Reader;)Lbiweekly/io/chain/ChainingTextParser;",
+   "access": 9,
+   "offset": 2736092,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextParser;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parse(Ljava/lang/String;)Lbiweekly/io/chain/ChainingTextStringParser;",
+   "access": 9,
+   "offset": 2736120,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextStringParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextStringParser;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseJson(Ljava/io/File;)Lbiweekly/io/chain/ChainingJsonParser;",
+   "access": 9,
+   "offset": 2735860,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingJsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingJsonParser;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseJson(Ljava/io/InputStream;)Lbiweekly/io/chain/ChainingJsonParser;",
+   "access": 9,
+   "offset": 2735888,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingJsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingJsonParser;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseJson(Ljava/io/Reader;)Lbiweekly/io/chain/ChainingJsonParser;",
+   "access": 9,
+   "offset": 2735916,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingJsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingJsonParser;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseJson(Ljava/lang/String;)Lbiweekly/io/chain/ChainingJsonStringParser;",
+   "access": 9,
+   "offset": 2735944,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingJsonStringParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingJsonStringParser;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseXml(Ljava/lang/String;)Lbiweekly/io/chain/ChainingXmlMemoryParser;",
+   "access": 9,
+   "offset": 2736212,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlMemoryParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlMemoryParser;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseXml(Lorg/w3c/dom/Document;)Lbiweekly/io/chain/ChainingXmlMemoryParser;",
+   "access": 9,
+   "offset": 2736240,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6132676,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlMemoryParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlMemoryParser;-><init>(Lorg/w3c/dom/Document;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseXml(Ljava/io/File;)Lbiweekly/io/chain/ChainingXmlParser;",
+   "access": 9,
+   "offset": 2736268,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlParser;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseXml(Ljava/io/InputStream;)Lbiweekly/io/chain/ChainingXmlParser;",
+   "access": 9,
+   "offset": 2736296,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlParser;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->parseXml(Ljava/io/Reader;)Lbiweekly/io/chain/ChainingXmlParser;",
+   "access": 9,
+   "offset": 2736324,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlParser;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->write(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 9,
+   "offset": 2736184,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->write([Lbiweekly/ICalendar;)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 137,
+   "offset": 2736148,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/Biweekly;->write(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->writeJson(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingJsonWriter;",
+   "access": 9,
+   "offset": 2736008,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingJsonWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingJsonWriter;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->writeJson([Lbiweekly/ICalendar;)Lbiweekly/io/chain/ChainingJsonWriter;",
+   "access": 137,
+   "offset": 2735972,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/Biweekly;->writeJson(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingJsonWriter;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->writeXml(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 9,
+   "offset": 2736388,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/Biweekly;->writeXml([Lbiweekly/ICalendar;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 137,
+   "offset": 2736352,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/Biweekly;->writeXml(Ljava/util/Collection;)Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

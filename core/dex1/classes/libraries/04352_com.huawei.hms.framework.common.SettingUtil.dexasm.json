@@ -1,0 +1,227 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/SettingUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SettingUtil;->TAG:Ljava/lang/String;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SettingUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3764440,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SettingUtil;->getSecureInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I",
+   "access": 9,
+   "offset": 3764320,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SettingUtil"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Settings Secure getInt throwFromSystemServer:"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0004",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0005"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SettingUtil;->getSystemInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I",
+   "access": 9,
+   "offset": 3764380,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SettingUtil"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Settings System getInt throwFromSystemServer:"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0004",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0005"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

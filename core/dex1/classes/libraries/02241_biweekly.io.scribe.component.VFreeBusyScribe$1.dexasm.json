@@ -1,0 +1,448 @@
+{
+ "class": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->this$0:Lbiweekly/io/scribe/component/VFreeBusyScribe;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;-><init>(Lbiweekly/io/scribe/component/VFreeBusyScribe;)V",
+   "access": 65537,
+   "offset": 2795180,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->this$0:Lbiweekly/io/scribe/component/VFreeBusyScribe;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->getEarliestStartDate(Lbiweekly/property/FreeBusy;)Ljava/util/Date;",
+   "access": 2,
+   "offset": 2795072,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/ListProperty;->getValues()Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/Period;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/Period;->getStartDate()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L0009"
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/Period;->getStartDate()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/Date;->compareTo(Ljava/util/Date;)I"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-lez",
+     "registers": [
+      2
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/Period;->getStartDate()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "goto",
+     "target": "L0009"
+    },
+    {
+     "label": "L002d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->compare(Lbiweekly/property/FreeBusy;Lbiweekly/property/FreeBusy;)I",
+   "access": 1,
+   "offset": 2794964,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6140893,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->getEarliestStartDate(Lbiweekly/property/FreeBusy;)Ljava/util/Date;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->getEarliestStartDate(Lbiweekly/property/FreeBusy;)Ljava/util/Date;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/Date;->compareTo(Ljava/util/Date;)I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->compare(Ljava/lang/Object;Ljava/lang/Object;)I",
+   "access": 4161,
+   "offset": 2795036,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/FreeBusy;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/property/FreeBusy;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/component/VFreeBusyScribe$1;->compare(Lbiweekly/property/FreeBusy;Lbiweekly/property/FreeBusy;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

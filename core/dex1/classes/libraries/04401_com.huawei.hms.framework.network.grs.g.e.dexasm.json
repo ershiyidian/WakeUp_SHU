@@ -1,0 +1,700 @@
+{
+ "class": "Lcom/huawei/hms/framework/network/grs/g/e;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/g/e;->a(Lcom/huawei/hms/framework/network/grs/g/d;)Ljava/util/LinkedHashMap;",
+   "access": 4105,
+   "offset": 3796612,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/e;->b(Lcom/huawei/hms/framework/network/grs/g/d;)Ljava/util/LinkedHashMap;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/g/e;->a(Ljava/util/ArrayList;JLorg/json/JSONArray;Landroid/content/Context;)V",
+   "access": 9,
+   "offset": 3796920,
+   "registers": 6,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6120901,
+   "end": "L0025",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-lez",
+     "registers": [
+      0
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getInstance()Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->isEnableReport(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getInstance()Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getReportExecutor()Ljava/util/concurrent/ExecutorService;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/framework/network/grs/g/e$a;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3,
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/e$a;-><init>(JLjava/util/ArrayList;Lorg/json/JSONArray;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;"
+    },
+    {
+     "label": "L0024",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/g/e;->b(Lcom/huawei/hms/framework/network/grs/g/d;)Ljava/util/LinkedHashMap;",
+   "access": 10,
+   "offset": 3796640,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L007b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->d()Ljava/lang/Exception;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "exception_name"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "error_code"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ExceptionCode;->getErrorCodeFromException(Ljava/lang/Exception;)I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Class;->getSimpleName()Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "message"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L0040"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->b()I"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->c()I"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "int-to-long",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0040",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "domain"
+    },
+    {
+     "label": "L0042",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/net/URL;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->l()Ljava/lang/String;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/net/URL;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/net/URL;->getHost()Ljava/lang/String;"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0052",
+     "op": "goto",
+     "target": "L005b"
+    },
+    {
+     "label": "L0053",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HaReportHelper"
+    },
+    {
+     "label": "L0056",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "report host MalformedURLException"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->h()J"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "req_start_time"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->g()J"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "req_end_time"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L006d",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/g/d;->i()J"
+    },
+    {
+     "label": "L0070",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0071",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "req_total_time"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->put(Ljava/lang/String;J)Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;"
+    },
+    {
+     "label": "L0076",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/LinkedHashMapPack;->getAll()Ljava/util/LinkedHashMap;"
+    },
+    {
+     "label": "L0079",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0042",
+     "end": "L0052",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/net/MalformedURLException;",
+       "target": "L0053"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

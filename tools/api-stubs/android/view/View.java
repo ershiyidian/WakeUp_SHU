@@ -1,0 +1,2 @@
+package android.view;
+public class View {public View(android.content.Context c){} public interface OnClickListener {void onClick(View v);}public void setOnClickListener(OnClickListener l){}public void setPadding(int a,int b,int c,int d){}public void setContentDescription(CharSequence s){}public void setBackgroundColor(int c){} public void setFitsSystemWindows(boolean b){}public ViewParent getParent(){return null;}public boolean post(Runnable r){return true;}public void setVisibility(int v){}public void setId(int i){} }

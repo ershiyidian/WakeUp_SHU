@@ -1,0 +1,697 @@
+{
+ "class": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->TAG:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->instance:Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;",
+   "access": 10
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;-><clinit>()V",
+   "access": 65544,
+   "offset": 3466260,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->instance:Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;-><init>()V",
+   "access": 65538,
+   "offset": 3466292,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;",
+   "access": 9,
+   "offset": 3466124,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->instance:Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->init(Landroid/content/Context;)V",
+   "access": 131081,
+   "offset": 3466316,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->init(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000a",
+     "handler": "H1"
+    },
+    {
+     "start": "L000d",
+     "end": "L000e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000c"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->init(Ljava/lang/Object;)V",
+   "access": 131081,
+   "offset": 3466384,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->init(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000a",
+     "handler": "H1"
+    },
+    {
+     "start": "L000d",
+     "end": "L000e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000c"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->get(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;",
+   "access": 131073,
+   "offset": 3466148,
+   "registers": 12,
+   "inputs": 6,
+   "outputs": 6,
+   "debug_offset": 0,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "monitor-enter",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "move-object",
+     "registers": [
+      1,
+      7
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "move-object",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "move-object",
+     "registers": [
+      3,
+      9
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "move-object",
+     "registers": [
+      4,
+      10
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "move-object",
+     "registers": [
+      5,
+      11
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "monitor-exit",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "move-object",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "monitor-exit",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "throw",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L000e",
+     "handler": "H1"
+    },
+    {
+     "start": "L0012",
+     "end": "L0013",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0010"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getAll(Ljava/lang/String;)Ljava/util/Map;",
+   "access": 1,
+   "offset": 3466224,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->getAll(Ljava/lang/String;)Ljava/util/Map;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)V",
+   "access": 131073,
+   "offset": 3466452,
+   "registers": 12,
+   "inputs": 6,
+   "outputs": 6,
+   "debug_offset": 0,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "monitor-enter",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "move-object",
+     "registers": [
+      1,
+      7
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "move-object",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "move-object",
+     "registers": [
+      3,
+      9
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "move-object",
+     "registers": [
+      4,
+      10
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "move-object",
+     "registers": [
+      5,
+      11
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "monitor-exit",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    },
+    {
+     "label": "L000f",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-object",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "monitor-exit",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "throw",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L000d",
+     "handler": "H1"
+    },
+    {
+     "start": "L0011",
+     "end": "L0012",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000f"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->remove(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 3466528,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->get()Lcom/huawei/agconnect/datastore/core/Platform;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/Platform;->remove(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

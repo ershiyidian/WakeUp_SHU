@@ -1,0 +1,419 @@
+{
+ "class": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a:Lcom/huawei/hms/api/HuaweiApiClientImpl;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;-><init>(Lcom/huawei/hms/api/HuaweiApiClientImpl;)V",
+   "access": 65538,
+   "offset": 3674692,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a:Lcom/huawei/hms/api/HuaweiApiClientImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;-><init>(Lcom/huawei/hms/api/HuaweiApiClientImpl;Lcom/huawei/hms/api/HuaweiApiClientImpl$a;)V",
+   "access": 69633,
+   "offset": 3674720,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110321,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;-><init>(Lcom/huawei/hms/api/HuaweiApiClientImpl;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a(Lcom/huawei/hms/support/api/ResolveResult;)V",
+   "access": 1,
+   "offset": 3674744,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L004d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/client/Result;->getStatus()Lcom/huawei/hms/support/api/client/Status;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/api/client/Status;->isSuccess()Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/ResolveResult;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/support/api/entity/core/JosGetNoticeResp;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/entity/core/JosGetNoticeResp;->getNoticeIntent()Landroid/content/Intent;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/entity/core/JosBaseResp;->getStatusCode()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "get notice has intent."
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiClientImpl"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a:Lcom/huawei/hms/api/HuaweiApiClientImpl;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiClientImpl;->c(Lcom/huawei/hms/api/HuaweiApiClientImpl;)Ljava/lang/ref/WeakReference;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/ref/Reference;->get()Ljava/lang/Object;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Landroid/app/Activity;"
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a:Lcom/huawei/hms/api/HuaweiApiClientImpl;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiClientImpl;->getTopActivity()Landroid/app/Activity;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->getValidActivity(Landroid/app/Activity;Landroid/app/Activity;)Landroid/app/Activity;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L003d",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "showNotice no valid activity!"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0042",
+     "op": "return-void"
+    },
+    {
+     "label": "L0043",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a:Lcom/huawei/hms/api/HuaweiApiClientImpl;"
+    },
+    {
+     "label": "L0045",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiClientImpl;->a(Lcom/huawei/hms/api/HuaweiApiClientImpl;Z)Z"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L004c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->onResult(Ljava/lang/Object;)V",
+   "access": 4161,
+   "offset": 3674916,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/support/api/ResolveResult;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiClientImpl$g;->a(Lcom/huawei/hms/support/api/ResolveResult;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

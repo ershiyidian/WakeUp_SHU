@@ -1,0 +1,2576 @@
+{
+ "class": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->DEFAULT_BUFFER_RESIZE_FACTOR:I",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->DEFAULT_BUFFER_SIZE:I",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->EOF:I",
+   "access": 24
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->MASK_8BITS:I",
+   "access": 28
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->MIME_CHUNK_SIZE:I",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->PAD_DEFAULT:B",
+   "access": 28
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->PEM_CHUNK_SIZE:I",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->PAD:B",
+   "access": 20
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->chunkSeparatorLength:I",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encodedBlockSize:I",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->lineLength:I",
+   "access": 20
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->pad:B",
+   "access": 20
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->unencodedBlockSize:I",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;-><init>(IIII)V",
+   "access": 65537,
+   "offset": 2942876,
+   "registers": 11,
+   "inputs": 5,
+   "outputs": 6,
+   "debug_offset": 6144392,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 61
+    },
+    {
+     "label": "L0002",
+     "op": "move-object",
+     "registers": [
+      0,
+      6
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "move",
+     "registers": [
+      1,
+      7
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "move",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "move",
+     "registers": [
+      3,
+      9
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "move",
+     "registers": [
+      4,
+      10
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;-><init>(IIIIB)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;-><init>(IIIIB)V",
+   "access": 65537,
+   "offset": 2942916,
+   "registers": 7,
+   "inputs": 6,
+   "outputs": 1,
+   "debug_offset": 6144400,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 61
+    },
+    {
+     "label": "L0005",
+     "op": "iput-byte",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->PAD:B"
+    },
+    {
+     "label": "L0007",
+     "op": "iput",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->unencodedBlockSize:I"
+    },
+    {
+     "label": "L0009",
+     "op": "iput",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encodedBlockSize:I"
+    },
+    {
+     "label": "L000b",
+     "op": "if-lez",
+     "registers": [
+      4
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000d",
+     "op": "if-lez",
+     "registers": [
+      5
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000f",
+     "op": "div-int/2addr",
+     "registers": [
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "mul-int",
+     "registers": [
+      4,
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0014",
+     "op": "iput",
+     "registers": [
+      4,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->lineLength:I"
+    },
+    {
+     "label": "L0016",
+     "op": "iput",
+     "registers": [
+      5,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->chunkSeparatorLength:I"
+    },
+    {
+     "label": "L0018",
+     "op": "iput-byte",
+     "registers": [
+      6,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->pad:B"
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getBytesUtf8(Ljava/lang/String;)[B",
+   "access": 9,
+   "offset": 2942212,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/RuntimeException;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L000a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isWhiteSpace(B)Z",
+   "access": 9,
+   "offset": 2941912,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0002",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L0006",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0008",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L000a",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000c",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0013",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->newStringUtf8([B)Ljava/lang/String;",
+   "access": 9,
+   "offset": 2942724,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Ljava/lang/String;-><init>([BLjava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/RuntimeException;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L000b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L000c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->resizeBuffer(Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)[B",
+   "access": 2,
+   "offset": 2942280,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getDefaultBufferSize()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L000b",
+     "op": "iput-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L000d",
+     "op": "iput",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L000f",
+     "op": "iput",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0011",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0012",
+     "op": "array-length",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "mul-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0015",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0017",
+     "op": "array-length",
+     "registers": [
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2,
+      1,
+      3
+     ],
+     "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+    },
+    {
+     "label": "L001b",
+     "op": "iput-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->available(Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)I",
+   "access": 1,
+   "offset": 2942360,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0008",
+     "op": "sub-int/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->containsAlphabetOrPad([B)Z",
+   "access": 1,
+   "offset": 2941688,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "array-length",
+     "registers": [
+      1,
+      6
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0008",
+     "op": "aget-byte",
+     "registers": [
+      3,
+      6,
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget-byte",
+     "registers": [
+      4,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->pad:B"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eq",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet(B)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0015",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0019",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 1,
+   "offset": 2942520,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6144376,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([B)[B"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000f",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/org/apache/commons/codec/DecoderException;"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Parameter supplied to Base-N decode is not a byte[] or a String"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/DecoderException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode(Ljava/lang/String;)[B",
+   "access": 1,
+   "offset": 2942044,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6132715,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getBytesUtf8(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([B)[B"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([B)[B",
+   "access": 1,
+   "offset": 2941968,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6144356,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L001c"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;-><init>()V"
+    },
+    {
+     "label": "L000b",
+     "op": "array-length",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      2,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      2,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->decode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L0016",
+     "op": "new-array",
+     "registers": [
+      1,
+      4
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1,
+      2,
+      4,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->readResults([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)I"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 1,
+   "offset": 2942596,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6144385,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([B)[B"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/org/apache/commons/codec/EncoderException;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Parameter supplied to Base-N encode is not a byte[]"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/EncoderException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([B)[B",
+   "access": 1,
+   "offset": 2942080,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6144366,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L001f"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;-><init>()V"
+    },
+    {
+     "label": "L000b",
+     "op": "array-length",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      2,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      2,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L0016",
+     "op": "iget",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0018",
+     "op": "sub-int/2addr",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "new-array",
+     "registers": [
+      1,
+      4
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1,
+      2,
+      4,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->readResults([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)I"
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encodeAsString([B)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2942652,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([B)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->newStringUtf8([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encodeToString([B)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2942688,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encode([B)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->newStringUtf8([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->ensureBufferSize(ILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)[B",
+   "access": 1,
+   "offset": 2942160,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0004",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L0007",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->resizeBuffer(Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)[B"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getDefaultBufferSize()I",
+   "access": 1,
+   "offset": 2942400,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 8192
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getEncodedLength([B)J",
+   "access": 1,
+   "offset": 2942796,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      7,
+      7
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->unencodedBlockSize:I"
+    },
+    {
+     "label": "L0003",
+     "op": "add-int/2addr",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0006",
+     "op": "div-int/2addr",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "iget",
+     "registers": [
+      7,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->encodedBlockSize:I"
+    },
+    {
+     "label": "L000a",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "mul-long",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "iget",
+     "registers": [
+      7,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->lineLength:I"
+    },
+    {
+     "label": "L000f",
+     "op": "if-lez",
+     "registers": [
+      7
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0011",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "add-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "sub-long/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      7
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget",
+     "registers": [
+      7,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->chunkSeparatorLength:I"
+    },
+    {
+     "label": "L001a",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      7
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "mul-long",
+     "registers": [
+      2,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "add-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->hasData(Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)Z",
+   "access": 1,
+   "offset": 2941760,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet(B)Z",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet(Ljava/lang/String;)Z",
+   "access": 1,
+   "offset": 2941876,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6120909,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->getBytesUtf8(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet([BZ)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet([BZ)Z",
+   "access": 1,
+   "offset": 2941792,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6144348,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      2,
+      5
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0005",
+     "op": "aget-byte",
+     "registers": [
+      2,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isInAlphabet(B)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L000f",
+     "op": "aget-byte",
+     "registers": [
+      2,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "iget-byte",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->pad:B"
+    },
+    {
+     "label": "L0013",
+     "op": "if-eq",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->isWhiteSpace(B)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0002"
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0020",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->readResults([BIILbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)I",
+   "access": 1,
+   "offset": 2942424,
+   "registers": 7,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      6
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec;->available(Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/Math;->min(II)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      3,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0015",
+     "op": "add-int/2addr",
+     "registers": [
+      3,
+      5
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "iput",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->readPos:I"
+    },
+    {
+     "label": "L0018",
+     "op": "iget",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->pos:I"
+    },
+    {
+     "label": "L001a",
+     "op": "if-lt",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001d",
+     "op": "iput-object",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->buffer:[B"
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "iget-boolean",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lbiweekly/util/org/apache/commons/codec/binary/BaseNCodec$Context;->eof:Z"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0025",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

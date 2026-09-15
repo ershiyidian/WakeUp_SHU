@@ -1,0 +1,1529 @@
+{
+ "class": "Lbiweekly/property/Version;",
+ "super": "Lbiweekly/property/ICalProperty;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/property/Version;->ICAL:Lbiweekly/util/VersionNumber;",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/property/Version;->VCAL:Lbiweekly/util/VersionNumber;",
+   "access": 25
+  },
+  {
+   "name": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/property/Version;-><clinit>()V",
+   "access": 65544,
+   "offset": 2891500,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/ICalVersion;->getVersion()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->VCAL:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/ICalVersion;->getVersion()Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->ICAL:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;-><init>(Lbiweekly/ICalVersion;)V",
+   "access": 65537,
+   "offset": 2891572,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6143217,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/ICalVersion;->getVersion()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;-><init>(Lbiweekly/property/Version;)V",
+   "access": 65537,
+   "offset": 2891612,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6143222,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/property/ICalProperty;-><init>(Lbiweekly/property/ICalProperty;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;-><init>(Lbiweekly/util/VersionNumber;Lbiweekly/util/VersionNumber;)V",
+   "access": 65538,
+   "offset": 2891652,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6143229,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/ICalProperty;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2891684,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6133882,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      2
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;-><init>(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2891712,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6143237,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0003",
+     "op": "move-object",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/util/VersionNumber;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0012"
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/util/VersionNumber;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Lbiweekly/util/VersionNumber;Lbiweekly/util/VersionNumber;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->v1_0()Lbiweekly/property/Version;",
+   "access": 9,
+   "offset": 2891060,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->v2_0()Lbiweekly/property/Version;",
+   "access": 9,
+   "offset": 2891092,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->copy()Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2891004,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/Version;->copy()Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->copy()Lbiweekly/property/Version;",
+   "access": 1,
+   "offset": 2891032,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6133764,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Lbiweekly/property/Version;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 2891172,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-super",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0010",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0016",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L0028",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L0031",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->getMaxVersion()Lbiweekly/util/VersionNumber;",
+   "access": 1,
+   "offset": 2891124,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->getMinVersion()Lbiweekly/util/VersionNumber;",
+   "access": 1,
+   "offset": 2891148,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->hashCode()I",
+   "access": 1,
+   "offset": 2891364,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->hashCode()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->hashCode()I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0018",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->hashCode()I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->isV1_0()Z",
+   "access": 1,
+   "offset": 2891292,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->VCAL:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->isV2_0()Z",
+   "access": 1,
+   "offset": 2891328,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->ICAL:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->setMaxVersion(Lbiweekly/util/VersionNumber;)V",
+   "access": 1,
+   "offset": 2891772,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->setMinVersion(Lbiweekly/util/VersionNumber;)V",
+   "access": 1,
+   "offset": 2891796,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->toICalVersion()Lbiweekly/ICalVersion;",
+   "access": 1,
+   "offset": 2890948,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/VersionNumber;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/ICalVersion;->get(Ljava/lang/String;)Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->toStringValues()Ljava/util/Map;",
+   "access": 1,
+   "offset": 2891444,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/LinkedHashMap;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/LinkedHashMap;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "minVersion"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/property/Version;->minVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "maxVersion"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/Version;->validate(Ljava/util/List;Lbiweekly/ICalVersion;Ljava/util/List;)V",
+   "access": 1,
+   "offset": 2891820,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/property/Version;->maxVersion:Lbiweekly/util/VersionNumber;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/ValidationWarning;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 35
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      3
+     ],
+     "method": "Lbiweekly/ValidationWarning;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

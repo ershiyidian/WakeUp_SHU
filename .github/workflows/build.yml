@@ -1,0 +1,23 @@
+name: Build source project
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: |
+          python3 --version
+          javac -version
+          python3 -m pip install -r requirements.txt
+      - name: Build and test
+        run: python3 build.py --test
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WakeUp-SHU-source-build
+          path: |
+            dist/WakeUp_SHU-unsigned.apk
+            build/tests/report.json

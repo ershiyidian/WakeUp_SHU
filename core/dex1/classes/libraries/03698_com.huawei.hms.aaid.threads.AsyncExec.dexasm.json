@@ -1,0 +1,265 @@
+{
+ "class": "Lcom/huawei/hms/aaid/threads/AsyncExec;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/aaid/threads/AsyncExec;->a:Ljava/util/concurrent/ThreadPoolExecutor;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/aaid/threads/AsyncExec;-><clinit>()V",
+   "access": 65544,
+   "offset": 3489816,
+   "registers": 9,
+   "inputs": 0,
+   "outputs": 9,
+   "debug_offset": 6109927,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ThreadPoolExecutor;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/util/concurrent/LinkedBlockingQueue;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lcom/huawei/hms/opendevice/c;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "SeqIO"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Lcom/huawei/hms/opendevice/c;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/util/concurrent/ThreadPoolExecutor$AbortPolicy;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/concurrent/ThreadPoolExecutor$AbortPolicy;-><init>()V"
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0016",
+     "op": "const-wide/16",
+     "registers": [
+      3
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "method": "Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/aaid/threads/AsyncExec;->a:Ljava/util/concurrent/ThreadPoolExecutor;"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/aaid/threads/AsyncExec;-><init>()V",
+   "access": 65537,
+   "offset": 3489896,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/aaid/threads/AsyncExec;->submitSeqIO(Ljava/lang/Runnable;)V",
+   "access": 9,
+   "offset": 3489920,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/aaid/threads/AsyncExec;->a:Ljava/util/concurrent/ThreadPoolExecutor;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/opendevice/o;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/opendevice/o;-><init>(Ljava/lang/Runnable;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

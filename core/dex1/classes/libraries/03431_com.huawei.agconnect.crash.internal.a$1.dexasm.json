@@ -1,0 +1,230 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/a$1;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/a$1;->a:Lcom/huawei/agconnect/crash/internal/a;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/a$1;-><init>(Lcom/huawei/agconnect/crash/internal/a;)V",
+   "access": 65537,
+   "offset": 3411364,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/a$1;->a:Lcom/huawei/agconnect/crash/internal/a;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/a$1;->run()V",
+   "access": 1,
+   "offset": 3411392,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0006",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/a;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/a$1;->a:Lcom/huawei/agconnect/crash/internal/a;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/a;->a(Lcom/huawei/agconnect/crash/internal/a;Ljava/lang/Thread$UncaughtExceptionHandler;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/crash/internal/a;->a()Lcom/huawei/agconnect/crash/internal/a;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V"
+    },
+    {
+     "label": "L0026",
+     "op": "return-void"
+    },
+    {
+     "label": "L0027",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "AGConnectCrashHandler"
+    },
+    {
+     "label": "L0029",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "default handler is AGC Crash Handler, ignore..."
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,1800 @@
+{
+ "class": "Lbiweekly/io/xml/XCalReader;",
+ "super": "Lbiweekly/io/StreamReader;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->readICal:Lbiweekly/ICalendar;",
+   "access": 66
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->source:Ljavax/xml/transform/Source;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->stream:Ljava/io/Closeable;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->thrown:Ljavax/xml/transform/TransformerException;",
+   "access": 66
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/io/File;)V",
+   "access": 65537,
+   "offset": 2853724,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6139725,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/BufferedInputStream;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/io/InputStream;)V",
+   "access": 65537,
+   "offset": 2853768,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6142830,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/StreamReader;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;-><init>(Lbiweekly/io/xml/XCalReader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/transform/stream/StreamSource;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljavax/xml/transform/stream/StreamSource;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->source:Ljavax/xml/transform/Source;"
+    },
+    {
+     "label": "L0027",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->stream:Ljava/io/Closeable;"
+    },
+    {
+     "label": "L0029",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/io/Reader;)V",
+   "access": 65537,
+   "offset": 2853868,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6142841,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/StreamReader;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;-><init>(Lbiweekly/io/xml/XCalReader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/transform/stream/StreamSource;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljavax/xml/transform/stream/StreamSource;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->source:Ljavax/xml/transform/Source;"
+    },
+    {
+     "label": "L0027",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->stream:Ljava/io/Closeable;"
+    },
+    {
+     "label": "L0029",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2853968,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/StringReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/io/StringReader;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;-><init>(Lorg/w3c/dom/Node;)V",
+   "access": 65537,
+   "offset": 2854004,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6142852,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/StreamReader;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;-><init>(Lbiweekly/io/xml/XCalReader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ArrayBlockingQueue;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/transform/dom/DOMSource;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->source:Ljavax/xml/transform/Source;"
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0028",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->stream:Ljava/io/Closeable;"
+    },
+    {
+     "label": "L002a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1100(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2853412,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1202(Lbiweekly/io/xml/XCalReader;Lbiweekly/ICalendar;)Lbiweekly/ICalendar;",
+   "access": 4105,
+   "offset": 2853196,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110327,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readICal:Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1300(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2853436,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1400(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853220,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1500(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853244,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1600(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2853460,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1700(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853268,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1800(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853292,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$1900(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853316,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2000(Lbiweekly/io/xml/XCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2853556,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2100(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853340,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2200(Lbiweekly/io/xml/XCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2853580,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2300(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853364,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2400(Lbiweekly/io/xml/XCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2853604,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2500(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2853484,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2600(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2853388,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$2700(Lbiweekly/io/xml/XCalReader;)Ljava/util/concurrent/BlockingQueue;",
+   "access": 4105,
+   "offset": 2853628,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$500(Lbiweekly/io/xml/XCalReader;)Ljavax/xml/transform/Source;",
+   "access": 4105,
+   "offset": 2853676,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->source:Ljavax/xml/transform/Source;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$600(Lbiweekly/io/xml/XCalReader;)Lbiweekly/io/xml/XCalReader$ReadThread;",
+   "access": 4105,
+   "offset": 2853508,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$702(Lbiweekly/io/xml/XCalReader;Ljavax/xml/transform/TransformerException;)Ljavax/xml/transform/TransformerException;",
+   "access": 4105,
+   "offset": 2853700,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110327,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thrown:Ljavax/xml/transform/TransformerException;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$800(Lbiweekly/io/xml/XCalReader;)Ljava/lang/Object;",
+   "access": 4105,
+   "offset": 2853532,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->access$900(Lbiweekly/io/xml/XCalReader;)Ljava/util/concurrent/BlockingQueue;",
+   "access": 4105,
+   "offset": 2853652,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->_readNext()Lbiweekly/ICalendar;",
+   "access": 1,
+   "offset": 2853000,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L004c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readICal:Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->clear()V"
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/ParseContext;-><init>()V"
+    },
+    {
+     "label": "L000d",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thrown:Ljavax/xml/transform/TransformerException;"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;->access$000(Lbiweekly/io/xml/XCalReader$ReadThread;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Thread;->start()V"
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;->access$100(Lbiweekly/io/xml/XCalReader$ReadThread;)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L004b"
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;->access$200(Lbiweekly/io/xml/XCalReader$ReadThread;)Z"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L004b"
+    },
+    {
+     "label": "L0030",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->threadBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0032",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->lock:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readerBlock:Ljava/util/concurrent/BlockingQueue;"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thrown:Ljavax/xml/transform/TransformerException;"
+    },
+    {
+     "label": "L003e",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L0040",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->readICal:Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/IOException;"
+    },
+    {
+     "label": "L0045",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thrown:Ljavax/xml/transform/TransformerException;"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L004a",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0030",
+     "end": "L0037",
+     "handler": "H1"
+    },
+    {
+     "start": "L0037",
+     "end": "L003c",
+     "handler": "H5"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/InterruptedException;",
+       "target": "L004b"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/lang/InterruptedException;",
+       "target": "L004b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalReader;->close()V",
+   "access": 1,
+   "offset": 2854108,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Thread;->isAlive()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalReader$ReadThread;->access$202(Lbiweekly/io/xml/XCalReader$ReadThread;Z)Z"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->thread:Lbiweekly/io/xml/XCalReader$ReadThread;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Thread;->interrupt()V"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalReader;->stream:Ljava/io/Closeable;"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/Closeable;->close()V"
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

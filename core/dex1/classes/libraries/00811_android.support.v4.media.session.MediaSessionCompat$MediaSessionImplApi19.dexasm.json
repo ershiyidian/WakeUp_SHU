@@ -1,0 +1,578 @@
+{
+ "class": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;",
+ "super": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;",
+ "access": 0,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V",
+   "access": 65537,
+   "offset": 2012608,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;->buildRccMetadata(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;",
+   "access": 1,
+   "offset": 2012376,
+   "registers": 10,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L0052",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      8,
+      9
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->buildRccMetadata(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      8
+     ],
+     "field": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mState:Landroid/support/v4/media/session/PlaybackStateCompat;"
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "move-wide",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "goto",
+     "target": "L0010"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/support/v4/media/session/PlaybackStateCompat;->getActions()J"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const-wide/16",
+     "registers": [
+      6
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0012",
+     "op": "and-long/2addr",
+     "registers": [
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const",
+     "registers": [
+      1
+     ],
+     "literal": 268435457
+    },
+    {
+     "label": "L0016",
+     "op": "cmp-long",
+     "registers": [
+      6,
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/MediaMetadataEditor;->addEditableKey(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L0051"
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.media.metadata.YEAR"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0028",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      4,
+      5
+     ],
+     "method": "Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;"
+    },
+    {
+     "label": "L0031",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.media.metadata.RATING"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0039",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 101
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      2
+     ],
+     "method": "Landroid/media/MediaMetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;"
+    },
+    {
+     "label": "L0042",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.media.metadata.USER_RATING"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0051"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      9
+     ],
+     "method": "Landroid/media/MediaMetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;"
+    },
+    {
+     "label": "L0051",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;->getRccTransportControlFlagsFromActions(J)I",
+   "access": 1,
+   "offset": 2012556,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      4,
+      5,
+      6
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;->getRccTransportControlFlagsFromActions(J)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0006",
+     "op": "and-long/2addr",
+     "registers": [
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "cmp-long",
+     "registers": [
+      3,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000d",
+     "op": "or-int/lit16",
+     "registers": [
+      5,
+      0
+     ],
+     "literal": 512
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;->setCallback(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/os/Handler;)V",
+   "access": 1,
+   "offset": 2012632,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;->setCallback(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/media/RemoteControlClient;->setMetadataUpdateListener(Landroid/media/RemoteControlClient$OnMetadataUpdateListener;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19$1;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19$1;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi19;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRcc:Landroid/media/RemoteControlClient;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/media/RemoteControlClient;->setMetadataUpdateListener(Landroid/media/RemoteControlClient$OnMetadataUpdateListener;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

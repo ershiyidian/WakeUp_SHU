@@ -1,0 +1,709 @@
+{
+ "class": "Landroidx/appcompat/widget/o00OOOOo;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Landroidx/appcompat/widget/o00OOOOo;->OooO0oO:Landroidx/appcompat/widget/SearchView;",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroidx/appcompat/widget/o00OOOOo;-><init>(Landroidx/appcompat/widget/SearchView;)V",
+   "access": 65537,
+   "offset": 2169308,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o00OOOOo;->OooO0oO:Landroidx/appcompat/widget/SearchView;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroidx/appcompat/widget/o00OOOOo;->onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z",
+   "access": 17,
+   "offset": 2168972,
+   "registers": 11,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6111497,
+   "end": "L00a0",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Landroidx/appcompat/widget/o00OOOOo;->OooO0oO:Landroidx/appcompat/widget/SearchView;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/SearchView;->Oooooo:Landroid/app/SearchableInfo;"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0007",
+     "op": "goto/16",
+     "target": "L009f"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/SearchView;->OooOo0O:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 66
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L006c"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->getListSelection()I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0019",
+     "op": "if-eq",
+     "registers": [
+      3,
+      6
+     ],
+     "target": "L006c"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      8,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/SearchView;->Oooooo:Landroid/app/SearchableInfo;"
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L001f",
+     "op": "goto/16",
+     "target": "L009f"
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      8,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/SearchView;->OoooOOO:LOoooO0O/o00O00O;"
+    },
+    {
+     "label": "L0023",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0025",
+     "op": "goto/16",
+     "target": "L009f"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Landroid/view/KeyEvent;->getAction()I"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Landroid/view/KeyEvent;->hasNoModifiers()Z"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L0033",
+     "op": "if-eq",
+     "registers": [
+      9,
+      4
+     ],
+     "target": "L0064"
+    },
+    {
+     "label": "L0035",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 84
+    },
+    {
+     "label": "L0037",
+     "op": "if-eq",
+     "registers": [
+      9,
+      8
+     ],
+     "target": "L0064"
+    },
+    {
+     "label": "L0039",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 61
+    },
+    {
+     "label": "L003b",
+     "op": "if-ne",
+     "registers": [
+      9,
+      8
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003d",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L003e",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 21
+    },
+    {
+     "label": "L0040",
+     "op": "if-eq",
+     "registers": [
+      9,
+      8
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L0042",
+     "op": "const/16",
+     "registers": [
+      10
+     ],
+     "literal": 22
+    },
+    {
+     "label": "L0044",
+     "op": "if-ne",
+     "registers": [
+      9,
+      10
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L0046",
+     "op": "goto",
+     "target": "L004f"
+    },
+    {
+     "label": "L0047",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 19
+    },
+    {
+     "label": "L0049",
+     "op": "if-ne",
+     "registers": [
+      9,
+      8
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->getListSelection()I"
+    },
+    {
+     "label": "L004e",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "if-ne",
+     "registers": [
+      9,
+      8
+     ],
+     "target": "L0053"
+    },
+    {
+     "label": "L0051",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0052",
+     "op": "goto",
+     "target": "L0057"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/TextView;->length()I"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8
+     ],
+     "method": "Landroid/widget/EditText;->setSelection(I)V"
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->setListSelection(I)V"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->clearListSelection()V"
+    },
+    {
+     "label": "L0060",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->OooO00o()V"
+    },
+    {
+     "label": "L0063",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/AutoCompleteTextView;->getListSelection()I"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Landroidx/appcompat/widget/SearchView;->OooOOOo(I)V"
+    },
+    {
+     "label": "L006b",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/EditText;->getText()Landroid/text/Editable;"
+    },
+    {
+     "label": "L006f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/text/TextUtils;->getTrimmedLength(Ljava/lang/CharSequence;)I"
+    },
+    {
+     "label": "L0073",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0074",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0077"
+    },
+    {
+     "label": "L0076",
+     "op": "goto",
+     "target": "L009f"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Landroid/view/KeyEvent;->hasNoModifiers()Z"
+    },
+    {
+     "label": "L007a",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L007d",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Landroid/view/KeyEvent;->getAction()I"
+    },
+    {
+     "label": "L0080",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0081",
+     "op": "if-ne",
+     "registers": [
+      10,
+      5
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L0083",
+     "op": "if-ne",
+     "registers": [
+      9,
+      4
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L0085",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Landroid/view/View;->cancelLongPress()V"
+    },
+    {
+     "label": "L0088",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/widget/EditText;->getText()Landroid/text/Editable;"
+    },
+    {
+     "label": "L008b",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L008f",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0090",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0091",
+     "op": "const-string",
+     "registers": [
+      10
+     ],
+     "string": "android.intent.action.SEARCH"
+    },
+    {
+     "label": "L0093",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      10,
+      9,
+      9,
+      8
+     ],
+     "method": "Landroidx/appcompat/widget/SearchView;->OooOO0o(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0096",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0097",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/view/View;->getContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L009a",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L009b",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      8
+     ],
+     "method": "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L009e",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L009f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

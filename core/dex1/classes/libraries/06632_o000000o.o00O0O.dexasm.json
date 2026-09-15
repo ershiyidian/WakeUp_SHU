@@ -1,0 +1,418 @@
+{
+ "class": "Lo000000o/o00O0O;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lo000000o/o00O0O;->OooO00o:I",
+   "access": 4121
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo000000o/o00O0O;-><clinit>()V",
+   "access": 65544,
+   "offset": 5069316,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "NetworkStateTracker"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/work/o0OO00O;->OooO0OO(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "tagWithPrefix(\"NetworkStateTracker\")"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0Oo(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000000o/o00O0O;->OooO00o(Landroid/net/ConnectivityManager;)Landroidx/work/impl/constraints/OooOO0;",
+   "access": 25,
+   "offset": 5069132,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L004b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "<this>"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0o0(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/net/NetworkInfo;->isConnected()Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "sget",
+     "registers": [
+      4
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L001a",
+     "op": "if-ge",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "LOooo/o00Ooo;->OooO0OO(Landroid/net/ConnectivityManager;)Landroid/net/Network;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      4
+     ],
+     "method": "Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0028",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/net/NetworkCapabilities;->hasCapability(I)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "method": "Landroidx/work/o0OO00O;->OooO0O0()Landroidx/work/o0OO00O;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L001c"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/net/NetworkInfo;->isRoaming()Z"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L0045"
+    },
+    {
+     "label": "L0044",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0045",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroidx/work/impl/constraints/OooOO0;"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4,
+      6,
+      1
+     ],
+     "method": "Landroidx/work/impl/constraints/OooOO0;-><init>(ZZZZ)V"
+    },
+    {
+     "label": "L004a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L001e",
+     "end": "L002e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/SecurityException;",
+       "target": "L002f"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

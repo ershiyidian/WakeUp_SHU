@@ -1,0 +1,593 @@
+{
+ "class": "Lcom/huawei/agconnect/common/api/RequestThrottle;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->INSTANCE:Lcom/huawei/agconnect/common/api/RequestThrottle;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->LOCK:Ljava/lang/Object;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->TAG:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->throttleMap:Ljava/util/Map;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;-><clinit>()V",
+   "access": 65544,
+   "offset": 3394024,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/common/api/RequestThrottle;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle;-><init>()V"
+    },
+    {
+     "label": "L000c",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->INSTANCE:Lcom/huawei/agconnect/common/api/RequestThrottle;"
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;-><init>()V",
+   "access": 65538,
+   "offset": 3394072,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->throttleMap:Ljava/util/Map;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->getInstance()Lcom/huawei/agconnect/common/api/RequestThrottle;",
+   "access": 9,
+   "offset": 3393768,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->INSTANCE:Lcom/huawei/agconnect/common/api/RequestThrottle;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->get(Lcom/huawei/agconnect/AGConnectInstance;Ljava/lang/String;)Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;",
+   "access": 1,
+   "offset": 3393792,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0057",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L0006",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/AGConnectInstance;->getInstance()Lcom/huawei/agconnect/AGConnectInstance;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000e",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectInstance;->getOptions()Lcom/huawei/agconnect/AGConnectOptions;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectOptions;->getIdentifier()Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "_"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "iget-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->throttleMap:Ljava/util/Map;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0035",
+     "op": "iget-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->throttleMap:Ljava/util/Map;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;"
+    },
+    {
+     "label": "L003d",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "goto",
+     "target": "L004d"
+    },
+    {
+     "label": "L0041",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0046",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle;->throttleMap:Ljava/util/Map;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3,
+      4
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L004b",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/RuntimeException;"
+    },
+    {
+     "label": "L0051",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "throttle name can not be empty"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0056",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000f",
+     "end": "L004e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L003f"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle;->get(Ljava/lang/String;)Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;",
+   "access": 1,
+   "offset": 3393996,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110395,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle;->get(Lcom/huawei/agconnect/AGConnectInstance;Ljava/lang/String;)Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

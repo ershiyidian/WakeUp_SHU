@@ -1,0 +1,1238 @@
+{
+ "class": "Lbiweekly/io/scribe/property/DaylightScribe;",
+ "super": "Lbiweekly/io/scribe/property/ICalPropertyScribe;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;-><init>()V",
+   "access": 65537,
+   "offset": 2804896,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "DAYLIGHT"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/Daylight;",
+   "access": 1,
+   "offset": 2804264,
+   "registers": 12,
+   "inputs": 5,
+   "outputs": 7,
+   "debug_offset": 6141360,
+   "end": "L0075",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      10
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      11
+     ],
+     "type": "Lo000O0o0/OooOO0;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      11,
+      8
+     ],
+     "method": "Lo000O0o0/OooOO0;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "move",
+     "registers": [
+      1,
+      8
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->parse(Ljava/lang/String;)Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "move-object",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L0021",
+     "op": "new-instance",
+     "registers": [
+      11
+     ],
+     "type": "Lbiweekly/io/CannotParseException;"
+    },
+    {
+     "label": "L0023",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 33
+    },
+    {
+     "label": "L0025",
+     "op": "new-array",
+     "registers": [
+      9,
+      9
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0027",
+     "op": "aput-object",
+     "registers": [
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-direct",
+     "registers": [
+      11,
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/CannotParseException;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "throw",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "move-object",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L004a"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Ljava/lang/String;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;->parse()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "move-object",
+     "registers": [
+      3,
+      8
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "goto",
+     "target": "L004b"
+    },
+    {
+     "label": "L003e",
+     "op": "new-instance",
+     "registers": [
+      11
+     ],
+     "type": "Lbiweekly/io/CannotParseException;"
+    },
+    {
+     "label": "L0040",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 34
+    },
+    {
+     "label": "L0042",
+     "op": "new-array",
+     "registers": [
+      9,
+      9
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0044",
+     "op": "aput-object",
+     "registers": [
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-direct",
+     "registers": [
+      11,
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/CannotParseException;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0049",
+     "op": "throw",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "move-object",
+     "registers": [
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L0059"
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Ljava/lang/String;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;->parse()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "move-object",
+     "registers": [
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "goto",
+     "target": "L0067"
+    },
+    {
+     "label": "L005b",
+     "op": "new-instance",
+     "registers": [
+      11
+     ],
+     "type": "Lbiweekly/io/CannotParseException;"
+    },
+    {
+     "label": "L005d",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 35
+    },
+    {
+     "label": "L005f",
+     "op": "new-array",
+     "registers": [
+      9,
+      9
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0061",
+     "op": "aput-object",
+     "registers": [
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-direct",
+     "registers": [
+      11,
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/CannotParseException;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0066",
+     "op": "throw",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L006a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L0071",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;-><init>(ZLbiweekly/util/UtcOffset;Lbiweekly/util/ICalDate;Lbiweekly/util/ICalDate;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0074",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L001b",
+     "end": "L001f",
+     "handler": "H1"
+    },
+    {
+     "start": "L0034",
+     "end": "L003c",
+     "handler": "H5"
+    },
+    {
+     "start": "L0051",
+     "end": "L0059",
+     "handler": "H9"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L0021"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L003e"
+      }
+     ]
+    },
+    {
+     "id": "H9",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L005b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2804556,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6113143,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/DaylightScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;->_writeText(Lbiweekly/property/Daylight;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2804584,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6141382,
+   "end": "L0074",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->isDaylight()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "FALSE"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "TRUE"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->getOffset()Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0019",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001b",
+     "op": "move-object",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->getStart()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->toString(ZZ)Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "goto",
+     "target": "L003d"
+    },
+    {
+     "label": "L003c",
+     "op": "move-object",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->getEnd()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0056"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L004c",
+     "op": "goto",
+     "target": "L0056"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->toString(ZZ)Ljava/lang/String;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "goto",
+     "target": "L0057"
+    },
+    {
+     "label": "L0056",
+     "op": "move-object",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->getStandardName()Ljava/lang/String;"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0061"
+    },
+    {
+     "label": "L0060",
+     "op": "move-object",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/property/Daylight;->getDaylightName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L006b"
+    },
+    {
+     "label": "L006a",
+     "op": "goto",
+     "target": "L006c"
+    },
+    {
+     "label": "L006b",
+     "op": "move-object",
+     "registers": [
+      1,
+      6
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      2
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO0oo(Ljava/util/ArrayList;Z)Ljava/lang/String;"
+    },
+    {
+     "label": "L0072",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0073",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;->_writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 4161,
+   "offset": 2804832,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/DaylightScribe;->_writeText(Lbiweekly/property/Daylight;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/DaylightScribe;->getSupportedVersions()Ljava/util/Set;",
+   "access": 1,
+   "offset": 2804864,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/EnumSet;->of(Ljava/lang/Enum;)Ljava/util/EnumSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

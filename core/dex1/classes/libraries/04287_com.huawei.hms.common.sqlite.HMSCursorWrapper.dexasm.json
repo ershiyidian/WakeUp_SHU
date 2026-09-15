@@ -1,0 +1,561 @@
+{
+ "class": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;",
+ "super": "Landroid/database/CursorWrapper;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;-><init>(Landroid/database/Cursor;)V",
+   "access": 65537,
+   "offset": 3730624,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L005a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/database/CursorWrapper;-><init>(Landroid/database/Cursor;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L0005",
+     "op": "instance-of",
+     "registers": [
+      0,
+      5
+     ],
+     "type": "Landroid/database/CursorWrapper;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " is not a subclass for CursorWrapper"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003b"
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Landroid/database/CursorWrapper;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/database/CursorWrapper;->getWrappedCursor()Landroid/database/Cursor;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0013",
+     "op": "instance-of",
+     "registers": [
+      0,
+      5
+     ],
+     "type": "Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0017",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0019",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L001e",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getWrappedCursor:"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "getWrappedCursor cannot be null"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L003d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "cursor:"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0051",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0054",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "cursor cannot be null"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0059",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->fillWindow(ILandroid/database/CursorWindow;)V",
+   "access": 1,
+   "offset": 3730820,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/database/AbstractCursor;->fillWindow(ILandroid/database/CursorWindow;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->getWindow()Landroid/database/CursorWindow;",
+   "access": 1,
+   "offset": 3730560,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/database/AbstractWindowedCursor;->getWindow()Landroid/database/CursorWindow;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->getWrappedCursor()Landroid/database/Cursor;",
+   "access": 1,
+   "offset": 3730536,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->onMove(II)Z",
+   "access": 1,
+   "offset": 3730592,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/database/AbstractCursor;->onMove(II)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->setWindow(Landroid/database/CursorWindow;)V",
+   "access": 1,
+   "offset": 3730848,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/sqlite/HMSCursorWrapper;->a:Landroid/database/AbstractWindowedCursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/database/AbstractWindowedCursor;->setWindow(Landroid/database/CursorWindow;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

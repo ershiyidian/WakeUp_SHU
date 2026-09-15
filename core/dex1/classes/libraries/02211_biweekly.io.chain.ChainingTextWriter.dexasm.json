@@ -1,0 +1,1128 @@
+{
+ "class": "Lbiweekly/io/chain/ChainingTextWriter;",
+ "super": "Lbiweekly/io/chain/ChainingWriter;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->caretEncoding:Z",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->foldLines:Z",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->version:Lbiweekly/ICalVersion;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;-><init>(Ljava/util/Collection;)V",
+   "access": 65537,
+   "offset": 2778348,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->caretEncoding:Z"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->foldLines:Z"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->getICalWriterConstructorVersion()Lbiweekly/ICalVersion;",
+   "access": 2,
+   "offset": 2777992,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go(Lbiweekly/io/text/ICalWriter;)V",
+   "access": 2,
+   "offset": 2778384,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6140543,
+   "end": "L0049",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->caretEncoding:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->setCaretEncodingEnabled(Z)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->foldLines:Z"
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->getVObjectWriter()Lo000O0o0/OooOo00;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lo000O0o0/OooOo00;->OooO0oO:Lo000O0o0/OooO0o;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lo000O0o0/OooO0o;->OooO0oo:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->defaultTimeZone:Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->setGlobalTimezone(Lbiweekly/io/TimezoneAssignment;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->icals:Ljava/util/Collection;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collection;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0032",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0034",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/ICalendar;->getVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003c",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->setTargetVersion(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->write(Lbiweekly/ICalendar;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->flush()V"
+    },
+    {
+     "label": "L0047",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0048",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->caretEncoding(Z)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778024,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->caretEncoding:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->foldLines(Z)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778048,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->foldLines:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2778276,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6140456,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/StringWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/StringWriter;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/Writer;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/StringWriter;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/RuntimeException;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L0008",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/File;)V",
+   "access": 1,
+   "offset": 2778548,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6140565,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/File;Z)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/File;Z)V",
+   "access": 1,
+   "offset": 2778576,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6140570,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/text/ICalWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->getICalWriterConstructorVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4,
+      1
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;-><init>(Ljava/io/File;ZLbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->go(Lbiweekly/io/text/ICalWriter;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->close()V"
+    },
+    {
+     "label": "L000f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;->close()V"
+    },
+    {
+     "label": "L0014",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0009",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0010"
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/OutputStream;)V",
+   "access": 1,
+   "offset": 2778648,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6132676,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/text/ICalWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->getICalWriterConstructorVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;-><init>(Ljava/io/OutputStream;Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->go(Lbiweekly/io/text/ICalWriter;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->go(Ljava/io/Writer;)V",
+   "access": 1,
+   "offset": 2778692,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6140579,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/text/ICalWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->getICalWriterConstructorVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/text/ICalWriter;-><init>(Ljava/io/Writer;Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->go(Lbiweekly/io/text/ICalWriter;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778072,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778104,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2778192,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2778220,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778136,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2778248,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingTextWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingTextWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingTextWriter;->version(Lbiweekly/ICalVersion;)Lbiweekly/io/chain/ChainingTextWriter;",
+   "access": 1,
+   "offset": 2778168,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/chain/ChainingTextWriter;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

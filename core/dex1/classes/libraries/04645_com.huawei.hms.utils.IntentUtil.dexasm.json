@@ -1,0 +1,303 @@
+{
+ "class": "Lcom/huawei/hms/utils/IntentUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/IntentUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3888948,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IntentUtil;->modifyIntentBehaviorsSafe(Landroid/content/Intent;)Landroid/content/Intent;",
+   "access": 9,
+   "offset": 3888804,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.intent.action.SEND"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.intent.action.SEND_MULTIPLE"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.IMAGE_CAPTURE"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.IMAGE_CAPTURE_SECURE"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "android.media.action.VIDEO_CAPTURE"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0030",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.intent.action.VIEW"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;->getFlags()I"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "and-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": -196
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

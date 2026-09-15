@@ -1,0 +1,471 @@
+{
+ "class": "Lcom/huawei/hms/framework/network/grs/h/e;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/h/e;->a(Ljava/lang/Long;)Z",
+   "access": 9,
+   "offset": 3802176,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Method isTimeExpire input param expireTime is null."
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->v(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "sub-long/2addr",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "cmp-long",
+     "registers": [
+      5,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-ltz",
+     "registers": [
+      5
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L001a",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "isSpExpire false."
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->i(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "isSpExpire true."
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->i(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "goto",
+     "target": "L0032"
+    },
+    {
+     "label": "L002b",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "isSpExpire spValue NumberFormatException."
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->v(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000b",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L002b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/h/e;->a(Ljava/lang/Long;J)Z",
+   "access": 9,
+   "offset": 3802312,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110321,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "Method isTimeWillExpire input param expireTime is null."
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->v(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "add-long/2addr",
+     "registers": [
+      1,
+      6
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "sub-long/2addr",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-wide/16",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      3,
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-ltz",
+     "registers": [
+      7
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L001b",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "isSpExpire false."
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->v(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0023",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/h/e;->a:Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "isSpExpire spValue NumberFormatException."
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->v(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000b",
+     "end": "L0022",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0024"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

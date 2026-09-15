@@ -1,0 +1,258 @@
+{
+ "class": "Lcom/huawei/hms/support/api/core/ConnectService$c;",
+ "super": "Lcom/huawei/hms/support/api/PendingResultImpl;",
+ "access": 0,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/support/api/core/ConnectService$c;-><init>(Lcom/huawei/hms/support/api/client/ApiClient;Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)V",
+   "access": 65537,
+   "offset": 3858724,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/api/PendingResultImpl;-><init>(Lcom/huawei/hms/support/api/client/ApiClient;Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/api/core/ConnectService$c;->a(Lcom/huawei/hms/support/api/entity/core/JosGetNoticeResp;)Lcom/huawei/hms/support/api/ResolveResult;",
+   "access": 1,
+   "offset": 3858588,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "connectservice"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "JosNoticeResp is null"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "josNoticeResp status code :"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/entity/core/JosBaseResp;->getStatusCode()I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/support/api/ResolveResult;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/ResolveResult;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/huawei/hms/support/api/client/Status;->SUCCESS:Lcom/huawei/hms/support/api/client/Status;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/api/client/Result;->setStatus(Lcom/huawei/hms/support/api/client/Status;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/api/core/ConnectService$c;->onComplete(Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/support/api/client/Result;",
+   "access": 4161,
+   "offset": 3858692,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/support/api/entity/core/JosGetNoticeResp;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/support/api/core/ConnectService$c;->a(Lcom/huawei/hms/support/api/entity/core/JosGetNoticeResp;)Lcom/huawei/hms/support/api/ResolveResult;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

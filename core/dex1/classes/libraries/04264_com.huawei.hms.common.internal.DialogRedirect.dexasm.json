@@ -1,0 +1,210 @@
+{
+ "class": "Lcom/huawei/hms/common/internal/DialogRedirect;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirect;-><init>()V",
+   "access": 65537,
+   "offset": 3710972,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirect;->getInstance(Landroid/app/Activity;Landroid/content/Intent;I)Lcom/huawei/hms/common/internal/DialogRedirect;",
+   "access": 9,
+   "offset": 3710944,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;-><init>(Landroid/content/Intent;Landroid/app/Activity;I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirect;->onClick(Landroid/content/DialogInterface;I)V",
+   "access": 1,
+   "offset": 3710996,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/DialogRedirect;->redirect()V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "DialogRedirect"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Failed to start resolution intent"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/DialogInterface;->dismiss()V"
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    },
+    {
+     "label": "L0013",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/DialogInterface;->dismiss()V"
+    },
+    {
+     "label": "L0019",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0003",
+     "handler": "H1"
+    },
+    {
+     "start": "L0006",
+     "end": "L000d",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0006"
+    },
+    {
+     "id": "H3",
+     "catches": [],
+     "all": "L0013"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirect;->redirect()V",
+   "access": 1025
+  }
+ ]
+}

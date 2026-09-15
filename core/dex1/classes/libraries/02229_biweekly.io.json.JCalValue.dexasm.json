@@ -1,0 +1,3569 @@
+{
+ "class": "Lbiweekly/io/json/JCalValue;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalValue;-><init>(Ljava/util/List;)V",
+   "access": 65537,
+   "offset": 2788940,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6120945,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;-><init>([Lbiweekly/io/json/JsonValue;)V",
+   "access": 65665,
+   "offset": 2788904,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6132537,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->multi(Ljava/util/List;)Lbiweekly/io/json/JCalValue;",
+   "access": 9,
+   "offset": 2787068,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6140717,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->multi([Ljava/lang/Object;)Lbiweekly/io/json/JCalValue;",
+   "access": 137,
+   "offset": 2787032,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->multi(Ljava/util/List;)Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->object(Lbiweekly/util/ListMultimap;)Lbiweekly/io/json/JCalValue;",
+   "access": 9,
+   "offset": 2787160,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L006c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/LinkedHashMap;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/LinkedHashMap;-><init>()V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "if-ne",
+     "registers": [
+      5,
+      1
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0029",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L0059"
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0053"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0052",
+     "op": "goto",
+     "target": "L0040"
+    },
+    {
+     "label": "L0053",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0058",
+     "op": "move-object",
+     "registers": [
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      4,
+      5
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L005c",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L005d",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L005f",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0064",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0066",
+     "op": "aput-object",
+     "registers": [
+      3,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;-><init>([Lbiweekly/io/json/JsonValue;)V"
+    },
+    {
+     "label": "L006b",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->single(Ljava/lang/Object;)Lbiweekly/io/json/JCalValue;",
+   "access": 9,
+   "offset": 2787392,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0008",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "aput-object",
+     "registers": [
+      1,
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;-><init>([Lbiweekly/io/json/JsonValue;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->structured(Ljava/util/List;)Lbiweekly/io/json/JCalValue;",
+   "access": 9,
+   "offset": 2787528,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6140734,
+   "end": "L007e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L006f"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0021",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002b",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-ne",
+     "registers": [
+      4,
+      1
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0039"
+    },
+    {
+     "label": "L0038",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L0039",
+     "op": "move-object",
+     "registers": [
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0042",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L0043",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L004f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0053",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0066"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0059",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L005c",
+     "op": "move-object",
+     "registers": [
+      6,
+      5
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0065",
+     "op": "goto",
+     "target": "L0050"
+    },
+    {
+     "label": "L0066",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L006e",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L006f",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0071",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0076",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0078",
+     "op": "aput-object",
+     "registers": [
+      3,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;-><init>([Lbiweekly/io/json/JsonValue;)V"
+    },
+    {
+     "label": "L007d",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->structured([Ljava/lang/Object;)Lbiweekly/io/json/JCalValue;",
+   "access": 137,
+   "offset": 2787444,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6140725,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0006",
+     "op": "array-length",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L000a",
+     "op": "aget-object",
+     "registers": [
+      3,
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "instance-of",
+     "registers": [
+      4,
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0017"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->structured(Ljava/util/List;)Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->asMulti()Ljava/util/List;",
+   "access": 1,
+   "offset": 2788256,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0016",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L002e",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L001c"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0041",
+     "op": "goto",
+     "target": "L001c"
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->asObject()Lbiweekly/util/ListMultimap;",
+   "access": 1,
+   "offset": 2787796,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6113151,
+   "end": "L0091",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/ListMultimap;-><init>(I)V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getObject()Ljava/util/Map;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/ListMultimap;-><init>(I)V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/ListMultimap;-><init>()V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Map;->entrySet()Ljava/util/Set;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Set;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0090"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": ""
+    },
+    {
+     "label": "L004e",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      5
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0053",
+     "op": "goto",
+     "target": "L0030"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0057",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0062"
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0061",
+     "op": "goto",
+     "target": "L0030"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L006f",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0075",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0078",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L007b",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L007e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      5
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0081",
+     "op": "goto",
+     "target": "L006c"
+    },
+    {
+     "label": "L0082",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0085",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0086",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L006c"
+    },
+    {
+     "label": "L0088",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L008b",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L008f",
+     "op": "goto",
+     "target": "L006c"
+    },
+    {
+     "label": "L0090",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->asSingle()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2788104,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->asStructured()Ljava/util/List;",
+   "access": 1,
+   "offset": 2788408,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6113151,
+   "end": "L00e3",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      8
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      8
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L00af"
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L00ae"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0040"
+    },
+    {
+     "label": "L003a",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L003f",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/String;->isEmpty()Z"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0053"
+    },
+    {
+     "label": "L0050",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L0052",
+     "op": "goto",
+     "target": "L0057"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L005a",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0061",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0066",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L006d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L006e",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0071",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0072",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0094"
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0077",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L007d",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L007e",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L0086"
+    },
+    {
+     "label": "L0080",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0082",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0085",
+     "op": "goto",
+     "target": "L006e"
+    },
+    {
+     "label": "L0086",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0089",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L006e"
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L008f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0093",
+     "op": "goto",
+     "target": "L006e"
+    },
+    {
+     "label": "L0094",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0097",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0098",
+     "op": "if-ne",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L00a9"
+    },
+    {
+     "label": "L009a",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L009d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L009e",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L00a0",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/String;->isEmpty()Z"
+    },
+    {
+     "label": "L00a3",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00a4",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L00a9"
+    },
+    {
+     "label": "L00a6",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->clear()V"
+    },
+    {
+     "label": "L00a9",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00ac",
+     "op": "goto/16",
+     "target": "L0028"
+    },
+    {
+     "label": "L00ae",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00af",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L00b2",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00b3",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00cf"
+    },
+    {
+     "label": "L00b5",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L00b7",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L00ba",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00bd",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00be",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/String;->isEmpty()Z"
+    },
+    {
+     "label": "L00c1",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00c2",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L00c7"
+    },
+    {
+     "label": "L00c4",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L00c6",
+     "op": "goto",
+     "target": "L00cb"
+    },
+    {
+     "label": "L00c7",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L00ca",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00cb",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00ce",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00cf",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->isNull()Z"
+    },
+    {
+     "label": "L00d2",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00d3",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00e0"
+    },
+    {
+     "label": "L00d5",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L00d7",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L00da",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L00dc",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00df",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00e0",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L00e2",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalValue;->getValues()Ljava/util/List;",
+   "access": 1,
+   "offset": 2788880,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalValue;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

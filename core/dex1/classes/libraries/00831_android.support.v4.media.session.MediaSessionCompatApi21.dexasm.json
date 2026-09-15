@@ -1,0 +1,1179 @@
+{
+ "class": "Landroid/support/v4/media/session/MediaSessionCompatApi21;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->TAG:Ljava/lang/String;",
+   "access": 24
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;-><init>()V",
+   "access": 65538,
+   "offset": 2025680,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->createCallback(Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 2025536,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->createSession(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 2025564,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->getSessionToken(Ljava/lang/Object;)Landroid/os/Parcelable;",
+   "access": 9,
+   "offset": 2025388,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->hasCallback(Ljava/lang/Object;)Z",
+   "access": 9,
+   "offset": 2025420,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "mCallback"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0015",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NoSuchFieldException;",
+       "target": "L0018"
+      },
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0018"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->isActive(Ljava/lang/Object;)Z",
+   "access": 9,
+   "offset": 2025504,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/media/session/MediaSession;->isActive()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->release(Ljava/lang/Object;)V",
+   "access": 9,
+   "offset": 2025704,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/media/session/MediaSession;->release()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->sendSessionEvent(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 9,
+   "offset": 2025732,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/media/session/MediaSession;->sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setActive(Ljava/lang/Object;Z)V",
+   "access": 9,
+   "offset": 2025760,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setActive(Z)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setCallback(Ljava/lang/Object;Ljava/lang/Object;Landroid/os/Handler;)V",
+   "access": 9,
+   "offset": 2025788,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/session/MediaSession$Callback;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setExtras(Ljava/lang/Object;Landroid/os/Bundle;)V",
+   "access": 9,
+   "offset": 2025820,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setExtras(Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setFlags(Ljava/lang/Object;I)V",
+   "access": 9,
+   "offset": 2025848,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setFlags(I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setMediaButtonReceiver(Ljava/lang/Object;Landroid/app/PendingIntent;)V",
+   "access": 9,
+   "offset": 2025876,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setMediaButtonReceiver(Landroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setMetadata(Ljava/lang/Object;Ljava/lang/Object;)V",
+   "access": 9,
+   "offset": 2025904,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/MediaMetadata;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setMetadata(Landroid/media/MediaMetadata;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackState(Ljava/lang/Object;Ljava/lang/Object;)V",
+   "access": 9,
+   "offset": 2025936,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/session/PlaybackState;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setPlaybackState(Landroid/media/session/PlaybackState;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackToLocal(Ljava/lang/Object;I)V",
+   "access": 9,
+   "offset": 2025968,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/AudioAttributes$Builder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/media/AudioAttributes$Builder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;"
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/media/session/MediaSession;->setPlaybackToLocal(Landroid/media/AudioAttributes;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setPlaybackToRemote(Ljava/lang/Object;Ljava/lang/Object;)V",
+   "access": 9,
+   "offset": 2026020,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/VolumeProvider;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setPlaybackToRemote(Landroid/media/VolumeProvider;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setQueue(Ljava/lang/Object;Ljava/util/List;)V",
+   "access": 9,
+   "offset": 2026052,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/media/session/MediaSession;->setQueue(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/media/session/MediaSession$QueueItem;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L0012"
+    },
+    {
+     "label": "L0022",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/media/session/MediaSession;->setQueue(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setQueueTitle(Ljava/lang/Object;Ljava/lang/CharSequence;)V",
+   "access": 9,
+   "offset": 2026148,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setQueueTitle(Ljava/lang/CharSequence;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->setSessionActivity(Ljava/lang/Object;Landroid/app/PendingIntent;)V",
+   "access": 9,
+   "offset": 2026176,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/media/session/MediaSession;->setSessionActivity(Landroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->verifySession(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 2025592,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      1
+     ],
+     "type": "Landroid/media/session/MediaSession;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "mediaSession is not a valid MediaSession object"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaSessionCompatApi21;->verifyToken(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 2025636,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      1
+     ],
+     "type": "Landroid/media/session/MediaSession$Token;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "token is not a valid MediaSession.Token object"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

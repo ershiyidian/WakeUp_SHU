@@ -1,0 +1,1076 @@
+{
+ "class": "Lbiweekly/io/scribe/property/AudioAlarmScribe;",
+ "super": "Lbiweekly/io/scribe/property/VCalAlarmPropertyScribe;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;-><init>()V",
+   "access": 65537,
+   "offset": 2799244,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "AALARM"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/VCalAlarmPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->buildAttachment(Lbiweekly/property/AudioAlarm;)Lbiweekly/property/Attachment;",
+   "access": 10,
+   "offset": 2798840,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getType()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0007",
+     "op": "move-object",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "audio/"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/property/Attachment;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/Attachment;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getData()[B"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/property/Attachment;->setData([B)V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getContentId()Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/property/Attachment;->setContentId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0033",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getUri()Ljava/lang/String;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lbiweekly/property/Attachment;->setUri(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->_dataType(Lbiweekly/property/AudioAlarm;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 1,
+   "offset": 2798704,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6141099,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getUri()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->URL:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getData()[B"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->BINARY:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getContentId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0018",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->CONTENT_ID:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->_dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 4161,
+   "offset": 2798780,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->_dataType(Lbiweekly/property/AudioAlarm;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->action()Lbiweekly/property/Action;",
+   "access": 1,
+   "offset": 2798812,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/property/Action;->audio()Lbiweekly/property/Action;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->create(Lbiweekly/ICalDataType;Lo000O0o0/OooOO0;)Lbiweekly/property/AudioAlarm;",
+   "access": 1,
+   "offset": 2798984,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6141110,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lo000O0o0/OooOO0;->OooO00o()Ljava/lang/String;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->BINARY:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-ne",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/Base64;->decodeBase64(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->setData([B)V"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->URL:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L001a",
+     "op": "if-ne",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->setUri(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalDataType;->CONTENT_ID:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-ne",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->setContentId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->setUri(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->create(Lbiweekly/ICalDataType;Lo000O0o0/OooOO0;)Lbiweekly/property/VCalAlarmProperty;",
+   "access": 4161,
+   "offset": 2799088,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->create(Lbiweekly/ICalDataType;Lo000O0o0/OooOO0;)Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->toVAlarm(Lbiweekly/component/VAlarm;Lbiweekly/property/AudioAlarm;)V",
+   "access": 1,
+   "offset": 2799276,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6117837,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->buildAttachment(Lbiweekly/property/AudioAlarm;)Lbiweekly/property/Attachment;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/component/VAlarm;->addAttachment(Lbiweekly/property/Attachment;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->toVAlarm(Lbiweekly/component/VAlarm;Lbiweekly/property/VCalAlarmProperty;)V",
+   "access": 4161,
+   "offset": 2799312,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->toVAlarm(Lbiweekly/component/VAlarm;Lbiweekly/property/AudioAlarm;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->writeData(Lbiweekly/property/AudioAlarm;)Ljava/util/List;",
+   "access": 1,
+   "offset": 2799116,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6141125,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getUri()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getData()[B"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/org/apache/commons/codec/binary/Base64;->encodeBase64String([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/AudioAlarm;->getContentId()Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->writeData(Lbiweekly/property/VCalAlarmProperty;)Ljava/util/List;",
+   "access": 4161,
+   "offset": 2799212,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/AudioAlarm;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/AudioAlarmScribe;->writeData(Lbiweekly/property/AudioAlarm;)Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

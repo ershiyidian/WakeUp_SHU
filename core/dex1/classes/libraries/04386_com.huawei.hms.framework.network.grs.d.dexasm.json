@@ -1,0 +1,577 @@
+{
+ "class": "Lcom/huawei/hms/framework/network/grs/d;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/d;->a:Ljava/util/Map;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/d;->b:Ljava/lang/Object;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/d;-><clinit>()V",
+   "access": 65544,
+   "offset": 3782048,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ConcurrentHashMap;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V"
+    },
+    {
+     "label": "L0007",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/d;->a:Ljava/util/Map;"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L000e",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/d;->b:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/network/grs/d;->a(Lcom/huawei/hms/framework/network/grs/GrsBaseInfo;Landroid/content/Context;)Lcom/huawei/hms/framework/network/grs/c;",
+   "access": 9,
+   "offset": 3781772,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L007b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/d;->b:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/GrsBaseInfo;->uniqueCode()I"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/framework/network/grs/d;->a:Ljava/util/Map;"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/framework/network/grs/c;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0056"
+    },
+    {
+     "label": "L0024",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/framework/network/grs/c;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/c;-><init>(Lcom/huawei/hms/framework/network/grs/GrsBaseInfo;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/c;->a(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L002f",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L0079"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "GrsClientManager"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "The app_name, ser_country, reg_country and issue_country is equal, but other not."
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->i(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/framework/network/grs/c;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      6,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/c;-><init>(Landroid/content/Context;Lcom/huawei/hms/framework/network/grs/GrsBaseInfo;)V"
+    },
+    {
+     "label": "L003f",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      5,
+      3
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0055",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L0056",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "GrsClientManager"
+    },
+    {
+     "label": "L0058",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "grsClientImpl == null, and new GrsClientImpl"
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->i(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L005d",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/framework/network/grs/c;"
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      6,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/network/grs/c;-><init>(Landroid/content/Context;Lcom/huawei/hms/framework/network/grs/GrsBaseInfo;)V"
+    },
+    {
+     "label": "L0062",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L006a",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006e",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0071",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0074",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      5,
+      3
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0078",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L0079",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L007a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0031"
+    }
+   ]
+  }
+ ]
+}

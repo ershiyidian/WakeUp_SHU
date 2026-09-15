@@ -1,0 +1,2756 @@
+{
+ "class": "Lcom/huawei/hms/analytics/bg;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn:Lcom/huawei/hms/analytics/bg;",
+   "access": 10
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;-><init>(Landroid/content/Context;Ljava/lang/String;)V",
+   "access": 65538,
+   "offset": 3539028,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0030",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/bh;"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/bh;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    },
+    {
+     "label": "L001d",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/analytics/bg$lmn;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg$lmn;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "context is null,or dbName is empty"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000b",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L001d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm(Landroid/content/Context;)V",
+   "access": 131082,
+   "offset": 3539424,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6148503,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->lmn:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "userEvent.db"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;-><init>(Landroid/content/Context;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "sput-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->lmn:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L0013"
+    },
+    {
+     "label": "L0011",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L0013",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    },
+    {
+     "label": "L0015",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0010",
+     "handler": "H1"
+    },
+    {
+     "start": "L0015",
+     "end": "L0016",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0011"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Landroid/content/Context;)Lcom/huawei/hms/analytics/bg;",
+   "access": 9,
+   "offset": 3538216,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110395,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->lmn:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->klm(Landroid/content/Context;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->lmn:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->hij(Ljava/util/List;)Ljava/util/List;",
+   "access": 17,
+   "offset": 3538252,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": " in( "
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWherePattern(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": " )"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWhereParams(Ljava/util/List;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->ijk()Ljava/util/List;",
+   "access": 17,
+   "offset": 3538372,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6110311,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/APIEventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "DBCommander"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SQLite blob too big exception"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteAll()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/ec;->lmn(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/database/sqlite/SQLiteBlobTooBigException;",
+       "target": "L0010"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->ijk(Ljava/util/List;)V",
+   "access": 17,
+   "offset": 3539156,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110395,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyIds(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->lmn:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " in( "
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWherePattern(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " )"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWhereParams(Ljava/util/List;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteWithArgs(Ljava/lang/String;[Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0032",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->ikl(Ljava/lang/String;)J",
+   "access": 17,
+   "offset": 3538912,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6149638,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "=?"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "filled-new-array",
+     "registers": [
+      4
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->count(Ljava/lang/String;[Ljava/lang/String;)J"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->ikl()Ljava/util/List;",
+   "access": 17,
+   "offset": 3538488,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6140083,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      2,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "DBCommander"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SQLite blob too big exception"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteAll()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/ec;->lmn(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/database/sqlite/SQLiteBlobTooBigException;",
+       "target": "L0010"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->ikl(Ljava/util/List;)V",
+   "access": 17,
+   "offset": 3539276,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6134357,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " in( "
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWherePattern(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " )"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->getWhereParams(Ljava/util/List;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteWithArgs(Ljava/lang/String;[Ljava/lang/String;)I"
+    },
+    {
+     "label": "L002e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm(Ljava/lang/String;)Ljava/util/List;",
+   "access": 17,
+   "offset": 3538604,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6149613,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": " = ?"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "filled-new-array",
+     "registers": [
+      5
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      1,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;",
+   "access": 17,
+   "offset": 3538688,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6149619,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "=? AND "
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "=?"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "filled-new-array",
+     "registers": [
+      5,
+      6
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      6,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      1,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm()V",
+   "access": 17,
+   "offset": 3539388,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6133337,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteAll()V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->klm(Ljava/util/List;)V",
+   "access": 17,
+   "offset": 3539508,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6137581,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->insertInTx(Ljava/util/List;)J"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Lcom/huawei/hms/analytics/core/storage/Event;)J",
+   "access": 17,
+   "offset": 3538988,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->insert(Ljava/lang/Object;)J"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/List;",
+   "access": 17,
+   "offset": 3538796,
+   "registers": 8,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6149628,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->getPropertyColumnNames()[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "=? AND "
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "=?"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "filled-new-array",
+     "registers": [
+      5,
+      6
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      6,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      1,
+      5,
+      7
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/List;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn()V",
+   "access": 17,
+   "offset": 3539544,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6149644,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DBCommander"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "delete all"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteAll()V"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Ljava/lang/String;)V",
+   "access": 17,
+   "offset": 3539596,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6149648,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "=?"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "filled-new-array",
+     "registers": [
+      4
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteWithArgs(Ljava/lang/String;[Ljava/lang/String;)I"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 17,
+   "offset": 3539672,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149654,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ghi:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "=? AND "
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/EventDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "=?"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "filled-new-array",
+     "registers": [
+      4,
+      5
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteWithArgs(Ljava/lang/String;[Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0028",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/bg;->lmn(Ljava/util/List;)V",
+   "access": 17,
+   "offset": 3539772,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6149663,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->insertInTx(Ljava/util/List;)J"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    },
+    {
+     "label": "L000a",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DBCommander"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "SQLite full exception"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/bg;->klm:Lcom/huawei/hms/analytics/database/DaoManager;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;->deleteAll()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/ec;->lmn(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0009",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/database/sqlite/SQLiteFullException;",
+       "target": "L000a"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

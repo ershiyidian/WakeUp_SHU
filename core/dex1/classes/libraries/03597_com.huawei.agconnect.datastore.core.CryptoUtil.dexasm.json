@@ -1,0 +1,332 @@
+{
+ "class": "Lcom/huawei/agconnect/datastore/core/CryptoUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/CryptoUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3465412,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/CryptoUtil;->createWhenProguard(Ljava/lang/Class;)Lcom/huawei/agconnect/datastore/annotation/ICrypto;",
+   "access": 10,
+   "offset": 3465244,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/ICrypto;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0007",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0008"
+      },
+      {
+       "type": "Ljava/lang/InstantiationException;",
+       "target": "L0008"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/datastore/core/CryptoUtil;->getHelper(Ljava/lang/Class;)Lcom/huawei/agconnect/datastore/annotation/ICrypto;",
+   "access": 9,
+   "offset": 3465296,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "get"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "new-array",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "[Ljava/lang/Class;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      3
+     ],
+     "method": "Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/ICrypto;"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/CryptoUtil;->createWhenProguard(Ljava/lang/Class;)Lcom/huawei/agconnect/datastore/annotation/ICrypto;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0021",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NoSuchMethodException;",
+       "target": "L0023"
+      },
+      {
+       "type": "Ljava/lang/reflect/InvocationTargetException;",
+       "target": "L0022"
+      },
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0022"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

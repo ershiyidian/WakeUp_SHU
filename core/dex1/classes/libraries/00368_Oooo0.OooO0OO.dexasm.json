@@ -1,0 +1,221 @@
+{
+ "class": "LOooo0/OooO0OO;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "LOooo0/OooO0OO;->OooO00o:Z",
+   "access": 1
+  },
+  {
+   "name": "LOooo0/OooO0OO;->OooO0O0:LOooo0/OooO0O0;",
+   "access": 1
+  },
+  {
+   "name": "LOooo0/OooO0OO;->OooO0OO:Z",
+   "access": 1
+  }
+ ],
+ "methods": [
+  {
+   "name": "LOooo0/OooO0OO;->OooO00o(LOooo0/OooO0O0;)V",
+   "access": 17,
+   "offset": 1796924,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "monitor-enter",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "LOooo0/OooO0OO;->OooO0OO:Z"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->wait()V"
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0001"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "LOooo0/OooO0OO;->OooO0O0:LOooo0/OooO0O0;"
+    },
+    {
+     "label": "L000b",
+     "op": "if-ne",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000d",
+     "op": "monitor-exit",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L000f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L0011",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "LOooo0/OooO0OO;->OooO0O0:LOooo0/OooO0O0;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "LOooo0/OooO0OO;->OooO00o:Z"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0017",
+     "op": "monitor-exit",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "LOooo0/OooO0O0;->OooO00o()V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "monitor-exit",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return-void"
+    },
+    {
+     "label": "L001e",
+     "op": "monitor-exit",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0003",
+     "handler": "H1"
+    },
+    {
+     "start": "L0005",
+     "end": "L0008",
+     "handler": "H3"
+    },
+    {
+     "start": "L0009",
+     "end": "L0018",
+     "handler": "H1"
+    },
+    {
+     "start": "L001c",
+     "end": "L001f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000f"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/lang/InterruptedException;",
+       "target": "L0001"
+      }
+     ],
+     "all": "L000f"
+    }
+   ]
+  }
+ ]
+}

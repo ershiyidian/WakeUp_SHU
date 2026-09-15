@@ -1,0 +1,282 @@
+{
+ "class": "Lio/ktor/http/IllegalHeaderValueException;",
+ "super": "Ljava/lang/IllegalArgumentException;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lio/ktor/http/IllegalHeaderValueException;->headerValue:Ljava/lang/String;",
+   "access": 18
+  },
+  {
+   "name": "Lio/ktor/http/IllegalHeaderValueException;->position:I",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lio/ktor/http/IllegalHeaderValueException;-><init>(Ljava/lang/String;I)V",
+   "access": 65537,
+   "offset": 4848392,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "headerValue"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0o0(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Header value '"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "' contains illegal character '"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/String;->charAt(I)C"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001b",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "' (code "
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/String;->charAt(I)C"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "and-int/lit16",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 255
+    },
+    {
+     "label": "L0026",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 41
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      1,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooO0oo(CILjava/lang/StringBuilder;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "iput-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lio/ktor/http/IllegalHeaderValueException;->headerValue:Ljava/lang/String;"
+    },
+    {
+     "label": "L0031",
+     "op": "iput",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Lio/ktor/http/IllegalHeaderValueException;->position:I"
+    },
+    {
+     "label": "L0033",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lio/ktor/http/IllegalHeaderValueException;->getHeaderValue()Ljava/lang/String;",
+   "access": 17,
+   "offset": 4848368,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lio/ktor/http/IllegalHeaderValueException;->headerValue:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lio/ktor/http/IllegalHeaderValueException;->getPosition()I",
+   "access": 17,
+   "offset": 4848344,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lio/ktor/http/IllegalHeaderValueException;->position:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

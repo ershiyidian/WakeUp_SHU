@@ -1,0 +1,876 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/Util;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;-><init>()V",
+   "access": 65538,
+   "offset": 2933444,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;->countInPeriod(Lbiweekly/util/DayOfWeek;Lbiweekly/util/DayOfWeek;I)I",
+   "access": 9,
+   "offset": 2933108,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110058,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "sub-int/2addr",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0016",
+     "op": "div-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "rsub-int/lit8",
+     "registers": [
+      2,
+      3
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0026",
+     "op": "sub-int/2addr",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0029",
+     "op": "div-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L002b",
+     "op": "goto",
+     "target": "L0018"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;->dayNumToDate(Lbiweekly/util/DayOfWeek;IILbiweekly/util/DayOfWeek;II)I",
+   "access": 9,
+   "offset": 2933212,
+   "registers": 6,
+   "inputs": 6,
+   "outputs": 1,
+   "debug_offset": 6117942,
+   "end": "L0031",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "rem-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "if-lez",
+     "registers": [
+      2
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0011",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0013",
+     "op": "mul-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0015",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit16",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 379
+    },
+    {
+     "label": "L001a",
+     "op": "sub-int",
+     "registers": [
+      0,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L001e",
+     "op": "div-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0020",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0022",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0025",
+     "op": "mul-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0027",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L0029",
+     "op": "if-lez",
+     "registers": [
+      2
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L002b",
+     "op": "if-le",
+     "registers": [
+      2,
+      5
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L002e",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0030",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;->invertWeekdayNum(Lbiweekly/util/ByDay;Lbiweekly/util/DayOfWeek;I)I",
+   "access": 9,
+   "offset": 2933328,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/ByDay;->getDay()Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Util;->countInPeriod(Lbiweekly/util/DayOfWeek;Lbiweekly/util/DayOfWeek;I)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/ByDay;->getNum()Ljava/lang/Integer;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0013",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;->nextWeekStart(Lbiweekly/util/com/google/ical/values/DateValue;Lbiweekly/util/DayOfWeek;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2933020,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->dayOfWeek(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/DayOfWeek;->getCalendarConstant()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0016",
+     "op": "rem-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0018",
+     "op": "rsub-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L001a",
+     "op": "rem-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L001c",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDate()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Util;->uniquify([I)[I",
+   "access": 9,
+   "offset": 2933384,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/IntSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "array-length",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0009",
+     "op": "aget",
+     "registers": [
+      3,
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->add(I)V"
+    },
+    {
+     "label": "L000e",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L0007"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->toIntArray()[I"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

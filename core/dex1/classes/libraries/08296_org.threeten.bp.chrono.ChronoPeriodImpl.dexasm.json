@@ -1,0 +1,3007 @@
+{
+ "class": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;",
+ "super": "Lorg/threeten/bp/chrono/OooO;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;-><init>(Lorg/threeten/bp/chrono/OooOOO;III)V",
+   "access": 65537,
+   "offset": 6014404,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 1,
+   "debug_offset": 6112552,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0007",
+     "op": "iput",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0009",
+     "op": "iput",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->addTo(Lo00o0oO/o00Oo0;)Lo00o0oO/o00Oo0;",
+   "access": 1,
+   "offset": 6013412,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L0060",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "temporal"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lo00o0oO/o0Oo0oo;->OooO0O0:Lo0000OOo/OooO0o;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00o0oO/o00Ooo;->query(Lo00o0oO/o0OO00O;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Invalid chronology, required: "
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->getId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ", but was: "
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->getId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0040",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L0042",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L004b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L004d",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0053",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0056",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L005f"
+    },
+    {
+     "label": "L0058",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 6012888,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      1,
+      5
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L000d",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L000f",
+     "op": "if-ne",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0011",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0015",
+     "op": "if-ne",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0017",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0019",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L001b",
+     "op": "if-ne",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0027",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->get(Lo00o0oO/oo0o0Oo;)J",
+   "access": 1,
+   "offset": 6013312,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0006",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000c",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0011",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/temporal/UnsupportedTemporalTypeException;"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unsupported unit: "
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lorg/threeten/bp/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getChronology()Lorg/threeten/bp/chrono/OooOOO;",
+   "access": 1,
+   "offset": 6014380,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getUnits()Ljava/util/List;",
+   "access": 1,
+   "offset": 6013240,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Lo00o0oO/oo0o0Oo;"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0010",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->hashCode()I",
+   "access": 1,
+   "offset": 6012988,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->hashCode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0008",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Integer;->rotateLeft(II)I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0011",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/Integer;->rotateLeft(II)I"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L001a",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->minus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/chrono/OooO;",
+   "access": 1,
+   "offset": 6013828,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0049",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      6
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0004",
+     "op": "move-object",
+     "registers": [
+      0,
+      6
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getChronology()Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getChronology()Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0019",
+     "op": "iget",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L001b",
+     "op": "iget",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0023",
+     "op": "iget",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget",
+     "registers": [
+      4,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L002b",
+     "op": "iget",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;-><init>(Lorg/threeten/bp/chrono/OooOOO;III)V"
+    },
+    {
+     "label": "L0034",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L0037",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0039",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unable to subtract amount: "
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0048",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->multipliedBy(I)Lorg/threeten/bp/chrono/OooO;",
+   "access": 1,
+   "offset": 6013992,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6109890,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget",
+     "registers": [
+      4,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      6
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;-><init>(Lorg/threeten/bp/chrono/OooOOO;III)V"
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->normalized()Lorg/threeten/bp/chrono/OooO;",
+   "access": 1,
+   "offset": 6014060,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoField;->MONTH_OF_YEAR:Lorg/threeten/bp/temporal/ChronoField;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->range(Lorg/threeten/bp/temporal/ChronoField;)Lorg/threeten/bp/temporal/ValueRange;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/temporal/ValueRange;->isFixed()Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->range(Lorg/threeten/bp/temporal/ChronoField;)Lorg/threeten/bp/temporal/ValueRange;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/temporal/ValueRange;->getMaximum()J"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->range(Lorg/threeten/bp/temporal/ChronoField;)Lorg/threeten/bp/temporal/ValueRange;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/temporal/ValueRange;->getMinimum()J"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "sub-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0025",
+     "op": "add-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0028",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "mul-long",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "iget",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L002d",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "add-long/2addr",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "div-long",
+     "registers": [
+      4,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "rem-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L003c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L003e",
+     "op": "iget",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      4,
+      0,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;-><init>(Lorg/threeten/bp/chrono/OooOOO;III)V"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->plus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/chrono/OooO;",
+   "access": 1,
+   "offset": 6014216,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0049",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      6
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0004",
+     "op": "move-object",
+     "registers": [
+      0,
+      6
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getChronology()Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->getChronology()Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0019",
+     "op": "iget",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L001b",
+     "op": "iget",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0023",
+     "op": "iget",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget",
+     "registers": [
+      4,
+      5
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L002b",
+     "op": "iget",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;-><init>(Lorg/threeten/bp/chrono/OooOOO;III)V"
+    },
+    {
+     "label": "L0034",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L0037",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0039",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unable to add amount: "
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0048",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->subtractFrom(Lo00o0oO/o00Oo0;)Lo00o0oO/o00Oo0;",
+   "access": 1,
+   "offset": 6013620,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L0060",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "temporal"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lo00o0oO/o0Oo0oo;->OooO0O0:Lo0000OOo/OooO0o;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00o0oO/o00Ooo;->query(Lo00o0oO/o0OO00O;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Invalid chronology, required: "
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->getId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ", but was: "
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->getId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L0040",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L0042",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L004b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L004d",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0053",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0056",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L005f"
+    },
+    {
+     "label": "L0058",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 6013060,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0052",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooO;->isZero()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " P0D"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->chronology:Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0024",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " P"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0029",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->years:I"
+    },
+    {
+     "label": "L002b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0030",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 89
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0035",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->months:I"
+    },
+    {
+     "label": "L0037",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003c",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 77
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/ChronoPeriodImpl;->days:I"
+    },
+    {
+     "label": "L0043",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0048",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 68
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

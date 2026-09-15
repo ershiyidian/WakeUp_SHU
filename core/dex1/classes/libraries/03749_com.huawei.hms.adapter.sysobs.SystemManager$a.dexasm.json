@@ -1,0 +1,872 @@
+{
+ "class": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;-><init>()V",
+   "access": 65537,
+   "offset": 3511356,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->notifyNoticeObservers(I)V",
+   "access": 1,
+   "offset": 3511396,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemManager;->a()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;->onNoticeResult(I)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->remove()V"
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0021",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0023",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-void"
+    },
+    {
+     "label": "L0025",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0021"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->notifyObservers(I)V",
+   "access": 1,
+   "offset": 3511612,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6149490,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemManager;->a()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;->onUpdateResult(I)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->remove()V"
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0021",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0023",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-void"
+    },
+    {
+     "label": "L0025",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0021"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->notifyObservers(Landroid/content/Intent;Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 3511504,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149479,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemManager;->a()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemObserver;->onSolutionResult(Landroid/content/Intent;Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->remove()V"
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0021",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0023",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-void"
+    },
+    {
+     "label": "L0025",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0021"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->registerObserver(Lcom/huawei/hms/adapter/sysobs/SystemObserver;)V",
+   "access": 1,
+   "offset": 3511720,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0003"
+    },
+    {
+     "label": "L0002",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/List;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemManager;->a()Ljava/lang/Object;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    },
+    {
+     "label": "L0017",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0010",
+     "end": "L0019",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0017"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->unRegisterObserver(Lcom/huawei/hms/adapter/sysobs/SystemObserver;)V",
+   "access": 1,
+   "offset": 3511804,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/adapter/sysobs/SystemManager;->a()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/hms/adapter/sysobs/SystemManager$a;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/List;->remove(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L000e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000c"
+    }
+   ]
+  }
+ ]
+}

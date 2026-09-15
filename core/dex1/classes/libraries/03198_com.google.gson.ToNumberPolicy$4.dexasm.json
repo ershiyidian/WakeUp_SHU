@@ -1,0 +1,262 @@
+{
+ "class": "Lcom/google/gson/ToNumberPolicy$4;",
+ "super": "Lcom/google/gson/ToNumberPolicy;",
+ "access": 16400,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/google/gson/ToNumberPolicy$4;-><init>(Ljava/lang/String;I)V",
+   "access": 65537,
+   "offset": 3350988,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/google/gson/ToNumberPolicy;-><init>(Ljava/lang/String;ILcom/google/gson/ToNumberPolicy$1;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/ToNumberPolicy$4;->readNumber(Lo000ooO0/OooO;)Ljava/lang/Number;",
+   "access": 4161,
+   "offset": 3350856,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/google/gson/ToNumberPolicy$4;->readNumber(Lo000ooO0/OooO;)Ljava/math/BigDecimal;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/ToNumberPolicy$4;->readNumber(Lo000ooO0/OooO;)Ljava/math/BigDecimal;",
+   "access": 1,
+   "offset": 3350884,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6148275,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lo000ooO0/OooO;->o00o0O()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooOO0(Ljava/lang/String;)Ljava/math/BigDecimal;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/google/gson/JsonParseException;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "Cannot parse "
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "; at path "
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      4
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOo0O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      3
+     ],
+     "method": "Lo000ooO0/OooO;->OooOo(Z)Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      6,
+      1
+     ],
+     "method": "Lcom/google/gson/JsonParseException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L0008",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0009"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

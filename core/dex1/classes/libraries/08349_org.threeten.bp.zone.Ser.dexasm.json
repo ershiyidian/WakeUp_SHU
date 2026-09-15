@@ -1,0 +1,1334 @@
+{
+ "class": "Lorg/threeten/bp/zone/Ser;",
+ "super": "Ljava/lang/Object;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->SZR:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->ZOT:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->ZOTRULE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->object:Ljava/lang/Object;",
+   "access": 2
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->type:B",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;-><init>()V",
+   "access": 65537,
+   "offset": 6079664,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;-><init>(BLjava/lang/Object;)V",
+   "access": 65537,
+   "offset": 6079688,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6139181,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-byte",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->type:B"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->OooO00o(BLjava/io/DataInput;)Ljava/io/Serializable;",
+   "access": 9,
+   "offset": 6079360,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0004",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0007",
+     "op": "if-ne",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/StreamCorruptedException;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unknown serialized type"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/io/StreamCorruptedException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/zone/StandardZoneRules;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->OooO0O0(BLjava/lang/Object;Ljava/io/DataOutput;)V",
+   "access": 9,
+   "offset": 6079968,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0004",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0007",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L000a",
+     "op": "if-ne",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    },
+    {
+     "label": "L0012",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/InvalidClassException;"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unknown serialized type"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/io/InvalidClassException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0020",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/StandardZoneRules;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->read(Ljava/io/DataInput;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 6079440,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->OooO00o(BLjava/io/DataInput;)Ljava/io/Serializable;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->readEpochSec(Ljava/io/DataInput;)J",
+   "access": 9,
+   "offset": 6079500,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 255
+    },
+    {
+     "label": "L0006",
+     "op": "and-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/io/DataInput;->readLong()J"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "and-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "and-int/2addr",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "shl-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L001a",
+     "op": "shl-int/lit8",
+     "registers": [
+      1,
+      2
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L001c",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 900
+    },
+    {
+     "label": "L0021",
+     "op": "mul-long",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const-wide",
+     "registers": [
+      2
+     ],
+     "literal": 4575744000
+    },
+    {
+     "label": "L0028",
+     "op": "sub-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->readOffset(Ljava/io/DataInput;)Lorg/threeten/bp/ZoneOffset;",
+   "access": 9,
+   "offset": 6079600,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 127
+    },
+    {
+     "label": "L0006",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/DataInput;->readInt()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->ofTotalSeconds(I)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "mul-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 900
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->ofTotalSeconds(I)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->readResolve()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 6079476,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->write(Ljava/lang/Object;Ljava/io/DataOutput;)V",
+   "access": 9,
+   "offset": 6079764,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->OooO0O0(BLjava/lang/Object;Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->writeEpochSec(JLjava/io/DataOutput;)V",
+   "access": 9,
+   "offset": 6079792,
+   "registers": 11,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide",
+     "registers": [
+      0
+     ],
+     "literal": 18446744069133807616
+    },
+    {
+     "label": "L0005",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 255
+    },
+    {
+     "label": "L0007",
+     "op": "cmp-long",
+     "registers": [
+      3,
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L000b",
+     "op": "const-wide",
+     "registers": [
+      0
+     ],
+     "literal": 10413792000
+    },
+    {
+     "label": "L0010",
+     "op": "cmp-long",
+     "registers": [
+      3,
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-gez",
+     "registers": [
+      3
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0014",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 900
+    },
+    {
+     "label": "L0016",
+     "op": "rem-long",
+     "registers": [
+      3,
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-wide/16",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001a",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      3,
+      5
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L001e",
+     "op": "const-wide",
+     "registers": [
+      3
+     ],
+     "literal": 4575744000
+    },
+    {
+     "label": "L0023",
+     "op": "add-long/2addr",
+     "registers": [
+      8,
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "div-long/2addr",
+     "registers": [
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "long-to-int",
+     "registers": [
+      9,
+      8
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "ushr-int/lit8",
+     "registers": [
+      8,
+      9
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L0028",
+     "op": "and-int/2addr",
+     "registers": [
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-interface",
+     "registers": [
+      10,
+      8
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L002c",
+     "op": "ushr-int/lit8",
+     "registers": [
+      8,
+      9
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L002e",
+     "op": "and-int/2addr",
+     "registers": [
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-interface",
+     "registers": [
+      10,
+      8
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L0032",
+     "op": "and-int/lit16",
+     "registers": [
+      8,
+      9
+     ],
+     "literal": 255
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-interface",
+     "registers": [
+      10,
+      8
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L0037",
+     "op": "return-void"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-interface",
+     "registers": [
+      10,
+      2
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-interface",
+     "registers": [
+      10,
+      8,
+      9
+     ],
+     "method": "Ljava/io/DataOutput;->writeLong(J)V"
+    },
+    {
+     "label": "L003e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->writeOffset(Lorg/threeten/bp/ZoneOffset;Ljava/io/DataOutput;)V",
+   "access": 9,
+   "offset": 6080060,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "rem-int/lit16",
+     "registers": [
+      0,
+      2
+     ],
+     "literal": 900
+    },
+    {
+     "label": "L0006",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 127
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000a",
+     "op": "div-int/lit16",
+     "registers": [
+      0,
+      2
+     ],
+     "literal": 900
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L000d",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 127
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L0012",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/io/DataOutput;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->readExternal(Ljava/io/ObjectInput;)V",
+   "access": 1,
+   "offset": 6079720,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iput-byte",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->type:B"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->OooO00o(BLjava/io/DataInput;)Ljava/io/Serializable;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/Ser;->writeExternal(Ljava/io/ObjectOutput;)V",
+   "access": 1,
+   "offset": 6079936,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-byte",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->type:B"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->OooO0O0(BLjava/lang/Object;Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

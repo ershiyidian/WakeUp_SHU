@@ -1,0 +1,526 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/Generators$2;",
+ "super": "Lbiweekly/util/com/google/ical/iter/Generator;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I",
+   "access": 0
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$dtStart:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 4112
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$interval:I",
+   "access": 4112
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I",
+   "access": 0
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;I)V",
+   "access": 65537,
+   "offset": 2923348,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$dtStart:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "iput",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$interval:I"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;-><init>()V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iput",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iput",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "if-ge",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0019",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L001b",
+     "op": "iput",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L001d",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I"
+    },
+    {
+     "label": "L001f",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "iput",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I"
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0023",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z",
+   "access": 1,
+   "offset": 2923192,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110209,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      7
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0008",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L000a",
+     "op": "sub-int",
+     "registers": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      5,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L0010",
+     "op": "sub-int/2addr",
+     "registers": [
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "sub-int/2addr",
+     "registers": [
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      5,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$interval:I"
+    },
+    {
+     "label": "L0014",
+     "op": "rem-int/2addr",
+     "registers": [
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "sub-int",
+     "registers": [
+      0,
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "rem-int/2addr",
+     "registers": [
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-le",
+     "registers": [
+      0,
+      4
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "iput",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->year:I"
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L001f",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L0021",
+     "op": "iget",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$interval:I"
+    },
+    {
+     "label": "L0023",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-le",
+     "registers": [
+      0,
+      4
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0026",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "iput",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L0029",
+     "op": "iput",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->month:I"
+    },
+    {
+     "label": "L002b",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$2;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2923296,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "serialMonthGenerator:"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$2;->val$interval:I"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

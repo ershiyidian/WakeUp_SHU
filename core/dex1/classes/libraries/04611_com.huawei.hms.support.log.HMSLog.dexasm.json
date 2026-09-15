@@ -1,0 +1,1202 @@
+{
+ "class": "Lcom/huawei/hms/support/log/HMSLog;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;-><clinit>()V",
+   "access": 65544,
+   "offset": 3869616,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;-><init>()V",
+   "access": 65537,
+   "offset": 3869648,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->a(Landroid/content/Context;)Ljava/lang/String;",
+   "access": 10,
+   "offset": 3869480,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HMS-"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HMS-[unknown-version]"
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 16384
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      3
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "("
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0023",
+     "op": "iget",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->versionCode:I"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000a",
+     "end": "L0031",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0032"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0032"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->d(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3869672,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;JLjava/lang/String;)V",
+   "access": 9,
+   "offset": 3869768,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6135612,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "["
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "] "
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/Throwable;)V",
+   "access": 9,
+   "offset": 3869844,
+   "registers": 8,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6118714,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "["
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "] "
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      3,
+      4,
+      7
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->b(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3869704,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V",
+   "access": 9,
+   "offset": 3869736,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6133013,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->b(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3869920,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->init(Landroid/content/Context;ILjava/lang/String;)V",
+   "access": 9,
+   "offset": 3869952,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(Landroid/content/Context;ILjava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "============================================================================\n====== "
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->a(Landroid/content/Context;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "\n============================================================================"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      2
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->isErrorEnable()Z",
+   "access": 9,
+   "offset": 3869384,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(I)Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->isInfoEnable()Z",
+   "access": 9,
+   "offset": 3869416,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(I)Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->isWarnEnable()Z",
+   "access": 9,
+   "offset": 3869448,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(I)Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->setExtLogger(Lcom/huawei/hms/support/log/HMSExtLogger;Z)V",
+   "access": 9,
+   "offset": 3870032,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/base/log/a;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/base/log/a;-><init>(Lcom/huawei/hms/support/log/HMSExtLogger;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(Lcom/huawei/hms/base/log/d;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a()Lcom/huawei/hms/base/log/d;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/base/log/d;->a(Lcom/huawei/hms/base/log/d;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "return-void"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L001b",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "extLogger is not able to be null"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/log/HMSLog;->w(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3870116,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/support/log/HMSLog;->a:Lcom/huawei/hms/base/log/b;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/base/log/b;->a(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

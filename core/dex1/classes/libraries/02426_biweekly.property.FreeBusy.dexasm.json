@@ -1,0 +1,714 @@
+{
+ "class": "Lbiweekly/property/FreeBusy;",
+ "super": "Lbiweekly/property/ListProperty;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/property/FreeBusy;-><init>()V",
+   "access": 65537,
+   "offset": 2875620,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/ListProperty;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;-><init>(Lbiweekly/property/FreeBusy;)V",
+   "access": 65537,
+   "offset": 2875644,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6143136,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lbiweekly/property/ListProperty;-><init>(Lbiweekly/property/ListProperty;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->clear()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/Period;"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L001c",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/Period;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/Period;-><init>(Lbiweekly/util/Period;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L000e"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;->copy()Lbiweekly/property/FreeBusy;",
+   "access": 1,
+   "offset": 2875564,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6133764,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/FreeBusy;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/FreeBusy;-><init>(Lbiweekly/property/FreeBusy;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;->copy()Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2875592,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/FreeBusy;->copy()Lbiweekly/property/FreeBusy;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;->getType()Lbiweekly/parameter/FreeBusyType;",
+   "access": 1,
+   "offset": 2875532,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/ICalProperty;->parameters:Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->getFreeBusyType()Lbiweekly/parameter/FreeBusyType;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;->setType(Lbiweekly/parameter/FreeBusyType;)V",
+   "access": 1,
+   "offset": 2875736,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/ICalProperty;->parameters:Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->setFreeBusyType(Lbiweekly/parameter/FreeBusyType;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/FreeBusy;->validate(Ljava/util/List;Lbiweekly/ICalVersion;Ljava/util/List;)V",
+   "access": 1,
+   "offset": 2875764,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L005c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lbiweekly/property/ListProperty;->validate(Ljava/util/List;Lbiweekly/ICalVersion;Ljava/util/List;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "goto",
+     "target": "L005b"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/Period;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/Period;->getStartDate()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0025",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/ValidationWarning;"
+    },
+    {
+     "label": "L0027",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 39
+    },
+    {
+     "label": "L0029",
+     "op": "new-array",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      1
+     ],
+     "method": "Lbiweekly/ValidationWarning;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/property/ListProperty;->values:Ljava/util/List;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/Period;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/Period;->getEndDate()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/Period;->getDuration()Lbiweekly/util/Duration;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L004f",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/ValidationWarning;"
+    },
+    {
+     "label": "L0051",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 40
+    },
+    {
+     "label": "L0053",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      0
+     ],
+     "method": "Lbiweekly/ValidationWarning;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L005b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

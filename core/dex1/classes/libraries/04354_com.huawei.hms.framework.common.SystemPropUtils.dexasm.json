@@ -1,0 +1,365 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/SystemPropUtils;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SystemPropUtils;->TAG:Ljava/lang/String;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/SystemPropUtils;-><init>()V",
+   "access": 65537,
+   "offset": 3766232,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/SystemPropUtils;->getProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3766064,
+   "registers": 9,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6112552,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "new-array",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "[Ljava/lang/Class;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-class",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "aput-object",
+     "registers": [
+      4,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "aput-object",
+     "registers": [
+      4,
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      5,
+      3
+     ],
+     "method": "Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0028",
+     "op": "aput-object",
+     "registers": [
+      6,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "aput-object",
+     "registers": [
+      8,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      7,
+      2
+     ],
+     "method": "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lcom/huawei/hms/framework/common/SystemPropUtils;->TAG:Ljava/lang/String;"
+    },
+    {
+     "label": "L0036",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "getProperty catch exception: "
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      7,
+      5
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L003b",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/framework/common/SystemPropUtils;->TAG:Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "reflect class for method has exception."
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0016",
+     "end": "L0032",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0033"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

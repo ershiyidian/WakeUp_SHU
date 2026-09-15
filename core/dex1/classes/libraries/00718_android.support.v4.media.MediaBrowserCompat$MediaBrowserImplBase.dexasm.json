@@ -1,0 +1,4364 @@
+{
+ "class": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->CONNECT_STATE_CONNECTED:I",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->CONNECT_STATE_CONNECTING:I",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->CONNECT_STATE_DISCONNECTED:I",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->CONNECT_STATE_DISCONNECTING:I",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->CONNECT_STATE_SUSPENDED:I",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;",
+   "access": 16
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;",
+   "access": 0
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mContext:Landroid/content/Context;",
+   "access": 16
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mExtras:Landroid/os/Bundle;",
+   "access": 2
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;",
+   "access": 16
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mMediaSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;",
+   "access": 2
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;",
+   "access": 2
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootHints:Landroid/os/Bundle;",
+   "access": 16
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+   "access": 0
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;",
+   "access": 16
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceConnection:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$MediaServiceConnection;",
+   "access": 0
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I",
+   "access": 0
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;Landroid/os/Bundle;)V",
+   "access": 65537,
+   "offset": 1972776,
+   "registers": 7,
+   "inputs": 5,
+   "outputs": 2,
+   "debug_offset": 6112552,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "LOooOOO/OooOo;-><init>(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0013",
+     "op": "iput",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L001b",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mContext:Landroid/content/Context;"
+    },
+    {
+     "label": "L001d",
+     "op": "iput-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L001f",
+     "op": "iput-object",
+     "registers": [
+      5,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;"
+    },
+    {
+     "label": "L0021",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0025",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootHints:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L002c",
+     "op": "return-void"
+    },
+    {
+     "label": "L002d",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "connection callback must not be null"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "service component must not be null"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003c",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "context must not be null"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;",
+   "access": 10,
+   "offset": 1972688,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0006",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0009",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L000c",
+     "op": "if-eq",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UNKNOWN/"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CONNECT_STATE_SUSPENDED"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CONNECT_STATE_CONNECTED"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CONNECT_STATE_CONNECTING"
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CONNECT_STATE_DISCONNECTED"
+    },
+    {
+     "label": "L0020",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CONNECT_STATE_DISCONNECTING"
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z",
+   "access": 2,
+   "offset": 1972520,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "if-ne",
+     "registers": [
+      3,
+      2
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0009",
+     "op": "if-ne",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0011",
+     "op": "if-eq",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0021",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->connect()V",
+   "access": 1,
+   "offset": 1972932,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "connect() called while neigther disconnecting nor disconnected (state="
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0022",
+     "op": "iput",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0026",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$1;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$1;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;)V"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L002e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->disconnect()V",
+   "access": 1,
+   "offset": 1973044,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iput",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->dump()V",
+   "access": 1,
+   "offset": 1973088,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootHints:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceConnection:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$MediaServiceConnection;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mMediaSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->forceCloseConnection()V",
+   "access": 1,
+   "offset": 1973188,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceConnection:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$MediaServiceConnection;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mContext:Landroid/content/Context;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "iput",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceConnection:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$MediaServiceConnection;"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L0011",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->setCallbacksMessenger(Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootId:Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mMediaSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getExtras()Landroid/os/Bundle;",
+   "access": 1,
+   "offset": 1972300,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mExtras:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getExtras() called while not connected (state="
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getItem(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;)V",
+   "access": 1,
+   "offset": 1973264,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6111252,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L003b"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$3;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      5,
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$3;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "return-void"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4,
+      5,
+      1
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;-><init>(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L0022",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-void"
+    },
+    {
+     "label": "L0028",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L002a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$4;"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      5,
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$4;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L0032",
+     "op": "return-void"
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "cb is null"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L003d",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "mediaId is empty"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0042",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0020",
+     "end": "L0027",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0028"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getNotifyChildrenChangedOptions()Landroid/os/Bundle;",
+   "access": 1,
+   "offset": 1972384,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getRoot()Ljava/lang/String;",
+   "access": 1,
+   "offset": 1972604,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getRoot() called while not connected(state="
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getServiceComponent()Landroid/content/ComponentName;",
+   "access": 1,
+   "offset": 1972224,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getServiceComponent() called while not connected (state="
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOO(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;",
+   "access": 1,
+   "offset": 1972408,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mMediaSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getSessionToken() called while not connected(state="
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOO(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z",
+   "access": 1,
+   "offset": 1972484,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0003",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->onConnectionFailed(Landroid/os/Messenger;)V",
+   "access": 1,
+   "offset": 1973432,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "onConnectFailed"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0011",
+     "op": "if-eq",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->forceCloseConnection()V"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnectionFailed()V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->onLoadChildren(Landroid/os/Messenger;Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1973512,
+   "registers": 7,
+   "inputs": 6,
+   "outputs": 4,
+   "debug_offset": 6114733,
+   "end": "L0042",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "onLoadChildren"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0041"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-boolean",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat;->DEBUG:Z"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceComponent:Landroid/content/ComponentName;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "LOooOOO/OooOo;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;"
+    },
+    {
+     "label": "L001a",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->getCallback(Landroid/os/Bundle;)Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0024",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0026",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->onError(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002b",
+     "op": "return-void"
+    },
+    {
+     "label": "L002c",
+     "op": "iput-object",
+     "registers": [
+      6,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;)V"
+    },
+    {
+     "label": "L0031",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0033",
+     "op": "return-void"
+    },
+    {
+     "label": "L0034",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L003a"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->onError(Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-void"
+    },
+    {
+     "label": "L003a",
+     "op": "iput-object",
+     "registers": [
+      6,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L003f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mNotifyChildrenChangedOptions:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0041",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1973660,
+   "registers": 10,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0075",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "onConnect"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6,
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0074"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000c",
+     "op": "if-eq",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    },
+    {
+     "label": "L0012",
+     "op": "iput-object",
+     "registers": [
+      7,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mRootId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "iput-object",
+     "registers": [
+      8,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mMediaSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0016",
+     "op": "iput-object",
+     "registers": [
+      9,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mExtras:Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0019",
+     "op": "iput",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L001b",
+     "op": "sget-boolean",
+     "registers": [
+      6
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat;->DEBUG:Z"
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->dump()V"
+    },
+    {
+     "label": "L0022",
+     "op": "iget-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnected()V"
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "LOooOOO/OooOO0;->entrySet()Ljava/util/Set;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "LOooOOO/OooO00o;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "LOooOOO/OooO00o;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "move-object",
+     "registers": [
+      7,
+      6
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "LOooOOO/OooO0o;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "LOooOOO/OooO0o;->hasNext()Z"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L0074"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "LOooOOO/OooO0o;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003f",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "check-cast",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L004a",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->getCallbacks()Ljava/util/List;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->getOptionsList()Ljava/util/List;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0059",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "if-ge",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L005c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-interface",
+     "registers": [
+      9,
+      0
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0061",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;"
+    },
+    {
+     "label": "L0064",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->mToken:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0069",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L006a",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L006c",
+     "op": "iget-object",
+     "registers": [
+      4,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L006e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8,
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->addSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0071",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0073",
+     "op": "goto",
+     "target": "L0056"
+    },
+    {
+     "label": "L0074",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0027",
+     "end": "L0071",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0074"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->search(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;)V",
+   "access": 1,
+   "offset": 1973928,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0039",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;"
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4,
+      5,
+      6,
+      1
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;-><init>(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->search(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      6,
+      4,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L0022",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0024",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "search() called while not connected (state="
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "iget",
+     "registers": [
+      6,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState:I"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getStateLabel(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0038",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000d",
+     "end": "L0014",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0015"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$CustomActionCallback;)V",
+   "access": 1,
+   "offset": 1974076,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0047",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$CustomActionResultReceiver;"
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4,
+      5,
+      6,
+      1
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$CustomActionResultReceiver;-><init>(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$CustomActionCallback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    },
+    {
+     "label": "L0015",
+     "op": "nop"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$6;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      6,
+      4,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$6;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$CustomActionCallback;Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    },
+    {
+     "label": "L0026",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Cannot send a custom action ("
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": ") with extras "
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003a",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": " because the browser is not connected to the service."
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      4
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0046",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000d",
+     "end": "L0014",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0015"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->subscribe(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V",
+   "access": 1,
+   "offset": 1974252,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0031",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "LOooOOO/OooOo;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      0
+     ],
+     "method": "LOooOOO/OooOo;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "move-object",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      5
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->putCallback(Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->mToken:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      5,
+      4,
+      1
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->addSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0027",
+     "end": "L0030",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0030"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V",
+   "access": 1,
+   "offset": 1974384,
+   "registers": 10,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6111252,
+   "end": "L005a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "LOooOOO/OooOo;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L0059"
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      1,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      2,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8,
+      3,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->removeSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L004c"
+    },
+    {
+     "label": "L001c",
+     "op": "nop"
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L004c"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->getCallbacks()Ljava/util/List;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->getOptionsList()Ljava/util/List;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L002c",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "if-ne",
+     "registers": [
+      4,
+      9
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->isConnected()Z"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L003a",
+     "op": "iget-object",
+     "registers": [
+      4,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper:Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;"
+    },
+    {
+     "label": "L003c",
+     "op": "iget-object",
+     "registers": [
+      5,
+      9
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;->mToken:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L003e",
+     "op": "iget-object",
+     "registers": [
+      6,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mCallbacksMessenger:Landroid/os/Messenger;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      8,
+      5,
+      6
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->removeSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Messenger;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/List;->remove(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/List;->remove(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0049",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L004b",
+     "op": "goto",
+     "target": "L002c"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$Subscription;->isEmpty()Z"
+    },
+    {
+     "label": "L004f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0050",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L0052",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0059"
+    },
+    {
+     "label": "L0054",
+     "op": "iget-object",
+     "registers": [
+      9,
+      7
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:LOooOOO/OooOO0;"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      8
+     ],
+     "method": "LOooOOO/OooOo;->remove(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0059",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000d",
+     "end": "L0049",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L001c"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

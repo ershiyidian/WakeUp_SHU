@@ -1,0 +1,4882 @@
+{
+ "class": "Lcom/huawei/hms/utils/JsonUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_BYTE:I",
+   "access": 28
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_ENTITY:I",
+   "access": 28
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_LIST:I",
+   "access": 28
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_MAP:I",
+   "access": 28
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_NULL:I",
+   "access": 28
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->VAL_TYPE:Ljava/lang/String;",
+   "access": 28
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3891124,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Lorg/json/JSONObject;)Ljava/lang/Object;",
+   "access": 10,
+   "offset": 3889796,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6153785,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "header"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "body"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;",
+   "access": 10,
+   "offset": 3890416,
+   "registers": 10,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6153821,
+   "end": "L0040",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003b"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "array-length",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0013",
+     "op": "aget-object",
+     "registers": [
+      5,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/annotation/Packed;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->isAnnotationPresent(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/reflect/AccessibleObject;->isAccessible()Z"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Field;Z)V"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/reflect/Field;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      9
+     ],
+     "method": "Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Field;Z)V"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      8,
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/lang/Object;Lorg/json/JSONObject;)Z"
+    },
+    {
+     "label": "L0033",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "goto",
+     "target": "L0009"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "return-object",
+     "registers": [
+      9
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Type;Lorg/json/JSONObject;)Ljava/util/List;",
+   "access": 10,
+   "offset": 3890768,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6153838,
+   "end": "L004e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_list_size_"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "if-ge",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "_list_item_"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      5
+     ],
+     "method": "Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0029",
+     "op": "move-object",
+     "registers": [
+      6,
+      7
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "aget-object",
+     "registers": [
+      6,
+      6,
+      3
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->jsonToEntity(Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L004a"
+    },
+    {
+     "label": "L0044",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0045",
+     "op": "if-ne",
+     "registers": [
+      1,
+      6
+     ],
+     "target": "L004a"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L004a",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L004c",
+     "op": "goto",
+     "target": "L0013"
+    },
+    {
+     "label": "L004d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;Ljava/lang/reflect/Field;Lorg/json/JSONObject;)V",
+   "access": 10,
+   "offset": 3891148,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6153869,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->b(Lcom/huawei/hms/core/aidl/IMessageEntity;Ljava/lang/reflect/Field;Lorg/json/JSONObject;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/reflect/AccessibleObject;->isAccessible()Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Field;Z)V"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2,
+      4
+     ],
+     "method": "Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Field;Z)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/util/List;Lorg/json/JSONObject;)V",
+   "access": 10,
+   "offset": 3891340,
+   "registers": 9,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6153893,
+   "end": "L003b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "_list_size_"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-ge",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "_list_item_"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      3
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/lang/Object;Lorg/json/JSONObject;)Z"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      3
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "instance-of",
+     "registers": [
+      4,
+      4
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L002f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0034",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      6,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L003a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/util/Map;Lorg/json/JSONObject;)V",
+   "access": 10,
+   "offset": 3891476,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6153909,
+   "end": "L005c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Map;->entrySet()Ljava/util/Set;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Set;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONArray;-><init>()V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "instance-of",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0023",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0025",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L002e",
+     "op": "goto",
+     "target": "L0032"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L0032",
+     "op": "instance-of",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0034",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0040"
+    },
+    {
+     "label": "L0036",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L003f",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L0044",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0049",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L004b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONArray;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_map_"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      4,
+      5
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L005b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;[BLorg/json/JSONObject;)V",
+   "access": 10,
+   "offset": 3891208,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6153880,
+   "end": "L0031",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_byte_"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/common/Base64;->encode([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L002d"
+    },
+    {
+     "label": "L0015",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "writeByte failed : "
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000b",
+     "end": "L0014",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L0015"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Field;Z)V",
+   "access": 10,
+   "offset": 3891676,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6153931,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/utils/JsonUtil$1;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil$1;-><init>(Ljava/lang/reflect/Field;Z)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/lang/Object;Lorg/json/JSONObject;)Z",
+   "access": 10,
+   "offset": 3889040,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6153747,
+   "end": "L0099",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0009",
+     "op": "goto/16",
+     "target": "L0082"
+    },
+    {
+     "label": "L000b",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L000f",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0018",
+     "op": "goto/16",
+     "target": "L0082"
+    },
+    {
+     "label": "L001a",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Short;"
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L001e",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Short;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0023",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0024",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L0028",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L002e",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Float;"
+    },
+    {
+     "label": "L0030",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0032",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Float;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0037",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0038",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Double;"
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L003c",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Double;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0041",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0042",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L0044",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0046",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L004b",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L004c",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L004e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0056"
+    },
+    {
+     "label": "L0050",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0055",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0056",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0058",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0060"
+    },
+    {
+     "label": "L005a",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;[BLorg/json/JSONObject;)V"
+    },
+    {
+     "label": "L005f",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0060",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0062",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L006a"
+    },
+    {
+     "label": "L0064",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/util/List;Lorg/json/JSONObject;)V"
+    },
+    {
+     "label": "L0069",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L006a",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/util/Map;"
+    },
+    {
+     "label": "L006c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0074"
+    },
+    {
+     "label": "L006e",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/Map;"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Ljava/util/Map;Lorg/json/JSONObject;)V"
+    },
+    {
+     "label": "L0073",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0074",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0076",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0077",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0098"
+    },
+    {
+     "label": "L0079",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;"
+    },
+    {
+     "label": "L007e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0082",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0083",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0084",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0085",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0087",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "IllegalAccessException , "
+    },
+    {
+     "label": "L0089",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L008f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0092",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0093",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0095",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0098",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0079",
+     "end": "L0082",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0084"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->a(Lorg/json/JSONObject;)[B",
+   "access": 10,
+   "offset": 3889380,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6153779,
+   "end": "L0025",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_byte_"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/common/Base64;->decode(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "readByte failed : "
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->b(Lcom/huawei/hms/core/aidl/IMessageEntity;Ljava/lang/reflect/Field;Lorg/json/JSONObject;)Ljava/lang/Object;",
+   "access": 10,
+   "offset": 3889948,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6153800,
+   "end": "L0092",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "cannot support type : "
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/String;Lorg/json/JSONObject;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L0091"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "com.huawei"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->startsWith(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "instance-of",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L002b",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L002d",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->jsonToEntity(Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "instance-of",
+     "registers": [
+      3,
+      7
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0040",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L008b"
+    },
+    {
+     "label": "L0042",
+     "op": "move-object",
+     "registers": [
+      3,
+      7
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L008b"
+    },
+    {
+     "label": "L004b",
+     "op": "move-object",
+     "registers": [
+      3,
+      7
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0053",
+     "op": "if-eq",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0080"
+    },
+    {
+     "label": "L0055",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0058"
+    },
+    {
+     "label": "L0057",
+     "op": "goto",
+     "target": "L0080"
+    },
+    {
+     "label": "L0058",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0059",
+     "op": "if-ne",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0062"
+    },
+    {
+     "label": "L005b",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lorg/json/JSONObject;)[B"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0063",
+     "op": "if-ne",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0070"
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0068",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->b(Ljava/lang/reflect/Type;Lorg/json/JSONObject;)Ljava/util/Map;"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0078",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L007b",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007f",
+     "op": "goto",
+     "target": "L0091"
+    },
+    {
+     "label": "L0080",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0083",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0084",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0086",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Ljava/lang/reflect/Type;Lorg/json/JSONObject;)Ljava/util/List;"
+    },
+    {
+     "label": "L0089",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L008b",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L008c",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "InstantiationException  "
+    },
+    {
+     "label": "L008e",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0091",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0011",
+     "end": "L008a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/InstantiationException;",
+       "target": "L008c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->b(Ljava/lang/reflect/Type;Lorg/json/JSONObject;)Ljava/util/Map;",
+   "access": 10,
+   "offset": 3890940,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6153854,
+   "end": "L0053",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "aget-object",
+     "registers": [
+      4,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_map_"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONArray;->length()I"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "instance-of",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0028",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L002a",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/json/JSONArray;->getString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->jsonToEntity(Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/json/JSONArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3,
+      2
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0041",
+     "op": "goto",
+     "target": "L004f"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/json/JSONArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lorg/json/JSONArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2,
+      3
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L004f",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0051",
+     "op": "goto",
+     "target": "L001c"
+    },
+    {
+     "label": "L0052",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->createJsonString(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3890560,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "createJsonString error, the input IMessageEntity is null"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "catch JSONException "
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L0028",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "catch IllegalAccessException "
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000c",
+     "end": "L0010",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0028"
+      },
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L0011"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->getInfoFromJsonobject(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 3890272,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0036"
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "instance-of",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0022",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "getInfoFromJsonobject:parser json error :"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000e",
+     "end": "L0020",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L0023"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->getIntValue(Lorg/json/JSONObject;Ljava/lang/String;)I",
+   "access": 9,
+   "offset": 3889748,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->getStringValue(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3890720,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->has(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/JsonUtil;->jsonToEntity(Ljava/lang/String;Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/core/aidl/IMessageEntity;",
+   "access": 9,
+   "offset": 3889488,
+   "registers": 10,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L0067",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "JsonUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      8
+     ],
+     "method": "Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0066"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "move-object",
+     "registers": [
+      1,
+      8
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L001d",
+     "op": "move-exception",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0051"
+    },
+    {
+     "label": "L001f",
+     "op": "array-length",
+     "registers": [
+      3,
+      8
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0021",
+     "op": "if-ge",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0023",
+     "op": "aget-object",
+     "registers": [
+      5,
+      8,
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/annotation/Packed;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->isAnnotationPresent(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      9,
+      5,
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/JsonUtil;->a(Lcom/huawei/hms/core/aidl/IMessageEntity;Ljava/lang/reflect/Field;Lorg/json/JSONObject;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "goto",
+     "target": "L0049"
+    },
+    {
+     "label": "L0031",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-direct",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0036",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "jsonToEntity, set value of the field exception, field name:"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/reflect/Field;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0049",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L004b",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L004f",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0050",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L0051",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0053",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "catch JSONException when parse jsonString"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0062",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0066",
+     "op": "return-object",
+     "registers": [
+      9
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L002b",
+     "handler": "H1"
+    },
+    {
+     "start": "L002d",
+     "end": "L0030",
+     "handler": "H5"
+    },
+    {
+     "start": "L0031",
+     "end": "L0050",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L001d"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0031"
+      },
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L001d"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

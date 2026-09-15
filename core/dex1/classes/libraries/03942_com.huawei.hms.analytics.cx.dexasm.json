@@ -1,0 +1,763 @@
+{
+ "class": "Lcom/huawei/hms/analytics/cx;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/cx;-><init>(Ljava/util/List;)V",
+   "access": 65537,
+   "offset": 3575024,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/av;->lmn()Lcom/huawei/hms/analytics/av;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/av;->lmn:Lcom/huawei/hms/analytics/ax;"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/ax;->ghi:Landroid/content/Context;"
+    },
+    {
+     "label": "L000b",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L000d",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->lmn(Landroid/content/Context;)Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/cu;->lmn(Landroid/content/Context;)Lcom/huawei/hms/analytics/cu;"
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/cx;->run()V",
+   "access": 17,
+   "offset": 3575096,
+   "registers": 12,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 0,
+   "end": "L009f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "EventApiUsageRecordMission"
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0099"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "goto/16",
+     "target": "L0099"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "latest_upload_time"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "apiUsageUploadKey"
+    },
+    {
+     "label": "L0014",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/eg;->klm(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;J)J"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-wide",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "auto report api data for bi"
+    },
+    {
+     "label": "L0020",
+     "op": "cmp-long",
+     "registers": [
+      10,
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      10
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      4,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      2,
+      3,
+      8,
+      9
+     ],
+     "method": "Lcom/huawei/hms/analytics/eg;->lmn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;J)V"
+    },
+    {
+     "label": "L0029",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L002a",
+     "op": "sub-long",
+     "registers": [
+      4,
+      8,
+      6
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const-wide/32",
+     "registers": [
+      6
+     ],
+     "literal": 86400000
+    },
+    {
+     "label": "L002f",
+     "op": "cmp-long",
+     "registers": [
+      10,
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "if-lez",
+     "registers": [
+      10
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "api usage cycle is exceeded the threshold."
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0038",
+     "op": "iget-object",
+     "registers": [
+      4,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      2,
+      3,
+      8,
+      9
+     ],
+     "method": "Lcom/huawei/hms/analytics/eg;->lmn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;J)V"
+    },
+    {
+     "label": "L003d",
+     "op": "goto",
+     "target": "L0048"
+    },
+    {
+     "label": "L003e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 20
+    },
+    {
+     "label": "L0046",
+     "op": "if-le",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0067"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->ijk()Ljava/util/List;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "iget-object",
+     "registers": [
+      1,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->klm()V"
+    },
+    {
+     "label": "L0056",
+     "op": "iget-object",
+     "registers": [
+      1,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/List;->addAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L005b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/cu;->lmn(Landroid/content/Context;)Lcom/huawei/hms/analytics/cu;"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "iget-object",
+     "registers": [
+      1,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/cu;->lmn(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0066",
+     "op": "return-void"
+    },
+    {
+     "label": "L0067",
+     "op": "iget-object",
+     "registers": [
+      2,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0069",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->ijk()Ljava/util/List;"
+    },
+    {
+     "label": "L006c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L006d",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0070",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0071",
+     "op": "iget-object",
+     "registers": [
+      5,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0076",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0077",
+     "op": "add-int/2addr",
+     "registers": [
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "if-le",
+     "registers": [
+      5,
+      3
+     ],
+     "target": "L0091"
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->addAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L0082",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->klm()V"
+    },
+    {
+     "label": "L0087",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->lmn:Landroid/content/Context;"
+    },
+    {
+     "label": "L0089",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/cu;->lmn(Landroid/content/Context;)Lcom/huawei/hms/analytics/cu;"
+    },
+    {
+     "label": "L008c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/cu;->lmn(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0090",
+     "op": "return-void"
+    },
+    {
+     "label": "L0091",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->ikl:Lcom/huawei/hms/analytics/bg;"
+    },
+    {
+     "label": "L0093",
+     "op": "iget-object",
+     "registers": [
+      1,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/cx;->klm:Ljava/util/List;"
+    },
+    {
+     "label": "L0095",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/bg;->lmn(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0098",
+     "op": "return-void"
+    },
+    {
+     "label": "L0099",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "apiEvents is empty, no data save"
+    },
+    {
+     "label": "L009b",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L009e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

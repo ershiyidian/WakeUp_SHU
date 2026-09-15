@@ -1,0 +1,1205 @@
+{
+ "class": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;-><init>()V",
+   "access": 65537,
+   "offset": 3729884,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromBytes([BLandroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;",
+   "access": 9,
+   "offset": 3729472,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "array-length",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcel;->unmarshall([BII)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->setDataPosition(I)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0018",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromIntentExtra(Landroid/content/Intent;Ljava/lang/String;Landroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;",
+   "access": 9,
+   "offset": 3729540,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromBytes([BLandroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromString(Ljava/lang/String;Landroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;",
+   "access": 9,
+   "offset": 3729588,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/util/Base64Utils;->decodeUrlSafe(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromBytes([BLandroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeIterableFromBundle(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;",
+   "access": 9,
+   "offset": 3729660,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromBytes([BLandroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeIterableFromIntentExtra(Landroid/content/Intent;Ljava/lang/String;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;",
+   "access": 9,
+   "offset": 3729772,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->deserializeFromBytes([BLandroid/os/Parcelable$Creator;)Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeIterableToBundle(Ljava/lang/Iterable;Landroid/os/Bundle;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3729908,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToBytes(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)[B"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L000e"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      0
+     ],
+     "method": "Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeIterableToIntentExtra(Ljava/lang/Iterable;Landroid/content/Intent;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3730000,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToBytes(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)[B"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L000e"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      0
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToBytes(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)[B",
+   "access": 9,
+   "offset": 3729420,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->marshall()[B"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToIntentExtra(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;Landroid/content/Intent;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3730092,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "goto",
+     "target": "L000c"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToBytes(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)[B"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToString(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3729624,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelableSerializer;->serializeToBytes(Lcom/huawei/hms/common/internal/safeparcel/SafeParcelable;)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/util/Base64Utils;->encodeUrlSafe([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

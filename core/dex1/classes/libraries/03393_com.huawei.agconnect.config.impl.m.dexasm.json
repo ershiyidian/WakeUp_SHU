@@ -1,0 +1,253 @@
+{
+ "class": "Lcom/huawei/agconnect/config/impl/m;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/config/impl/m;->a:Ljava/util/Map;",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/agconnect/config/impl/m;->b:Lcom/huawei/agconnect/config/impl/k;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/config/impl/m;-><init>(Landroid/content/Context;Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 3403776,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ConcurrentHashMap;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/concurrent/ConcurrentHashMap;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/config/impl/m;->a:Ljava/util/Map;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/config/impl/k;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/config/impl/k;-><init>(Landroid/content/Context;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/config/impl/m;->b:Lcom/huawei/agconnect/config/impl/k;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/config/impl/m;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3403684,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/config/impl/m;->a:Ljava/util/Map;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/config/impl/m;->b:Lcom/huawei/agconnect/config/impl/k;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/config/impl/k;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/config/impl/m;->a:Ljava/util/Map;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2,
+      0
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/config/impl/m;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 3403752,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "SecurityResourcesReader{mKey=, encrypt=true}"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

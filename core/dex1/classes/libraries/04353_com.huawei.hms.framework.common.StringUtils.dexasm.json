@@ -1,0 +1,2772 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/StringUtils;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->INIT_CAPACITY:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->SAFE_STRING_PATH:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->TAG:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->isAegisStringLibraryLoaded:Z",
+   "access": 10
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;-><init>()V",
+   "access": 65537,
+   "offset": 3766040,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765064,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->toCharArray()[C"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "array-length",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-ge",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L000f",
+     "op": "rem-int/lit8",
+     "registers": [
+      1,
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0013",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 42
+    },
+    {
+     "label": "L0015",
+     "op": "aput-char",
+     "registers": [
+      1,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L000c"
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/String;-><init>([C)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->byte2Str([B)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765144,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      2
+     ],
+     "method": "Ljava/lang/String;-><init>([BLjava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "StringUtils.byte2str error: UnsupportedEncodingException"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->checkCompatible(Ljava/lang/String;)Z",
+   "access": 10,
+   "offset": 3764464,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/framework/common/SecurityBase64Utils;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/framework/common/StringUtils;"
+    },
+    {
+     "label": "L000f",
+     "op": "monitor-enter",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/StringUtils;->isAegisStringLibraryLoaded:Z"
+    },
+    {
+     "label": "L0013",
+     "op": "monitor-exit",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "monitor-exit",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000a",
+     "end": "L0010",
+     "handler": "H1"
+    },
+    {
+     "start": "L0011",
+     "end": "L0017",
+     "handler": "H5"
+    },
+    {
+     "start": "L0017",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/ClassNotFoundException;",
+       "target": "L0018"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [],
+     "all": "L0015"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->collection2String(Ljava/util/Collection;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765232,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collection;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collection;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ";"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0025",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->length()I"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0030",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->substring(II)Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0037",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;",
+   "access": 137,
+   "offset": 3765360,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Locale;->ROOT:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->getBytes(J)[B",
+   "access": 9,
+   "offset": 3764812,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->valueOf(J)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->getBytes(Ljava/lang/String;)[B",
+   "access": 9,
+   "offset": 3764736,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6151969,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "utf-8"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "the content has error while it is converted to bytes"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->getTraceInfo(Ljava/lang/Throwable;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765400,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(I)V"
+    },
+    {
+     "label": "L000b",
+     "op": "array-length",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L000f",
+     "op": "aget-object",
+     "registers": [
+      3,
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "at "
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ";"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0022",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->replace(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765500,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/StringUtils;->isAegisStringLibraryLoaded:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.secure.android.common.util.SafeString"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/secure/android/common/util/SafeString;->replace(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "SafeString.substring error"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000c",
+     "end": "L0010",
+     "handler": "H1"
+    },
+    {
+     "start": "L0024",
+     "end": "L0028",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0011"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0028"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->str2Byte(Ljava/lang/String;)[B",
+   "access": 9,
+   "offset": 3764848,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0007",
+     "op": "new-array",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils.str2Byte error: UnsupportedEncodingException"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "new-array",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000a",
+     "end": "L0010",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L0011"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->strEquals(Ljava/lang/String;Ljava/lang/String;)Z",
+   "access": 9,
+   "offset": 3764564,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->stringToBoolean(Ljava/lang/String;Z)Z",
+   "access": 9,
+   "offset": 3764612,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Boolean;->booleanValue()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "String to Integer catch NumberFormatException."
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L000f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0010"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->stringToInteger(Ljava/lang/String;I)I",
+   "access": 9,
+   "offset": 3764948,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "String to Integer catch NumberFormatException."
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L000b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L000c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->stringToLong(Ljava/lang/String;J)J",
+   "access": 9,
+   "offset": 3765924,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Long;->parseLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "String to Long catch NumberFormatException."
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->anonymizeMessage(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "return-wide",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L000b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L000c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->substring(Ljava/lang/String;I)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765624,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6151976,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.secure.android.common.util.SafeString"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/secure/android/common/util/SafeString;->substring(Ljava/lang/String;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "SafeString.substring error"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L001a",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-lt",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0022",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/String;->substring(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L000c",
+     "handler": "H1"
+    },
+    {
+     "start": "L0024",
+     "end": "L0028",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000d"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0029"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->substring(Ljava/lang/String;II)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765748,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6151986,
+   "end": "L0030",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/StringUtils;->isAegisStringLibraryLoaded:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.secure.android.common.util.SafeString"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/secure/android/common/util/SafeString;->substring(Ljava/lang/String;II)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "StringUtils"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "SafeString.substring error"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L001e",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0020",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-gt",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0028",
+     "op": "if-lt",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->substring(II)Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000c",
+     "end": "L0010",
+     "handler": "H1"
+    },
+    {
+     "start": "L002a",
+     "end": "L002e",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0011"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L002f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/StringUtils;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3765884,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Locale;->ROOT:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,468 @@
+{
+ "class": "Lcom/huawei/hms/analytics/ef;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/ef;->lmn(Landroid/content/Context;Ljava/lang/String;II)I",
+   "access": 9,
+   "offset": 3619296,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6113143,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/ef;->lmn(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0010",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0012",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L0023",
+     "op": "array-length",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-gtz",
+     "registers": [
+      1
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "aget-object",
+     "registers": [
+      1,
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L002a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/ef;->lmn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0031",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L0032",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/ef;->lmn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I",
+   "access": 10,
+   "offset": 3619416,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6133013,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L0004",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/OooO00o;->OooOOOO(Landroid/content/Context;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/app/AppOpsManager;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/OooO00o;->OooO00o(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/ef;->lmn(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 10,
+   "offset": 3619480,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6120931,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L0004",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "LOooo/o00Ooo;->OooOO0(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

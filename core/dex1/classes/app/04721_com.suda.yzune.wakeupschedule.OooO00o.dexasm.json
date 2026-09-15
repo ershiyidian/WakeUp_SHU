@@ -1,0 +1,646 @@
+{
+ "class": "Lcom/suda/yzune/wakeupschedule/OooO00o;",
+ "super": "Lo00O0O/OooO00o;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/OooO00o;->OooO0OO:I",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/OooO00o;-><init>(III)V",
+   "access": 69633,
+   "offset": 3921240,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6113635,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/OooO00o;->OooO0OO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00O0O/OooO00o;-><init>(II)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/OooO00o;->OooO00o(Loo000o/OooO00o;)V",
+   "access": 17,
+   "offset": 3921268,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6112844,
+   "end": "L00ae",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/OooO00o;->OooO0OO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "database"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0o0(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE TimeTableBean (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT NOT NULL);"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO TimeTableBean VALUES(1, '\u9ed8\u8ba4');"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE TableBean (\n    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,\n    tableName TEXT NOT NULL, \n    nodes INTEGER NOT NULL DEFAULT 11, \n    background TEXT NOT NULL DEFAULT '',\n    timeTable INTEGER NOT NULL DEFAULT 1,\n    startDate TEXT NOT NULL DEFAULT '2019-02-25',\n    maxWeek INTEGER NOT NULL DEFAULT 30,\n    itemHeight INTEGER NOT NULL DEFAULT 56,\n    itemAlpha INTEGER NOT NULL DEFAULT 50,\n    itemTextSize INTEGER NOT NULL DEFAULT 12,\n    widgetItemHeight INTEGER NOT NULL DEFAULT 56,\n    widgetItemAlpha INTEGER NOT NULL DEFAULT 50,\n    widgetItemTextSize INTEGER NOT NULL DEFAULT 12,\n    strokeColor INTEGER NOT NULL DEFAULT 0x80ffffff,\n    widgetStrokeColor INTEGER NOT NULL DEFAULT 0x80ffffff,\n    textColor INTEGER NOT NULL DEFAULT 0xff000000,\n    widgetTextColor INTEGER NOT NULL DEFAULT 0xff000000,\n    courseTextColor INTEGER NOT NULL DEFAULT 0xff000000,\n    widgetCourseTextColor INTEGER NOT NULL DEFAULT 0xff000000,\n    showSat INTEGER NOT NULL DEFAULT 1,\n    showSun INTEGER NOT NULL DEFAULT 1,\n    sundayFirst INTEGER NOT NULL DEFAULT 0,\n    showOtherWeekCourse INTEGER NOT NULL DEFAULT 0,\n    showTime INTEGER NOT NULL DEFAULT 0,\n    type INTEGER NOT NULL DEFAULT 0,\n    FOREIGN KEY (timeTable) REFERENCES TimeTableBean (id) ON DELETE SET DEFAULT ON UPDATE CASCADE\n);"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE INDEX index_TableBean_id_timeTable ON TableBean (timeTable ASC);"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE CourseBaseBean RENAME TO CourseBaseBean_old;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE CourseBaseBean(id INTEGER NOT NULL, courseName TEXT NOT NULL, color TEXT NOT NULL, tableId INTEGER NOT NULL, PRIMARY KEY (id, tableId), FOREIGN KEY (tableId) REFERENCES TableBean (id) ON DELETE CASCADE ON UPDATE CASCADE);"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO TableBean (tableName) VALUES('');"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO TableBean (tableName) VALUES('\u60c5\u4fa3\u8bfe\u8868');"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO CourseBaseBean (id, courseName, color, tableId) SELECT id, courseName, color, CASE WHEN tableName = '' THEN 1 ELSE 2 END FROM CourseBaseBean_old;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE INDEX index_CourseBaseBean_tableId ON CourseBaseBean (tableId ASC);"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP TABLE CourseBaseBean_old;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP INDEX index_CourseDetailBean_id_tableName;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0046",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE CourseDetailBean RENAME TO CourseDetailBean_old;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE CourseDetailBean (\n  id INTEGER NOT NULL,\n  day INTEGER NOT NULL,\n  room TEXT,\n  teacher TEXT,\n  startNode INTEGER NOT NULL,\n  step INTEGER NOT NULL,\n  startWeek INTEGER NOT NULL,\n  endWeek INTEGER NOT NULL,\n  type INTEGER NOT NULL,\n  tableId INTEGER NOT NULL,\n  PRIMARY KEY (day, startNode, startWeek, type, tableId, id),\n  FOREIGN KEY (\"id\", \"tableId\") REFERENCES \"CourseBaseBean\" (\"id\", \"tableId\") ON DELETE CASCADE ON UPDATE CASCADE\n);"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0050",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO CourseDetailBean (id, day, room, teacher, startNode, step, startWeek, endWeek, type, tableId) SELECT id, day, room, teacher, startNode, step, startWeek, endWeek, type, CASE WHEN tableName = '' THEN 1 ELSE 2 END FROM CourseDetailBean_old;"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0055",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE INDEX index_CourseDetailBean_id_tableId ON CourseDetailBean (id ASC, tableId ASC);"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP TABLE CourseDetailBean_old"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE TimeDetailBean RENAME TO TimeDetailBean_old;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0064",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE TimeDetailBean (node INTEGER NOT NULL, startTime TEXT NOT NULL, endTime TEXT NOT NULL, timeTable INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (node, timeTable), FOREIGN KEY (timeTable) REFERENCES TimeTableBean (id) ON DELETE CASCADE ON UPDATE CASCADE);"
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0069",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO TimeDetailBean (node, startTime, endTime) SELECT node, startTime, endTime FROM TimeDetailBean_old;"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L006e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE INDEX index_TimeDetailBean_id_timeTable ON TimeDetailBean(timeTable ASC);"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0073",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP TABLE TimeDetailBean_old;"
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0078",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE TimeTableBean ADD COLUMN sameLen INTEGER NOT NULL DEFAULT 1;"
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE TimeTableBean ADD COLUMN courseLen INTEGER NOT NULL DEFAULT 50;"
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0082",
+     "op": "return-void"
+    },
+    {
+     "label": "L0083",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "database"
+    },
+    {
+     "label": "L0085",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0o0(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0088",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP INDEX IF EXISTS index_CourseDetailBean_id_tableId;"
+    },
+    {
+     "label": "L008a",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L008d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE TABLE CourseDetailBean_new (\n  id INTEGER NOT NULL,\n  day INTEGER NOT NULL,\n  room TEXT,\n  teacher TEXT,\n  startNode INTEGER NOT NULL,\n  step INTEGER NOT NULL,\n  startWeek INTEGER NOT NULL,\n  endWeek INTEGER NOT NULL,\n  type INTEGER NOT NULL,\n  tableId INTEGER NOT NULL,\n  level INTEGER NOT NULL DEFAULT 0,\n  ownTime INTEGER NOT NULL DEFAULT 0,\n  startTime TEXT NOT NULL DEFAULT '',\n  endTime TEXT NOT NULL DEFAULT '',\n  PRIMARY KEY (day, startNode, startWeek, type, tableId, id, ownTime, startTime),\n  FOREIGN KEY (\"id\", \"tableId\") REFERENCES \"CourseBaseBean\" (\"id\", \"tableId\") ON DELETE CASCADE ON UPDATE CASCADE\n);"
+    },
+    {
+     "label": "L008f",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0092",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "INSERT INTO CourseDetailBean_new (id, day, room, teacher, startNode, step, startWeek, endWeek, type, tableId, level, ownTime, startTime, endTime) SELECT id, day, room, teacher, startNode, step, startWeek, endWeek, type, tableId, level, ownTime, startTime, endTime FROM CourseDetailBean;"
+    },
+    {
+     "label": "L0094",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0097",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP TABLE CourseDetailBean;"
+    },
+    {
+     "label": "L0099",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L009c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ALTER TABLE CourseDetailBean_new RENAME TO CourseDetailBean;"
+    },
+    {
+     "label": "L009e",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00a1",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CREATE INDEX index_CourseDetailBean_id_tableId ON CourseDetailBean (id ASC, tableId ASC);"
+    },
+    {
+     "label": "L00a3",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Loo000o/OooO00o;->OooOOOo(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00a6",
+     "op": "return-void"
+    },
+    {
+     "label": "L00a7",
+     "op": "nop"
+    },
+    {
+     "label": "L00a8",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0002",
+     "targets": [
+      "L0083"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

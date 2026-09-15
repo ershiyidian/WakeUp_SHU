@@ -1,0 +1,1439 @@
+{
+ "class": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->c:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->e:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->f:Landroid/content/Context;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;-><init>(Landroid/app/Activity;)V",
+   "access": 65537,
+   "offset": 3499752,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;-><init>()V"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L000e",
+     "op": "const",
+     "registers": [
+      0
+     ],
+     "literal": 61100302
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setSdkVersion(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0016",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->c:Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;-><init>()V"
+    },
+    {
+     "label": "L001d",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L001f",
+     "op": "const",
+     "registers": [
+      0
+     ],
+     "literal": 30000000
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;->setApkVersion(I)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    },
+    {
+     "label": "L0026",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "listener must not be null."
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->registerResponseCallback(Ljava/lang/String;Lcom/huawei/hms/activity/internal/BusResponseCallback;)V",
+   "access": 9,
+   "offset": 3499860,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->getInstance()Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->registerObserver(Ljava/lang/String;Lcom/huawei/hms/activity/internal/BusResponseCallback;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->unregisterResponseCallback(Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3499892,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->getInstance()Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->unRegisterObserver(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->build()Landroid/content/Intent;",
+   "access": 1,
+   "offset": 3499044,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6113151,
+   "end": "L00a9",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/activity/ForegroundBusDelegate;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->f:Landroid/content/Context;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->f:Landroid/content/Context;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->getAppId(Landroid/content/Context;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->getAppId(Landroid/content/Context;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->getAppID()Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "|"
+    },
+    {
+     "label": "L002f",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0046"
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setAppID(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0045",
+     "op": "goto",
+     "target": "L005c"
+    },
+    {
+     "label": "L0046",
+     "op": "iget-object",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOo0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "iget-object",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->getAppID()Ljava/lang/String;"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setAppID(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->getTransactionId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0061",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0077"
+    },
+    {
+     "label": "L0068",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->getAppID()Ljava/lang/String;"
+    },
+    {
+     "label": "L006d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L006e",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "hub.request"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/internal/TransactionIdCreater;->getId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0073",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setTransactionId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0077",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0079",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setPkgName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L007e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->toJson()Ljava/lang/String;"
+    },
+    {
+     "label": "L0081",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0082",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HMS_FOREGROUND_REQ_HEADER"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0087",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->c:Ljava/lang/String;"
+    },
+    {
+     "label": "L0089",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HMS_FOREGROUND_REQ_BODY"
+    },
+    {
+     "label": "L008b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L008e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;->toJson()Ljava/lang/String;"
+    },
+    {
+     "label": "L0093",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0094",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HMS_FOREGROUND_REQ_INNER"
+    },
+    {
+     "label": "L0096",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0099",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L009b",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L009e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L009f",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L00a1",
+     "op": "iget-object",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L00a3",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "INNER_PACKAGE_NAME"
+    },
+    {
+     "label": "L00a5",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L00a8",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setAction(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499400,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setApiName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setApiLevel(I)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499428,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setApiLevel(I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setApplicationContext(Landroid/content/Context;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499456,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->f:Landroid/content/Context;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setInnerHms()Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499480,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setKitSdkVersion(I)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499516,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setKitSdkVersion(I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setMinApkVersion(I)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499544,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;->setApkVersion(I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setRequestBody(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499572,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->c:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setResponseCallback(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499596,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;->setResponseCallbackKey(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setResponseCallback(Ljava/lang/String;Lcom/huawei/hms/activity/internal/BusResponseCallback;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499624,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149073,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->d:Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundInnerHeader;->setResponseCallbackKey(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->getInstance()Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/activity/internal/ForegroundBusResponseMgr;->registerObserver(Ljava/lang/String;Lcom/huawei/hms/activity/internal/BusResponseCallback;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setServiceName(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499668,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setSrvName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setSubAppId(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499696,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setAppID(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->setTransactionId(Ljava/lang/String;)Lcom/huawei/hms/activity/ForegroundIntentBuilder;",
+   "access": 1,
+   "offset": 3499724,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->b:Lcom/huawei/hms/common/internal/RequestHeader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/RequestHeader;->setTransactionId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

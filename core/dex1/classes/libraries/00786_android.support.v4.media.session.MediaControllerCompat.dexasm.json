@@ -1,0 +1,2764 @@
+{
+ "class": "Landroid/support/v4/media/session/MediaControllerCompat;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_ADD_QUEUE_ITEM:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_ADD_QUEUE_ITEM_AT:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_ARGUMENT_INDEX:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_ARGUMENT_MEDIA_DESCRIPTION:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_GET_EXTRA_BINDER:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_REMOVE_QUEUE_ITEM:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->COMMAND_REMOVE_QUEUE_ITEM_AT:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->TAG:Ljava/lang/String;",
+   "access": 24
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;",
+   "access": 18
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/HashSet;",
+   "access": 18
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V",
+   "access": 65537,
+   "offset": 2008028,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6133341,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashSet;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/HashSet;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L000e",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 24
+    },
+    {
+     "label": "L0012",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0014",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L001e",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0027",
+     "op": "return-void"
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L002f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0030",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "sessionToken must not be null"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V",
+   "access": 65537,
+   "offset": 2008156,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6133354,
+   "end": "L003a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashSet;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/HashSet;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0012",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0014",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 24
+    },
+    {
+     "label": "L0016",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi24;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L001e",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L0020",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0022",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L002e",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0031",
+     "op": "return-void"
+    },
+    {
+     "label": "L0032",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0034",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "session must not be null"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0012",
+     "end": "L002d",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L002e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getMediaController(Landroid/app/Activity;)Landroid/support/v4/media/session/MediaControllerCompat;",
+   "access": 9,
+   "offset": 2007400,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6133323,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Landroidx/core/app/ComponentActivity;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroidx/core/app/ComponentActivity;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      3,
+      3
+     ],
+     "field": "Landroidx/core/app/ComponentActivity;->OooO0oO:LOooOOO/OooOo;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "LOooOOO/OooOo;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "LOooOoOO/o0000Ooo;"
+    },
+    {
+     "label": "L0014",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;"
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;->getMediaController()Landroid/support/v4/media/session/MediaControllerCompat;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompatApi21;->getMediaController(Landroid/app/Activity;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompatApi21;->getSessionToken(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$Token;->fromToken(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0029",
+     "end": "L0032",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L0033"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->setMediaController(Landroid/app/Activity;Landroid/support/v4/media/session/MediaControllerCompat;)V",
+   "access": 9,
+   "offset": 2008656,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Landroidx/core/app/ComponentActivity;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0004",
+     "op": "move-object",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroidx/core/app/ComponentActivity;"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;-><init>(Landroid/support/v4/media/session/MediaControllerCompat;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Landroidx/core/app/ComponentActivity;->OooO0oO:LOooOOO/OooOo;"
+    },
+    {
+     "label": "L0011",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "LOooOOO/OooOo;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$Token;->getToken()Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompatApi21;->fromToken(Landroid/content/Context;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0025",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompatApi21;->setMediaController(Landroid/app/Activity;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 9,
+   "offset": 2008872,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0003"
+    },
+    {
+     "label": "L0002",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.support.v4.media.session.action.FOLLOW"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.support.v4.media.session.action.UNFOLLOW"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0013",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "An extra field android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE is required for this action "
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "."
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOO(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V",
+   "access": 1,
+   "offset": 2008304,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V",
+   "access": 1,
+   "offset": 2008332,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->adjustVolume(II)V",
+   "access": 1,
+   "offset": 2008360,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->adjustVolume(II)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->dispatchMediaButtonEvent(Landroid/view/KeyEvent;)Z",
+   "access": 1,
+   "offset": 2007656,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->dispatchMediaButtonEvent(Landroid/view/KeyEvent;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "KeyEvent may not be null"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getExtras()Landroid/os/Bundle;",
+   "access": 1,
+   "offset": 2007304,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getExtras()Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getFlags()J",
+   "access": 1,
+   "offset": 2007996,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getFlags()J"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getMediaController()Ljava/lang/Object;",
+   "access": 1,
+   "offset": 2007900,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6133337,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getMediaController()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getMetadata()Landroid/support/v4/media/MediaMetadataCompat;",
+   "access": 1,
+   "offset": 2007368,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getMetadata()Landroid/support/v4/media/MediaMetadataCompat;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getPackageName()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2007932,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getPlaybackInfo()Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;",
+   "access": 1,
+   "offset": 2007536,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPlaybackInfo()Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;",
+   "access": 1,
+   "offset": 2007624,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getQueue()Ljava/util/List;",
+   "access": 1,
+   "offset": 2007964,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getQueue()Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getQueueTitle()Ljava/lang/CharSequence;",
+   "access": 1,
+   "offset": 2007868,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getQueueTitle()Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getRatingType()I",
+   "access": 1,
+   "offset": 2007772,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getRatingType()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getRepeatMode()I",
+   "access": 1,
+   "offset": 2007804,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getRepeatMode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getSessionActivity()Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 2007272,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getSessionActivity()Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;",
+   "access": 1,
+   "offset": 2007600,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getSessionToken2Bundle()Landroid/os/Bundle;",
+   "access": 1,
+   "offset": 2007336,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSessionToken2Bundle()Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getShuffleMode()I",
+   "access": 1,
+   "offset": 2007836,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getShuffleMode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->getTransportControls()Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;",
+   "access": 1,
+   "offset": 2007568,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getTransportControls()Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->isCaptioningEnabled()Z",
+   "access": 1,
+   "offset": 2007708,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->isCaptioningEnabled()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->isSessionReady()Z",
+   "access": 1,
+   "offset": 2007740,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->isSessionReady()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V",
+   "access": 1,
+   "offset": 2008388,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6118730,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V",
+   "access": 1,
+   "offset": 2008416,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6133368,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/os/Handler;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/os/Handler;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/HashSet;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/util/HashSet;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "callback must not be null"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->removeQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V",
+   "access": 1,
+   "offset": 2008496,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->removeQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->removeQueueItemAt(I)V",
+   "access": 1,
+   "offset": 2008524,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat;->getQueue()Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0006",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat;->removeQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V",
+   "access": 1,
+   "offset": 2008600,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "command must neither be null nor empty"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->setVolumeTo(II)V",
+   "access": 1,
+   "offset": 2008756,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->setVolumeTo(II)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/MediaControllerCompat;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V",
+   "access": 1,
+   "offset": 2008784,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/HashSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    },
+    {
+     "label": "L0011",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "callback must not be null"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000d",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0011"
+    }
+   ]
+  }
+ ]
+}

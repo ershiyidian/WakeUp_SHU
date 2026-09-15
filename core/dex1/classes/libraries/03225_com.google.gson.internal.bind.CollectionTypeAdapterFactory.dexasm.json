@@ -1,0 +1,406 @@
+{
+ "class": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->OooO0oO:Lcom/bumptech/glide/OooO0OO;",
+   "access": 17
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;-><init>(Lcom/bumptech/glide/OooO0OO;)V",
+   "access": 65537,
+   "offset": 3361780,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->OooO0oO:Lcom/bumptech/glide/OooO0OO;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->OooO00o(Lcom/google/gson/OooO0OO;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/OooOOOO;",
+   "access": 17,
+   "offset": 3361596,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6111252,
+   "end": "L0053",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lcom/google/gson/reflect/TypeToken;->OooO0O0:Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/Collection;"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      2,
+      7
+     ],
+     "field": "Lcom/google/gson/reflect/TypeToken;->OooO00o:Ljava/lang/Class;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "instance-of",
+     "registers": [
+      3,
+      0
+     ],
+     "type": "Ljava/lang/reflect/WildcardType;"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0013",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/reflect/WildcardType;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/reflect/WildcardType;->getUpperBounds()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooO0O0(Z)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooO0oO(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooOO0O(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/Type;Ljava/util/HashMap;)Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "instance-of",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L0031",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0033",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L003c",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L003e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/google/gson/reflect/TypeToken;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Lcom/google/gson/OooO0OO;->OooO0o0(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/OooOOOO;"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->OooO0oO:Lcom/bumptech/glide/OooO0OO;"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      7
+     ],
+     "method": "Lcom/bumptech/glide/OooO0OO;->OooO(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/OooOOO;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      6,
+      0,
+      1,
+      7
+     ],
+     "method": "Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;-><init>(Lcom/google/gson/OooO0OO;Ljava/lang/reflect/Type;Lcom/google/gson/OooOOOO;Lcom/google/gson/internal/OooOOO;)V"
+    },
+    {
+     "label": "L0052",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,751 @@
+{
+ "class": "Lo000000/OooO00o;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lo000000/OooO00o;->OooO00o:I",
+   "access": 4121
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo000000/OooO00o;-><clinit>()V",
+   "access": 65544,
+   "offset": 5056696,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Alarms"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/work/o0OO00O;->OooO0OO(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000000/OooO00o;->OooO00o(Landroid/content/Context;Lo00000O0/OooOOOO;I)V",
+   "access": 9,
+   "offset": 5056724,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L003a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "alarm"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/app/AlarmManager;"
+    },
+    {
+     "label": "L0008",
+     "op": "sget",
+     "registers": [
+      1
+     ],
+     "field": "Lo000000/OooO0O0;->OooOO0o:I"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Landroidx/work/impl/background/systemalarm/SystemAlarmService;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "ACTION_DELAY_MET"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Lo000000/OooO0O0;->OooO0o0(Landroid/content/Intent;Lo00000O0/OooOOOO;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "sget",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L001b",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L001d",
+     "op": "if-lt",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L001f",
+     "op": "const/high16",
+     "registers": [
+      2
+     ],
+     "literal": 9216
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L0024"
+    },
+    {
+     "label": "L0022",
+     "op": "const/high16",
+     "registers": [
+      2
+     ],
+     "literal": 8192
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6,
+      1,
+      2
+     ],
+     "method": "Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0039"
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0039"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "method": "Landroidx/work/o0OO00O;->OooO0O0()Landroidx/work/o0OO00O;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lo00000O0/OooOOOO;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000000/OooO00o;->OooO0O0(Landroid/content/Context;Landroidx/work/impl/WorkDatabase;Lo00000O0/OooOOOO;J)V",
+   "access": 9,
+   "offset": 5056856,
+   "registers": 9,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroidx/work/impl/WorkDatabase;->OooOoO0()Lo00000O0/OooOOO;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lo00000O0/OooOOO;->OooOOoo(Lo00000O0/OooOOOO;)Lo00000O0/OooOO0O;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000a",
+     "op": "iget",
+     "registers": [
+      5,
+      1
+     ],
+     "field": "Lo00000O0/OooOO0O;->OooO0OO:I"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6,
+      5
+     ],
+     "method": "Lo000000/OooO00o;->OooO00o(Landroid/content/Context;Lo00000O0/OooOOOO;I)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6,
+      5,
+      7,
+      8
+     ],
+     "method": "Lo000000/OooO00o;->OooO0OO(Landroid/content/Context;Lo00000O0/OooOOOO;IJ)V"
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    },
+    {
+     "label": "L0013",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "LOooO0Oo/OooOOO;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "LOooO0Oo/OooOOO;-><init>(Landroidx/work/impl/WorkDatabase;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Landroidx/work/impl/utils/OooOO0;"
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      1
+     ],
+     "method": "Landroidx/work/impl/utils/OooOO0;-><init>(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "LOooooo/o0000O00;"
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      2
+     ],
+     "method": "LOooooo/o0000O00;-><init>(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Landroidx/room/oo0o0Oo;->OooOo00(Lo00Oo0O0/o000000O;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "workDatabase.runInTransa\u2026NAGER_ID_KEY) }\n        )"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0Oo(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/Number;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Number;->intValue()I"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lo00000O0/OooOO0O;"
+    },
+    {
+     "label": "L0035",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lo00000O0/OooOOOO;->OooO00o:Ljava/lang/String;"
+    },
+    {
+     "label": "L0037",
+     "op": "iget",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lo00000O0/OooOOOO;->OooO0O0:I"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "method": "Lo00000O0/OooOO0O;-><init>(Ljava/lang/String;II)V"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lo00000O0/OooOOO;->OooOo0(Lo00000O0/OooOO0O;)V"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6,
+      5,
+      7,
+      8
+     ],
+     "method": "Lo000000/OooO00o;->OooO0OO(Landroid/content/Context;Lo00000O0/OooOOOO;IJ)V"
+    },
+    {
+     "label": "L0042",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000000/OooO00o;->OooO0OO(Landroid/content/Context;Lo00000O0/OooOOOO;IJ)V",
+   "access": 9,
+   "offset": 5057008,
+   "registers": 9,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "alarm"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/app/AlarmManager;"
+    },
+    {
+     "label": "L0008",
+     "op": "sget",
+     "registers": [
+      1
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L000a",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L000c",
+     "op": "if-lt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000e",
+     "op": "const/high16",
+     "registers": [
+      1
+     ],
+     "literal": 3072
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L0013"
+    },
+    {
+     "label": "L0011",
+     "op": "const/high16",
+     "registers": [
+      1
+     ],
+     "literal": 2048
+    },
+    {
+     "label": "L0013",
+     "op": "sget",
+     "registers": [
+      2
+     ],
+     "field": "Lo000000/OooO0O0;->OooOO0o:I"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L0017",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Landroidx/work/impl/background/systemalarm/SystemAlarmService;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      4,
+      3
+     ],
+     "method": "Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "ACTION_DELAY_MET"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Lo000000/OooO0O0;->OooO0o0(Landroid/content/Intent;Lo00000O0/OooOOOO;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6,
+      2,
+      1
+     ],
+     "method": "Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L002a",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      7,
+      8,
+      4
+     ],
+     "method": "Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,637 @@
+{
+ "class": "Lcom/huawei/hms/analytics/element/ElementOnEvent;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/element/ElementOnEvent;-><init>()V",
+   "access": 65537,
+   "offset": 3624544,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/element/ElementOnEvent;->a(Landroid/app/Activity;Landroid/view/View;)V",
+   "access": 10,
+   "offset": 3624568,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0069",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ElementOnEvent"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "view is null, can not hookClickListener!"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    },
+    {
+     "label": "L000a",
+     "op": "instance-of",
+     "registers": [
+      1,
+      6
+     ],
+     "type": "Landroid/widget/AdapterView;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/element/a;->a()Lcom/huawei/hms/analytics/element/a;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/a;->a(Landroid/view/View;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    },
+    {
+     "label": "L0015",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/view/View;"
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getListenerInfo"
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001a",
+     "op": "new-array",
+     "registers": [
+      4,
+      3
+     ],
+     "type": "[Ljava/lang/Class;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V"
+    },
+    {
+     "label": "L0024",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6,
+      3
+     ],
+     "method": "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "mOnClickListener"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "instance-of",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "Lcom/huawei/hms/analytics/element/i;"
+    },
+    {
+     "label": "L003f",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0041",
+     "op": "goto",
+     "target": "L0052"
+    },
+    {
+     "label": "L0042",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L0052"
+    },
+    {
+     "label": "L0045",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/analytics/element/i;"
+    },
+    {
+     "label": "L0047",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/view/View$OnClickListener;"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/i;-><init>(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6,
+      3
+     ],
+     "method": "Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L004f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0050",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "goto",
+     "target": "L0053"
+    },
+    {
+     "label": "L0052",
+     "op": "return-void"
+    },
+    {
+     "label": "L0053",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0055",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "error info: "
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0064",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0068",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0015",
+     "end": "L004f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0050"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/element/ElementOnEvent;->setClickListener(Landroid/app/Activity;Landroid/view/View;)V",
+   "access": 9,
+   "offset": 3624808,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "ElementOnEvent"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "view is null, can not setClickListener!"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    },
+    {
+     "label": "L000a",
+     "op": "instance-of",
+     "registers": [
+      0,
+      4
+     ],
+     "type": "Landroid/view/ViewGroup;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L000e",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Landroid/view/ViewGroup;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/view/ViewGroup;->getChildCount()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "if-ge",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/ElementOnEvent;->setClickListener(Landroid/app/Activity;Landroid/view/View;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/ElementOnEvent;->a(Landroid/app/Activity;Landroid/view/View;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "return-void"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/ElementOnEvent;->a(Landroid/app/Activity;Landroid/view/View;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

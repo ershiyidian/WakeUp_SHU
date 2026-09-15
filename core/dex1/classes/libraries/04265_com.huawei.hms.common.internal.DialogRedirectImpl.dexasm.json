@@ -1,0 +1,145 @@
+{
+ "class": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;",
+ "super": "Lcom/huawei/hms/common/internal/DialogRedirect;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->a:Landroid/app/Activity;",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->b:I",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->c:Landroid/content/Intent;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;-><init>(Landroid/content/Intent;Landroid/app/Activity;I)V",
+   "access": 65537,
+   "offset": 3710864,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 1,
+   "debug_offset": 6110058,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/DialogRedirect;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->c:Landroid/content/Intent;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0007",
+     "op": "iput",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->b:I"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->redirect()V",
+   "access": 17,
+   "offset": 3710900,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->c:Landroid/content/Intent;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->a:Landroid/app/Activity;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0008",
+     "op": "iget",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lcom/huawei/hms/common/internal/DialogRedirectImpl;->b:I"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      2
+     ],
+     "method": "Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

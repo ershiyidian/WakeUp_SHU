@@ -1,0 +1,794 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/b;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;-><init>()V",
+   "access": 65537,
+   "offset": 3423196,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;)Ljava/io/File;",
+   "access": 2,
+   "offset": 3422716,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ".AGConnectCrash"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/log/e;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a()Ljava/lang/String;",
+   "access": 2,
+   "offset": 3423036,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6140044,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Ljava/util/UUID;->randomUUID()Ljava/util/UUID;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/UUID;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;Lcom/huawei/agconnect/crash/internal/bean/EventBody;)Ljava/io/File;",
+   "access": 1,
+   "offset": 3422748,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110321,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;)Ljava/io/File;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;Lcom/huawei/agconnect/crash/internal/bean/EventBody;Ljava/io/File;)Ljava/io/File;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;Lcom/huawei/agconnect/crash/internal/bean/EventBody;Ljava/io/File;)Ljava/io/File;",
+   "access": 1,
+   "offset": 3422784,
+   "registers": 8,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6148487,
+   "end": "L0053",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "write crash to file failed"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CrashFileImpl"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "writeFile"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b;->a()Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      7,
+      2
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "sget-object",
+     "registers": [
+      7
+     ],
+     "field": "Lo00o0/o00O0O;->OooO00o:Ljava/util/logging/Logger;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lo00o0/OooO0O0;->OooO0oo(Ljava/io/File;)Lo00o0/OooO0OO;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lo00o0/OooO0O0;->OooO0O0(Lo00o0/o0OOO0o;)Lo00o0/o00Ooo;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->toJsonString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "method": "Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6,
+      7
+     ],
+     "method": "Lo00o0/o00Ooo;->OooOOO0(Ljava/lang/String;Ljava/nio/charset/Charset;)Lo00o0/OooOOO0;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00o0/o00Ooo;->close()V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L0048"
+    },
+    {
+     "label": "L0033",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "goto",
+     "target": "L0049"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "IOException"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00o0/o00Ooo;->close()V"
+    },
+    {
+     "label": "L003f",
+     "op": "goto",
+     "target": "L0048"
+    },
+    {
+     "label": "L0040",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "FileNotFoundException"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0045",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L0047",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0048",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00o0/o00Ooo;->close()V"
+    },
+    {
+     "label": "L004e",
+     "op": "goto",
+     "target": "L0052"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0052",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0016",
+     "end": "L002b",
+     "handler": "H1"
+    },
+    {
+     "start": "L002b",
+     "end": "L002e",
+     "handler": "H9"
+    },
+    {
+     "start": "L0035",
+     "end": "L003a",
+     "handler": "Hd"
+    },
+    {
+     "start": "L003c",
+     "end": "L003f",
+     "handler": "H9"
+    },
+    {
+     "start": "L0040",
+     "end": "L0045",
+     "handler": "Hd"
+    },
+    {
+     "start": "L004b",
+     "end": "L004e",
+     "handler": "Hf"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L0040"
+      },
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0035"
+      }
+     ],
+     "all": "L0033"
+    },
+    {
+     "id": "H9",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L002f"
+      }
+     ]
+    },
+    {
+     "id": "Hd",
+     "catches": [],
+     "all": "L0033"
+    },
+    {
+     "id": "Hf",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L004f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;Z)Ljava/util/List;",
+   "access": 1,
+   "offset": 3423072,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6140759,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;)Ljava/io/File;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;ZLjava/io/File;)Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b;->a(Landroid/content/Context;ZLjava/io/File;)Ljava/util/List;",
+   "access": 1,
+   "offset": 3423108,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 2,
+   "debug_offset": 6133404,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/io/File;->listFiles()[Ljava/io/File;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000f",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/b$1;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/b$1;-><init>(Lcom/huawei/agconnect/crash/internal/b;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

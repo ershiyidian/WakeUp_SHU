@@ -1,0 +1,2 @@
+package android.database.sqlite;
+public class SQLiteDatabase {public interface CursorFactory{}public static SQLiteDatabase openDatabase(String p,CursorFactory f,int flags){return null;}public int getVersion(){return 0;}public android.database.Cursor rawQuery(String sql,String[] args){return null;}public void beginTransaction(){}public void setTransactionSuccessful(){}public void endTransaction(){}public void execSQL(String sql,Object[] args){}public void close(){}}

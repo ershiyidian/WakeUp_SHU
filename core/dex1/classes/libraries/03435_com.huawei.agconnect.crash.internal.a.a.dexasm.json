@@ -1,0 +1,213 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/a/a;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/a/a;->a()Z",
+   "access": 9,
+   "offset": 3412136,
+   "registers": 4,
+   "inputs": 0,
+   "outputs": 5,
+   "debug_offset": 0,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "sget",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/android/os/BuildEx$VERSION;->EMUI_SDK_INT:I"
+    },
+    {
+     "label": "L0003",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 21
+    },
+    {
+     "label": "L0005",
+     "op": "if-lt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/securitydiagnose/HwSecurityDiagnoseManager$StpExtraStatusInfo;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/securitydiagnose/HwSecurityDiagnoseManager$StpExtraStatusInfo;-><init>()V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "method": "Landroid/securitydiagnose/HwSecurityDiagnoseManager;->getInstance()Landroid/securitydiagnose/HwSecurityDiagnoseManager;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      0,
+      0,
+      1
+     ],
+     "method": "Landroid/securitydiagnose/HwSecurityDiagnoseManager;->getStpStatusByCategory(IZZLandroid/securitydiagnose/HwSecurityDiagnoseManager$StpExtraStatusInfo;)I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "if-ne",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0019",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L001f"
+    },
+    {
+     "label": "L001d",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/android/util/NoExtAPIException;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0016",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lcom/huawei/android/util/NoExtAPIException;",
+       "target": "L001d"
+      },
+      {
+       "type": "Ljava/lang/NoClassDefFoundError;",
+       "target": "L001b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

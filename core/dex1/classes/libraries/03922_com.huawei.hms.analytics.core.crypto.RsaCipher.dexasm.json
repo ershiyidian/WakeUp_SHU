@@ -1,0 +1,366 @@
+{
+ "class": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;->a:Ljava/nio/charset/Charset;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;-><clinit>()V",
+   "access": 65544,
+   "offset": 3564636,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;->a:Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;-><init>()V",
+   "access": 65537,
+   "offset": 3564672,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;->encrypt([BLjava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3564480,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L003d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "RsaCipherCommander"
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L000f",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/security/spec/X509EncodedKeySpec;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "RSA"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RsaCipher;->a:Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lcom/bumptech/glide/OooO;->o000oOoO([BLjava/security/PublicKey;)[B"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/crypto/HAHexUtil;->byteArray2HexString([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "rsaEncrypt(): InvalidKeySpecException"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L0036"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "rsaEncrypt(): getInstance - No such algorithm,transformation"
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "content or public key is null"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000f",
+     "end": "L002c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0033"
+      },
+      {
+       "type": "Ljava/security/spec/InvalidKeySpecException;",
+       "target": "L002d"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

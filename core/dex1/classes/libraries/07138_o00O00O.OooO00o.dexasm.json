@@ -1,0 +1,664 @@
+{
+ "class": "Lo00O00O/OooO00o;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lo00O00O/OooO00o;->OooO00o:Z",
+   "access": 9
+  },
+  {
+   "name": "Lo00O00O/OooO00o;->OooO0O0:Z",
+   "access": 9
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo00O00O/OooO00o;->OooO00o()Ljava/security/SecureRandom;",
+   "access": 9,
+   "offset": 5388968,
+   "registers": 6,
+   "inputs": 0,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0041",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 26
+    },
+    {
+     "label": "L0004",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "method": "Lo000000O/OooO0O0;->OooOOO0()Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SHA1PRNG"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/security/SecureRandom;->getInstance(Ljava/lang/String;)Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0016",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/bouncycastle/crypto/engines/AESEngine;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/bouncycastle/crypto/engines/AESEngine;-><init>()V"
+    },
+    {
+     "label": "L001d",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L001f",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0024",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/bouncycastle/crypto/prng/SP800SecureRandomBuilder;"
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0,
+      5
+     ],
+     "method": "Lorg/bouncycastle/crypto/prng/SP800SecureRandomBuilder;-><init>(Ljava/security/SecureRandom;Z)V"
+    },
+    {
+     "label": "L002a",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 384
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lorg/bouncycastle/crypto/prng/SP800SecureRandomBuilder;->setEntropyBitsRequired(I)Lorg/bouncycastle/crypto/prng/SP800SecureRandomBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 256
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      5,
+      3,
+      1
+     ],
+     "method": "Lorg/bouncycastle/crypto/prng/SP800SecureRandomBuilder;->buildCTR(Lorg/bouncycastle/crypto/BlockCipher;I[BZ)Lorg/bouncycastle/crypto/prng/SP800SecureRandom;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "sget-boolean",
+     "registers": [
+      3
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO0O0:Z"
+    },
+    {
+     "label": "L0039",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0040"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "sput-boolean",
+     "registers": [
+      1
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO0O0:Z"
+    },
+    {
+     "label": "L0040",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000a",
+     "handler": "H1"
+    },
+    {
+     "start": "L000f",
+     "end": "L0036",
+     "handler": "H5"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L000b"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0040"
+      }
+     ],
+     "all": "L0016"
+    }
+   ]
+  },
+  {
+   "name": "Lo00O00O/OooO00o;->OooO0O0(I)[B",
+   "access": 9,
+   "offset": 5388776,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO00o:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0005",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0007",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 26
+    },
+    {
+     "label": "L000b",
+     "op": "if-lt",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "method": "Lo000000O/OooO0O0;->OooOOO0()Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "goto",
+     "target": "L0013"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "SHA1PRNG"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/security/SecureRandom;->getInstance(Ljava/lang/String;)Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L001c",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "new-array",
+     "registers": [
+      3,
+      1
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "method": "Lo00O00O/OooO00o;->OooO00o()Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002e",
+     "op": "new-array",
+     "registers": [
+      3,
+      1
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L0011",
+     "handler": "H1"
+    },
+    {
+     "start": "L0015",
+     "end": "L0021",
+     "handler": "H5"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0012"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0025"
+      },
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L001c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lo00O00O/OooO00o;->OooO0OO(I)Ljava/lang/String;",
+   "access": 9,
+   "offset": 5388932,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lo00O00O/OooO00o;->OooO0O0(I)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooO0oO([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

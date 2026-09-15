@@ -1,0 +1,848 @@
+{
+ "class": "Lbiweekly/io/scribe/property/RawPropertyScribe;",
+ "super": "Lbiweekly/io/scribe/property/ICalPropertyScribe;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2816776,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;Lbiweekly/ICalDataType;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->jcardValueToString(Lbiweekly/io/json/JCalValue;)Ljava/lang/String;",
+   "access": 10,
+   "offset": 2816624,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->getValues()Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0009",
+     "op": "if-le",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asMulti()Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO0o(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0022",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asStructured()Ljava/util/List;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asSingle()Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 4161,
+   "offset": 2816284,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_dataType(Lbiweekly/property/RawProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_dataType(Lbiweekly/property/RawProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 1,
+   "offset": 2816316,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110321,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/RawProperty;->getDataType()Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2816344,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6113143,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;",
+   "access": 1,
+   "offset": 2816428,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 4,
+   "debug_offset": 6141223,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->jcardValueToString(Lbiweekly/io/json/JCalValue;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      2,
+      1
+     ],
+     "method": "Lbiweekly/property/RawProperty;-><init>(Ljava/lang/String;Lbiweekly/ICalDataType;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2816372,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6113143,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;",
+   "access": 1,
+   "offset": 2816468,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 4,
+   "debug_offset": 6120901,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      2,
+      1
+     ],
+     "method": "Lbiweekly/property/RawProperty;-><init>(Ljava/lang/String;Lbiweekly/ICalDataType;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseXml(Lbiweekly/io/xml/XCalElement;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 4161,
+   "offset": 2816400,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6113635,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseXml(Lbiweekly/io/xml/XCalElement;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_parseXml(Lbiweekly/io/xml/XCalElement;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/RawProperty;",
+   "access": 1,
+   "offset": 2816500,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6141870,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement;->firstValue()Lbiweekly/io/xml/XCalElement$XCalValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement$XCalValue;->getDataType()Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement$XCalValue;->getValue()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/property/RawProperty;-><init>(Ljava/lang/String;Lbiweekly/ICalDataType;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 4161,
+   "offset": 2816556,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_writeText(Lbiweekly/property/RawProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/RawPropertyScribe;->_writeText(Lbiweekly/property/RawProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2816588,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6117837,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/RawProperty;->getValue()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

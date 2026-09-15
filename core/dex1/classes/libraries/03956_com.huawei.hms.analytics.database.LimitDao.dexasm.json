@@ -1,0 +1,617 @@
+{
+ "class": "Lcom/huawei/hms/analytics/database/LimitDao;",
+ "super": "Lcom/huawei/hms/analytics/database/AbstractDao;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/database/LimitDao;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V",
+   "access": 65537,
+   "offset": 3582636,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "EVENT_LIMIT"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/AbstractDao;-><init>(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/LimitDao;->lmn(Landroid/database/sqlite/SQLiteDatabase;)V",
+   "access": 9,
+   "offset": 3582664,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CREATE TABLE IF NOT EXISTS \"EVENT_LIMIT\" (\""
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->lmn:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "\" INTEGER PRIMARY KEY AUTOINCREMENT ,\""
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0013",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->klm:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "\" TEXT,\""
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0026",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "\" TEXT);"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/LimitDao;->convertToBean(Landroid/database/Cursor;)Ljava/lang/Object;",
+   "access": 4113,
+   "offset": 3582516,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->lmn:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->klm:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      2
+     ],
+     "method": "Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/analytics/bj;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/bj;-><init>()V"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Landroid/database/Cursor;->getLong(I)J"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->lmn:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Landroid/database/Cursor;->getString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->klm:Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      2
+     ],
+     "method": "Landroid/database/Cursor;->getString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "iput-object",
+     "registers": [
+      7,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->ikl:Ljava/lang/String;"
+    },
+    {
+     "label": "L0033",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/LimitDao;->transformContentValues(Landroid/content/ContentValues;Ljava/lang/Object;)V",
+   "access": 4113,
+   "offset": 3582784,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/analytics/bj;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/content/ContentValues;->clear()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->lmn:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->lmn:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1,
+      0
+     ],
+     "method": "Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->klm:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->klm:Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/LimitDao$Properties;->ikl:Lcom/huawei/hms/analytics/database/Property;"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/Property;->columnName:Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/bj;->ikl:Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0,
+      4
+     ],
+     "method": "Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

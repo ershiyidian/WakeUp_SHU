@@ -1,0 +1,663 @@
+{
+ "class": "Lcom/google/gson/internal/bind/TypeAdapters$2;",
+ "super": "Lcom/google/gson/OooOOOO;",
+ "access": 0,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/google/gson/internal/bind/TypeAdapters$2;-><init>()V",
+   "access": 65537,
+   "offset": 3374360,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/bind/TypeAdapters$2;->OooO0O0(Lo000ooO0/OooO;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 3374096,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L007b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/BitSet;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->OooO00o()V"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->oo000o()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/google/gson/stream/JsonToken;->END_ARRAY:Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+     "label": "L0010",
+     "op": "if-eq",
+     "registers": [
+      1,
+      4
+     ],
+     "target": "L0077"
+    },
+    {
+     "label": "L0012",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/google/gson/internal/bind/OooOO0O;->OooO00o:[I"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Enum;->ordinal()I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "aget",
+     "registers": [
+      4,
+      4,
+      5
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "if-eq",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L001e",
+     "op": "if-eq",
+     "registers": [
+      4,
+      6
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0021",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->OoooOOO()Z"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "goto",
+     "target": "L0052"
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/google/gson/JsonSyntaxException;"
+    },
+    {
+     "label": "L002a",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002c",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "Invalid bitset value type: "
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0034",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "; at path "
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      2
+     ],
+     "method": "Lo000ooO0/OooO;->OooOo(Z)Ljava/lang/String;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      8
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0047",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->OooooOO()I"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0050"
+    },
+    {
+     "label": "L004e",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L004f",
+     "op": "goto",
+     "target": "L0052"
+    },
+    {
+     "label": "L0050",
+     "op": "if-ne",
+     "registers": [
+      1,
+      5
+     ],
+     "target": "L005e"
+    },
+    {
+     "label": "L0052",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0057"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/BitSet;->set(I)V"
+    },
+    {
+     "label": "L0057",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0059",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->oo000o()Lcom/google/gson/stream/JsonToken;"
+    },
+    {
+     "label": "L005c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "goto",
+     "target": "L000e"
+    },
+    {
+     "label": "L005e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/google/gson/JsonSyntaxException;"
+    },
+    {
+     "label": "L0060",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Invalid bitset value "
+    },
+    {
+     "label": "L0062",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ", expected 0 or 1; at path "
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOoo(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      5
+     ],
+     "method": "Lo000ooO0/OooO;->OooOo(Z)Ljava/lang/String;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0072",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0076",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo000ooO0/OooO;->OooOo00()V"
+    },
+    {
+     "label": "L007a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/bind/TypeAdapters$2;->OooO0OO(Lo000ooO0/OooOO0;Ljava/lang/Object;)V",
+   "access": 17,
+   "offset": 3374384,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lo000ooO0/OooOO0;->OooO0o()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/BitSet;->length()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "if-ge",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/util/BitSet;->get(I)Z"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2,
+      3
+     ],
+     "method": "Lo000ooO0/OooOO0;->o0OoOo0(J)V"
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0016",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lo000ooO0/OooOO0;->OooOo00()V"
+    },
+    {
+     "label": "L001a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,1190 @@
+{
+ "class": "Lbiweekly/util/ICalDateFormat$TimestampPattern;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->regex:Ljava/util/regex/Pattern;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->matches:Z",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;-><clinit>()V",
+   "access": 65544,
+   "offset": 2903052,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "^(\\d{4})-?(\\d{2})-?(\\d{2})(T(\\d{2}):?(\\d{2}):?(\\d{2})(\\.\\d+)?(Z|([-+])((\\d{2})|((\\d{2}):?(\\d{2}))))?)?$"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->regex:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2903088,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->regex:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/regex/Matcher;->find()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->matches:Z"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I",
+   "access": 2,
+   "offset": 2902956,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->date()I",
+   "access": 1,
+   "offset": 2902584,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->hasOffset()Z",
+   "access": 1,
+   "offset": 2902472,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->hasTime()Z",
+   "access": 1,
+   "offset": 2902516,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->hour()I",
+   "access": 1,
+   "offset": 2902612,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->matches()Z",
+   "access": 1,
+   "offset": 2902560,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->matches:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->millisecond()I",
+   "access": 1,
+   "offset": 2902640,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-wide",
+     "registers": [
+      2
+     ],
+     "literal": 4652007308841189376
+    },
+    {
+     "label": "L001b",
+     "op": "mul-double",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/Math;->round(D)J"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "long-to-int",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->minute()I",
+   "access": 1,
+   "offset": 2902728,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->month()I",
+   "access": 1,
+   "offset": 2902756,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->offsetMillis()I",
+   "access": 1,
+   "offset": 2902784,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L004e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Z"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0011",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0014",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "+"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0022",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0023",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->m:Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0027",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L0040"
+    },
+    {
+     "label": "L0034",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 14
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "const",
+     "registers": [
+      3
+     ],
+     "literal": 3600000
+    },
+    {
+     "label": "L0043",
+     "op": "mul-int",
+     "registers": [
+      2,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "const",
+     "registers": [
+      3
+     ],
+     "literal": 60000
+    },
+    {
+     "label": "L0048",
+     "op": "mul-int",
+     "registers": [
+      1,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "mul-int",
+     "registers": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->second()I",
+   "access": 1,
+   "offset": 2902996,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->year()I",
+   "access": 1,
+   "offset": 2903024,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDateFormat$TimestampPattern;->parseInt(I)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

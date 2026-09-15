@@ -1,0 +1,293 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;",
+ "super": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->CRASH_TYPE:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->EVENT_ID_CRASH:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->EXCEPTION_NAME:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->MESSAGE:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->PROCESS_ID:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->STACK_TRACE:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->THREAD_ID:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->THREAD_NAME:Ljava/lang/String;",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;->TIME:Ljava/lang/String;",
+   "access": 25
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/CrashHianalyticsData;-><init>()V",
+   "access": 65537,
+   "offset": 3767436,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "time"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;"
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "method": "Landroid/os/Process;->myPid()I"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "process_id"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;"
+    },
+    {
+     "label": "L002f",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "method": "Landroid/os/Process;->myTid()I"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "thread_id"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;->put(Ljava/lang/String;Ljava/lang/String;)Lcom/huawei/hms/framework/common/hianalytics/HianalyticsBaseData;"
+    },
+    {
+     "label": "L0044",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

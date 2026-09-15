@@ -1,0 +1,2711 @@
+{
+ "class": "Lbiweekly/io/scribe/property/ICalPropertyScribe;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->allVersions:Ljava/util/Set;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->clazz:Ljava/lang/Class;",
+   "access": 20
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->defaultDataType:Lbiweekly/ICalDataType;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;",
+   "access": 20
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->qname:Ljavax/xml/namespace/QName;",
+   "access": 20
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><clinit>()V",
+   "access": 65544,
+   "offset": 2812928,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/EnumSet;->allOf(Ljava/lang/Class;)Ljava/util/EnumSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->allVersions:Ljava/util/Set;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2812972,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6133425,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;Lbiweekly/ICalDataType;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;Lbiweekly/ICalDataType;)V",
+   "access": 65537,
+   "offset": 2813000,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6133013,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "urn:ietf:params:xml:ns:icalendar-2.0"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;Lbiweekly/ICalDataType;Ljavax/xml/namespace/QName;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;Lbiweekly/ICalDataType;Ljavax/xml/namespace/QName;)V",
+   "access": 65537,
+   "offset": 2813048,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 1,
+   "debug_offset": 6140017,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->clazz:Ljava/lang/Class;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->defaultDataType:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->qname:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Ljava/lang/String;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;",
+   "access": 9,
+   "offset": 2811840,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateParser;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Lbiweekly/util/ICalDate;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;",
+   "access": 9,
+   "offset": 2811868,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;-><init>(Lbiweekly/util/ICalDate;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Lbiweekly/util/ICalDate;Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;",
+   "access": 9,
+   "offset": 2811896,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6141746,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getGlobalTimezone()Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getTimezoneInfo()Lbiweekly/io/TimezoneInfo;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/io/TimezoneInfo;->isFloating(Lbiweekly/property/ICalProperty;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/io/TimezoneInfo;->getTimezoneToWriteIn(Lbiweekly/property/ICalProperty;)Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/TimezoneAssignment;->getTimeZone()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/TimezoneAssignment;->getTimeZone()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/WriteContext;->addDate(Lbiweekly/util/ICalDate;ZLjava/util/TimeZone;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Lbiweekly/util/ICalDate;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;->tz(ZLjava/util/TimeZone;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Ljava/util/Date;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;",
+   "access": 9,
+   "offset": 2812000,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6141760,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDate;-><init>(Ljava/util/Date;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "move-object",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Lbiweekly/util/ICalDate;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Ljava/util/Date;Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;",
+   "access": 9,
+   "offset": 2812048,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6141765,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDate;-><init>(Ljava/util/Date;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "move-object",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->date(Lbiweekly/util/ICalDate;Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/scribe/property/ICalPropertyScribe$DateWriter;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->handleTzidParameter(Lbiweekly/property/ICalProperty;ZLbiweekly/io/WriteContext;)Lbiweekly/parameter/ICalParameters;",
+   "access": 9,
+   "offset": 2812124,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L005a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->getParameters()Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V1_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-ne",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getTimezoneInfo()Lbiweekly/io/TimezoneInfo;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/TimezoneInfo;->isFloating(Lbiweekly/property/ICalProperty;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getGlobalTimezone()Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/TimezoneInfo;->getTimezoneToWriteIn(Lbiweekly/property/ICalProperty;)Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/TimezoneAssignment;->getComponent()Lbiweekly/component/VTimezone;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/TimezoneAssignment;->getGlobalId()Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/component/VTimezone;->getTimezoneId()Lbiweekly/property/TimezoneId;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue(Lbiweekly/property/ValuedProperty;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L0047"
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0046"
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "/"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "goto",
+     "target": "L0047"
+    },
+    {
+     "label": "L0046",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0047",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0051"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/TimezoneAssignment;->getTimeZone()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/TimeZone;->getID()Ljava/lang/String;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;-><init>(Lbiweekly/parameter/ICalParameters;)V"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->setTimezoneId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0059",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->isInObservance(Lbiweekly/io/WriteContext;)Z",
+   "access": 9,
+   "offset": 2812552,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/WriteContext;->getParent()Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "Lbiweekly/component/Observance;"
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->jcalValueToString(Lbiweekly/io/json/JCalValue;)Ljava/lang/String;",
+   "access": 10,
+   "offset": 2812632,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6112844,
+   "end": "L0066",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->getValues()Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0009",
+     "op": "if-le",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asMulti()Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO0o(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0021",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getArray()Ljava/util/List;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asStructured()Ljava/util/List;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO(Ljava/util/List;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;->getObject()Ljava/util/Map;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asObject()Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->isEmpty()Z"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->getMap()Ljava/util/Map;"
+    },
+    {
+     "label": "L0057",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO0oO(Ljava/util/Map;)Ljava/lang/String;"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->asSingle()Ljava/lang/String;"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO00o(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0064",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0065",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->missingXmlElements([Lbiweekly/ICalDataType;)Lbiweekly/io/CannotParseException;",
+   "access": 137,
+   "offset": 2811644,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6141737,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "array-length",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0007",
+     "op": "aget-object",
+     "registers": [
+      2,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "unknown"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/ICalDataType;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "aput-object",
+     "registers": [
+      2,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0004"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->missingXmlElements([Ljava/lang/String;)Lbiweekly/io/CannotParseException;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->missingXmlElements([Ljava/lang/String;)Lbiweekly/io/CannotParseException;",
+   "access": 137,
+   "offset": 2811724,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6132715,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/CannotParseException;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "aput-object",
+     "registers": [
+      3,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/CannotParseException;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 1,
+   "offset": 2811536,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->defaultDataType(Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_defaultDataType(Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 1,
+   "offset": 2811564,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->defaultDataType:Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 1,
+   "offset": 2812348,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->jcalValueToString(Lbiweekly/io/json/JCalValue;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseXml(Lbiweekly/io/xml/XCalElement;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 1,
+   "offset": 2812384,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement;->firstValue()Lbiweekly/io/xml/XCalElement$XCalValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement$XCalValue;->getDataType()Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement$XCalValue;->getValue()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lo000O0o0/OooOO0O;->OooO00o(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_prepareParameters(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/parameter/ICalParameters;",
+   "access": 1,
+   "offset": 2812096,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->getParameters()Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeJson(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/json/JCalValue;",
+   "access": 1,
+   "offset": 2811776,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;->single(Ljava/lang/Object;)Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeXml(Lbiweekly/property/ICalProperty;Lbiweekly/io/xml/XCalElement;Lbiweekly/io/WriteContext;)V",
+   "access": 1,
+   "offset": 2813088,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2,
+      4
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement;->append(Lbiweekly/ICalDataType;Ljava/lang/String;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 17,
+   "offset": 2811588,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_dataType(Lbiweekly/property/ICalProperty;Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->defaultDataType(Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;",
+   "access": 17,
+   "offset": 2811616,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_defaultDataType(Lbiweekly/ICalVersion;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->getPropertyClass()Ljava/lang/Class;",
+   "access": 1,
+   "offset": 2812584,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->clazz:Ljava/lang/Class;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->getPropertyName(Lbiweekly/ICalVersion;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2812608,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->getQName()Ljavax/xml/namespace/QName;",
+   "access": 1,
+   "offset": 2812904,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->qname:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->getSupportedVersions()Ljava/util/Set;",
+   "access": 1,
+   "offset": 2812880,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->allVersions:Ljava/util/Set;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 17,
+   "offset": 2812444,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->setParameters(Lbiweekly/parameter/ICalParameters;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 17,
+   "offset": 2812476,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseText(Ljava/lang/String;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->setParameters(Lbiweekly/parameter/ICalParameters;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->parseXml(Lorg/w3c/dom/Element;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;",
+   "access": 17,
+   "offset": 2812508,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalElement;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement;-><init>(Lorg/w3c/dom/Element;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_parseXml(Lbiweekly/io/xml/XCalElement;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/property/ICalProperty;->setParameters(Lbiweekly/parameter/ICalParameters;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->prepareParameters(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/parameter/ICalParameters;",
+   "access": 17,
+   "offset": 2812320,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_prepareParameters(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeJson(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/json/JCalValue;",
+   "access": 17,
+   "offset": 2811812,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeJson(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;",
+   "access": 17,
+   "offset": 2812852,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeText(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeXml(Lbiweekly/property/ICalProperty;Lorg/w3c/dom/Element;Lbiweekly/io/WriteContext;)V",
+   "access": 17,
+   "offset": 2813132,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalElement;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/io/xml/XCalElement;-><init>(Lorg/w3c/dom/Element;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0,
+      4
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->_writeXml(Lbiweekly/property/ICalProperty;Lbiweekly/io/xml/XCalElement;Lbiweekly/io/WriteContext;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

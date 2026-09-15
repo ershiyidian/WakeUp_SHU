@@ -1,0 +1,456 @@
+{
+ "class": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->collectorConfig:Lcom/huawei/hms/analytics/framework/config/ICollectorConfig;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->parameters:Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storageHandler:Lcom/huawei/hms/analytics/core/storage/IStorageHandler;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storagePolicy:Lcom/huawei/hms/analytics/framework/policy/IStoragePolicy;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;-><init>()V",
+   "access": 65537,
+   "offset": 3633072,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->build(Ljava/lang/String;)Lcom/huawei/hms/analytics/framework/HAFrameworkInstance;",
+   "access": 17,
+   "offset": 3632824,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->parameters:Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/framework/b/b;->a()Lcom/huawei/hms/analytics/framework/b/b;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/b/b;->a:Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;"
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/framework/b/b;->a()Lcom/huawei/hms/analytics/framework/b/b;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/b/b;->b:Ljava/util/Map;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "serviceTag check failed : "
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HAFrameworkCase"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/framework/b/a;"
+    },
+    {
+     "label": "L002c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->collectorConfig:Lcom/huawei/hms/analytics/framework/config/ICollectorConfig;"
+    },
+    {
+     "label": "L002e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storageHandler:Lcom/huawei/hms/analytics/core/storage/IStorageHandler;"
+    },
+    {
+     "label": "L0030",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storagePolicy:Lcom/huawei/hms/analytics/framework/policy/IStoragePolicy;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/framework/b/a;-><init>(Lcom/huawei/hms/analytics/framework/config/ICollectorConfig;Lcom/huawei/hms/analytics/core/storage/IStorageHandler;Lcom/huawei/hms/analytics/framework/policy/IStoragePolicy;)V"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/framework/b/b;->a()Lcom/huawei/hms/analytics/framework/b/b;"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->parameters:Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/framework/b/b;->a(Ljava/lang/String;Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;Lcom/huawei/hms/analytics/framework/b/a;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/framework/a;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/framework/a;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->setCollectorConfig(Lcom/huawei/hms/analytics/framework/config/ICollectorConfig;)Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;",
+   "access": 17,
+   "offset": 3632976,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->collectorConfig:Lcom/huawei/hms/analytics/framework/config/ICollectorConfig;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->setMandatoryParameters(Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;)Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;",
+   "access": 17,
+   "offset": 3633000,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->parameters:Lcom/huawei/hms/analytics/framework/config/IMandatoryParameters;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->setStorageHandler(Lcom/huawei/hms/analytics/core/storage/IStorageHandler;)Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;",
+   "access": 17,
+   "offset": 3633024,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storageHandler:Lcom/huawei/hms/analytics/core/storage/IStorageHandler;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->setStoragePolicy(Lcom/huawei/hms/analytics/framework/policy/IStoragePolicy;)Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;",
+   "access": 17,
+   "offset": 3633048,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/framework/HAFrameworkInstance$Builder;->storagePolicy:Lcom/huawei/hms/analytics/framework/policy/IStoragePolicy;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

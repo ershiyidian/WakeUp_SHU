@@ -1,0 +1,141 @@
+{
+ "class": "Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;",
+ "super": "Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;",
+ "access": 1025,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;-><init>(Lo00OOOo/oo000o;)V",
+   "access": 65537,
+   "offset": 4903992,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lo00OOOo/oo000o;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lo00OOOo/oo000o;->getContext()Lo00OOOo/o0OO00O;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;"
+    },
+    {
+     "label": "L000b",
+     "op": "if-ne",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Coroutines with restricted suspension must have EmptyCoroutineContext"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;->getContext()Lo00OOOo/o0OO00O;",
+   "access": 1,
+   "offset": 4903968,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

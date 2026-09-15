@@ -1,0 +1,5554 @@
+{
+ "class": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;",
+ "super": "Lcom/huawei/hms/api/HuaweiApiAvailability;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a:Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;-><clinit>()V",
+   "access": 65544,
+   "offset": 3671828,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a:Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;-><init>()V",
+   "access": 65538,
+   "offset": 3671860,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailability;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;ILcom/huawei/hms/common/internal/DialogRedirect;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;",
+   "access": 10,
+   "offset": 3669316,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6149879,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/UIUtil;->getDialogThemeId(Landroid/app/Activity;)I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ConnectionErrorMessages;->getErrorMessage(Landroid/app/Activity;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ConnectionErrorMessages;->getErrorDialogButtonMessage(Landroid/app/Activity;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      4
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/adapter/AvailableUtil;->isInstallerLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ConnectionErrorMessages;->getErrorTitle(Landroid/app/Activity;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L003f"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L003f"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ConnectionErrorMessages;->getErrorTitle(Landroid/app/Activity;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L003f"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;I)Landroid/content/Intent;",
+   "access": 2,
+   "offset": 3669912,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149959,
+   "end": "L005a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "getErrorResolutionIntent, errorCode: "
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0008",
+     "op": "if-eq",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000b",
+     "op": "if-eq",
+     "registers": [
+      4,
+      1
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001b",
+     "op": "const-class",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/update/note/AppSpoofResolution;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const-class",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/api/BindingFailedResolution;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/adapter/AvailableUtil;->isInstallerLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L003f",
+     "op": "new-array",
+     "registers": [
+      4,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0041",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0042",
+     "op": "aput-object",
+     "registers": [
+      3,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "com.huawei.hms.update.manager.UpdateManager"
+    },
+    {
+     "label": "L0046",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "startUpdateIntent"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/adapter/ui/UpdateAdapter;->invokeMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L004e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "const-class",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/update/note/DoNothingResolution;"
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;",
+   "access": 10,
+   "offset": 3670108,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;",
+   "access": 10,
+   "offset": 3670136,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110321,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;)Lcom/huawei/hms/update/ui/UpdateBean;",
+   "access": 2,
+   "offset": 3670820,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6150016,
+   "end": "L0050",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/update/ui/UpdateBean;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setHmsOrApkUpgrade(Z)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->getInstance(Landroid/content/Context;)Lcom/huawei/hms/utils/HMSPackageManager;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->getHMSPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setClientPackageName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->getClientPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "com.huawei.hwid"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setClientPackageName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailability;->getServicesVersionCode()I"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setClientVersionCode(I)V"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "C10132067"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setClientAppId(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/utils/ResourceLoaderUtil;->getmContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/ResourceLoaderUtil;->setmContext(Landroid/content/Context;)V"
+    },
+    {
+     "label": "L0038",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "hms_update_title"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/ResourceLoaderUtil;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/update/ui/UpdateBean;->setClientAppName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0045",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "getString has Exception:"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoOO(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0038",
+     "end": "L0041",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0042"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V",
+   "access": 10,
+   "offset": 3671884,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6150059,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "activity must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/ErrorDialogFragment;->newInstance(Landroid/app/Dialog;Landroid/content/DialogInterface$OnCancelListener;)Lcom/huawei/hms/common/ErrorDialogFragment;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/ErrorDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Ljava/lang/Object;)V",
+   "access": 2,
+   "offset": 3671936,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6150068,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/common/api/AvailabilityException;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "instance-of",
+     "registers": [
+      1,
+      3
+     ],
+     "type": "Lcom/huawei/hms/common/HuaweiApi;"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/common/HuaweiApi;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;->getConnectionResult(Lcom/huawei/hms/common/HuaweiApi;)Lcom/huawei/hms/api/ConnectionResult;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/huawei/hms/common/api/HuaweiApiCallable;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;->getConnectionResult(Lcom/huawei/hms/common/api/HuaweiApiCallable;)Lcom/huawei/hms/api/ConnectionResult;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/api/ConnectionResult;->getErrorCode()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001c",
+     "op": "return-void"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "The service is unavailable: "
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getInstance()Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;",
+   "access": 9,
+   "offset": 3670796,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a:Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->checkApiAccessible(Lcom/huawei/hms/common/HuaweiApi;[Lcom/huawei/hms/common/HuaweiApi;)Lo00O0000/OooO;",
+   "access": 129,
+   "offset": 3671308,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6150039,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lo0O0ooO/OooO0OO;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lo0O0ooO/OooO0OO;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L000f",
+     "op": "array-length",
+     "registers": [
+      4,
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      1,
+      4
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L0013",
+     "op": "aget-object",
+     "registers": [
+      2,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "checkApi has AvailabilityException "
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lcom/huawei/hms/common/api/AvailabilityException;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->checkApiAccessible(Lcom/huawei/hms/common/api/HuaweiApiCallable;[Lcom/huawei/hms/common/api/HuaweiApiCallable;)Lo00O0000/OooO;",
+   "access": 129,
+   "offset": 3671444,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6150049,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lo0O0ooO/OooO0OO;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lo0O0ooO/OooO0OO;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L000f",
+     "op": "array-length",
+     "registers": [
+      4,
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      1,
+      4
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L0013",
+     "op": "aget-object",
+     "registers": [
+      2,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiCallable checkApi has AvailabilityException "
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0007",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lcom/huawei/hms/common/api/AvailabilityException;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrPendingIntent(Landroid/content/Context;II)Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 3669684,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6149930,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter getResolveErrorPendingIntent, errorCode: "
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": " requestCode: "
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/content/Context;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0021",
+     "op": "const/high16",
+     "registers": [
+      0
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      5,
+      4,
+      0
+     ],
+     "method": "Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrPendingIntent(Landroid/content/Context;Lcom/huawei/hms/api/ConnectionResult;)Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 3669636,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149921,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/ConnectionResult;->getErrorCode()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorDialog(Landroid/app/Activity;II)Landroid/app/Dialog;",
+   "access": 1,
+   "offset": 3669468,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6149897,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "activity must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter getErrorDialog, errorCode: "
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4,
+      5,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorDialog(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorDialog(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;",
+   "access": 1,
+   "offset": 3669544,
+   "registers": 7,
+   "inputs": 5,
+   "outputs": 4,
+   "debug_offset": 6149908,
+   "end": "L0025",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "activity must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter getErrorDialog, errorCode: "
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/common/internal/DialogRedirect;->getInstance(Landroid/app/Activity;Landroid/content/Intent;I)Lcom/huawei/hms/common/internal/DialogRedirect;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;ILcom/huawei/hms/common/internal/DialogRedirect;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorString(I)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3671244,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter getErrorString, errorCode: "
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/api/ConnectionResult;->getErrorString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getHuaweiServicesReady(Landroid/app/Activity;)Lo00O0000/OooO;",
+   "access": 1,
+   "offset": 3671580,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L0073",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lo00O0000/OooOO0;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lo00O0000/OooOO0;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0009",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Lo00O0000/OooOO0;"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "aput-object",
+     "registers": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "aget-object",
+     "registers": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lo00O0000/OooOO0;->OooO00o:Lo0O0ooO/OooO0OO;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/content/Context;->getApplicationContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const",
+     "registers": [
+      4
+     ],
+     "literal": 30000000
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isHuaweiMobileServicesAvailable(Landroid/content/Context;I)I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7,
+      3
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/app/Activity;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/hms/api/ResolutionDelegate;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Lcom/huawei/hms/activity/BridgeActivity;->getIntentStartBridgeActivity(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L002d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl$a;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      6,
+      1
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl$a;-><init>(Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;[Lo00O0000/OooOO0;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CALLBACK_METHOD"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/activity/ForegroundIntentBuilder;->registerResponseCallback(Ljava/lang/String;Lcom/huawei/hms/activity/internal/BusResponseCallback;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L003c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "resolution"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L0047",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0049",
+     "op": "if-ne",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0059"
+    },
+    {
+     "label": "L004b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/Intent;-><init>()V"
+    },
+    {
+     "label": "L0050",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/activity/EnableServiceActivity;"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      7,
+      2
+     ],
+     "method": "Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L0058",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L005b",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0063"
+    },
+    {
+     "label": "L005d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "The HMS service is available."
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0062",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "Framework can not solve the availability problem."
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0068",
+     "op": "aget-object",
+     "registers": [
+      7,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L006a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/common/api/AvailabilityException;"
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/api/AvailabilityException;-><init>()V"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Lo00O0000/OooOO0;->OooO00o(Ljava/lang/Exception;)V"
+    },
+    {
+     "label": "L0072",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/app/Activity;I)Landroid/content/Intent;",
+   "access": 1,
+   "offset": 3670164,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149975,
+   "end": "L0067",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Enter getResolveErrorIntent, errorCode: "
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eq",
+     "registers": [
+      6,
+      1
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0011",
+     "op": "if-eq",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0013",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0015",
+     "op": "if-eq",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/update/note/AppSpoofResolution;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/api/BindingFailedResolution;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/adapter/AvailableUtil;->isInstallerLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getApplicationContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;)Lcom/huawei/hms/update/ui/UpdateBean;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L004c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L004d",
+     "op": "aput-object",
+     "registers": [
+      5,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "aput-object",
+     "registers": [
+      6,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "com.huawei.hms.update.manager.UpdateManager"
+    },
+    {
+     "label": "L0053",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "getStartUpdateIntent"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6,
+      0
+     ],
+     "method": "Lcom/huawei/hms/adapter/ui/UpdateAdapter;->invokeMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L005b",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/update/note/NotInstalledHmsResolution;"
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0061",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/content/Context;I)Landroid/content/Intent;",
+   "access": 1,
+   "offset": 3670388,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6149992,
+   "end": "L0064",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter getResolveErrorIntent, errorCode: "
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0009",
+     "op": "if-eq",
+     "registers": [
+      5,
+      1
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eq",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001b",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/hms/update/note/AppSpoofResolution;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/hms/api/BindingFailedResolution;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->isAvailableLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0059"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/adapter/AvailableUtil;->isInstallerLibExist(Landroid/content/Context;)Z"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0059"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/content/Context;->getApplicationContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;)Lcom/huawei/hms/update/ui/UpdateBean;"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0049",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L004a",
+     "op": "aput-object",
+     "registers": [
+      4,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "aput-object",
+     "registers": [
+      5,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "com.huawei.hms.update.manager.UpdateManager"
+    },
+    {
+     "label": "L0050",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "getStartUpdateIntent"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      0
+     ],
+     "method": "Lcom/huawei/hms/adapter/ui/UpdateAdapter;->invokeMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0055",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L0058",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/hms/update/note/NotInstalledHmsResolution;"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0062",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorPendingIntent(Landroid/app/Activity;I)Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 3669784,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6149941,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Enter getResolveErrorPendingIntent, errorCode: "
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/app/Activity;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "const/high16",
+     "registers": [
+      1
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      4,
+      1
+     ],
+     "method": "Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 3669848,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6149950,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Enter getResolveErrorPendingIntent, errorCode: "
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorIntent(Landroid/content/Context;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "const/high16",
+     "registers": [
+      1
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      4,
+      1
+     ],
+     "method": "Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isHuaweiMobileNoticeAvailable(Landroid/content/Context;)I",
+   "access": 1,
+   "offset": 3671012,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "context must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/utils/PackageManagerHelper;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/PackageManagerHelper;-><init>(Landroid/content/Context;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->getInstance(Landroid/content/Context;)Lcom/huawei/hms/utils/HMSPackageManager;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->getHMSPackageNameForMultiService()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L001b",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "hmsPackageName is empty, Service is invalid."
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageStates(Ljava/lang/String;)Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;->NOT_INSTALLED:Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L002d",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "hmsPackageName is not installed, Service is invalid."
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->getInstance(Landroid/content/Context;)Lcom/huawei/hms/utils/HMSPackageManager;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "const",
+     "registers": [
+      0
+     ],
+     "literal": 20600000
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/HMSPackageManager;->isApkUpdateNecessary(I)Z"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0040",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0041",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0043",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isHuaweiMobileServicesAvailable(Landroid/content/Context;)I",
+   "access": 1,
+   "offset": 3671164,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6143605,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "context must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailability;->getServicesVersionCode()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiMobileServicesUtil;->isHuaweiMobileServicesAvailable(Landroid/content/Context;I)I"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isHuaweiMobileServicesAvailable(Landroid/content/Context;I)I",
+   "access": 1,
+   "offset": 3671208,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6150032,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "context must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiMobileServicesUtil;->isHuaweiMobileServicesAvailable(Landroid/content/Context;I)I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isUserResolvableError(I)Z",
+   "access": 1,
+   "offset": 3670604,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6133882,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isUserResolvableError(ILandroid/app/PendingIntent;)Z"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->isUserResolvableError(ILandroid/app/PendingIntent;)Z",
+   "access": 1,
+   "offset": 3670632,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 0,
+   "debug_offset": 6113619,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eq",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000b",
+     "op": "if-eq",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0010",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->popupErrNotification(Landroid/content/Context;Lcom/huawei/hms/api/ConnectionResult;)V",
+   "access": 1,
+   "offset": 3672060,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/ConnectionResult;->getErrorCode()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorNotification(Landroid/content/Context;I)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->resolveError(Landroid/app/Activity;II)V",
+   "access": 1,
+   "offset": 3672104,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6138004,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->resolveError(Landroid/app/Activity;IILandroid/app/PendingIntent;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->resolveError(Landroid/app/Activity;IILandroid/app/PendingIntent;)V",
+   "access": 1,
+   "offset": 3672132,
+   "registers": 14,
+   "inputs": 5,
+   "outputs": 7,
+   "debug_offset": 6150081,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "activity must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      10,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      13
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter resolveError, param pendingIntent is not null. and.errorCode: "
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      13
+     ],
+     "string": "Enter resolveError, param pendingIntent is  null. get pendingIntent from error code.and.errorCode: "
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      13,
+      0
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      10,
+      11
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getResolveErrorPendingIntent(Landroid/app/Activity;I)Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      13
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      13
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "In resolveError, start pendingIntent.errorCode: "
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoO0(ILjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      13
+     ],
+     "method": "Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0025",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "move-object",
+     "registers": [
+      2,
+      10
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "move",
+     "registers": [
+      4,
+      12
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual/range",
+     "registers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "method": "Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V"
+    },
+    {
+     "label": "L002c",
+     "op": "return-void"
+    },
+    {
+     "label": "L002d",
+     "op": "new-instance",
+     "registers": [
+      10
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      12
+     ],
+     "string": "Enter resolveError, start pendingIntent failed.errorCode: "
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      10,
+      12
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      11
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      10
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L001f",
+     "end": "L002c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/content/IntentSender$SendIntentException;",
+       "target": "L002d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorDialogFragment(Landroid/app/Activity;II)Z",
+   "access": 1,
+   "offset": 3670720,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6138004,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorDialogFragment(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorDialogFragment(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z",
+   "access": 1,
+   "offset": 3670748,
+   "registers": 5,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6150007,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorDialog(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "HuaweiMobileServicesErrorDialog"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->a(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorDialogFragment(Landroid/app/Activity;ILandroid/app/Fragment;ILandroid/content/DialogInterface$OnCancelListener;)Z",
+   "access": 1,
+   "offset": 3670692,
+   "registers": 6,
+   "inputs": 6,
+   "outputs": 5,
+   "debug_offset": 6149823,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorDialogFragment(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->showErrorNotification(Landroid/content/Context;I)V",
+   "access": 1,
+   "offset": 3672292,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "context must not be null."
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Checker;->checkNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Enter showErrorNotification, errorCode: "
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "HuaweiApiAvailabilityImpl"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Landroid/app/Activity;"
+    },
+    {
+     "label": "L001a",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "context not instanceof Activity"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/app/Activity;"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/api/HuaweiApiAvailabilityImpl;->getErrorDialog(Landroid/app/Activity;II)Landroid/app/Dialog;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "showErrorNotification errorDialog can not be null"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/app/Dialog;->show()V"
+    },
+    {
+     "label": "L0034",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

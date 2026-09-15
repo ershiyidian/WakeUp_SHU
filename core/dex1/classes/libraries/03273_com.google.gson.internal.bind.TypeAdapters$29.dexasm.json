@@ -1,0 +1,180 @@
+{
+ "class": "Lcom/google/gson/internal/bind/TypeAdapters$29;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/google/gson/internal/bind/TypeAdapters$29;-><init>()V",
+   "access": 65537,
+   "offset": 3374072,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/bind/TypeAdapters$29;->OooO00o(Lcom/google/gson/OooO0OO;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/OooOOOO;",
+   "access": 17,
+   "offset": 3373992,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lcom/google/gson/reflect/TypeToken;->OooO00o:Ljava/lang/Class;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Enum;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L000a",
+     "op": "if-ne",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Class;->isEnum()Z"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;-><init>(Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

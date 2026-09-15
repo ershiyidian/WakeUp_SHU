@@ -1,0 +1,499 @@
+{
+ "class": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;",
+ "super": "Ljava/lang/Object;",
+ "access": 4113,
+ "fields": [
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oO:I",
+   "access": 4113
+  },
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oo:Ljava/lang/Object;",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;-><init>(ILjava/lang/Object;)V",
+   "access": 69633,
+   "offset": 4684500,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6113619,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oo:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->onClick(Landroid/content/DialogInterface;I)V",
+   "access": 17,
+   "offset": 4684532,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L0072",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oo:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/OooO00o;->OooO0oO:I"
+    },
+    {
+     "label": "L0004",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L006c"
+    },
+    {
+     "label": "L0007",
+     "op": "sget",
+     "registers": [
+      7
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/AdvancedSettingsActivity;->OoooO0:I"
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/suda/yzune/wakeupschedule/settings/AdvancedSettingsActivity;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "package"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.settings.APPLICATION_DETAILS_SETTINGS"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;-><init>()V"
+    },
+    {
+     "label": "L0018",
+     "op": "sget",
+     "registers": [
+      3
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L001a",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 26
+    },
+    {
+     "label": "L001c",
+     "op": "if-lt",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "android.settings.APP_NOTIFICATION_SETTINGS"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "android.provider.extra.APP_PACKAGE"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L002c",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "android.intent.extra.CHANNEL_ID"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "iget",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Landroid/content/pm/ApplicationInfo;->uid:I"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0O0(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L003b",
+     "op": "goto",
+     "target": "L004a"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      3,
+      1
+     ],
+     "method": "Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L004d",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L004e",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/content/Intent;"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/Intent;-><init>()V"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0059",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      0,
+      1
+     ],
+     "method": "Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      7
+     ],
+     "method": "Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+    },
+    {
+     "label": "L0064",
+     "op": "return-void"
+    },
+    {
+     "label": "L0065",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/suda/yzune/wakeupschedule/settings/AdvancedSettingsActivity;->OoooO0:I"
+    },
+    {
+     "label": "L0067",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lkotlin/jvm/internal/Ref$IntRef;"
+    },
+    {
+     "label": "L0069",
+     "op": "iput",
+     "registers": [
+      7,
+      6
+     ],
+     "field": "Lkotlin/jvm/internal/Ref$IntRef;->element:I"
+    },
+    {
+     "label": "L006b",
+     "op": "return-void"
+    },
+    {
+     "label": "L006c",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0004",
+     "targets": [
+      "L0065"
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0013",
+     "end": "L004d",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L004e"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

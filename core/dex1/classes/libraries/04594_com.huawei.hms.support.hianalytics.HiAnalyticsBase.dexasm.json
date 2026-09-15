@@ -1,0 +1,331 @@
+{
+ "class": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;-><init>()V",
+   "access": 65537,
+   "offset": 3862840,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;->getMapForBi(Landroid/content/Context;Ljava/lang/String;)Ljava/util/Map;",
+   "access": 9,
+   "offset": 3862684,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L0046",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0045"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "\\."
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "array-length",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0016",
+     "op": "if-lt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0019",
+     "op": "aget-object",
+     "registers": [
+      1,
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001c",
+     "op": "aget-object",
+     "registers": [
+      4,
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "service"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "apiName"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "package"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      3
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0031",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "baseVersion"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "6.11.0.302"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->valueOf(J)Ljava/lang/String;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "callTime"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      3
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0045",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

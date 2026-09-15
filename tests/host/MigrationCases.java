@@ -1,0 +1,19 @@
+import android.content.Context;import android.database.sqlite.SQLiteDatabase;import java.nio.file.*;import java.io.*;import java.util.*;import shu.wakeup.*;
+public final class MigrationCases {
+ interface Apply {void apply(Context c)throws Throwable;} static Apply APPLY=ShuMigration::apply; static int assertions;static void check(boolean b,String text){assertions++;if(!b)throw new AssertionError(text);}
+ static SQLiteDatabase fresh(){SQLiteDatabase.instance=new SQLiteDatabase();return SQLiteDatabase.instance;}
+ static void add(SQLiteDatabase db,int id,int table){List<Object[]>rows=new ArrayList<>();for(int n=0;n<12;n++)rows.add(new Object[]{n+1,ShuTimes.OLD_START[n],ShuTimes.OLD_END[n]});db.schedules.put(id,rows);db.links.put(id,Arrays.asList(table));}
+ static void converted(SQLiteDatabase db,int id){for(int n=0;n<12;n++){Object[]a=db.schedules.get(id).get(n);check(a[1].equals(ShuTimes.START[n])&&a[2].equals(ShuTimes.END[n]),"time row "+n);}}
+ public static void main(String[]args)throws Throwable{
+  File file=Files.createTempFile("shu-migration-", ".db").toFile();try{
+   for(int n=0;n<12;n++){int s=Integer.parseInt(ShuTimes.START[n].substring(0,2))*60+Integer.parseInt(ShuTimes.START[n].substring(3));int e=Integer.parseInt(ShuTimes.END[n].substring(0,2))*60+Integer.parseInt(ShuTimes.END[n].substring(3));check(e-s==45,"45-minute period");check(ShuTimes.stockRow(n+1,ShuTimes.OLD_START[n],ShuTimes.OLD_END[n]),"legacy row matching");}
+   SQLiteDatabase db=fresh();add(db,1,10);Context c=new Context(file);APPLY.apply(c);converted(db,1);check(db.updates==12&&db.commits==1,"single transaction");check(c.getSharedPreferences("time1_config",0).getInt("courseLen",0)==45,"course length preference");check(c.getSharedPreferences("table10_config",0).getInt("nodes",0)==12,"display period preference");APPLY.apply(c);check(db.opens==1,"one-time migration");check(db.closes==1&&db.activeCursors==0,"resource release");
+   db=fresh();add(db,1,10);add(db,2,11);db.schedules.get(2).get(0)[1]="08:10";c=new Context(file);c.getSharedPreferences("table10_config",0).edit().putInt("nodes",14).apply();c.getSharedPreferences("time1_config",0).edit().putInt("courseLen",40).apply();APPLY.apply(c);converted(db,1);check(db.schedules.get(2).get(0)[1].equals("08:10")&&db.updates==12,"custom timetable preservation");check(c.getSharedPreferences("table10_config",0).getInt("nodes",0)==14,"custom node count");check(c.getSharedPreferences("time1_config",0).getInt("courseLen",0)==40,"custom course length");check(!c.getSharedPreferences("time2_config",0).contains("courseLen"),"untouched custom table settings");
+   db=fresh();add(db,1,10);db.failAt=5;c=new Context(file);APPLY.apply(c);check(!c.getSharedPreferences("shu_release",0).getBoolean("times_r5",false),"retry marker");check(db.schedules.get(1).get(0)[2].equals(ShuTimes.OLD_END[0]),"transaction rollback");check(db.activeCursors==0&&db.closes==1,"fault resource release");db.failAt=-1;APPLY.apply(c);converted(db,1);check(c.getSharedPreferences("shu_release",0).getBoolean("times_r5",false),"successful retry");
+   db=fresh();db.version=18;c=new Context(file);APPLY.apply(c);check(db.transactions==0&&db.closes==1,"version-specific migration");check(!c.getSharedPreferences("shu_release",0).getBoolean("times_r5",false),"future migration eligibility");
+   db=fresh();c=new Context(new File(file.getParentFile(),"shu-fixture-absent-file"));APPLY.apply(c);check(db.opens==0&&c.getSharedPreferences("shu_release",0).getBoolean("times_r5",false),"fresh installation uses factory defaults");
+   db=fresh();add(db,1,10);db.schedules.get(1).remove(11);c=new Context(file);APPLY.apply(c);check(db.updates==0,"partial custom table preservation");
+   System.out.println("migration_assertions="+assertions+" status=PASS");
+  }finally{file.delete();}
+ }
+}

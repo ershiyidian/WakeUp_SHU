@@ -1,0 +1,2697 @@
+{
+ "class": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->MAX_REQUEST_COUNT_IN_INTERVAL:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->SP_FILE_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->THROTTLE_INTERVAL_TIME:J",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;-><clinit>()V",
+   "access": 65544,
+   "offset": 3392788,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 3392820,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayDeque;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->loadCache()V"
+    },
+    {
+     "label": "L000f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->getFirst()J",
+   "access": 2,
+   "offset": 3392724,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayDeque;->getFirst()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/util/NoSuchElementException;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->loadCache()V",
+   "access": 2,
+   "offset": 3393152,
+   "registers": 12,
+   "inputs": 1,
+   "outputs": 6,
+   "debug_offset": 6113151,
+   "end": "L0090",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      2,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "-countDeque"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0013",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L0017",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->get(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ","
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "array-length",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0028",
+     "op": "if-ge",
+     "registers": [
+      4,
+      2
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L002a",
+     "op": "aget-object",
+     "registers": [
+      0,
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-lez",
+     "registers": [
+      5
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0032",
+     "op": "iget-object",
+     "registers": [
+      5,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L003b",
+     "op": "goto",
+     "target": "L0044"
+    },
+    {
+     "label": "L003c",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "AGC_THROTTLE"
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "count deque"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0046",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L004a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0050",
+     "op": "iget-object",
+     "registers": [
+      1,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L0052",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "-failCount"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0057",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "const-class",
+     "registers": [
+      10
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L005e",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L0060",
+     "op": "const-class",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual/range",
+     "registers": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->get(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0068",
+     "op": "iput-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L006d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L006e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0073",
+     "op": "iget-object",
+     "registers": [
+      2,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L0075",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "-failTime"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L007a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L007d",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L0080",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0081",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L0083",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L0085",
+     "op": "const-class",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L0087",
+     "op": "invoke-virtual/range",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->get(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L008a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L008b",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L008d",
+     "op": "iput-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L008f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L002c",
+     "end": "L003b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L003c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->saveCache()V",
+   "access": 2,
+   "offset": 3393472,
+   "registers": 16,
+   "inputs": 1,
+   "outputs": 6,
+   "debug_offset": 6113151,
+   "end": "L0081",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0020",
+     "op": "if-eq",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0022",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ","
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0027",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0029",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0033",
+     "op": "iget-object",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L0035",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "-countDeque"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "const-class",
+     "registers": [
+      8
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L0041",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L0043",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual/range",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0051",
+     "op": "iget-object",
+     "registers": [
+      1,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L0053",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "-failCount"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "iget-object",
+     "registers": [
+      13,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L005b",
+     "op": "const-class",
+     "registers": [
+      14
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L005d",
+     "op": "const-string",
+     "registers": [
+      10
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L005f",
+     "op": "const-class",
+     "registers": [
+      12
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual/range",
+     "registers": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->getInstance()Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L006d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->name:Ljava/lang/String;"
+    },
+    {
+     "label": "L006f",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "-failTime"
+    },
+    {
+     "label": "L0071",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0074",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0075",
+     "op": "iget-object",
+     "registers": [
+      4,
+      15
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0077",
+     "op": "const-class",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/agconnect/datastore/annotation/DefaultCrypto;"
+    },
+    {
+     "label": "L0079",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "com.huawei.agc.throttle"
+    },
+    {
+     "label": "L007b",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Long;"
+    },
+    {
+     "label": "L007d",
+     "op": "invoke-virtual/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/agconnect/datastore/core/SharedPrefUtil;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Class;)V"
+    },
+    {
+     "label": "L0080",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->addForFail()V",
+   "access": 1,
+   "offset": 3392868,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->saveCache()V"
+    },
+    {
+     "label": "L001e",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0020",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0022",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0020"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->addForStart()V",
+   "access": 1,
+   "offset": 3392968,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayDeque;->size()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L000b",
+     "op": "if-ne",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L0013",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L0024"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-void"
+    },
+    {
+     "label": "L0024",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0025",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0013"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->addForSuccess()V",
+   "access": 1,
+   "offset": 3393072,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L000a",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->saveCache()V"
+    },
+    {
+     "label": "L0015",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-void"
+    },
+    {
+     "label": "L0017",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L0019",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0017"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->checkFail(Ljava/lang/Exception;)Z",
+   "access": 1,
+   "offset": 3392332,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      4
+     ],
+     "type": "Lcom/huawei/agconnect/exception/AGCException;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/agconnect/exception/AGCException;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/exception/AGCException;->getCode()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 429
+    },
+    {
+     "label": "L000d",
+     "op": "if-eq",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/exception/AGCException;->getCode()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 500
+    },
+    {
+     "label": "L0015",
+     "op": "if-eq",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/exception/AGCException;->getCode()I"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 502
+    },
+    {
+     "label": "L001d",
+     "op": "if-eq",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/exception/AGCException;->getCode()I"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 503
+    },
+    {
+     "label": "L0025",
+     "op": "if-eq",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/agconnect/exception/AGCException;->getCode()I"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 504
+    },
+    {
+     "label": "L002d",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0030",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0032",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->getEndTime()J",
+   "access": 1,
+   "offset": 3392452,
+   "registers": 11,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0079",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->LOCK:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->countDeque:Ljava/util/ArrayDeque;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayDeque;->size()I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L000b",
+     "op": "if-lt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct",
+     "registers": [
+      10
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->getFirst()J"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "sub-long/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-wide/32",
+     "registers": [
+      3
+     ],
+     "literal": 3600000
+    },
+    {
+     "label": "L0019",
+     "op": "cmp-long",
+     "registers": [
+      5,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-gez",
+     "registers": [
+      5
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-direct",
+     "registers": [
+      10
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->getFirst()J"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "add-long/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "sub-long/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "goto",
+     "target": "L0077"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0033",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0034",
+     "op": "if-le",
+     "registers": [
+      1,
+      4
+     ],
+     "target": "L0075"
+    },
+    {
+     "label": "L0036",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-wide",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "cmp-long",
+     "registers": [
+      1,
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-lez",
+     "registers": [
+      1
+     ],
+     "target": "L0075"
+    },
+    {
+     "label": "L0040",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failCount:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "sub-int/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/Math;->min(II)I"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "int-to-double",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "const-wide/high16",
+     "registers": [
+      6
+     ],
+     "literal": 16384
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      7,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/Math;->pow(DD)D"
+    },
+    {
+     "label": "L0053",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "double-to-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "const-wide/32",
+     "registers": [
+      6
+     ],
+     "literal": 60000
+    },
+    {
+     "label": "L0058",
+     "op": "mul-long",
+     "registers": [
+      4,
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L0060",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L0063",
+     "op": "move-result-wide",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0064",
+     "op": "add-long/2addr",
+     "registers": [
+      8,
+      4
+     ]
+    },
+    {
+     "label": "L0065",
+     "op": "cmp-long",
+     "registers": [
+      1,
+      6,
+      8
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "if-gez",
+     "registers": [
+      1
+     ],
+     "target": "L0075"
+    },
+    {
+     "label": "L0069",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->failTime:Ljava/lang/Long;"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Long;->longValue()J"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "add-long/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0073",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0074",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L0075",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0077",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0078",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0029"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RequestThrottle$Throttle;->setDeveloperMode(Z)V",
+   "access": 1,
+   "offset": 3393748,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0001",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

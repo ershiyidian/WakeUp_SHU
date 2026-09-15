@@ -1,0 +1,369 @@
+{
+ "class": "Lcom/huawei/hms/common/internal/ResolveClientBean;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->a:I",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;",
+   "access": 18
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->c:I",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;-><init>(Lcom/huawei/hms/common/internal/AnyClient;I)V",
+   "access": 65537,
+   "offset": 3715896,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0014",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "aput-object",
+     "registers": [
+      3,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Objects;->hashCode([Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iput",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->a:I"
+    },
+    {
+     "label": "L0011",
+     "op": "iput",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->c:I"
+    },
+    {
+     "label": "L0013",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->clientReconnect()V",
+   "access": 1,
+   "offset": 3715952,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->c:I"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/AnyClient;->connect(IZ)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 3715784,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-ne",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0006",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lcom/huawei/hms/common/internal/ResolveClientBean;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L0016"
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/common/internal/ResolveClientBean;"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->getClient()Lcom/huawei/hms/common/internal/AnyClient;",
+   "access": 1,
+   "offset": 3715848,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->b:Lcom/huawei/hms/common/internal/AnyClient;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/internal/ResolveClientBean;->hashCode()I",
+   "access": 1,
+   "offset": 3715872,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/common/internal/ResolveClientBean;->a:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

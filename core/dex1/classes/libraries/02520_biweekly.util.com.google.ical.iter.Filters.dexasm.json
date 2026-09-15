@@ -1,0 +1,671 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/Filters;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->LOW_24_BITS:I",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->LOW_60_BITS:J",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;-><init>()V",
+   "access": 65538,
+   "offset": 2919752,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->byDayFilter([Lbiweekly/util/ByDay;ZLbiweekly/util/DayOfWeek;)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919404,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$1;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$1;-><init>(ZLbiweekly/util/DayOfWeek;[Lbiweekly/util/ByDay;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->byHourFilter([I)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919432,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-ge",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0005",
+     "op": "aget",
+     "registers": [
+      3,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0008",
+     "op": "shl-int",
+     "registers": [
+      3,
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "or-int/2addr",
+     "registers": [
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0003"
+    },
+    {
+     "label": "L000e",
+     "op": "const",
+     "registers": [
+      5
+     ],
+     "literal": 16777215
+    },
+    {
+     "label": "L0011",
+     "op": "and-int",
+     "registers": [
+      0,
+      2,
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-ne",
+     "registers": [
+      0,
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/com/google/ical/util/Predicates;->alwaysTrue()Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$4;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$4;-><init>(I)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->byMinuteFilter([I)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919512,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "if-ge",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0006",
+     "op": "aget",
+     "registers": [
+      4,
+      7,
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-wide/16",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "shl-long",
+     "registers": [
+      4,
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "or-long/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0004"
+    },
+    {
+     "label": "L0010",
+     "op": "const-wide",
+     "registers": [
+      3
+     ],
+     "literal": 1152921504606846975
+    },
+    {
+     "label": "L0015",
+     "op": "and-long",
+     "registers": [
+      5,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/com/google/ical/util/Predicates;->alwaysTrue()Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$5;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$5;-><init>(J)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->byMonthDayFilter([I)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919604,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$2;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$2;-><init>([I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->bySecondFilter([I)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919632,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "const-wide/16",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "if-ge",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0006",
+     "op": "aget",
+     "registers": [
+      4,
+      7,
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-wide/16",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "shl-long",
+     "registers": [
+      4,
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "or-long/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0004"
+    },
+    {
+     "label": "L0010",
+     "op": "const-wide",
+     "registers": [
+      3
+     ],
+     "literal": 1152921504606846975
+    },
+    {
+     "label": "L0015",
+     "op": "and-long",
+     "registers": [
+      5,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/com/google/ical/util/Predicates;->alwaysTrue()Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$6;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$6;-><init>(J)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Filters;->weekIntervalFilter(ILbiweekly/util/DayOfWeek;Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 9,
+   "offset": 2919724,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/Filters$3;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Filters$3;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;Lbiweekly/util/DayOfWeek;I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

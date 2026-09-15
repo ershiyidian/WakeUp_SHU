@@ -1,0 +1,658 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/grs/GrsUtils;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->GRS_KEY_INDEX:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->GRS_PATH_INDEX:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->GRS_SCHEMA:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->GRS_SERVICE_INDEX:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->MAX_GRS_SPLIT:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->SEPARATOR:Ljava/lang/String;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;-><init>()V",
+   "access": 65537,
+   "offset": 3767412,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->fixResult([Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3767140,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0002",
+     "op": "if-le",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "/"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Ljava/lang/String;->endsWith(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOo00(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "aget-object",
+     "registers": [
+      3,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOo0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "aget-object",
+     "registers": [
+      3,
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->isGRSSchema(Ljava/lang/String;)Z",
+   "access": 9,
+   "offset": 3767096,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "grs://"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->startsWith(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->parseGRSSchema(Ljava/lang/String;)[Ljava/lang/String;",
+   "access": 9,
+   "offset": 3767240,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "grs://"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->indexOf(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->substring(Ljava/lang/String;I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "/"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "array-length",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001e",
+     "op": "aget-object",
+     "registers": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "ROOT"
+    },
+    {
+     "label": "L0022",
+     "op": "filled-new-array",
+     "registers": [
+      2,
+      0
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->parseParams(Ljava/lang/String;)[Ljava/lang/String;",
+   "access": 9,
+   "offset": 3767336,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "/"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->endsWith(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "grs://"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->indexOf(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/StringUtils;->substring(Ljava/lang/String;II)Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/grs/GrsUtils;->parseGRSSchema(Ljava/lang/String;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

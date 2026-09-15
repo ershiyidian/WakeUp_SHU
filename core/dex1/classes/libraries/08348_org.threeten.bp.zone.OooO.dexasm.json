@@ -1,0 +1,256 @@
+{
+ "class": "Lorg/threeten/bp/zone/OooO;",
+ "super": "Lorg/threeten/bp/zone/OooOO0;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/zone/OooO;->OooO00o()V",
+   "access": 17,
+   "offset": 6089368,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/zone/OooO0O0;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/zone/OooO0O0;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/OooO0O0;->OooO0OO(Lorg/threeten/bp/zone/OooO0O0;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "instance-of",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "Ljava/lang/SecurityException;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0025",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "return-void"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ServiceConfigurationError;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Ljava/util/ServiceConfigurationError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0031",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L000b",
+     "handler": "H1"
+    },
+    {
+     "start": "L0017",
+     "end": "L001a",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/util/ServiceConfigurationError;",
+       "target": "L001b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

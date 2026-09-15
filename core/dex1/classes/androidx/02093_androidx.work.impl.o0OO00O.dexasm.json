@@ -1,0 +1,470 @@
+{
+ "class": "Landroidx/work/impl/o0OO00O;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Landroidx/work/impl/o0OO00O;->OooO00o:I",
+   "access": 4121
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroidx/work/impl/o0OO00O;-><clinit>()V",
+   "access": 65544,
+   "offset": 2709480,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "WorkerWrapper"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/work/o0OO00O;->OooO0OO(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "tagWithPrefix(\"WorkerWrapper\")"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0Oo(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroidx/work/impl/o0OO00O;->OooO00o(Lo000oo0/o000000;Landroidx/work/o00Ooo;Lkotlin/coroutines/jvm/internal/SuspendLambda;)Ljava/lang/Object;",
+   "access": 25,
+   "offset": 2709244,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L003a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/concurrent/Future;->isDone()Z"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroidx/work/impl/o0OO00O;->OooO0O0(Ljava/util/concurrent/Future;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lo00OoO0/Oooo000;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/bumptech/glide/OooOO0;->OooOo(Lo00OOOo/oo000o;)Lo00OOOo/oo000o;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      4
+     ],
+     "method": "Lo00OoO0/Oooo000;-><init>(ILo00OOOo/oo000o;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooOOoo()V"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Landroidx/concurrent/futures/Oooo0;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      2,
+      1,
+      0
+     ],
+     "method": "Landroidx/concurrent/futures/Oooo0;-><init>(Lo000oo0/o000000;Lo00OoO0/Oooo000;I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Landroidx/work/DirectExecutor;->INSTANCE:Landroidx/work/DirectExecutor;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      4,
+      0
+     ],
+     "method": "Lo000oo0/o000000;->OooO00o(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Landroidx/work/impl/WorkerWrapperKt$awaitWithin$2$1;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3,
+      2
+     ],
+     "method": "Landroidx/work/impl/WorkerWrapperKt$awaitWithin$2$1;-><init>(Landroidx/work/o00Ooo;Lo000oo0/o000000;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooOo0(Lo00Oo0O0/o000OO;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooOOo()Ljava/lang/Object;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lkotlin/jvm/internal/OooOO0O;->OooO0O0(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L000b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/util/concurrent/ExecutionException;",
+       "target": "L0031"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Landroidx/work/impl/o0OO00O;->OooO0O0(Ljava/util/concurrent/Future;)Ljava/lang/Object;",
+   "access": 25,
+   "offset": 2709392,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/concurrent/Future;->get()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "method": "Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Thread;->interrupt()V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "method": "Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Thread;->interrupt()V"
+    },
+    {
+     "label": "L0019",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L0001"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L0005",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/InterruptedException;",
+       "target": "L001a"
+      }
+     ],
+     "all": "L000f"
+    }
+   ]
+  }
+ ]
+}

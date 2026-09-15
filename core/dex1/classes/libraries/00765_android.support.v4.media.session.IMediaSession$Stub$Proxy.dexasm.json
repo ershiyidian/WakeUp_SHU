@@ -1,0 +1,9971 @@
+{
+ "class": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;-><init>(Landroid/os/IBinder;)V",
+   "access": 65537,
+   "offset": 1990320,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V",
+   "access": 1,
+   "offset": 1990348,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaDescriptionCompat;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 41
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "return-void"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0027",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->addQueueItemAt(Landroid/support/v4/media/MediaDescriptionCompat;I)V",
+   "access": 1,
+   "offset": 1990484,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaDescriptionCompat;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 42
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->adjustVolume(IILjava/lang/String;)V",
+   "access": 1,
+   "offset": 1990624,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0030",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 11
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      5,
+      0,
+      1,
+      6
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-void"
+    },
+    {
+     "label": "L0028",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002f",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0021",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0028"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->asBinder()Landroid/os/IBinder;",
+   "access": 1,
+   "offset": 1988396,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->fastForward()V",
+   "access": 1,
+   "offset": 1990748,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 22
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getExtras()Landroid/os/Bundle;",
+   "access": 1,
+   "offset": 1988256,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getFlags()J",
+   "access": 1,
+   "offset": 1990204,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 9
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readLong()J"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;",
+   "access": 1,
+   "offset": 1989836,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getLaunchPendingIntent()Landroid/app/PendingIntent;",
+   "access": 1,
+   "offset": 1988116,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/app/PendingIntent;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getMetadata()Landroid/support/v4/media/MediaMetadataCompat;",
+   "access": 1,
+   "offset": 1988420,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 27
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/support/v4/media/MediaMetadataCompat;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/MediaMetadataCompat;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getPackageName()Ljava/lang/String;",
+   "access": 1,
+   "offset": 1989860,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;",
+   "access": 1,
+   "offset": 1988700,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 28
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/PlaybackStateCompat;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/session/PlaybackStateCompat;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getQueue()Ljava/util/List;",
+   "access": 1,
+   "offset": 1990084,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 29
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002c",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0025"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getQueueTitle()Ljava/lang/CharSequence;",
+   "access": 1,
+   "offset": 1989696,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 30
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getRatingType()I",
+   "access": 1,
+   "offset": 1989348,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getRepeatMode()I",
+   "access": 1,
+   "offset": 1989464,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 37
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getShuffleMode()I",
+   "access": 1,
+   "offset": 1989580,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 47
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0023"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getTag()Ljava/lang/String;",
+   "access": 1,
+   "offset": 1989972,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->getVolumeAttributes()Landroid/support/v4/media/session/ParcelableVolumeInfo;",
+   "access": 1,
+   "offset": 1988560,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/support/v4/media/session/ParcelableVolumeInfo;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/session/ParcelableVolumeInfo;"
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0027",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0026",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0027"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->isCaptioningEnabled()Z",
+   "access": 1,
+   "offset": 1988840,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 45
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0025",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0026"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->isShuffleModeEnabledRemoved()Z",
+   "access": 1,
+   "offset": 1988960,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 38
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0025",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0026"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->isTransportControlEnabled()Z",
+   "access": 1,
+   "offset": 1989080,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0024",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002c",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0025"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->next()V",
+   "access": 1,
+   "offset": 1990856,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 20
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->pause()V",
+   "access": 1,
+   "offset": 1990964,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 18
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->play()V",
+   "access": 1,
+   "offset": 1991072,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->playFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1991180,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 14
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->playFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1991320,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1991460,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6111252,
+   "end": "L0041",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      3
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0025",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L002b",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-void"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0040",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0033",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->prepare()V",
+   "access": 1,
+   "offset": 1991620,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 33
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1991728,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 34
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1991868,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 35
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1992008,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6111252,
+   "end": "L0041",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      3
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0025",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L002b",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 36
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-void"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0040",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0033",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->previous()V",
+   "access": 1,
+   "offset": 1992168,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 21
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->rate(Landroid/support/v4/media/RatingCompat;)V",
+   "access": 1,
+   "offset": 1992276,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/RatingCompat;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 25
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "return-void"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0027",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->rateWithExtras(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1992412,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6111252,
+   "end": "L0041",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      3
+     ],
+     "method": "Landroid/support/v4/media/RatingCompat;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      3
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0025",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L002b",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 51
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-void"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0040",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0033",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->registerCallbackListener(Landroid/support/v4/media/session/IMediaControllerCallback;)V",
+   "access": 1,
+   "offset": 1992572,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "goto",
+     "target": "L0017"
+    },
+    {
+     "label": "L0014",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "return-void"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0024",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0014"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->removeQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V",
+   "access": 1,
+   "offset": 1992700,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaDescriptionCompat;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 43
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "return-void"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0027",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->removeQueueItemAt(I)V",
+   "access": 1,
+   "offset": 1992836,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 44
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->rewind()V",
+   "access": 1,
+   "offset": 1992948,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->seekTo(J)V",
+   "access": 1,
+   "offset": 1993056,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeLong(J)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 24
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      5,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)V",
+   "access": 1,
+   "offset": 1993168,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0042",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      2
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L003b"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      2
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L002c"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L002c",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003a",
+     "op": "return-void"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0041",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0034",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1993328,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      4
+     ],
+     "method": "Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0022",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 26
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0037",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->sendMediaButton(Landroid/view/KeyEvent;)Z",
+   "access": 1,
+   "offset": 1989200,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L003c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0,
+      3
+     ],
+     "method": "Landroid/view/KeyEvent;->writeToParcel(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "goto",
+     "target": "L0035"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      6,
+      4,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L002c",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L002d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0034",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L003b",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L002a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0018"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->setCaptioningEnabled(Z)V",
+   "access": 1,
+   "offset": 1993468,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 46
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->setRepeatMode(I)V",
+   "access": 1,
+   "offset": 1993580,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 39
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->setShuffleMode(I)V",
+   "access": 1,
+   "offset": 1993692,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 48
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->setShuffleModeEnabledRemoved(Z)V",
+   "access": 1,
+   "offset": 1993804,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 40
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->setVolumeTo(IILjava/lang/String;)V",
+   "access": 1,
+   "offset": 1993916,
+   "registers": 7,
+   "inputs": 4,
+   "outputs": 5,
+   "debug_offset": 6110058,
+   "end": "L0030",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeInt(I)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      5,
+      0,
+      1,
+      6
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-void"
+    },
+    {
+     "label": "L0028",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002f",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0021",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0028"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->skipToQueueItem(J)V",
+   "access": 1,
+   "offset": 1994040,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeLong(J)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 17
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      5,
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0022"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->stop()V",
+   "access": 1,
+   "offset": 1994152,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 19
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      0,
+      1,
+      4
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L001e",
+     "op": "return-void"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0026",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0018",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001f"
+    }
+   ]
+  },
+  {
+   "name": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->unregisterCallbackListener(Landroid/support/v4/media/session/IMediaControllerCallback;)V",
+   "access": 1,
+   "offset": 1994260,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Landroid/os/Parcel;->obtain()Landroid/os/Parcel;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "android.support.v4.media.session.IMediaSession"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "goto",
+     "target": "L0017"
+    },
+    {
+     "label": "L0014",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Landroid/support/v4/media/session/IMediaSession$Stub$Proxy;->mRemote:Landroid/os/IBinder;"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      2,
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->readException()V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002a",
+     "op": "return-void"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Parcel;->recycle()V"
+    },
+    {
+     "label": "L0031",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L0024",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0014"
+    }
+   ]
+  }
+ ]
+}

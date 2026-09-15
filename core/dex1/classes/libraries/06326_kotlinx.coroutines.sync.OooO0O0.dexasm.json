@@ -1,0 +1,2732 @@
+{
+ "class": "Lkotlinx/coroutines/sync/OooO0O0;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
+   "access": 4121
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;",
+   "access": 4121
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0O:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
+   "access": 4121
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0o:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;",
+   "access": 4121
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooOOO0:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
+   "access": 4121
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oO:I",
+   "access": 17
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oo:Lo00OoO0/OooOo;",
+   "access": 17
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->_availablePermits$volatile:I",
+   "access": 4162
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->deqIdx$volatile:J",
+   "access": 4162
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->enqIdx$volatile:J",
+   "access": 4162
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->head$volatile:Ljava/lang/Object;",
+   "access": 4162
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->tail$volatile:Ljava/lang/Object;",
+   "access": 4162
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;-><clinit>()V",
+   "access": 65544,
+   "offset": 4971012,
+   "registers": 3,
+   "inputs": 0,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "head$volatile"
+    },
+    {
+     "label": "L0002",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lkotlinx/coroutines/sync/OooO0O0;"
+    },
+    {
+     "label": "L0004",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "deqIdx$volatile"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "tail$volatile"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0O:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "enqIdx$volatile"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0o:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0024",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_availablePermits$volatile"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOOO0:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;"
+    },
+    {
+     "label": "L002c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;-><init>(I)V",
+   "access": 65537,
+   "offset": 4971120,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6110209,
+   "end": "L0041",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oO:I"
+    },
+    {
+     "label": "L0005",
+     "op": "if-lez",
+     "registers": [
+      6
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0007",
+     "op": "if-ltz",
+     "registers": [
+      6
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lo00OoOOO/o0000O0O;"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000c",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3,
+      4,
+      1
+     ],
+     "method": "Lo00OoOOO/o0000O0O;-><init>(JLo00OoOOO/o0000O0O;I)V"
+    },
+    {
+     "label": "L0012",
+     "op": "iput-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->head$volatile:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "iput-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->tail$volatile:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "iput",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->_availablePermits$volatile:I"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lo00OoO0/OooOo;"
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      0,
+      5
+     ],
+     "method": "Lo00OoO0/OooOo;-><init>(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oo:Lo00OoO0/OooOo;"
+    },
+    {
+     "label": "L0020",
+     "op": "return-void"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "The number of acquired permits should be in 0.."
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Semaphore should have at least 1 permit, but had "
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0040",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0O0(Lkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 4970844,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0046",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOOO0:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndDecrement(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oO:I"
+    },
+    {
+     "label": "L0008",
+     "op": "if-gt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0000"
+    },
+    {
+     "label": "L000a",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lo00OOOO/o00Oo0;->OooO00o:Lo00OOOO/o00Oo0;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-lez",
+     "registers": [
+      1
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0041"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/bumptech/glide/OooOO0;->OooOo(Lo00OOOo/oo000o;)Lo00OOOo/oo000o;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lo00OoO0/o00000;->OooOO0O(Lo00OOOo/oo000o;)Lo00OoO0/Oooo000;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0OO(Lo00OoO0/o00OO000;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndDecrement(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "if-gt",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0023",
+     "op": "if-lez",
+     "registers": [
+      1
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oo:Lo00OoO0/OooOo;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3,
+      0
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooO0Oo(Ljava/lang/Object;Lo00Oo0O0/o000O0o;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "goto",
+     "target": "L0034"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0OO(Lo00OoO0/o00OO000;)Z"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0031",
+     "op": "goto",
+     "target": "L0034"
+    },
+    {
+     "label": "L0032",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L0042"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooOOo()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;"
+    },
+    {
+     "label": "L003a",
+     "op": "if-ne",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L003d",
+     "op": "move-object",
+     "registers": [
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-ne",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0040",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lo00OoO0/Oooo000;->OooOoO()V"
+    },
+    {
+     "label": "L0045",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0017",
+     "end": "L002f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0032"
+    }
+   ]
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0OO(Lo00OoO0/o00OO000;)Z",
+   "access": 17,
+   "offset": 4970468,
+   "registers": 19,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6112844,
+   "end": "L00b4",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "move-object/from16",
+     "registers": [
+      0,
+      17
+     ]
+    },
+    {
+     "label": "L0002",
+     "op": "move-object/from16",
+     "registers": [
+      1,
+      18
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0O:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lo00OoOOO/o0000O0O;"
+    },
+    {
+     "label": "L000c",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0o:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lkotlinx/coroutines/sync/SemaphoreAndMutexImpl$addAcquireToQueue$createNewSegment$1;->INSTANCE:Lkotlinx/coroutines/sync/SemaphoreAndMutexImpl$addAcquireToQueue$createNewSegment$1;"
+    },
+    {
+     "label": "L0014",
+     "op": "sget",
+     "registers": [
+      7
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0o:I"
+    },
+    {
+     "label": "L0016",
+     "op": "int-to-long",
+     "registers": [
+      7,
+      7
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "div-long",
+     "registers": [
+      7,
+      4,
+      7
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      7,
+      8,
+      6
+     ],
+     "method": "Lo00OoO/OooO;->OooO0O0(Lo00OoO/o00Ooo;JLo00Oo0O0/o000O000;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lo00OoO/OooO;->OooO0o0(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "if-nez",
+     "registers": [
+      10
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lo00OoO/OooO;->OooO0OO(Ljava/lang/Object;)Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "check-cast",
+     "registers": [
+      11
+     ],
+     "type": "Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L002d",
+     "op": "iget-wide",
+     "registers": [
+      12,
+      11
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L002f",
+     "op": "iget-wide",
+     "registers": [
+      14,
+      10
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L0031",
+     "op": "cmp-long",
+     "registers": [
+      16,
+      12,
+      14
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "if-ltz",
+     "registers": [
+      16
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L005d"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooOO0()Z"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-nez",
+     "registers": [
+      12
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L0019"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      11,
+      10
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "if-eqz",
+     "registers": [
+      12
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooO0o()Z"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L005d"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0o0()V"
+    },
+    {
+     "label": "L004c",
+     "op": "goto",
+     "target": "L005d"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "if-eq",
+     "registers": [
+      12,
+      11
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooO0o()Z"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "if-eqz",
+     "registers": [
+      11
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0059",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0o0()V"
+    },
+    {
+     "label": "L005c",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lo00OoO/OooO;->OooO0OO(Ljava/lang/Object;)Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lo00OoOOO/o0000O0O;"
+    },
+    {
+     "label": "L0063",
+     "op": "sget",
+     "registers": [
+      3
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0o:I"
+    },
+    {
+     "label": "L0065",
+     "op": "int-to-long",
+     "registers": [
+      6,
+      3
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "rem-long/2addr",
+     "registers": [
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "long-to-int",
+     "registers": [
+      3,
+      4
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "iget-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lo00OoOOO/o0000O0O;->OooO0o0:Ljava/util/concurrent/atomic/AtomicReferenceArray;"
+    },
+    {
+     "label": "L006a",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3,
+      5,
+      1
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0070",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0076"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Lo00OoO0/o00OO000;->OooO00o(Lo00OoO/o00Ooo;I)V"
+    },
+    {
+     "label": "L0075",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0079",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L006a"
+    },
+    {
+     "label": "L007c",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0O0:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L007e",
+     "op": "sget-object",
+     "registers": [
+      7
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0OO:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L0080",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3,
+      5,
+      7
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0083",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0084",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L00ac"
+    },
+    {
+     "label": "L0086",
+     "op": "instance-of",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "Lo00OoO0/OooOo00;"
+    },
+    {
+     "label": "L0088",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0094"
+    },
+    {
+     "label": "L008a",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lo00OoO0/OooOo00;"
+    },
+    {
+     "label": "L008c",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lo00OOOO/o00Oo0;->OooO00o:Lo00OOOO/o00Oo0;"
+    },
+    {
+     "label": "L008e",
+     "op": "iget-object",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oo:Lo00OoO0/OooOo;"
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Lo00OoO0/OooOo00;->OooO0Oo(Ljava/lang/Object;Lo00Oo0O0/o000O0o;)V"
+    },
+    {
+     "label": "L0093",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0094",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L0096",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0098",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "unexpected: "
+    },
+    {
+     "label": "L009a",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L009d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00a0",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00a3",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00a4",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00a7",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00a8",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00ab",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00ac",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L00af",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00b0",
+     "op": "if-eq",
+     "registers": [
+      2,
+      5
+     ],
+     "target": "L0080"
+    },
+    {
+     "label": "L00b2",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L00b3",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0Oo()V",
+   "access": 17,
+   "offset": 4971268,
+   "registers": 16,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6113151,
+   "end": "L0107",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOOO0:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndIncrement(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oO:I"
+    },
+    {
+     "label": "L0008",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L00e2"
+    },
+    {
+     "label": "L000a",
+     "op": "if-ltz",
+     "registers": [
+      1
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "goto/16",
+     "target": "L00c9"
+    },
+    {
+     "label": "L000e",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lo00OoOOO/o0000O0O;"
+    },
+    {
+     "label": "L0016",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooOO0:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "sget",
+     "registers": [
+      4
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0o:I"
+    },
+    {
+     "label": "L001e",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "div-long",
+     "registers": [
+      4,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lkotlinx/coroutines/sync/SemaphoreAndMutexImpl$tryResumeNextFromQueue$createNewSegment$1;->INSTANCE:Lkotlinx/coroutines/sync/SemaphoreAndMutexImpl$tryResumeNextFromQueue$createNewSegment$1;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4,
+      5,
+      6
+     ],
+     "method": "Lo00OoO/OooO;->OooO0O0(Lo00OoO/o00Ooo;JLo00Oo0O0/o000O000;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lo00OoO/OooO;->OooO0o0(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L0067"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lo00OoO/OooO;->OooO0OO(Ljava/lang/Object;)Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "check-cast",
+     "registers": [
+      9
+     ],
+     "type": "Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L0037",
+     "op": "iget-wide",
+     "registers": [
+      10,
+      9
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L0039",
+     "op": "iget-wide",
+     "registers": [
+      12,
+      8
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L003b",
+     "op": "cmp-long",
+     "registers": [
+      14,
+      10,
+      12
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "if-ltz",
+     "registers": [
+      14
+     ],
+     "target": "L0040"
+    },
+    {
+     "label": "L003f",
+     "op": "goto",
+     "target": "L0067"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooOO0()Z"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "if-nez",
+     "registers": [
+      10
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L0046",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15,
+      9,
+      8
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L004a",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L0057"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooO0o()Z"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0067"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0o0()V"
+    },
+    {
+     "label": "L0056",
+     "op": "goto",
+     "target": "L0067"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L005a",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "if-eq",
+     "registers": [
+      10,
+      9
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo00OoO/o00Ooo;->OooO0o()Z"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0o0()V"
+    },
+    {
+     "label": "L0066",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lo00OoO/OooO;->OooO0OO(Ljava/lang/Object;)Lo00OoO/o00Ooo;"
+    },
+    {
+     "label": "L006a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L006b",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lo00OoOOO/o0000O0O;"
+    },
+    {
+     "label": "L006d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lo00OoO/OooOO0;->OooO0O0()V"
+    },
+    {
+     "label": "L0070",
+     "op": "iget-wide",
+     "registers": [
+      6,
+      0
+     ],
+     "field": "Lo00OoO/o00Ooo;->OooO0OO:J"
+    },
+    {
+     "label": "L0072",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0073",
+     "op": "cmp-long",
+     "registers": [
+      8,
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L0075",
+     "op": "if-lez",
+     "registers": [
+      8
+     ],
+     "target": "L0078"
+    },
+    {
+     "label": "L0077",
+     "op": "goto",
+     "target": "L00c7"
+    },
+    {
+     "label": "L0078",
+     "op": "sget",
+     "registers": [
+      4
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0o:I"
+    },
+    {
+     "label": "L007a",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "rem-long/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "long-to-int",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L007d",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0O0:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L007f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lo00OoOOO/o0000O0O;->OooO0o0:Ljava/util/concurrent/atomic/AtomicReferenceArray;"
+    },
+    {
+     "label": "L0081",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      2
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0084",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0085",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0086",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L00ae"
+    },
+    {
+     "label": "L0088",
+     "op": "sget",
+     "registers": [
+      2
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO00o:I"
+    },
+    {
+     "label": "L008a",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L008b",
+     "op": "if-ge",
+     "registers": [
+      5,
+      2
+     ],
+     "target": "L009a"
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0090",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0091",
+     "op": "sget-object",
+     "registers": [
+      7
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0OO:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L0093",
+     "op": "if-ne",
+     "registers": [
+      6,
+      7
+     ],
+     "target": "L0097"
+    },
+    {
+     "label": "L0095",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0096",
+     "op": "goto",
+     "target": "L00c7"
+    },
+    {
+     "label": "L0097",
+     "op": "add-int/lit8",
+     "registers": [
+      5,
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0099",
+     "op": "goto",
+     "target": "L008b"
+    },
+    {
+     "label": "L009a",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0O0:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L009c",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0Oo:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L009e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      5,
+      6
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00a1",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00a2",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L00a6"
+    },
+    {
+     "label": "L00a4",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00a5",
+     "op": "goto",
+     "target": "L00ac"
+    },
+    {
+     "label": "L00a6",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L00a9",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00aa",
+     "op": "if-eq",
+     "registers": [
+      2,
+      5
+     ],
+     "target": "L009e"
+    },
+    {
+     "label": "L00ac",
+     "op": "xor-int/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L00ad",
+     "op": "goto",
+     "target": "L00c7"
+    },
+    {
+     "label": "L00ae",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lo00OoOOO/o0000O0;->OooO0o0:Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L00b0",
+     "op": "if-ne",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L00b3"
+    },
+    {
+     "label": "L00b2",
+     "op": "goto",
+     "target": "L00c7"
+    },
+    {
+     "label": "L00b3",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lo00OoO0/OooOo00;"
+    },
+    {
+     "label": "L00b5",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00ca"
+    },
+    {
+     "label": "L00b7",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lo00OoO0/OooOo00;"
+    },
+    {
+     "label": "L00b9",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lo00OOOO/o00Oo0;->OooO00o:Lo00OOOO/o00Oo0;"
+    },
+    {
+     "label": "L00bb",
+     "op": "iget-object",
+     "registers": [
+      3,
+      15
+     ],
+     "field": "Lkotlinx/coroutines/sync/OooO0O0;->OooO0oo:Lo00OoO0/OooOo;"
+    },
+    {
+     "label": "L00bd",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0,
+      3
+     ],
+     "method": "Lo00OoO0/OooOo00;->OooO0O0(Ljava/lang/Object;Lo00Oo0O0/o000O0o;)Lcom/google/gson/internal/OooO0O0;"
+    },
+    {
+     "label": "L00c0",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00c1",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00c7"
+    },
+    {
+     "label": "L00c3",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lo00OoO0/OooOo00;->OooOO0(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L00c6",
+     "op": "goto",
+     "target": "L0095"
+    },
+    {
+     "label": "L00c7",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0000"
+    },
+    {
+     "label": "L00c9",
+     "op": "return-void"
+    },
+    {
+     "label": "L00ca",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L00cc",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00ce",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "unexpected: "
+    },
+    {
+     "label": "L00d0",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00d3",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00d6",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00d9",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00da",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00dd",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00de",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00e1",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00e2",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L00e5",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00e6",
+     "op": "if-le",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L00ef"
+    },
+    {
+     "label": "L00e8",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      15,
+      1,
+      2
+     ],
+     "method": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z"
+    },
+    {
+     "label": "L00eb",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00ec",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L00ef"
+    },
+    {
+     "label": "L00ee",
+     "op": "goto",
+     "target": "L00e2"
+    },
+    {
+     "label": "L00ef",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalStateException;"
+    },
+    {
+     "label": "L00f1",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00f3",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "The number of released permits cannot be greater than "
+    },
+    {
+     "label": "L00f5",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00f8",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00fb",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00fe",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00ff",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0102",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0103",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0106",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

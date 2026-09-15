@@ -1,0 +1,690 @@
+{
+ "class": "Lcom/google/gson/internal/LazilyParsedNumber;",
+ "super": "Ljava/lang/Number;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 3356712,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Number;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->readObject(Ljava/io/ObjectInputStream;)V",
+   "access": 2,
+   "offset": 3356740,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/io/InvalidObjectException;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Deserialization is unsupported"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->writeReplace()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 3356588,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooOO0(Ljava/lang/String;)Ljava/math/BigDecimal;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->doubleValue()D",
+   "access": 1,
+   "offset": 3356396,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 3356336,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-ne",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lcom/google/gson/internal/LazilyParsedNumber;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/google/gson/internal/LazilyParsedNumber;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->floatValue()F",
+   "access": 1,
+   "offset": 3356428,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->hashCode()I",
+   "access": 1,
+   "offset": 3356460,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/String;->hashCode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->intValue()I",
+   "access": 1,
+   "offset": 3356492,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Long;->parseLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "long-to-int",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooOO0(Ljava/lang/String;)Ljava/math/BigDecimal;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/math/BigDecimal;->intValue()I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0006",
+     "handler": "H1"
+    },
+    {
+     "start": "L0007",
+     "end": "L000d",
+     "handler": "H5"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0007"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L000f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->longValue()J",
+   "access": 1,
+   "offset": 3356644,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Long;->parseLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/google/gson/internal/OooO00o;->OooOO0(Ljava/lang/String;)Ljava/math/BigDecimal;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/math/BigDecimal;->longValue()J"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0006",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0007"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/google/gson/internal/LazilyParsedNumber;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 3356620,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

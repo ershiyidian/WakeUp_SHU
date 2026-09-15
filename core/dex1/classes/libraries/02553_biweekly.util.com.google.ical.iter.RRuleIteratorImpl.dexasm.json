@@ -1,0 +1,2356 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;",
+ "super": "Ljava/lang/Object;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->MIN_DATE:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->canShortcutAdvance:Z",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->condition:Lbiweekly/util/com/google/ical/util/Predicate;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->dtStart:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->instanceGenerator:Lbiweekly/util/com/google/ical/iter/Generator;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->lastUtc_:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->monthGenerator:Lbiweekly/util/com/google/ical/iter/Generator;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->tzid:Ljava/util/TimeZone;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;-><clinit>()V",
+   "access": 65544,
+   "offset": 2929288,
+   "registers": 3,
+   "inputs": 0,
+   "outputs": 4,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateValueImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/high16",
+     "registers": [
+      1
+     ],
+     "literal": -32768
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValueImpl;-><init>(III)V"
+    },
+    {
+     "label": "L0008",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->MIN_DATE:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;Lbiweekly/util/com/google/ical/util/Predicate;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;Z)V",
+   "access": 65537,
+   "offset": 2929328,
+   "registers": 16,
+   "inputs": 12,
+   "outputs": 3,
+   "debug_offset": 6144024,
+   "end": "L00a9",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0006",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->MIN_DATE:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->lastUtc_:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      7,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->condition:Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      8,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->instanceGenerator:Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L000e",
+     "op": "iput-object",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;"
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      10,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->monthGenerator:Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L0012",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->dtStart:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0014",
+     "op": "iput-object",
+     "registers": [
+      6,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->tzid:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0016",
+     "op": "iput-boolean",
+     "registers": [
+      15,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->canShortcutAdvance:Z"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "iput-object",
+     "registers": [
+      8,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 1000
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      12,
+      13,
+      14
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/InstanceGenerators;->skipSubDayGenerators(Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;Lbiweekly/util/com/google/ical/iter/Generator;)Z"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      15
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "if-eqz",
+     "registers": [
+      15
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0027",
+     "op": "new-array",
+     "registers": [
+      11,
+      0
+     ],
+     "type": "[Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L0029",
+     "op": "aput-object",
+     "registers": [
+      9,
+      11,
+      1
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "aput-object",
+     "registers": [
+      10,
+      11,
+      2
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "iget-object",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "check-cast",
+     "registers": [
+      12
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      12
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;->getValue()I"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "iput",
+     "registers": [
+      10,
+      9
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->hour:I"
+    },
+    {
+     "label": "L0037",
+     "op": "iget-object",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0039",
+     "op": "check-cast",
+     "registers": [
+      13
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      13
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;->getValue()I"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "iput",
+     "registers": [
+      10,
+      9
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->minute:I"
+    },
+    {
+     "label": "L0041",
+     "op": "iget-object",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0043",
+     "op": "check-cast",
+     "registers": [
+      14
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      14
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/SingleValueGenerator;->getValue()I"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "iput",
+     "registers": [
+      10,
+      9
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->second:I"
+    },
+    {
+     "label": "L004b",
+     "op": "goto",
+     "target": "L005c"
+    },
+    {
+     "label": "L004c",
+     "op": "const/4",
+     "registers": [
+      14
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L004d",
+     "op": "new-array",
+     "registers": [
+      14,
+      14
+     ],
+     "type": "[Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L004f",
+     "op": "aput-object",
+     "registers": [
+      9,
+      14,
+      1
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "aput-object",
+     "registers": [
+      10,
+      14,
+      2
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "aput-object",
+     "registers": [
+      11,
+      14,
+      0
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0056",
+     "op": "aput-object",
+     "registers": [
+      12,
+      14,
+      9
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0059",
+     "op": "aput-object",
+     "registers": [
+      13,
+      14,
+      9
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "move-object",
+     "registers": [
+      11,
+      14
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "array-length",
+     "registers": [
+      9,
+      11
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "if-eq",
+     "registers": [
+      1,
+      9
+     ],
+     "target": "L007b"
+    },
+    {
+     "label": "L005f",
+     "op": "aget-object",
+     "registers": [
+      9,
+      11,
+      1
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "iget-object",
+     "registers": [
+      10,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      10
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0066",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L006b"
+    },
+    {
+     "label": "L0069",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L006a",
+     "op": "goto",
+     "target": "L0072"
+    },
+    {
+     "label": "L006b",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L006d",
+     "op": "if-gez",
+     "registers": [
+      1
+     ],
+     "target": "L0072"
+    },
+    {
+     "label": "L006f",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0071",
+     "op": "goto",
+     "target": "L007b"
+    },
+    {
+     "label": "L0072",
+     "op": "add-int/lit8",
+     "registers": [
+      8,
+      8
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0074",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L0076",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0078",
+     "op": "goto",
+     "target": "L007b"
+    },
+    {
+     "label": "L0079",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L007b",
+     "op": "iget-boolean",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L007d",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->generateInstance()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0082",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0083",
+     "op": "iput-object",
+     "registers": [
+      9,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0085",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L008a"
+    },
+    {
+     "label": "L0087",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0089",
+     "op": "goto",
+     "target": "L00a8"
+    },
+    {
+     "label": "L008a",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toUtc(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L008d",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L008e",
+     "op": "invoke-interface",
+     "registers": [
+      9,
+      10
+     ],
+     "method": "Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0091",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0092",
+     "op": "if-ltz",
+     "registers": [
+      9
+     ],
+     "target": "L00a2"
+    },
+    {
+     "label": "L0094",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0096",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/Predicate;->apply(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0099",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L009a",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L009c",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L009e",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L009f",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L00a1",
+     "op": "goto",
+     "target": "L00a8"
+    },
+    {
+     "label": "L00a2",
+     "op": "add-int/lit8",
+     "registers": [
+      8,
+      8
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L00a4",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L007b"
+    },
+    {
+     "label": "L00a6",
+     "op": "iput-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L00a8",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0021",
+     "end": "L0078",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lbiweekly/util/com/google/ical/iter/Generator$IteratorShortCircuitingException;",
+       "target": "L0079"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->fetchNext()V",
+   "access": 2,
+   "offset": 2930112,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->generateInstance()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->condition:Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/Predicate;->apply(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L0018",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;->workDone()V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0021",
+     "op": "iput-boolean",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0023",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->generateInstance()Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 2,
+   "offset": 2929040,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->instanceGenerator:Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->dtStart:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000e",
+     "op": "instance-of",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDateTime()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->tzid:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toUtc(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDate()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->lastUtc_:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-lez",
+     "registers": [
+      0
+     ],
+     "target": "L0000"
+    },
+    {
+     "label": "L002d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L002b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lbiweekly/util/com/google/ical/iter/Generator$IteratorShortCircuitingException;",
+       "target": "L002e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->advanceTo(Lbiweekly/util/com/google/ical/values/DateValue;)V",
+   "access": 1,
+   "offset": 2929700,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6112844,
+   "end": "L00bd",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-gtz",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "goto/16",
+     "target": "L00bc"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->tzid:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fromUtc(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDate()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-gtz",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001e",
+     "op": "goto/16",
+     "target": "L00bc"
+    },
+    {
+     "label": "L0020",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0021",
+     "op": "iput-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0024",
+     "op": "iget-boolean",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->canShortcutAdvance:Z"
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0099"
+    },
+    {
+     "label": "L0028",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L002a",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-ge",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0060"
+    },
+    {
+     "label": "L0032",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;"
+    },
+    {
+     "label": "L0034",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L003f"
+    },
+    {
+     "label": "L003c",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L003e",
+     "op": "return-void"
+    },
+    {
+     "label": "L003f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-lt",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L0049",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->monthGenerator:Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L004b",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0060"
+    },
+    {
+     "label": "L0053",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;"
+    },
+    {
+     "label": "L0055",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L005a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L005d",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L005f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0060",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0062",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "if-ge",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L006e"
+    },
+    {
+     "label": "L006a",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L006c",
+     "op": "iput",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L006e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0070",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0075",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "if-ne",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0099"
+    },
+    {
+     "label": "L0078",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L007a",
+     "op": "iget",
+     "registers": [
+      2,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L007c",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L007f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0080",
+     "op": "if-ge",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0099"
+    },
+    {
+     "label": "L0082",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->monthGenerator:Lbiweekly/util/com/google/ical/iter/Generator;"
+    },
+    {
+     "label": "L0084",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0086",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0089",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L006e"
+    },
+    {
+     "label": "L008c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->yearGenerator:Lbiweekly/util/com/google/ical/iter/ThrottledGenerator;"
+    },
+    {
+     "label": "L008e",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->builder:Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z"
+    },
+    {
+     "label": "L0093",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0094",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L0096",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L0098",
+     "op": "return-void"
+    },
+    {
+     "label": "L0099",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L009b",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L00bc"
+    },
+    {
+     "label": "L009d",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->generateInstance()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L00a0",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00a1",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L00a6"
+    },
+    {
+     "label": "L00a3",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L00a5",
+     "op": "return-void"
+    },
+    {
+     "label": "L00a6",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->condition:Lbiweekly/util/com/google/ical/util/Predicate;"
+    },
+    {
+     "label": "L00a8",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/Predicate;->apply(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00ab",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00ac",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L00b1"
+    },
+    {
+     "label": "L00ae",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L00b0",
+     "op": "return-void"
+    },
+    {
+     "label": "L00b1",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L00b4",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00b5",
+     "op": "if-ltz",
+     "registers": [
+      2
+     ],
+     "target": "L0099"
+    },
+    {
+     "label": "L00b7",
+     "op": "iput-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L00b9",
+     "op": "return-void"
+    },
+    {
+     "label": "L00ba",
+     "op": "iput-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->done:Z"
+    },
+    {
+     "label": "L00bc",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0024",
+     "end": "L00b9",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lbiweekly/util/com/google/ical/iter/Generator$IteratorShortCircuitingException;",
+       "target": "L00ba"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->hasNext()Z",
+   "access": 1,
+   "offset": 2929212,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->fetchNext()V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->next()Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 1,
+   "offset": 2929168,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6144017,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->fetchNext()V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->pendingUtc:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->next()Ljava/lang/Object;",
+   "access": 4161,
+   "offset": 2929260,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->next()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/RRuleIteratorImpl;->remove()V",
+   "access": 1,
+   "offset": 2930200,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/UnsupportedOperationException;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/UnsupportedOperationException;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

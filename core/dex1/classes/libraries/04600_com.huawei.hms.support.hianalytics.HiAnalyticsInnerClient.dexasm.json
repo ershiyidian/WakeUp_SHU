@@ -1,0 +1,507 @@
+{
+ "class": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsInnerClient;",
+ "super": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsInnerClient;-><init>()V",
+   "access": 65537,
+   "offset": 3863508,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsInnerClient;->reportEntryClient(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3863532,
+   "registers": 7,
+   "inputs": 5,
+   "outputs": 4,
+   "debug_offset": 6114733,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsBase;->getMapForBi(Landroid/content/Context;Ljava/lang/String;)Ljava/util/Map;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "appid"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/TransactionIdCreater;->getId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "transId"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3,
+      5
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "direction"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "req"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3,
+      4
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->versionCodeToName(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "version"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      4,
+      3
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002e",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "ro.logsystem.usertype"
+    },
+    {
+     "label": "L0030",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->getSystemProperties(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "phoneType"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      4,
+      3
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->getInstance()Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "HMS_SDK_BASE_API_CALLED"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2,
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->onNewEvent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsInnerClient;->reportEntryExit(Landroid/content/Context;Lcom/huawei/hms/common/internal/ResponseHeader;Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3863688,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->getInstance()Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->getMapFromRequestHeader(Lcom/huawei/hms/common/internal/ResponseHeader;)Ljava/util/Map;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "direction"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "rsp"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->versionCodeToName(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "version"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0,
+      4
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "ro.logsystem.usertype"
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/Util;->getSystemProperties(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "phoneType"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0,
+      4
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->getInstance()Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HMS_SDK_BASE_API_CALLED"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/hianalytics/HiAnalyticsUtil;->onNewEvent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0033",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,348 @@
+{
+ "class": "Lcom/huawei/hms/support/gentyref/GenericTypeReflector;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/support/gentyref/GenericTypeReflector;-><init>()V",
+   "access": 65538,
+   "offset": 3862660,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/support/gentyref/GenericTypeReflector;->getType(Ljava/lang/reflect/Type;)Ljava/lang/Class;",
+   "access": 9,
+   "offset": 3862500,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0048",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/reflect/ParameterizedType;->getRawType()Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Ljava/lang/reflect/TypeVariable;"
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/reflect/TypeVariable;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/reflect/TypeVariable;->getBounds()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0021",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/reflect/TypeVariable;->getBounds()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0029",
+     "op": "aget-object",
+     "registers": [
+      3,
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/gentyref/GenericTypeReflector;->getType(Ljava/lang/reflect/Type;)Ljava/lang/Class;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0032",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0034",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "not supported: "
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0047",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

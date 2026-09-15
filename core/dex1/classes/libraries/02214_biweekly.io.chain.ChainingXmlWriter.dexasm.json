@@ -1,0 +1,1150 @@
+{
+ "class": "Lbiweekly/io/chain/ChainingXmlWriter;",
+ "super": "Lbiweekly/io/chain/ChainingWriter;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->parameterDataTypes:Ljava/util/Map;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;-><init>(Ljava/util/Collection;)V",
+   "access": 65537,
+   "offset": 2779964,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalOutputProperties;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>(I)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->parameterDataTypes:Ljava/util/Map;"
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;",
+   "access": 2,
+   "offset": 2779704,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0054",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->writer()Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->defaultTimeZone:Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->setGlobalTimezone(Lbiweekly/io/TimezoneAssignment;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->parameterDataTypes:Ljava/util/Map;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Map;->entrySet()Ljava/util/Set;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Set;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      3
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->registerParameterDataType(Ljava/lang/String;Lbiweekly/ICalDataType;)V"
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L0036",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0038",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lbiweekly/io/chain/ChainingWriter;->icals:Ljava/util/Collection;"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collection;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0053"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->write(Lbiweekly/ICalendar;)V"
+    },
+    {
+     "label": "L0052",
+     "op": "goto",
+     "target": "L0043"
+    },
+    {
+     "label": "L0053",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->dom()Lorg/w3c/dom/Document;",
+   "access": 1,
+   "offset": 2779928,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->getDocument()Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->go()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2779888,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110311,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->write(Ljava/util/Map;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->go(Ljava/io/File;)V",
+   "access": 1,
+   "offset": 2780020,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6120931,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->write(Ljava/io/File;Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->go(Ljava/io/OutputStream;)V",
+   "access": 1,
+   "offset": 2780056,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110395,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->write(Ljava/io/OutputStream;Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->go(Ljava/io/Writer;)V",
+   "access": 1,
+   "offset": 2780092,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6120909,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->createXCalDocument()Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->write(Ljava/io/Writer;Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->indent(Ljava/lang/Integer;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779468,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalOutputProperties;->setIndent(Ljava/lang/Integer;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties(Ljava/util/Map;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779496,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperty(Ljava/lang/String;Ljava/lang/String;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779524,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2779384,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2779412,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779552,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->register(Lbiweekly/io/scribe/component/ICalComponentScribe;)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779584,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->register(Ljava/lang/String;Lbiweekly/ICalDataType;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779616,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6140590,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->parameterDataTypes:Ljava/util/Map;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingWriter;",
+   "access": 4161,
+   "offset": 2779440,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingXmlWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779644,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/chain/ChainingWriter;->tz(Ljava/util/TimeZone;Z)Lbiweekly/io/chain/ChainingWriter;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/chain/ChainingXmlWriter;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/chain/ChainingXmlWriter;->xmlVersion(Ljava/lang/String;)Lbiweekly/io/chain/ChainingXmlWriter;",
+   "access": 1,
+   "offset": 2779676,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/chain/ChainingXmlWriter;->outputProperties:Lbiweekly/io/xml/XCalOutputProperties;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalOutputProperties;->setXmlVersion(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

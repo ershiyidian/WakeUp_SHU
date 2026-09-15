@@ -1,0 +1,695 @@
+{
+ "class": "LOooOoo/o0OO00O;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "LOooOoo/o0OO00O;->OooO00o:Ljava/util/HashMap;",
+   "access": 17
+  }
+ ],
+ "methods": [
+  {
+   "name": "LOooOoo/o0OO00O;-><init>()V",
+   "access": 65537,
+   "offset": 1768588,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "LOooOoo/o0OO00O;->OooO00o:Ljava/util/HashMap;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "LOooOoo/o0OO00O;->OooO00o(Landroid/net/Uri;)Ljava/io/File;",
+   "access": 17,
+   "offset": 1768244,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L009c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 47
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/lang/String;->indexOf(II)I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000c",
+     "op": "if-eq",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0088"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/lang/String;->substring(II)Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "add-int/2addr",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/String;->substring(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "LOooOoo/o0OO00O;->OooO00o:Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L0027",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0074"
+    },
+    {
+     "label": "L0029",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      2,
+      0
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/io/File;->getCanonicalFile()Ljava/io/File;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/io/File;->getPath()Ljava/lang/String;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/File;->getPath()Ljava/lang/String;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/core/content/FileProvider;->OooO00o(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Landroidx/core/content/FileProvider;->OooO00o(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->startsWith(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0058"
+    },
+    {
+     "label": "L0057",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/SecurityException;"
+    },
+    {
+     "label": "L005a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Resolved path jumped beyond configured root"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005f",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0060",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0062",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0064",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Failed to resolve canonical path for "
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0069",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L006f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0073",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0074",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0076",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0078",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unable to find configured root for "
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0080",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0083",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0087",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0088",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L008a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L008c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unable to find path from root: "
+    },
+    {
+     "label": "L008e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0091",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0094",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0097",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0098",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L009b",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L002e",
+     "end": "L0032",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0060"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

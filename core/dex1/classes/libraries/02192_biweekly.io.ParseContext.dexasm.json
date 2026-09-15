@@ -1,0 +1,809 @@
+{
+ "class": "Lbiweekly/io/ParseContext;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/ParseContext;->floatingDates:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->lineNumber:Ljava/lang/Integer;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->propertyName:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->timezonedDates:Lbiweekly/util/ListMultimap;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->version:Lbiweekly/ICalVersion;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->warnings:Ljava/util/List;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/ParseContext;-><init>()V",
+   "access": 65537,
+   "offset": 2770308,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0019",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ListMultimap;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->timezonedDates:Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0016",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->floatingDates:Ljava/util/List;"
+    },
+    {
+     "label": "L0018",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->addDate(Lbiweekly/util/ICalDate;Lbiweekly/property/ICalProperty;Lbiweekly/parameter/ICalParameters;)V",
+   "access": 1,
+   "offset": 2770376,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/ICalDate;->hasTime()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->isUtc()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->getTimezoneId()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseContext;->addFloatingDate(Lbiweekly/property/ICalProperty;Lbiweekly/util/ICalDate;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseContext;->addTimezonedDate(Ljava/lang/String;Lbiweekly/property/ICalProperty;Lbiweekly/util/ICalDate;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->addFloatingDate(Lbiweekly/property/ICalProperty;Lbiweekly/util/ICalDate;)V",
+   "access": 1,
+   "offset": 2770456,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/ParseContext;->floatingDates:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ParseContext$TimezonedDate;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      4,
+      3
+     ],
+     "method": "Lbiweekly/io/ParseContext$TimezonedDate;-><init>(Lbiweekly/util/ICalDate;Lbiweekly/property/ICalProperty;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->addTimezonedDate(Ljava/lang/String;Lbiweekly/property/ICalProperty;Lbiweekly/util/ICalDate;)V",
+   "access": 1,
+   "offset": 2770496,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/ParseContext;->timezonedDates:Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ParseContext$TimezonedDate;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      5,
+      4
+     ],
+     "method": "Lbiweekly/io/ParseContext$TimezonedDate;-><init>(Lbiweekly/util/ICalDate;Lbiweekly/property/ICalProperty;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->addWarning(I[Ljava/lang/Object;)V",
+   "access": 129,
+   "offset": 2770536,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6140405,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/ParseContext;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;-><init>(Lbiweekly/io/ParseContext;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->message(I[Ljava/lang/Object;)Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->build()Lbiweekly/io/ParseWarning;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->addWarning(Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 2770592,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6140414,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/ParseContext;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;-><init>(Lbiweekly/io/ParseContext;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->message(Ljava/lang/String;)Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->build()Lbiweekly/io/ParseWarning;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getFloatingDates()Ljava/util/List;",
+   "access": 1,
+   "offset": 2770260,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->floatingDates:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getLineNumber()Ljava/lang/Integer;",
+   "access": 1,
+   "offset": 2770212,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->lineNumber:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getPropertyName()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2770236,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getTimezonedDates()Lbiweekly/util/ListMultimap;",
+   "access": 1,
+   "offset": 2770188,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->timezonedDates:Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getVersion()Lbiweekly/ICalVersion;",
+   "access": 1,
+   "offset": 2770164,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->getWarnings()Ljava/util/List;",
+   "access": 1,
+   "offset": 2770284,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/ParseContext;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->setLineNumber(Ljava/lang/Integer;)V",
+   "access": 1,
+   "offset": 2770648,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/ParseContext;->lineNumber:Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->setPropertyName(Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 2770672,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/ParseContext;->propertyName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/ParseContext;->setVersion(Lbiweekly/ICalVersion;)V",
+   "access": 1,
+   "offset": 2770696,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/ParseContext;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

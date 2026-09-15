@@ -1,0 +1,979 @@
+{
+ "class": "Lcom/huawei/hms/hatool/h1;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->b:Lcom/huawei/hms/hatool/k0;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->c:Lcom/huawei/hms/hatool/t0;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->d:Lcom/huawei/hms/hatool/o1;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->e:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->f:Ljava/lang/String;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 3816596,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->f:Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a()Lorg/json/JSONObject;",
+   "access": 1,
+   "offset": 3816184,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110311,
+   "end": "L00b8",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "events_global_properties"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "hmsSdk"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00b5"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000f",
+     "op": "goto/16",
+     "target": "L00b5"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      1,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->b:Lcom/huawei/hms/hatool/k0;"
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00b2"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->c:Lcom/huawei/hms/hatool/t0;"
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00b2"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      1,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->d:Lcom/huawei/hms/hatool/o1;"
+    },
+    {
+     "label": "L001b",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001d",
+     "op": "goto/16",
+     "target": "L00b2"
+    },
+    {
+     "label": "L001f",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      4,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->b:Lcom/huawei/hms/hatool/k0;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/hatool/o1;->a()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "header"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5,
+      4
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L002f",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/json/JSONObject;-><init>()V"
+    },
+    {
+     "label": "L0034",
+     "op": "iget-object",
+     "registers": [
+      5,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->d:Lcom/huawei/hms/hatool/o1;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/huawei/hms/hatool/o1;->a()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "iget-object",
+     "registers": [
+      6,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->c:Lcom/huawei/hms/hatool/t0;"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/hatool/o1;->a()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "properties"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      7,
+      6
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0045",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0047",
+     "op": "iget-object",
+     "registers": [
+      7,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      6
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L004f",
+     "op": "goto",
+     "target": "L0055"
+    },
+    {
+     "label": "L0050",
+     "op": "iget-object",
+     "registers": [
+      6,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0,
+      6
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0055",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "events_common"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      5
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L005a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/json/JSONArray;-><init>()V"
+    },
+    {
+     "label": "L005f",
+     "op": "iget-object",
+     "registers": [
+      5,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0064",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0068",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0081"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lcom/huawei/hms/hatool/b1;"
+    },
+    {
+     "label": "L0071",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/hatool/b1;->a()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0074",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0075",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L007b"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    },
+    {
+     "label": "L007a",
+     "op": "goto",
+     "target": "L0065"
+    },
+    {
+     "label": "L007b",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "custom event is empty,delete this event"
+    },
+    {
+     "label": "L007d",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Lcom/huawei/hms/hatool/v;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0080",
+     "op": "goto",
+     "target": "L0065"
+    },
+    {
+     "label": "L0081",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "events"
+    },
+    {
+     "label": "L0083",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0086",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0089",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "UTF-8"
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L008f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/hatool/k1;->a([B)[B"
+    },
+    {
+     "label": "L0093",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0094",
+     "op": "iget-object",
+     "registers": [
+      4,
+      8
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->f:Ljava/lang/String;"
+    },
+    {
+     "label": "L0096",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lcom/huawei/hms/hatool/n;->a([BLjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0099",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L009a",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L009d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L009e",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L00a6"
+    },
+    {
+     "label": "L00a0",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "eventInfo encrypt failed,report over!"
+    },
+    {
+     "label": "L00a2",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/hatool/v;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00a5",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00a6",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "event"
+    },
+    {
+     "label": "L00a8",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      0
+     ],
+     "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L00ab",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00ac",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "getBitZip(): Unsupported coding : utf-8"
+    },
+    {
+     "label": "L00ae",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/hatool/v;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00b1",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00b2",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "model in wrong format"
+    },
+    {
+     "label": "L00b4",
+     "op": "goto",
+     "target": "L00ae"
+    },
+    {
+     "label": "L00b5",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Not have actionEvent to send"
+    },
+    {
+     "label": "L00b7",
+     "op": "goto",
+     "target": "L00ae"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0045",
+     "end": "L004f",
+     "handler": "H1"
+    },
+    {
+     "start": "L008a",
+     "end": "L00ab",
+     "handler": "H5"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L0050"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/io/UnsupportedEncodingException;",
+       "target": "L00ac"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a(Lcom/huawei/hms/hatool/k0;)V",
+   "access": 1,
+   "offset": 3816632,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110395,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->b:Lcom/huawei/hms/hatool/k0;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a(Lcom/huawei/hms/hatool/l;)V",
+   "access": 1,
+   "offset": 3816656,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6120931,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->d:Lcom/huawei/hms/hatool/o1;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a(Lcom/huawei/hms/hatool/t0;)V",
+   "access": 1,
+   "offset": 3816680,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6120909,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->c:Lcom/huawei/hms/hatool/t0;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a(Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 3816704,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6132676,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->e:Ljava/lang/String;"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/hatool/h1;->a(Ljava/util/List;)V",
+   "access": 1,
+   "offset": 3816732,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6132715,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/hatool/h1;->a:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

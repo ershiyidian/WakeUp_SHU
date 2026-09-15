@@ -1,0 +1,5472 @@
+{
+ "class": "Lorg/threeten/bp/Period;",
+ "super": "Lorg/threeten/bp/chrono/OooO;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/Period;->OooO0oO:Ljava/util/regex/Pattern;",
+   "access": 25
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;",
+   "access": 25
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->days:I",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->months:I",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->years:I",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/Period;-><clinit>()V",
+   "access": 65544,
+   "offset": 5986468,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 4,
+   "debug_offset": 6110028,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      1,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;-><init>(III)V"
+    },
+    {
+     "label": "L0006",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "([-+]?)P(?:([-+]?[0-9]+)Y)?(?:([-+]?[0-9]+)M)?(?:([-+]?[0-9]+)W)?(?:([-+]?[0-9]+)D)?"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->OooO0oO:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;-><init>(III)V",
+   "access": 65537,
+   "offset": 5986520,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 1,
+   "debug_offset": 6110058,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0005",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0007",
+     "op": "iput",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5984648,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "or-int",
+     "registers": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0002",
+     "op": "or-int/2addr",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/Period;-><init>(III)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->OooO0O0(Ljava/lang/String;Ljava/lang/CharSequence;I)I",
+   "access": 9,
+   "offset": 5983892,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/threeten/bp/format/DateTimeParseException;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Text cannot be parsed to a Period"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      1,
+      3,
+      0
+     ],
+     "method": "Lorg/threeten/bp/format/DateTimeParseException;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/format/DateTimeParseException;"
+    },
+    {
+     "label": "L001b",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0008",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/ArithmeticException;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->between(Lorg/threeten/bp/LocalDate;Lorg/threeten/bp/LocalDate;)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5984620,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/LocalDate;->until(Lorg/threeten/bp/chrono/OooO0O0;)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->from(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5984692,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L0083",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      8
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      8
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "instance-of",
+     "registers": [
+      0,
+      8
+     ],
+     "type": "Lorg/threeten/bp/chrono/OooO;"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L000b",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/IsoChronology;->INSTANCE:Lorg/threeten/bp/chrono/IsoChronology;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-object",
+     "registers": [
+      1,
+      8
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/OooO;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooO;->getChronology()Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L002f"
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Period requires ISO chronology: "
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "amount"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lo00o0oO/o00oO0o;->getUnits()Ljava/util/List;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003d",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L007e"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lo00o0oO/oo0o0Oo;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-interface",
+     "registers": [
+      8,
+      4
+     ],
+     "method": "Lo00o0oO/o00oO0o;->get(Lo00o0oO/oo0o0Oo;)J"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-wide",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "sget-object",
+     "registers": [
+      7
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0051",
+     "op": "if-ne",
+     "registers": [
+      4,
+      7
+     ],
+     "target": "L0058"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "goto",
+     "target": "L003f"
+    },
+    {
+     "label": "L0058",
+     "op": "sget-object",
+     "registers": [
+      7
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L005a",
+     "op": "if-ne",
+     "registers": [
+      4,
+      7
+     ],
+     "target": "L0061"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L005f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0060",
+     "op": "goto",
+     "target": "L003f"
+    },
+    {
+     "label": "L0061",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0063",
+     "op": "if-ne",
+     "registers": [
+      4,
+      3
+     ],
+     "target": "L006a"
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0068",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "goto",
+     "target": "L003f"
+    },
+    {
+     "label": "L006a",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lorg/threeten/bp/DateTimeException;"
+    },
+    {
+     "label": "L006c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Unit must be Years, Months or Days, but was "
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0076",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0079",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L007a",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Lorg/threeten/bp/DateTimeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L007d",
+     "op": "throw",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L007e",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0081",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0082",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->of(III)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985464,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->ofDays(I)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985492,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->ofMonths(I)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985520,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      0
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->ofWeeks(I)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985548,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->ofYears(I)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985588,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0,
+      0
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->parse(Ljava/lang/CharSequence;)Lorg/threeten/bp/Period;",
+   "access": 9,
+   "offset": 5985616,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6112844,
+   "end": "L006f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "text"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->OooO0oO:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/regex/Matcher;->matches()Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "Text cannot be parsed to a Period"
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0069"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "-"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0022",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      7
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0038",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003a",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003c",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0069"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      8,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO0O0(Ljava/lang/String;Ljava/lang/CharSequence;I)I"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      8,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO0O0(Ljava/lang/String;Ljava/lang/CharSequence;I)I"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      8,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO0O0(Ljava/lang/String;Ljava/lang/CharSequence;I)I"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      8,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO0O0(Ljava/lang/String;Ljava/lang/CharSequence;I)I"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      0
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L005a",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/format/DateTimeParseException;"
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3,
+      8,
+      2
+     ],
+     "method": "Lorg/threeten/bp/format/DateTimeParseException;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "check-cast",
+     "registers": [
+      8
+     ],
+     "type": "Lorg/threeten/bp/format/DateTimeParseException;"
+    },
+    {
+     "label": "L0068",
+     "op": "throw",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/format/DateTimeParseException;"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      8,
+      2
+     ],
+     "method": "Lorg/threeten/bp/format/DateTimeParseException;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V"
+    },
+    {
+     "label": "L006e",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L003e",
+     "end": "L005b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L005c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->readResolve()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 5983980,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0004",
+     "op": "or-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0007",
+     "op": "or-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000a",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->addTo(Lo00o0oO/o00Oo0;)Lo00o0oO/o00Oo0;",
+   "access": 1,
+   "offset": 5984364,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "temporal"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/Period;->toTotalMonths()J"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0018",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0020",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0024",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L002f",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->plus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5983596,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      1,
+      5
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L000d",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L000f",
+     "op": "if-ne",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0011",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0015",
+     "op": "if-ne",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0017",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0019",
+     "op": "iget",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L001b",
+     "op": "if-ne",
+     "registers": [
+      1,
+      5
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001d",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->get(Lo00o0oO/oo0o0Oo;)J",
+   "access": 1,
+   "offset": 5984224,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0006",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000c",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0011",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0013",
+     "op": "iget",
+     "registers": [
+      4,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0015",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/temporal/UnsupportedTemporalTypeException;"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Unsupported unit: "
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lorg/threeten/bp/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->getChronology()Lorg/threeten/bp/chrono/OooOOO;",
+   "access": 1,
+   "offset": 5986444,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/IsoChronology;->INSTANCE:Lorg/threeten/bp/chrono/IsoChronology;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->getDays()I",
+   "access": 1,
+   "offset": 5983760,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->getMonths()I",
+   "access": 1,
+   "offset": 5983784,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->getUnits()Ljava/util/List;",
+   "access": 1,
+   "offset": 5984152,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0010",
+     "op": "aput-object",
+     "registers": [
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->getYears()I",
+   "access": 1,
+   "offset": 5983808,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->hashCode()I",
+   "access": 1,
+   "offset": 5983832,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Integer;->rotateLeft(II)I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L000d",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/Integer;->rotateLeft(II)I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->isNegative()Z",
+   "access": 1,
+   "offset": 5983676,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ltz",
+     "registers": [
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0006",
+     "op": "if-ltz",
+     "registers": [
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0008",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L000a",
+     "op": "if-gez",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L000f"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->isZero()Z",
+   "access": 1,
+   "offset": 5983728,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->minus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5984972,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6163445,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/threeten/bp/Period;->from(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0016",
+     "op": "iget",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o0OoOo0(II)I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->minus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/chrono/OooO;",
+   "access": 4161,
+   "offset": 5986304,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->minus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->minusDays(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985056,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/high16",
+     "registers": [
+      0
+     ],
+     "literal": -32768
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide",
+     "registers": [
+      4
+     ],
+     "literal": 9223372036854775807
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusDays(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusDays(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "neg-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusDays(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->minusMonths(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985128,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/high16",
+     "registers": [
+      0
+     ],
+     "literal": -32768
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide",
+     "registers": [
+      4
+     ],
+     "literal": 9223372036854775807
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusMonths(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusMonths(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "neg-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusMonths(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->minusYears(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985200,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/high16",
+     "registers": [
+      0
+     ],
+     "literal": -32768
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide",
+     "registers": [
+      4
+     ],
+     "literal": 9223372036854775807
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusYears(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusYears(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "neg-long",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->plusYears(J)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->multipliedBy(I)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985272,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6163455,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eq",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "if-ne",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "goto",
+     "target": "L001f"
+    },
+    {
+     "label": "L0008",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo(II)I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->multipliedBy(I)Lorg/threeten/bp/chrono/OooO;",
+   "access": 4161,
+   "offset": 5986332,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->multipliedBy(I)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->negated()Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985352,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6163465,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lorg/threeten/bp/Period;->multipliedBy(I)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->negated()Lorg/threeten/bp/chrono/OooO;",
+   "access": 4161,
+   "offset": 5986360,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->negated()Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->normalized()Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985380,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6163469,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lorg/threeten/bp/Period;->toTotalMonths()J"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0006",
+     "op": "div-long",
+     "registers": [
+      4,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "rem-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "long-to-int",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L000c",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "cmp-long",
+     "registers": [
+      0,
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0011",
+     "op": "iget",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0013",
+     "op": "if-ne",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "iget",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->normalized()Lorg/threeten/bp/chrono/OooO;",
+   "access": 4161,
+   "offset": 5986388,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->normalized()Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->plus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985872,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6163445,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/threeten/bp/Period;->from(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0006",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0016",
+     "op": "iget",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooooOo(II)I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->plus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/chrono/OooO;",
+   "access": 4161,
+   "offset": 5986416,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->plus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->plusDays(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5985956,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000b",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L000d",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      5,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo0(JJ)J"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-wide",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->plusMonths(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5986028,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000b",
+     "op": "int-to-long",
+     "registers": [
+      1,
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo0(JJ)J"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      4,
+      5
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->plusYears(J)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5986100,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0009",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo0(JJ)J"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->o00O0O(J)I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0014",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      0
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->subtractFrom(Lo00o0oO/o00Oo0;)Lo00o0oO/o00Oo0;",
+   "access": 1,
+   "offset": 5984492,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "temporal"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Ooooo00(Ljava/lang/Object;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/Period;->toTotalMonths()J"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0018",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->YEARS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0020",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0024",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->MONTHS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "iget",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L002d",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L002f",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lorg/threeten/bp/temporal/ChronoUnit;->DAYS:Lorg/threeten/bp/temporal/ChronoUnit;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      0,
+      1,
+      2
+     ],
+     "method": "Lo00o0oO/o00Oo0;->minus(JLo00o0oO/oo0o0Oo;)Lo00o0oO/o00Oo0;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 5984024,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/threeten/bp/Period;->ZERO:Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "P0D"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "P"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 89
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L001c",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0021",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 77
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0026",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0028",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0032"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002d",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 68
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->toTotalMonths()J",
+   "access": 1,
+   "offset": 5984324,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0005",
+     "op": "mul-long",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0009",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "add-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->withDays(I)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5986172,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->withMonths(I)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5986216,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Period;->withYears(I)Lorg/threeten/bp/Period;",
+   "access": 1,
+   "offset": 5986260,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->years:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-ne",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->months:I"
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Period;->days:I"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Period;->OooO00o(III)Lorg/threeten/bp/Period;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

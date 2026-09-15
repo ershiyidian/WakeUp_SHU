@@ -1,0 +1,272 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/c;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;->a:Lcom/huawei/agconnect/crash/internal/c;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;->b:Lcom/huawei/agconnect/common/api/HaBridge;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;-><clinit>()V",
+   "access": 65544,
+   "offset": 3427244,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/c;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/c;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/c;->a:Lcom/huawei/agconnect/crash/internal/c;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;-><init>()V",
+   "access": 65538,
+   "offset": 3427276,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/c;->b:Lcom/huawei/agconnect/common/api/HaBridge;"
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/common/api/HaBridge;"
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Crash_TAG"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/HaBridge;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/c;->b:Lcom/huawei/agconnect/common/api/HaBridge;"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;->a()Lcom/huawei/agconnect/crash/internal/c;",
+   "access": 131081,
+   "offset": 3427156,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110311,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/c;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/c;->a:Lcom/huawei/agconnect/crash/internal/c;"
+    },
+    {
+     "label": "L0005",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L0005",
+     "handler": "H1"
+    },
+    {
+     "start": "L0008",
+     "end": "L0009",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0007"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/c;->a(Ljava/lang/String;Landroid/os/Bundle;)Lo00O0000/OooO;",
+   "access": 1,
+   "offset": 3427212,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/c;->b:Lcom/huawei/agconnect/common/api/HaBridge;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/HaBridge;->onEvent(Ljava/lang/String;Landroid/os/Bundle;)Lo00O0000/OooO;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

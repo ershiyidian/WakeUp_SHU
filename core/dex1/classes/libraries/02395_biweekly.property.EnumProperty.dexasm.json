@@ -1,0 +1,906 @@
+{
+ "class": "Lbiweekly/property/EnumProperty;",
+ "super": "Lbiweekly/property/TextProperty;",
+ "access": 1025,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/property/EnumProperty;-><init>(Lbiweekly/property/EnumProperty;)V",
+   "access": 65537,
+   "offset": 2874832,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/TextProperty;-><init>(Lbiweekly/property/TextProperty;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2874856,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/property/TextProperty;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 2874548,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eq",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0012",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/property/EnumProperty;"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/property/ICalProperty;->parameters:Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lbiweekly/property/ICalProperty;->parameters:Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0028",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L002d",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L0035",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->getStandardValues(Lbiweekly/ICalVersion;)Ljava/util/Collection;",
+   "access": 1025
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->getValueSupportedVersions()Ljava/util/Collection;",
+   "access": 1,
+   "offset": 2874784,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "method": "Lbiweekly/ICalVersion;->values()[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->hashCode()I",
+   "access": 1,
+   "offset": 2874712,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/property/ICalProperty;->parameters:Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;->hashCode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L0008",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/String;->hashCode()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->is(Ljava/lang/String;)Z",
+   "access": 1,
+   "offset": 2874676,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/property/EnumProperty;->validate(Ljava/util/List;Lbiweekly/ICalVersion;Ljava/util/List;)V",
+   "access": 1,
+   "offset": 2874880,
+   "registers": 8,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-super",
+     "registers": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->validate(Ljava/util/List;Lbiweekly/ICalVersion;Ljava/util/List;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L0044"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/EnumProperty;->getValueSupportedVersions()Ljava/util/Collection;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Collection;->isEmpty()Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/ValidationWarning;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lbiweekly/property/EnumProperty;->getStandardValues(Lbiweekly/ICalVersion;)Ljava/util/Collection;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "aput-object",
+     "registers": [
+      3,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "aput-object",
+     "registers": [
+      6,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 28
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6,
+      2
+     ],
+     "method": "Lbiweekly/ValidationWarning;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002b",
+     "op": "return-void"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/Collection;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0032",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/ValidationWarning;"
+    },
+    {
+     "label": "L0034",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/property/ValuedProperty;->value:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0036",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0038",
+     "op": "aput-object",
+     "registers": [
+      3,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "aput-object",
+     "registers": [
+      5,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 46
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      5,
+      2
+     ],
+     "method": "Lbiweekly/ValidationWarning;-><init>(I[Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0044",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

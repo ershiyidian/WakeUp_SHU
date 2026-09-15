@@ -1,0 +1,263 @@
+{
+ "class": "Lcom/bumptech/glide/load/HttpException;",
+ "super": "Ljava/io/IOException;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;->UNKNOWN:I",
+   "access": 25
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;->statusCode:I",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;-><init>(I)V",
+   "access": 65537,
+   "offset": 2988868,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110400,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Http request failed"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      2
+     ],
+     "method": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2988896,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6133882,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;I)V",
+   "access": 65537,
+   "offset": 2988924,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6137432,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V",
+   "access": 65537,
+   "offset": 2988952,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6144768,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ", status code: "
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "iput",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lcom/bumptech/glide/load/HttpException;->statusCode:I"
+    },
+    {
+     "label": "L0019",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/HttpException;->getStatusCode()I",
+   "access": 1,
+   "offset": 2988844,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/bumptech/glide/load/HttpException;->statusCode:I"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

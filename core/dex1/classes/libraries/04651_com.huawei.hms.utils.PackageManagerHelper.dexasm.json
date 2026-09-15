@@ -1,0 +1,2716 @@
+{
+ "class": "Lcom/huawei/hms/utils/PackageManagerHelper;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;-><init>(Landroid/content/Context;)V",
+   "access": 65537,
+   "offset": 3893688,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->a(Ljava/lang/String;)[B",
+   "access": 2,
+   "offset": 3892744,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L003e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Failed to get application signature certificate fingerprint."
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0007",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 64
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      6,
+      4
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      6,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;"
+    },
+    {
+     "label": "L0011",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0013",
+     "op": "array-length",
+     "registers": [
+      3,
+      6
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "if-lez",
+     "registers": [
+      3
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0016",
+     "op": "aget-object",
+     "registers": [
+      6,
+      6,
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/pm/Signature;->toByteArray()[B"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L001f",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L0025"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0038"
+    },
+    {
+     "label": "L0025",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003b",
+     "op": "new-array",
+     "registers": [
+      6,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L003d",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L001c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L001f"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L001d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getApplicationName(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3893140,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/CharSequence;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Failed to get application name for "
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0012",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0013"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0013"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageFirstInstallTime(Ljava/lang/String;)J",
+   "access": 1,
+   "offset": 3893624,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5,
+      3
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-wide",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->firstInstallTime:J"
+    },
+    {
+     "label": "L000e",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L000e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L000e"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L000e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageSignature(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3893252,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/PackageManagerHelper;->a(Ljava/lang/String;)[B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0006",
+     "op": "array-length",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/SHA256;->digest([B)[B"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/HEX;->encodeHexString([BZ)Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageSigningCertificate(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3893312,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0060",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0005",
+     "op": "sget",
+     "registers": [
+      4
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0007",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 28
+    },
+    {
+     "label": "L0009",
+     "op": "if-ge",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      8
+     ],
+     "method": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageSignature(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      5,
+      7
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0013",
+     "op": "const/high16",
+     "registers": [
+      6
+     ],
+     "literal": 2048
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      8,
+      6
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Landroidx/work/impl/utils/OooOO0O;->OooO0O0(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningInfo;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "new-array",
+     "registers": [
+      6,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "aput-object",
+     "registers": [
+      8,
+      6,
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "aput-object",
+     "registers": [
+      5,
+      6,
+      1
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Objects;->isNull([Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0029",
+     "op": "const-string",
+     "registers": [
+      8
+     ],
+     "string": "packageInfo or packageInfo.signingInfo is null"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      8
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Landroidx/work/impl/utils/OooOO0O;->OooO0O0(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningInfo;"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Landroidx/work/impl/utils/OooOO0O;->OooOoO0(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "aget-object",
+     "registers": [
+      5,
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L003b",
+     "op": "aput-object",
+     "registers": [
+      8,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "aput-object",
+     "registers": [
+      5,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/Objects;->isNull([Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L004b"
+    },
+    {
+     "label": "L0045",
+     "op": "const-string",
+     "registers": [
+      8
+     ],
+     "string": "get V3 signature is null"
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      8
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004a",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "aget-object",
+     "registers": [
+      8,
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Landroid/content/pm/Signature;->toByteArray()[B"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lcom/huawei/hms/utils/SHA256;->digest([B)[B"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-static",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/HEX;->encodeHexString([BZ)Ljava/lang/String;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "const-string",
+     "registers": [
+      8
+     ],
+     "string": "getPackageSignatureV3 has exception"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      8
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0011",
+     "end": "L004a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L005a"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L005a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageStates(Ljava/lang/String;)Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;",
+   "access": 1,
+   "offset": 3892900,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "servicePackageName is empty."
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;->NOT_INSTALLED:Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      2
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget-boolean",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Landroid/content/pm/ApplicationInfo;->enabled:Z"
+    },
+    {
+     "label": "L001a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001c",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;->ENABLED:Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;->DISABLED:Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L0021",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "in getPackageStates, getApplicationInfo threw an exception"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;->NOT_INSTALLED:Lcom/huawei/hms/utils/PackageManagerHelper$PackageStates;"
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0010",
+     "end": "L0021",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0022"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0022"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageVersionCode(Ljava/lang/String;)I",
+   "access": 1,
+   "offset": 3893016,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0005",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5,
+      3
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L000d",
+     "op": "iget",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->versionCode:I"
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L0012",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "get PackageVersionCode failed"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      5
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "get PackageVersionCode failed "
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0012"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0010"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->getPackageVersionName(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 3893536,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0004",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0010",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "move-exception",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "get getPackageVersionName failed"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L000e",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L001b"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0011"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->hasProvider(Ljava/lang/String;Ljava/lang/String;)Z",
+   "access": 1,
+   "offset": 3892268,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0003",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 8
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5,
+      2
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->providers:[Landroid/content/pm/ProviderInfo;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L000f",
+     "op": "array-length",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0013",
+     "op": "aget-object",
+     "registers": [
+      3,
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      3,
+      3
+     ],
+     "field": "Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      3
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001e",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L001b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0022"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0022"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->isPackageFreshInstall(Ljava/lang/String;)Z",
+   "access": 1,
+   "offset": 3892372,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0003",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6,
+      2
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->firstInstallTime:J"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-wide",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->lastUpdateTime:J"
+    },
+    {
+     "label": "L000f",
+     "op": "cmp-long",
+     "registers": [
+      6,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L000f",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/util/AndroidException;",
+       "target": "L0015"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L0015"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/PackageManagerHelper;->verifyPackageArchive(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z",
+   "access": 1,
+   "offset": 3892448,
+   "registers": 9,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0077",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "PackageManagerHelper"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Failed to get application signature certificate fingerprint."
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lcom/huawei/hms/utils/PackageManagerHelper;->a:Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L0007",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 64
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      6,
+      4
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L000e",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "getPackageArchiveInfo Exception. "
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/aaid/utils/OooO00o;->OooOoOO(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "move-object",
+     "registers": [
+      6,
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0076"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;"
+    },
+    {
+     "label": "L001f",
+     "op": "array-length",
+     "registers": [
+      4,
+      4
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-lez",
+     "registers": [
+      4
+     ],
+     "target": "L0076"
+    },
+    {
+     "label": "L0022",
+     "op": "iget-object",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L002a",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      6,
+      6
+     ],
+     "field": "Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;"
+    },
+    {
+     "label": "L002d",
+     "op": "aget-object",
+     "registers": [
+      6,
+      6,
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/pm/Signature;->toByteArray()[B"
+    },
+    {
+     "label": "L0032",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->toInputStream([B)Ljava/io/InputStream;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "X.509"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/security/cert/Certificate;->getEncoded()[B"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lcom/huawei/hms/utils/SHA256;->digest([B)[B"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lcom/huawei/hms/utils/HEX;->encodeHexString([BZ)Ljava/lang/String;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      6
+     ],
+     "method": "Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0055",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "goto",
+     "target": "L0072"
+    },
+    {
+     "label": "L0058",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "goto",
+     "target": "L005b"
+    },
+    {
+     "label": "L005a",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0060",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0063",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L006a",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L006e",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0071",
+     "op": "goto",
+     "target": "L0076"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0075",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L000d",
+     "handler": "H1"
+    },
+    {
+     "start": "L002b",
+     "end": "L0052",
+     "handler": "H5"
+    },
+    {
+     "start": "L005b",
+     "end": "L006e",
+     "handler": "Hd"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L000e"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L005a"
+      },
+      {
+       "type": "Ljava/security/cert/CertificateException;",
+       "target": "L0058"
+      }
+     ],
+     "all": "L0056"
+    },
+    {
+     "id": "Hd",
+     "catches": [],
+     "all": "L0056"
+    }
+   ]
+  }
+ ]
+}

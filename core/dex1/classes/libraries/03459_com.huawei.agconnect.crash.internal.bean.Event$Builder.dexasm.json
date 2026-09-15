@@ -1,0 +1,1189 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->LEVEL_CRASH:I",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->LEVEL_MAJOR:I",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->LEVEL_MINOR:I",
+   "access": 25
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->aaid:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->deviceInfo:Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->level:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->logInfoList:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->stackList:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->statusInfoList:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->summary:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->threadList:Ljava/util/List;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->time:J",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->userId:Ljava/lang/String;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;-><init>(Landroid/content/Context;)V",
+   "access": 65537,
+   "offset": 3420596,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0036",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/AGCInstanceID;->getInstance(Landroid/content/Context;)Lcom/huawei/agconnect/common/api/AGCInstanceID;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/AGCInstanceID;->getId()Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->aaid:Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0019"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Event"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "get aaid exception"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0017",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->aaid:Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->stackList:Ljava/util/List;"
+    },
+    {
+     "label": "L0020",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->threadList:Ljava/util/List;"
+    },
+    {
+     "label": "L0027",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L002c",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->statusInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L002e",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0033",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->logInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L0035",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000d",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L000e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->addStack(Lcom/huawei/agconnect/crash/internal/bean/StackInfo;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420152,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->stackList:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->addThread(Lcom/huawei/agconnect/crash/internal/bean/ThreadInfo;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420180,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->threadList:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->build()Lcom/huawei/agconnect/crash/internal/bean/Event;",
+   "access": 1,
+   "offset": 3420024,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 0,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/bean/Event;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->aaid:Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$002(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->level:Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$102(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->summary:Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$202(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->time:J"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$302(Lcom/huawei/agconnect/crash/internal/bean/Event;J)J"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->deviceInfo:Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$402(Lcom/huawei/agconnect/crash/internal/bean/Event;Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;)Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;"
+    },
+    {
+     "label": "L001e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->stackList:Ljava/util/List;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$502(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->threadList:Ljava/util/List;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$602(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0028",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->userId:Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$702(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->statusInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$802(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0032",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->logInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->access$902(Lcom/huawei/agconnect/crash/internal/bean/Event;Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0037",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->crashwhen(J)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420208,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-wide",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->time:J"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->device(Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420232,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->deviceInfo:Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->level(I)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420256,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/String;->valueOf(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->level:Ljava/lang/String;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->logInfoList(Ljava/util/List;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420288,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->logInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->now()Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420312,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Etc/GMT+0"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Calendar;->getTime()Ljava/util/Date;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Date;->getTime()J"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iput-wide",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->time:J"
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Event"
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "get time exception"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0014",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0015"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->statusInfoList(Ljava/util/List;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420404,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->statusInfoList:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->summary(Ljava/lang/Throwable;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420428,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0010"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000e",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Class;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L0021",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "|(at "
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ")"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->summary:Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->userId(Ljava/lang/String;)Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;",
+   "access": 1,
+   "offset": 3420572,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/Event$Builder;->userId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

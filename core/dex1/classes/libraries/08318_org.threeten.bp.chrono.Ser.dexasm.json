@@ -1,0 +1,934 @@
+{
+ "class": "Lorg/threeten/bp/chrono/Ser;",
+ "super": "Ljava/lang/Object;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->CHRONO_LOCALDATETIME_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->CHRONO_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->CHRONO_ZONEDDATETIME_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->HIJRAH_DATE_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->HIJRAH_ERA_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->JAPANESE_DATE_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->JAPANESE_ERA_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->MINGUO_DATE_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->MINGUO_ERA_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->THAIBUDDHIST_DATE_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->THAIBUDDHIST_ERA_TYPE:B",
+   "access": 24
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->object:Ljava/lang/Object;",
+   "access": 2
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->type:B",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;-><init>()V",
+   "access": 65537,
+   "offset": 6055800,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;-><init>(BLjava/lang/Object;)V",
+   "access": 65537,
+   "offset": 6055824,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6139181,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-byte",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->type:B"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->OooO00o(BLjava/io/ObjectInput;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 6055568,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6111252,
+   "end": "L0060",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/StreamCorruptedException;"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Unknown serialized type"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/StreamCorruptedException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoZonedDateTimeImpl;->readExternal(Ljava/io/ObjectInput;)Lorg/threeten/bp/chrono/OooOO0O;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoLocalDateTimeImpl;->readExternal(Ljava/io/ObjectInput;)Lorg/threeten/bp/chrono/OooO0OO;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/ThaiBuddhistEra;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/ThaiBuddhistEra;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/ThaiBuddhistDate;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/OooO0O0;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/MinguoEra;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/MinguoEra;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/MinguoDate;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/OooO0O0;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/HijrahEra;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/HijrahEra;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/HijrahDate;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/OooO0O0;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/JapaneseEra;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/JapaneseEra;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/JapaneseDate;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/chrono/OooO0O0;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "packed-switch-payload",
+     "first_key": 1,
+     "switch": "L0000",
+     "targets": [
+      "L003d",
+      "L0038",
+      "L0033",
+      "L002e",
+      "L0029",
+      "L0024",
+      "L001f",
+      "L001a",
+      "L0003",
+      "L0003",
+      "L0015",
+      "L0010",
+      "L000b"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->read(Ljava/io/ObjectInput;)Ljava/lang/Object;",
+   "access": 9,
+   "offset": 6055532,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/chrono/Ser;->OooO00o(BLjava/io/ObjectInput;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->readResolve()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 6055776,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->readExternal(Ljava/io/ObjectInput;)V",
+   "access": 1,
+   "offset": 6055856,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iput-byte",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->type:B"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/chrono/Ser;->OooO00o(BLjava/io/ObjectInput;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/chrono/Ser;->writeExternal(Ljava/io/ObjectOutput;)V",
+   "access": 1,
+   "offset": 6055900,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0072",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-byte",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->type:B"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/chrono/Ser;->object:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L0007",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/io/InvalidClassException;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Unknown serialized type"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/io/InvalidClassException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "throw",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoZonedDateTimeImpl;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoZonedDateTimeImpl;->writeExternal(Ljava/io/ObjectOutput;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "return-void"
+    },
+    {
+     "label": "L0018",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/ChronoLocalDateTimeImpl;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/ChronoLocalDateTimeImpl;->writeExternal(Ljava/io/ObjectOutput;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-void"
+    },
+    {
+     "label": "L001e",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/OooOOO;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/OooOOO;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "return-void"
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/ThaiBuddhistEra;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/ThaiBuddhistEra;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0029",
+     "op": "return-void"
+    },
+    {
+     "label": "L002a",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/ThaiBuddhistDate;"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/ThaiBuddhistDate;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0030",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/MinguoEra;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/MinguoEra;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0035",
+     "op": "return-void"
+    },
+    {
+     "label": "L0036",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/MinguoDate;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/MinguoDate;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L003b",
+     "op": "return-void"
+    },
+    {
+     "label": "L003c",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/HijrahEra;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/HijrahEra;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "return-void"
+    },
+    {
+     "label": "L0042",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/HijrahDate;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/HijrahDate;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0047",
+     "op": "return-void"
+    },
+    {
+     "label": "L0048",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/JapaneseEra;"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/JapaneseEra;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L004d",
+     "op": "return-void"
+    },
+    {
+     "label": "L004e",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/chrono/JapaneseDate;"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/chrono/JapaneseDate;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0053",
+     "op": "return-void"
+    },
+    {
+     "label": "L0054",
+     "op": "packed-switch-payload",
+     "first_key": 1,
+     "switch": "L0007",
+     "targets": [
+      "L004e",
+      "L0048",
+      "L0042",
+      "L003c",
+      "L0036",
+      "L0030",
+      "L002a",
+      "L0024",
+      "L000a",
+      "L000a",
+      "L001e",
+      "L0018",
+      "L0012"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

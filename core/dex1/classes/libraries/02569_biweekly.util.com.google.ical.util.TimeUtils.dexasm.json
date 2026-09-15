@@ -1,0 +1,3821 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/util/TimeUtils;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->BOGUS_TIMEZONE:Ljava/util/TimeZone;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->DAYS_OF_WEEK:[Lbiweekly/util/DayOfWeek;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MIDNIGHT:Lbiweekly/util/com/google/ical/values/TimeValue;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MONTH_START_TO_DOY:[I",
+   "access": 10
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->SECS_PER_DAY:J",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->UTC_TZID:Ljava/util/regex/Pattern;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;",
+   "access": 10
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;-><clinit>()V",
+   "access": 65544,
+   "offset": 2937620,
+   "registers": 5,
+   "inputs": 0,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/SimpleTimeZone;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Etc/GMT"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/util/SimpleTimeZone;-><init>(ILjava/lang/String;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L000a",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L000c",
+     "op": "new-array",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "[I"
+    },
+    {
+     "label": "L000e",
+     "op": "sput-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MONTH_START_TO_DOY:[I"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0013",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MONTH_START_TO_DOY:[I"
+    },
+    {
+     "label": "L0015",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0017",
+     "op": "aget",
+     "registers": [
+      3,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 1970
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->monthLength(II)I"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "add-int/2addr",
+     "registers": [
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "aput",
+     "registers": [
+      4,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/DayOfWeek;->values()[Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->DAYS_OF_WEEK:[Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L002b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "noSuchTimeZone"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->BOGUS_TIMEZONE:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "^GMT([+-]0(:00)?)?$|UTC|Zulu|Etc\\/GMT|Greenwich.*"
+    },
+    {
+     "label": "L0035",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->UTC_TZID:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L003c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/util/TimeUtils$1;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils$1;-><init>()V"
+    },
+    {
+     "label": "L0041",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MIDNIGHT:Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0043",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;-><init>()V",
+   "access": 65538,
+   "offset": 2937772,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->add(Lbiweekly/util/com/google/ical/values/DateValue;Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2936460,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6111252,
+   "end": "L0054",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/util/DTBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L000e",
+     "op": "iget",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L0017",
+     "op": "iget",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L0020",
+     "op": "instance-of",
+     "registers": [
+      1,
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0046"
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0026",
+     "op": "iget",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->hour:I"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->hour()I"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->hour:I"
+    },
+    {
+     "label": "L002f",
+     "op": "iget",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->minute:I"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->minute()I"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->minute:I"
+    },
+    {
+     "label": "L0038",
+     "op": "iget",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->second:I"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->second()I"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "add-int/2addr",
+     "registers": [
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "iput",
+     "registers": [
+      4,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->second:I"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDateTime()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0044",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "instance-of",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0048",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDateTime()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/DTBuilder;->toDate()Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;Ljava/util/TimeZone;I)Lbiweekly/util/com/google/ical/values/DateTimeValue;",
+   "access": 10,
+   "offset": 2935900,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Ljava/util/TimeZone;->hasSameRules(Ljava/util/TimeZone;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L0011",
+     "op": "if-lez",
+     "registers": [
+      5
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0013",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-object",
+     "registers": [
+      2,
+      5
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "move-object",
+     "registers": [
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "move-object",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L0019",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->secsSinceEpoch(Lbiweekly/util/com/google/ical/values/DateValue;)J"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timetMillisFromEpochSecs(JLjava/util/TimeZone;)J"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toDateTimeValue(JLjava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->dayOfWeek(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/DayOfWeek;",
+   "access": 9,
+   "offset": 2935780,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "rem-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0012",
+     "op": "if-gez",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0016",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->DAYS_OF_WEEK:[Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L0018",
+     "op": "aget-object",
+     "registers": [
+      2,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->dayOfYear(III)I",
+   "access": 9,
+   "offset": 2936872,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110058,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "if-le",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000b",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MONTH_START_TO_DOY:[I"
+    },
+    {
+     "label": "L000f",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "aget",
+     "registers": [
+      3,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "add-int/2addr",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/2addr",
+     "registers": [
+      3,
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->dayStart(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/com/google/ical/values/DateTimeValue;",
+   "access": 9,
+   "offset": 2935996,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 7,
+   "debug_offset": 6109890,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;-><init>(IIIIII)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->daysBetween(IIIIII)I",
+   "access": 9,
+   "offset": 2936968,
+   "registers": 6,
+   "inputs": 6,
+   "outputs": 3,
+   "debug_offset": 6144265,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sub-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->daysBetween(Lbiweekly/util/com/google/ical/values/DateValue;Lbiweekly/util/com/google/ical/values/DateValue;)I",
+   "access": 9,
+   "offset": 2936932,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6113619,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(Lbiweekly/util/com/google/ical/values/DateValue;)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(Lbiweekly/util/com/google/ical/values/DateValue;)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "sub-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->firstDayOfWeekInMonth(II)Lbiweekly/util/DayOfWeek;",
+   "access": 9,
+   "offset": 2935852,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "rem-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0007",
+     "op": "if-gez",
+     "registers": [
+      1
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0009",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L000b",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->DAYS_OF_WEEK:[Lbiweekly/util/DayOfWeek;"
+    },
+    {
+     "label": "L000d",
+     "op": "aget-object",
+     "registers": [
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I",
+   "access": 9,
+   "offset": 2937056,
+   "registers": 6,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6144275,
+   "end": "L0025",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0002",
+     "op": "mul-int/lit16",
+     "registers": [
+      1,
+      0
+     ],
+     "literal": 365
+    },
+    {
+     "label": "L0004",
+     "op": "div-int/lit8",
+     "registers": [
+      2,
+      0
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0006",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "div-int/lit8",
+     "registers": [
+      1,
+      0
+     ],
+     "literal": 100
+    },
+    {
+     "label": "L0009",
+     "op": "sub-int/2addr",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "div-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 400
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "mul-int/lit16",
+     "registers": [
+      1,
+      4
+     ],
+     "literal": 367
+    },
+    {
+     "label": "L000f",
+     "op": "add-int/lit16",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": -362
+    },
+    {
+     "label": "L0011",
+     "op": "div-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0015",
+     "op": "if-gt",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0018",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0021"
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0020",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L0022",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(Lbiweekly/util/com/google/ical/values/DateValue;)I",
+   "access": 10,
+   "offset": 2937004,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110400,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fromUtc(Lbiweekly/util/com/google/ical/values/DateTimeValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateTimeValue;",
+   "access": 9,
+   "offset": 2936056,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6133455,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;Ljava/util/TimeZone;I)Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fromUtc(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2936644,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6113619,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fromUtc(Lbiweekly/util/com/google/ical/values/DateTimeValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z",
+   "access": 9,
+   "offset": 2936824,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "rem-int/lit8",
+     "registers": [
+      0,
+      1
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0004",
+     "op": "rem-int/lit8",
+     "registers": [
+      0,
+      1
+     ],
+     "literal": 100
+    },
+    {
+     "label": "L0006",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0008",
+     "op": "rem-int/lit16",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 400
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->monthLength(II)I",
+   "access": 9,
+   "offset": 2937148,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "packed-switch",
+     "registers": [
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/AssertionError;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/AssertionError;-><init>(I)V"
+    },
+    {
+     "label": "L0008",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 30
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 29
+    },
+    {
+     "label": "L0014",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 28
+    },
+    {
+     "label": "L0017",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "nop"
+    },
+    {
+     "label": "L001c",
+     "op": "packed-switch-payload",
+     "first_key": 1,
+     "switch": "L0000",
+     "targets": [
+      "L0018",
+      "L000c",
+      "L0018",
+      "L0009",
+      "L0018",
+      "L0009",
+      "L0018",
+      "L0018",
+      "L0009",
+      "L0018",
+      "L0009",
+      "L0018"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->secsSinceEpoch(Lbiweekly/util/com/google/ical/values/DateValue;)J",
+   "access": 9,
+   "offset": 2937420,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110209,
+   "end": "L0025",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(Lbiweekly/util/com/google/ical/values/DateValue;)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const-wide/32",
+     "registers": [
+      2
+     ],
+     "literal": 86400
+    },
+    {
+     "label": "L0008",
+     "op": "mul-long",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "instance-of",
+     "registers": [
+      2,
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L000e",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->second()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->minute()I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->hour()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "mul-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L001e",
+     "op": "add-int/2addr",
+     "registers": [
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "mul-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0021",
+     "op": "add-int/2addr",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "add-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timeFromSecsSinceEpoch(J)Lbiweekly/util/com/google/ical/values/DateTimeValue;",
+   "access": 9,
+   "offset": 2936084,
+   "registers": 15,
+   "inputs": 2,
+   "outputs": 7,
+   "debug_offset": 6112844,
+   "end": "L0077",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/32",
+     "registers": [
+      0
+     ],
+     "literal": 86400
+    },
+    {
+     "label": "L0003",
+     "op": "rem-long",
+     "registers": [
+      2,
+      13,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "long-to-int",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "div-long",
+     "registers": [
+      0,
+      13,
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "long-to-int",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      1
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L000b",
+     "op": "int-to-long",
+     "registers": [
+      4,
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const-wide/16",
+     "registers": [
+      6
+     ],
+     "literal": 400
+    },
+    {
+     "label": "L000e",
+     "op": "mul-long",
+     "registers": [
+      4,
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "const-wide/32",
+     "registers": [
+      6
+     ],
+     "literal": 146097
+    },
+    {
+     "label": "L0013",
+     "op": "div-long/2addr",
+     "registers": [
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "long-to-int",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "if-lt",
+     "registers": [
+      1,
+      5
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001e",
+     "op": "move",
+     "registers": [
+      7,
+      2
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L0020",
+     "op": "move",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      4,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "sub-int",
+     "registers": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      2,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L002e",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L0039"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0036",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0037",
+     "op": "goto",
+     "target": "L0039"
+    },
+    {
+     "label": "L0038",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0039",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L003c",
+     "op": "add-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 373
+    },
+    {
+     "label": "L003e",
+     "op": "div-int/lit16",
+     "registers": [
+      8,
+      0
+     ],
+     "literal": 367
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      8,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->fixedFromGregorian(III)I"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "sub-int/2addr",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "add-int/lit8",
+     "registers": [
+      9,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0047",
+     "op": "rem-int/lit8",
+     "registers": [
+      12,
+      3
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0049",
+     "op": "div-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L004b",
+     "op": "rem-int/lit8",
+     "registers": [
+      11,
+      3
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L004d",
+     "op": "div-int/lit8",
+     "registers": [
+      10,
+      3
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L004f",
+     "op": "if-ltz",
+     "registers": [
+      10
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L0051",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 24
+    },
+    {
+     "label": "L0053",
+     "op": "if-ge",
+     "registers": [
+      10,
+      0
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L0055",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-direct/range",
+     "registers": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;-><init>(IIIIII)V"
+    },
+    {
+     "label": "L005a",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/AssertionError;"
+    },
+    {
+     "label": "L005d",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L005f",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Input was: "
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      13,
+      14
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0067",
+     "op": "const-string",
+     "registers": [
+      13
+     ],
+     "string": "to make hour: "
+    },
+    {
+     "label": "L0069",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      13
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0072",
+     "op": "move-result-object",
+     "registers": [
+      13
+     ]
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      13
+     ],
+     "method": "Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0076",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timeOf(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/com/google/ical/values/TimeValue;",
+   "access": 9,
+   "offset": 2936788,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->MIDNIGHT:Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timeZoneForName(Ljava/lang/String;)Ljava/util/TimeZone;",
+   "access": 9,
+   "offset": 2937316,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->BOGUS_TIMEZONE:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/TimeZone;->hasSameRules(Ljava/util/TimeZone;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->UTC_TZID:Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/regex/Matcher;->matches()Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->utcTimezone()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timetMillisFromEpochSecs(JLjava/util/TimeZone;)J",
+   "access": 10,
+   "offset": 2937512,
+   "registers": 10,
+   "inputs": 3,
+   "outputs": 7,
+   "debug_offset": 6110327,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      7,
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->timeFromSecsSinceEpoch(J)Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/GregorianCalendar;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      9
+     ],
+     "method": "Ljava/util/GregorianCalendar;-><init>(Ljava/util/TimeZone;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Calendar;->clear()V"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      8
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->hour()I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->minute()I"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->second()I"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Ljava/util/Calendar;->set(IIIIII)V"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Calendar;->getTimeInMillis()J"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-wide",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "return-wide",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toDateTimeValue(JLjava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateTimeValue;",
+   "access": 9,
+   "offset": 2936340,
+   "registers": 11,
+   "inputs": 3,
+   "outputs": 7,
+   "debug_offset": 6110327,
+   "end": "L0034",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/GregorianCalendar;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      10
+     ],
+     "method": "Ljava/util/GregorianCalendar;-><init>(Ljava/util/TimeZone;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Calendar;->clear()V"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8,
+      9
+     ],
+     "method": "Ljava/util/Calendar;->setTimeInMillis(J)V"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      9
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      9
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 11
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "const/16",
+     "registers": [
+      8
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-direct/range",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;-><init>(IIIIII)V"
+    },
+    {
+     "label": "L0033",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toDateValue(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2936684,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateValueImpl;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValueImpl;-><init>(III)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->toUtc(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2936748,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/TimeValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;Ljava/util/TimeZone;I)Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->utcTimezone()Ljava/util/TimeZone;",
+   "access": 9,
+   "offset": 2937396,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/TimeUtils;->ZULU:Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/util/TimeUtils;->yearLength(I)I",
+   "access": 9,
+   "offset": 2937276,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->isLeapYear(I)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 366
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 365
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

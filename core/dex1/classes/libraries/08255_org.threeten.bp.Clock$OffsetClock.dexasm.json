@@ -1,0 +1,756 @@
+{
+ "class": "Lorg/threeten/bp/Clock$OffsetClock;",
+ "super": "Lorg/threeten/bp/OooO00o;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;-><init>(Lorg/threeten/bp/OooO00o;Lorg/threeten/bp/Duration;)V",
+   "access": 65537,
+   "offset": 5938568,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5938168,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      4
+     ],
+     "type": "Lorg/threeten/bp/Clock$OffsetClock;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lorg/threeten/bp/Clock$OffsetClock;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      4,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lorg/threeten/bp/Duration;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001c",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->getZone()Lorg/threeten/bp/ZoneId;",
+   "access": 1,
+   "offset": 5938536,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->getZone()Lorg/threeten/bp/ZoneId;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->hashCode()I",
+   "access": 1,
+   "offset": 5938244,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->hashCode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/threeten/bp/Duration;->hashCode()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->instant()Lorg/threeten/bp/Instant;",
+   "access": 1,
+   "offset": 5938492,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->instant()Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Instant;->plus(Lo00o0oO/o00oO0o;)Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->millis()J",
+   "access": 1,
+   "offset": 5938368,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6110028,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->millis()J"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/Duration;->toMillis()J"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lo00O00Oo/OooOO0;->Oooooo0(JJ)J"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 5938288,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "OffsetClock["
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ","
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "]"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$OffsetClock;->withZone(Lorg/threeten/bp/ZoneId;)Lorg/threeten/bp/OooO00o;",
+   "access": 1,
+   "offset": 5938420,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->getZone()Lorg/threeten/bp/ZoneId;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Lorg/threeten/bp/ZoneId;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/Clock$OffsetClock;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->withZone(Lorg/threeten/bp/ZoneId;)Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/Clock$OffsetClock;->offset:Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Clock$OffsetClock;-><init>(Lorg/threeten/bp/OooO00o;Lorg/threeten/bp/Duration;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

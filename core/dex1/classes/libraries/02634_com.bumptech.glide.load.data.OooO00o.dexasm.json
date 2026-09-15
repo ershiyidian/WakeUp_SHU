@@ -1,0 +1,502 @@
+{
+ "class": "Lcom/bumptech/glide/load/data/OooO00o;",
+ "super": "Lcom/bumptech/glide/load/data/OooO0O0;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/bumptech/glide/load/data/OooO00o;->OooOO0O:I",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/bumptech/glide/load/data/OooO00o;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;I)V",
+   "access": 69633,
+   "offset": 2989892,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6113635,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Lcom/bumptech/glide/load/data/OooO00o;->OooOO0O:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "method": "Lcom/bumptech/glide/load/data/OooO0O0;-><init>(ILjava/lang/Comparable;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/data/OooO00o;->OooO(Landroid/net/Uri;Landroid/content/ContentResolver;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 2989728,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L004a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lcom/bumptech/glide/load/data/OooO00o;->OooOO0O:I"
+    },
+    {
+     "label": "L0002",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "r"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3,
+      0
+     ],
+     "method": "Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Landroid/content/res/AssetFileDescriptor;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0014",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "FileDescriptor is null for: "
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "r"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3,
+      0
+     ],
+     "method": "Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0031",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0033",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "FileDescriptor is null for: "
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0042",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "nop"
+    },
+    {
+     "label": "L0044",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0002",
+     "targets": [
+      "L0026"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/data/OooO00o;->OooO00o()Ljava/lang/Class;",
+   "access": 17,
+   "offset": 2989676,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/bumptech/glide/load/data/OooO00o;->OooOO0O:I"
+    },
+    {
+     "label": "L0002",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L000c"
+    },
+    {
+     "label": "L0005",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/os/ParcelFileDescriptor;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/content/res/AssetFileDescriptor;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "nop"
+    },
+    {
+     "label": "L000c",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0002",
+     "targets": [
+      "L0008"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/bumptech/glide/load/data/OooO00o;->OooO0oO(Ljava/lang/Object;)V",
+   "access": 17,
+   "offset": 2989924,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/bumptech/glide/load/data/OooO00o;->OooOO0O:I"
+    },
+    {
+     "label": "L0002",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/os/ParcelFileDescriptor;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/os/ParcelFileDescriptor;->close()V"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    },
+    {
+     "label": "L000b",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/content/res/AssetFileDescriptor;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/content/res/AssetFileDescriptor;->close()V"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    },
+    {
+     "label": "L0011",
+     "op": "nop"
+    },
+    {
+     "label": "L0012",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0002",
+     "targets": [
+      "L000b"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

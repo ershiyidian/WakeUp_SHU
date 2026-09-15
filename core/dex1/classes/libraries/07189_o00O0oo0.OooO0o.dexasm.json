@@ -1,0 +1,843 @@
+{
+ "class": "Lo00O0oo0/OooO0o;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO0oo:Landroid/net/Uri;",
+   "access": 25
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO0oO:Landroid/content/Context;",
+   "access": 17
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo00O0oo0/OooO0o;-><clinit>()V",
+   "access": 65545,
+   "offset": 5433568,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "content://com.vivo.awarecontext.awareeventprovider"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O0oo0/OooO0o;->OooO0oo:Landroid/net/Uri;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;-><init>(Landroid/content/Context;)V",
+   "access": 65537,
+   "offset": 5433604,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lo00O0oo0/OooO0o;->OooO0oO:Landroid/content/Context;"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO00o(Landroid/os/Bundle;Ljava/lang/String;)Lo00O0oo0/OooO0O0;",
+   "access": 17,
+   "offset": 5433220,
+   "registers": 8,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6111252,
+   "end": "L004d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_V_"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "AiEngineCpCall"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lo00O0oo0/OooO0O0;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lo00O0oo0/OooO0O0;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lo00O0oo0/OooO0o;->OooO0oO:Landroid/content/Context;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      4
+     ],
+     "field": "Lo00O0oo0/OooO0o;->OooO0oo:Landroid/net/Uri;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "donation"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      7,
+      6
+     ],
+     "method": "Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": "respCode"
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7,
+      4
+     ],
+     "method": "Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L002a"
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "iput",
+     "registers": [
+      6,
+      2
+     ],
+     "field": "Lo00O0oo0/OooO0O0;->OooO00o:I"
+    },
+    {
+     "label": "L0029",
+     "op": "goto",
+     "target": "L003d"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L002e",
+     "op": "iput",
+     "registers": [
+      6,
+      2
+     ],
+     "field": "Lo00O0oo0/OooO0O0;->OooO00o:I"
+    },
+    {
+     "label": "L0030",
+     "op": "goto",
+     "target": "L003d"
+    },
+    {
+     "label": "L0031",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/content/ContentProviderClient;->release()Z"
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L0036",
+     "op": "move-exception",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L003a",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L0043"
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/content/ContentProviderClient;->release()Z"
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Object;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0049",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L004a",
+     "op": "iput",
+     "registers": [
+      6,
+      2
+     ],
+     "field": "Lo00O0oo0/OooO0O0;->OooO00o:I"
+    },
+    {
+     "label": "L004c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0009",
+     "end": "L0015",
+     "handler": "H1"
+    },
+    {
+     "start": "L0017",
+     "end": "L0030",
+     "handler": "H5"
+    },
+    {
+     "start": "L0032",
+     "end": "L0035",
+     "handler": "H7"
+    },
+    {
+     "start": "L0037",
+     "end": "L0042",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/os/RemoteException;",
+       "target": "L003b"
+      }
+     ]
+    },
+    {
+     "id": "H5",
+     "catches": [],
+     "all": "L0031"
+    },
+    {
+     "id": "H7",
+     "catches": [],
+     "all": "L0036"
+    }
+   ]
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO0O0(Lo00O0oo0/OooO0OO;)Lo00O0oo0/OooO0O0;",
+   "access": 17,
+   "offset": 5433140,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lo00O0oo0/OooO0OO;->OooO00o()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "payload"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "protocolVersion"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "deleteIntent"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      3
+     ],
+     "method": "Lo00O0oo0/OooO0o;->OooO00o(Landroid/os/Bundle;Ljava/lang/String;)Lo00O0oo0/OooO0O0;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO0OO(Lo00O0oo0/OooO0OO;)Lo00O0oo0/OooO0O0;",
+   "access": 17,
+   "offset": 5433488,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lo00O0oo0/OooO0OO;->OooO00o()Lorg/json/JSONObject;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "payload"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "protocolVersion"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "donateIntent"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      3
+     ],
+     "method": "Lo00O0oo0/OooO0o;->OooO00o(Landroid/os/Bundle;Ljava/lang/String;)Lo00O0oo0/OooO0O0;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O0oo0/OooO0o;->OooO0o0(I)Lo00O0oo0/OooO0O0;",
+   "access": 17,
+   "offset": 5433436,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "protocolVersion"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "isSupport"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      0
+     ],
+     "method": "Lo00O0oo0/OooO0o;->OooO00o(Landroid/os/Bundle;Ljava/lang/String;)Lo00O0oo0/OooO0O0;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

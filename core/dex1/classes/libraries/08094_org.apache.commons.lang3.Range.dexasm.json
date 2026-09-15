@@ -1,0 +1,2893 @@
+{
+ "class": "Lorg/apache/commons/lang3/Range;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->OooO0oO:I",
+   "access": 129
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->OooO0oo:Ljava/lang/String;",
+   "access": 129
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/apache/commons/lang3/Range;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)V",
+   "access": 65537,
+   "offset": 5862568,
+   "registers": 6,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L003f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L0009",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range$ComparableComparator;->INSTANCE:Lorg/apache/commons/lang3/Range$ComparableComparator;"
+    },
+    {
+     "label": "L000b",
+     "op": "iput-object",
+     "registers": [
+      5,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L000d",
+     "op": "goto",
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "iput-object",
+     "registers": [
+      5,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      5,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      3,
+      4
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0017",
+     "op": "if-ge",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0019",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L001b",
+     "op": "iput-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L001d",
+     "op": "return-void"
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      4,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0022",
+     "op": "return-void"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0025",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0027",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "Elements in a range must not be null: element1="
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ", element2="
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Comparable;Ljava/lang/Comparable;)Lorg/apache/commons/lang3/Range;",
+   "access": 9,
+   "offset": 5862280,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6133425,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;",
+   "access": 9,
+   "offset": 5862308,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6133013,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->is(Ljava/lang/Comparable;)Lorg/apache/commons/lang3/Range;",
+   "access": 9,
+   "offset": 5862512,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6118730,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      1,
+      0
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->is(Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;",
+   "access": 9,
+   "offset": 5862540,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110321,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      0,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861180,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000d",
+     "op": "if-le",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0018",
+     "op": "if-ge",
+     "registers": [
+      4,
+      1
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->containsRange(Lorg/apache/commons/lang3/Range;)Z",
+   "access": 1,
+   "offset": 5861252,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      3,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->elementCompareTo(Ljava/lang/Object;)I",
+   "access": 1,
+   "offset": 5861816,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lo00o0O0/OooOO0;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lo00o0O0/OooOO0;-><init>([Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lo00o00Oo/OooOOO;->OooOO0(Ljava/lang/Object;Lo00o0O0/OooOO0;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isAfter(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0012",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isBefore(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861316,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      5,
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eq",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L0010",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0012",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L001c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L001e",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0026",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->fit(Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 1,
+   "offset": 5861972,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lo00o0O0/OooOO0;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lo00o0O0/OooOO0;-><init>([Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lo00o00Oo/OooOOO;->OooOO0(Ljava/lang/Object;Lo00o0O0/OooOO0;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isAfter(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isBefore(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L001c",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->getComparator()Ljava/util/Comparator;",
+   "access": 1,
+   "offset": 5862256,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->getMaximum()Ljava/lang/Object;",
+   "access": 1,
+   "offset": 5862048,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->getMinimum()Ljava/lang/Object;",
+   "access": 1,
+   "offset": 5862072,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->hashCode()I",
+   "access": 1,
+   "offset": 5861888,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->OooO0oO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0004",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->hashCode()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "add-int/lit16",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 629
+    },
+    {
+     "label": "L000c",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 37
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;->hashCode()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "mul-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 37
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->hashCode()I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "iput",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->OooO0oO:I"
+    },
+    {
+     "label": "L0020",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->intersectionWith(Lorg/apache/commons/lang3/Range;)Lorg/apache/commons/lang3/Range;",
+   "access": 1,
+   "offset": 5862336,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0050",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isOverlappedBy(Lorg/apache/commons/lang3/Range;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->getComparator()Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-gez",
+     "registers": [
+      0
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L001e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->getComparator()Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-gez",
+     "registers": [
+      1
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002e",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0030",
+     "op": "goto",
+     "target": "L0033"
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->getComparator()Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      5,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->between(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lorg/apache/commons/lang3/Range;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L003e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0040",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Cannot calculate intersection with non-overlapping range "
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004f",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isAfter(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861412,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-gez",
+     "registers": [
+      4
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isAfterRange(Lorg/apache/commons/lang3/Range;)Z",
+   "access": 1,
+   "offset": 5861464,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isAfter(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isBefore(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861504,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-lez",
+     "registers": [
+      4
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isBeforeRange(Lorg/apache/commons/lang3/Range;)Z",
+   "access": 1,
+   "offset": 5861556,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->isBefore(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isEndedBy(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861596,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isNaturalOrdering()Z",
+   "access": 1,
+   "offset": 5861648,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/apache/commons/lang3/Range$ComparableComparator;->INSTANCE:Lorg/apache/commons/lang3/Range$ComparableComparator;"
+    },
+    {
+     "label": "L0004",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isOverlappedBy(Lorg/apache/commons/lang3/Range;)Z",
+   "access": 1,
+   "offset": 5861684,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      3,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/apache/commons/lang3/Range;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L001e"
+    },
+    {
+     "label": "L001d",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->isStartedBy(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5861764,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      4,
+      2
+     ],
+     "method": "Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 5862096,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6162594,
+   "end": "L0028",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->OooO0oo:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "["
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ".."
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "]"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->OooO0oo:Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->OooO0oo:Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/apache/commons/lang3/Range;->toString(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 1,
+   "offset": 5862192,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120909,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->minimum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->maximum:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      2,
+      5
+     ],
+     "field": "Lorg/apache/commons/lang3/Range;->comparator:Ljava/util/Comparator;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0007",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "aput-object",
+     "registers": [
+      0,
+      3,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000d",
+     "op": "aput-object",
+     "registers": [
+      1,
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0010",
+     "op": "aput-object",
+     "registers": [
+      2,
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      3
+     ],
+     "method": "Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

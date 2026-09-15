@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/notification_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <include android:layout_width="@dimen/notification_large_icon_width" android:layout_height="@dimen/notification_large_icon_height" layout="@layout/notification_template_icon_group">
+  </include>
+  <LinearLayout android:layout_gravity="0x00000030" android:orientation="1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/notification_large_icon_width">
+    <LinearLayout android:orientation="0" android:id="@id/notification_main_column_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/notification_large_icon_height">
+      <FrameLayout android:id="@id/notification_main_column" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_weight="1" android:layout_marginEnd="8dp">
+      </FrameLayout>
+      <FrameLayout android:id="@id/right_side" android:paddingTop="@dimen/notification_right_side_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8dp">
+        <ViewStub android:layout_gravity="0x00800035" android:id="@id/time" android:visibility="2" android:layout="@layout/notification_template_part_time" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        </ViewStub>
+        <ViewStub android:layout_gravity="0x00800035" android:id="@id/chronometer" android:visibility="2" android:layout="@layout/notification_template_part_chronometer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        </ViewStub>
+        <TextView android:textAppearance="@style/TextAppearance.Compat.Notification.Info" android:layout_gravity="0x00800055" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:singleLine="true">
+        </TextView>
+      </FrameLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/action_divider" android:background="#29000000" android:visibility="2" android:layout_width="match_parent" android:layout_height="1dp">
+    </ImageView>
+    <LinearLayout android:orientation="0" android:id="@id/actions" android:visibility="2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="-8dp">
+    </LinearLayout>
+  </LinearLayout>
+</FrameLayout>

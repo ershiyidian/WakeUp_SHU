@@ -1,0 +1,768 @@
+{
+ "class": "Lbiweekly/io/json/JCalModule;",
+ "super": "Lcom/fasterxml/jackson/databind/module/SimpleModule;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->MODULE_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->MODULE_VERSION:Lcom/fasterxml/jackson/core/Version;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->deserializer:Lbiweekly/io/json/JCalDeserializer;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->index:Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->serializer:Lbiweekly/io/json/JCalSerializer;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalModule;-><clinit>()V",
+   "access": 65544,
+   "offset": 2780528,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/io/json/JCalModule;->moduleVersion()Lcom/fasterxml/jackson/core/Version;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->MODULE_VERSION:Lcom/fasterxml/jackson/core/Version;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;-><init>()V",
+   "access": 65537,
+   "offset": 2780560,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "biweekly-jcal"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->MODULE_VERSION:Lcom/fasterxml/jackson/core/Version;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/databind/module/SimpleModule;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/Version;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalDeserializer;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalDeserializer;-><init>()V"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->deserializer:Lbiweekly/io/json/JCalDeserializer;"
+    },
+    {
+     "label": "L000e",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/json/JCalSerializer;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalSerializer;-><init>()V"
+    },
+    {
+     "label": "L0013",
+     "op": "iput-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->serializer:Lbiweekly/io/json/JCalSerializer;"
+    },
+    {
+     "label": "L0015",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;-><init>()V"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalModule;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalModule;->addSerializer(Lcom/fasterxml/jackson/databind/JsonSerializer;)Lcom/fasterxml/jackson/databind/module/SimpleModule;"
+    },
+    {
+     "label": "L0020",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalModule;->addDeserializer(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/module/SimpleModule;"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->moduleVersion()Lcom/fasterxml/jackson/core/Version;",
+   "access": 10,
+   "offset": 2780376,
+   "registers": 10,
+   "inputs": 0,
+   "outputs": 7,
+   "debug_offset": 6109927,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/Biweekly;->VERSION:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "[.-]"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L000a",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/fasterxml/jackson/core/Version;"
+    },
+    {
+     "label": "L000e",
+     "op": "sget-object",
+     "registers": [
+      8
+     ],
+     "field": "Lbiweekly/Biweekly;->GROUP_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      9
+     ],
+     "field": "Lbiweekly/Biweekly;->ARTIFACT_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      7
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct/range",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "method": "Lcom/fasterxml/jackson/core/Version;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001c",
+     "op": "aget-object",
+     "registers": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0023",
+     "op": "aget-object",
+     "registers": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L002a",
+     "op": "aget-object",
+     "registers": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "if-le",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0033",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "move-object",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "RELEASE"
+    },
+    {
+     "label": "L0039",
+     "op": "goto",
+     "target": "L0035"
+    },
+    {
+     "label": "L003a",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lcom/fasterxml/jackson/core/Version;"
+    },
+    {
+     "label": "L003c",
+     "op": "sget-object",
+     "registers": [
+      8
+     ],
+     "field": "Lbiweekly/Biweekly;->GROUP_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L003e",
+     "op": "sget-object",
+     "registers": [
+      9
+     ],
+     "field": "Lbiweekly/Biweekly;->ARTIFACT_ID:Ljava/lang/String;"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-direct/range",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "method": "Lcom/fasterxml/jackson/core/Version;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->getGlobalTimezone()Lbiweekly/io/TimezoneAssignment;",
+   "access": 1,
+   "offset": 2780320,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->serializer:Lbiweekly/io/json/JCalSerializer;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalSerializer;->getGlobalTimezone()Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->getScribeIndex()Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 1,
+   "offset": 2780352,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->registerScribe(Lbiweekly/io/scribe/property/ICalPropertyScribe;)V",
+   "access": 1,
+   "offset": 2780652,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->register(Lbiweekly/io/scribe/property/ICalPropertyScribe;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->setGlobalTimezone(Lbiweekly/io/TimezoneAssignment;)V",
+   "access": 1,
+   "offset": 2780680,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->serializer:Lbiweekly/io/json/JCalSerializer;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalSerializer;->setGlobalTimezone(Lbiweekly/io/TimezoneAssignment;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalModule;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V",
+   "access": 1,
+   "offset": 2780708,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->serializer:Lbiweekly/io/json/JCalSerializer;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalSerializer;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalModule;->deserializer:Lbiweekly/io/json/JCalDeserializer;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalDeserializer;->setScribeIndex(Lbiweekly/io/scribe/ScribeIndex;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

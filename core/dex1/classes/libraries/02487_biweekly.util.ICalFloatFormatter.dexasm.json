@@ -1,0 +1,187 @@
+{
+ "class": "Lbiweekly/util/ICalFloatFormatter;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/ICalFloatFormatter;->nf:Ljava/text/NumberFormat;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/ICalFloatFormatter;-><init>()V",
+   "access": 65537,
+   "offset": 2904664,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6132325,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalFloatFormatter;-><init>(I)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalFloatFormatter;-><init>(I)V",
+   "access": 65537,
+   "offset": 2904692,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6143592,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Ljava/util/Locale;->ROOT:Ljava/util/Locale;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/text/NumberFormat;->getNumberInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalFloatFormatter;->nf:Ljava/text/NumberFormat;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V"
+    },
+    {
+     "label": "L000e",
+     "op": "if-lez",
+     "registers": [
+      2
+     ],
+     "target": "L0014"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/text/NumberFormat;->setMinimumFractionDigits(I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/ICalFloatFormatter;->format(D)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2904632,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/ICalFloatFormatter;->nf:Ljava/text/NumberFormat;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/text/NumberFormat;->format(D)Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

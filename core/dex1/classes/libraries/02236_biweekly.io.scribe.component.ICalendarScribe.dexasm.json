@@ -1,0 +1,337 @@
+{
+ "class": "Lbiweekly/io/scribe/component/ICalendarScribe;",
+ "super": "Lbiweekly/io/scribe/component/ICalComponentScribe;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;-><init>()V",
+   "access": 65537,
+   "offset": 2793644,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "VCALENDAR"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;-><init>(Ljava/lang/Class;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;->moveToFront(Ljava/lang/Class;Lbiweekly/ICalendar;Ljava/util/List;)V",
+   "access": 2,
+   "offset": 2793676,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties(Ljava/lang/Class;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/util/List;->removeAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2,
+      1
+     ],
+     "method": "Ljava/util/List;->addAll(ILjava/util/Collection;)Z"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;->_newInstance()Lbiweekly/ICalendar;",
+   "access": 1,
+   "offset": 2793492,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6133764,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/ICalendar;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;->_newInstance()Lbiweekly/component/ICalComponent;",
+   "access": 4161,
+   "offset": 2793520,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110311,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalendarScribe;->_newInstance()Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;->getProperties(Lbiweekly/ICalendar;)Ljava/util/List;",
+   "access": 1,
+   "offset": 2793548,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6140875,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties()Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->values()Ljava/util/List;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/ProductId;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1,
+      3,
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalendarScribe;->moveToFront(Ljava/lang/Class;Lbiweekly/ICalendar;Ljava/util/List;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "const-class",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1,
+      3,
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalendarScribe;->moveToFront(Ljava/lang/Class;Lbiweekly/ICalendar;Ljava/util/List;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/scribe/component/ICalendarScribe;->getProperties(Lbiweekly/component/ICalComponent;)Ljava/util/List;",
+   "access": 4161,
+   "offset": 2793612,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalendarScribe;->getProperties(Lbiweekly/ICalendar;)Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "class": "Lcom/huawei/hms/analytics/dk;",
+ "super": "Lcom/huawei/hms/analytics/dp;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/dk;-><init>(Lcom/huawei/hms/analytics/bq;)V",
+   "access": 65537,
+   "offset": 3600328,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "$AppFirstOpen"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "isFirstRun"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/dp;-><init>(Lcom/huawei/hms/analytics/bq;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "FsOpenHandler"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lcom/huawei/hms/analytics/dp;->lmn:Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/dk;->klm()Z",
+   "access": 17,
+   "offset": 3600200,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0002",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/dk;->lmn()J",
+   "access": 17,
+   "offset": 3600220,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0026",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lcom/huawei/hms/analytics/dp;->ikl:Landroid/content/Context;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "global_v2"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "firstRunTime"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/eg;->klm(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Long;->parseLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lcom/huawei/hms/analytics/dp;->lmn:Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "first run time error"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "iget-object",
+     "registers": [
+      4,
+      6
+     ],
+     "field": "Lcom/huawei/hms/analytics/dp;->ikl:Landroid/content/Context;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/String;->valueOf(J)Ljava/lang/String;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      2,
+      3,
+      5
+     ],
+     "method": "Lcom/huawei/hms/analytics/eg;->lmn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L000c",
+     "end": "L0010",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/NumberFormatException;",
+       "target": "L0011"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

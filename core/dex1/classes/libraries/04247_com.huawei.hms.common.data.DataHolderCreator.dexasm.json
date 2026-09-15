@@ -1,0 +1,561 @@
+{
+ "class": "Lcom/huawei/hms/common/data/DataHolderCreator;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/common/data/DataHolderCreator;-><init>()V",
+   "access": 65537,
+   "offset": 3700632,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/data/DataHolderCreator;->createFromParcel(Landroid/os/Parcel;)Lcom/huawei/hms/common/data/DataHolder;",
+   "access": 17,
+   "offset": 3700360,
+   "registers": 12,
+   "inputs": 2,
+   "outputs": 6,
+   "debug_offset": 6151042,
+   "end": "L0058",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      11
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "move-object",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "move-object",
+     "registers": [
+      5,
+      4
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "move-object",
+     "registers": [
+      7,
+      5
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "if-gt",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Landroid/os/Parcel;->dataPosition()I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "if-ge",
+     "registers": [
+      2,
+      0
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      11
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "const/16",
+     "registers": [
+      9
+     ],
+     "literal": 1000
+    },
+    {
+     "label": "L001f",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L004a"
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0025",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L003b"
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0028",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L0036"
+    },
+    {
+     "label": "L002a",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L002b",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0030",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->createBundle(Landroid/os/Parcel;I)Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L003b",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Landroid/database/CursorWindow;->CREATOR:Landroid/os/Parcelable$Creator;"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2,
+      5
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->createTypedArray(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "move-object",
+     "registers": [
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "[Landroid/database/CursorWindow;"
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->createStringArray(Landroid/os/Parcel;I)[Ljava/lang/String;"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      2
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I"
+    },
+    {
+     "label": "L004d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V"
+    },
+    {
+     "label": "L0052",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/common/data/DataHolder;"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-direct/range",
+     "registers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lcom/huawei/hms/common/data/DataHolder;-><init>(I[Ljava/lang/String;[Landroid/database/CursorWindow;ILandroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0057",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/data/DataHolderCreator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;",
+   "access": 4161,
+   "offset": 3700576,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/data/DataHolderCreator;->createFromParcel(Landroid/os/Parcel;)Lcom/huawei/hms/common/data/DataHolder;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/data/DataHolderCreator;->newArray(I)[Lcom/huawei/hms/common/data/DataHolder;",
+   "access": 17,
+   "offset": 3700552,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110395,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Lcom/huawei/hms/common/data/DataHolder;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/common/data/DataHolderCreator;->newArray(I)[Ljava/lang/Object;",
+   "access": 4161,
+   "offset": 3700604,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/common/data/DataHolderCreator;->newArray(I)[Lcom/huawei/hms/common/data/DataHolder;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

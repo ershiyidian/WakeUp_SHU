@@ -1,0 +1,1296 @@
+{
+ "class": "Lorg/jsoup/nodes/OooO0o;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [
+  {
+   "name": "Lorg/jsoup/nodes/OooO0o;->OooO00o:[C",
+   "access": 25
+  },
+  {
+   "name": "Lorg/jsoup/nodes/OooO0o;->OooO0O0:Ljava/util/HashMap;",
+   "access": 25
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/jsoup/nodes/OooO0o;-><clinit>()V",
+   "access": 65544,
+   "offset": 5872688,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0001",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[C"
+    },
+    {
+     "label": "L0003",
+     "op": "fill-array-data",
+     "registers": [
+      0
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0006",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/jsoup/nodes/OooO0o;->OooO00o:[C"
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L000d",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/jsoup/nodes/OooO0o;->OooO0O0:Ljava/util/HashMap;"
+    },
+    {
+     "label": "L000f",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lorg/jsoup/nodes/Entities$EscapeMode;->xhtml:Lorg/jsoup/nodes/Entities$EscapeMode;"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/ThreadLocal;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/ThreadLocal;-><init>()V"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTF8"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "array-data-payload",
+     "element_width": 2,
+     "elements": [
+      44,
+      59
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/jsoup/nodes/OooO0o;->OooO00o(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Entities$EscapeMode;I)V",
+   "access": 9,
+   "offset": 5872772,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L002e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lorg/jsoup/nodes/Entities$EscapeMode;->nameForCodepoint(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 59
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L000e",
+     "op": "const/16",
+     "registers": [
+      4
+     ],
+     "literal": 38
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L001b",
+     "op": "return-void"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "&#x"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L002d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/jsoup/nodes/OooO0o;->OooO0O0(Ljava/lang/StringBuilder;Ljava/lang/String;Lorg/jsoup/nodes/OooO00o;ZZZ)V",
+   "access": 9,
+   "offset": 5872880,
+   "registers": 19,
+   "inputs": 6,
+   "outputs": 3,
+   "debug_offset": 6117942,
+   "end": "L00e9",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      1,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooO0oO:Lorg/jsoup/nodes/Entities$EscapeMode;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooO:Ljava/lang/ThreadLocal;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/nio/charset/CharsetEncoder;"
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0026"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      2,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooO0oo:Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/nio/charset/Charset;->newEncoder()Ljava/nio/charset/CharsetEncoder;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "iget-object",
+     "registers": [
+      3,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooO:Ljava/lang/ThreadLocal;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/nio/charset/Charset;->name()Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/jsoup/nodes/Entities$CoreCharset;->byName(Ljava/lang/String;)Lorg/jsoup/nodes/Entities$CoreCharset;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "iput-object",
+     "registers": [
+      3,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooOO0:Lorg/jsoup/nodes/Entities$CoreCharset;"
+    },
+    {
+     "label": "L0026",
+     "op": "iget-object",
+     "registers": [
+      0,
+      15
+     ],
+     "field": "Lorg/jsoup/nodes/OooO00o;->OooOO0:Lorg/jsoup/nodes/Entities$CoreCharset;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      14
+     ],
+     "method": "Ljava/lang/String;->length()I"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002d",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002e",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002f",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0030",
+     "op": "if-ge",
+     "registers": [
+      5,
+      3
+     ],
+     "target": "L00e8"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-virtual",
+     "registers": [
+      14,
+      5
+     ],
+     "method": "Ljava/lang/String;->codePointAt(I)I"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0037",
+     "op": "if-eqz",
+     "registers": [
+      17
+     ],
+     "target": "L0051"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lo00o0OoO/oo000o;->OooO0o0(I)Z"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L003f",
+     "op": "if-eqz",
+     "registers": [
+      18
+     ],
+     "target": "L0043"
+    },
+    {
+     "label": "L0041",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00e1"
+    },
+    {
+     "label": "L0043",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L0045",
+     "op": "goto/16",
+     "target": "L00e1"
+    },
+    {
+     "label": "L0047",
+     "op": "const/16",
+     "registers": [
+      7
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      7
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L004c",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L004d",
+     "op": "goto/16",
+     "target": "L00e1"
+    },
+    {
+     "label": "L004f",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0050",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0051",
+     "op": "const/high16",
+     "registers": [
+      10
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0053",
+     "op": "if-ge",
+     "registers": [
+      8,
+      10
+     ],
+     "target": "L00cb"
+    },
+    {
+     "label": "L0055",
+     "op": "int-to-char",
+     "registers": [
+      10,
+      8
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 34
+    },
+    {
+     "label": "L0058",
+     "op": "if-eq",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L00bf"
+    },
+    {
+     "label": "L005a",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 38
+    },
+    {
+     "label": "L005c",
+     "op": "if-eq",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L00b9"
+    },
+    {
+     "label": "L005e",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0060",
+     "op": "if-eq",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L0062",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 62
+    },
+    {
+     "label": "L0064",
+     "op": "if-eq",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L009c"
+    },
+    {
+     "label": "L0066",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 160
+    },
+    {
+     "label": "L0068",
+     "op": "if-eq",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L008c"
+    },
+    {
+     "label": "L006a",
+     "op": "sget-object",
+     "registers": [
+      11
+     ],
+     "field": "Lorg/jsoup/nodes/OooO0OO;->OooO00o:[I"
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Enum;->ordinal()I"
+    },
+    {
+     "label": "L006f",
+     "op": "move-result",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "aget",
+     "registers": [
+      11,
+      11,
+      12
+     ]
+    },
+    {
+     "label": "L0072",
+     "op": "if-eq",
+     "registers": [
+      11,
+      9
+     ],
+     "target": "L007c"
+    },
+    {
+     "label": "L0074",
+     "op": "const/4",
+     "registers": [
+      12
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0075",
+     "op": "if-eq",
+     "registers": [
+      11,
+      12
+     ],
+     "target": "L0082"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      10
+     ],
+     "method": "Ljava/nio/charset/CharsetEncoder;->canEncode(C)Z"
+    },
+    {
+     "label": "L007a",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L007c",
+     "op": "const/16",
+     "registers": [
+      11
+     ],
+     "literal": 128
+    },
+    {
+     "label": "L007e",
+     "op": "if-ge",
+     "registers": [
+      10,
+      11
+     ],
+     "target": "L0081"
+    },
+    {
+     "label": "L0080",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L0081",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0082",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L0088"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0087",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L0088",
+     "op": "invoke-static",
+     "registers": [
+      13,
+      1,
+      8
+     ],
+     "method": "Lorg/jsoup/nodes/OooO0o;->OooO00o(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Entities$EscapeMode;I)V"
+    },
+    {
+     "label": "L008b",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L008c",
+     "op": "sget-object",
+     "registers": [
+      9
+     ],
+     "field": "Lorg/jsoup/nodes/Entities$EscapeMode;->xhtml:Lorg/jsoup/nodes/Entities$EscapeMode;"
+    },
+    {
+     "label": "L008e",
+     "op": "if-eq",
+     "registers": [
+      1,
+      9
+     ],
+     "target": "L0096"
+    },
+    {
+     "label": "L0090",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&nbsp;"
+    },
+    {
+     "label": "L0092",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L0095",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L0096",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&#xa0;"
+    },
+    {
+     "label": "L0098",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L009b",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L009c",
+     "op": "if-nez",
+     "registers": [
+      16
+     ],
+     "target": "L00a4"
+    },
+    {
+     "label": "L009e",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&gt;"
+    },
+    {
+     "label": "L00a0",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00a3",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00a4",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00a7",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00a8",
+     "op": "if-eqz",
+     "registers": [
+      16
+     ],
+     "target": "L00b3"
+    },
+    {
+     "label": "L00aa",
+     "op": "sget-object",
+     "registers": [
+      9
+     ],
+     "field": "Lorg/jsoup/nodes/Entities$EscapeMode;->xhtml:Lorg/jsoup/nodes/Entities$EscapeMode;"
+    },
+    {
+     "label": "L00ac",
+     "op": "if-ne",
+     "registers": [
+      1,
+      9
+     ],
+     "target": "L00af"
+    },
+    {
+     "label": "L00ae",
+     "op": "goto",
+     "target": "L00b3"
+    },
+    {
+     "label": "L00af",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00b2",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00b3",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&lt;"
+    },
+    {
+     "label": "L00b5",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00b8",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00b9",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&amp;"
+    },
+    {
+     "label": "L00bb",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00be",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00bf",
+     "op": "if-eqz",
+     "registers": [
+      16
+     ],
+     "target": "L00c7"
+    },
+    {
+     "label": "L00c1",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "&quot;"
+    },
+    {
+     "label": "L00c3",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00c6",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00c7",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00ca",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00cb",
+     "op": "new-instance",
+     "registers": [
+      9
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L00cd",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Character;->toChars(I)[C"
+    },
+    {
+     "label": "L00d0",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L00d1",
+     "op": "invoke-direct",
+     "registers": [
+      9,
+      10
+     ],
+     "method": "Ljava/lang/String;-><init>([C)V"
+    },
+    {
+     "label": "L00d4",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      9
+     ],
+     "method": "Ljava/nio/charset/CharsetEncoder;->canEncode(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L00d7",
+     "op": "move-result",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L00d8",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L00de"
+    },
+    {
+     "label": "L00da",
+     "op": "invoke-virtual",
+     "registers": [
+      13,
+      9
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;"
+    },
+    {
+     "label": "L00dd",
+     "op": "goto",
+     "target": "L00e1"
+    },
+    {
+     "label": "L00de",
+     "op": "invoke-static",
+     "registers": [
+      13,
+      1,
+      8
+     ],
+     "method": "Lorg/jsoup/nodes/OooO0o;->OooO00o(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Entities$EscapeMode;I)V"
+    },
+    {
+     "label": "L00e1",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Character;->charCount(I)I"
+    },
+    {
+     "label": "L00e4",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L00e5",
+     "op": "add-int/2addr",
+     "registers": [
+      5,
+      8
+     ]
+    },
+    {
+     "label": "L00e6",
+     "op": "goto/16",
+     "target": "L0030"
+    },
+    {
+     "label": "L00e8",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

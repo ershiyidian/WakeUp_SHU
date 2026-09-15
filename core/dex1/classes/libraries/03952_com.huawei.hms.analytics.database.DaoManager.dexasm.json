@@ -1,0 +1,281 @@
+{
+ "class": "Lcom/huawei/hms/analytics/database/DaoManager;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->apiEventDao:Lcom/huawei/hms/analytics/database/APIEventDao;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->eventDao:Lcom/huawei/hms/analytics/database/EventDao;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V",
+   "access": 65537,
+   "offset": 3580644,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/APIEventDao;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/DaoManager;->apiEventDao:Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/DaoManager;->eventDao:Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->createAPIEventTable(Landroid/database/sqlite/SQLiteDatabase;Z)V",
+   "access": 9,
+   "offset": 3580696,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/APIEventDao;->createTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->createAllTables(Landroid/database/sqlite/SQLiteDatabase;Z)V",
+   "access": 9,
+   "offset": 3580720,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/APIEventDao;->createTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->createTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->createEventTable(Landroid/database/sqlite/SQLiteDatabase;Z)V",
+   "access": 9,
+   "offset": 3580752,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->createTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->dropAllTables(Landroid/database/sqlite/SQLiteDatabase;Z)V",
+   "access": 9,
+   "offset": 3580776,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/APIEventDao;->dropTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/database/EventDao;->dropTable(Landroid/database/sqlite/SQLiteDatabase;Z)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->getAPIEventDao()Lcom/huawei/hms/analytics/database/APIEventDao;",
+   "access": 1,
+   "offset": 3580596,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/DaoManager;->apiEventDao:Lcom/huawei/hms/analytics/database/APIEventDao;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/database/DaoManager;->getEventDao()Lcom/huawei/hms/analytics/database/EventDao;",
+   "access": 1,
+   "offset": 3580620,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/database/DaoManager;->eventDao:Lcom/huawei/hms/analytics/database/EventDao;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

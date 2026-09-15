@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <View android:id="@id/open_search_view_scrim" android:background="?attr/scrimBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0">
+  </View>
+  <com.google.android.material.internal.ClippableRoundedCornerLayout android:id="@id/open_search_view_root" android:focusable="true" android:focusableInTouchMode="true" android:visibility="2" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="1" android:id="@id/open_search_view_background" android:layout_width="match_parent" android:layout_height="match_parent">
+      <View android:id="@id/open_search_view_status_bar_spacer" android:visibility="2" android:layout_width="match_parent" android:layout_height="wrap_content">
+      </View>
+      <FrameLayout android:id="@id/open_search_view_header_container" android:visibility="2" android:layout_width="match_parent" android:layout_height="wrap_content">
+      </FrameLayout>
+      <FrameLayout android:id="@id/open_search_view_toolbar_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar android:layout_gravity="0x00800005" android:id="@id/open_search_view_dummy_toolbar" android:visibility="2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:navigationIcon="@0x00000000" style="?attr/materialSearchViewToolbarStyle">
+        </com.google.android.material.appbar.MaterialToolbar>
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/open_search_view_toolbar" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:navigationContentDescription="@string/searchview_navigation_content_description" style="?attr/materialSearchViewToolbarStyle">
+          <LinearLayout android:gravity="0x00000010" android:orientation="0" android:layout_width="match_parent" android:layout_height="?attr/materialSearchViewToolbarHeight">
+            <TextView android:id="@id/open_search_view_search_prefix" android:visibility="2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/materialSearchViewPrefixStyle">
+            </TextView>
+            <EditText android:id="@id/open_search_view_edit_text" android:background="@0x00000000" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:inputType="0x00080001" android:imeOptions="0x10000003" android:textDirection="1" android:importantForAutofill="0x00000002">
+            </EditText>
+            <ImageButton android:id="@id/open_search_view_clear_button" android:background="?attr/actionBarItemBackground" android:padding="16dp" android:visibility="2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/searchview_clear_text_content_description" app:srcCompat="@drawable/ic_clear_black_24">
+            </ImageButton>
+          </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+      </FrameLayout>
+      <View android:id="@id/open_search_view_divider" android:background="?attr/colorOutline" android:layout_width="match_parent" android:layout_height="@dimen/m3_searchview_divider_size">
+      </View>
+      <com.google.android.material.internal.TouchObserverFrameLayout android:id="@id/open_search_view_content_container" android:layout_width="match_parent" android:layout_height="match_parent">
+      </com.google.android.material.internal.TouchObserverFrameLayout>
+    </LinearLayout>
+  </com.google.android.material.internal.ClippableRoundedCornerLayout>
+</merge>

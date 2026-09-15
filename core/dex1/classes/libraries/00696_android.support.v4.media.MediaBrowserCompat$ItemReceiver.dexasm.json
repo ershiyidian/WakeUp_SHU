@@ -1,0 +1,275 @@
+{
+ "class": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;",
+ "super": "Landroid/support/v4/os/ResultReceiver;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;",
+   "access": 18
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;-><init>(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Landroid/os/Handler;)V",
+   "access": 65537,
+   "offset": 1967860,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Landroid/support/v4/os/ResultReceiver;-><init>(Landroid/os/Handler;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->onReceiveResult(ILandroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 1967892,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0033",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0005",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "media_item"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0016",
+     "op": "instance-of",
+     "registers": [
+      3,
+      2
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaItem;"
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L0023"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-void"
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;"
+    },
+    {
+     "label": "L0025",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/support/v4/media/MediaBrowserCompat$MediaItem;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onItemLoaded(Landroid/support/v4/media/MediaBrowserCompat$MediaItem;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "return-void"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;"
+    },
+    {
+     "label": "L002d",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

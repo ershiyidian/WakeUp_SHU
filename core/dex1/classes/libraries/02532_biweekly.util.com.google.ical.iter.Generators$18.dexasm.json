@@ -1,0 +1,668 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/Generators$18;",
+ "super": "Lbiweekly/util/com/google/ical/iter/Generator;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->dates:[I",
+   "access": 0
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->i:I",
+   "access": 0
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I",
+   "access": 0
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->val$dtStart:Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 4112
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->val$uYearDays:[I",
+   "access": 4112
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I",
+   "access": 0
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;-><init>(Lbiweekly/util/com/google/ical/values/DateValue;[I)V",
+   "access": 65537,
+   "offset": 2922788,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->val$dtStart:Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0002",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->val$uYearDays:[I"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generator;-><init>()V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I"
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0014",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->i:I"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generators$18;->checkMonth()V"
+    },
+    {
+     "label": "L0019",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->checkMonth()V",
+   "access": 1,
+   "offset": 2922856,
+   "registers": 11,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L003b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->dayOfYear(III)I"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L000b",
+     "op": "iget",
+     "registers": [
+      3,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->monthLength(II)I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "iget",
+     "registers": [
+      3,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/util/TimeUtils;->yearLength(I)I"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/IntSet;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;-><init>()V"
+    },
+    {
+     "label": "L001c",
+     "op": "iget-object",
+     "registers": [
+      5,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->val$uYearDays:[I"
+    },
+    {
+     "label": "L001e",
+     "op": "array-length",
+     "registers": [
+      6,
+      5
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0020",
+     "op": "if-ge",
+     "registers": [
+      7,
+      6
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0022",
+     "op": "aget",
+     "registers": [
+      8,
+      5,
+      7
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-gez",
+     "registers": [
+      8
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0026",
+     "op": "add-int/lit8",
+     "registers": [
+      9,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0028",
+     "op": "add-int/2addr",
+     "registers": [
+      8,
+      9
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "sub-int/2addr",
+     "registers": [
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-lt",
+     "registers": [
+      8,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002c",
+     "op": "if-gt",
+     "registers": [
+      8,
+      1
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->add(I)V"
+    },
+    {
+     "label": "L0031",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->toIntArray()[I"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "iput-object",
+     "registers": [
+      0,
+      10
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->dates:[I"
+    },
+    {
+     "label": "L003a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->generate(Lbiweekly/util/com/google/ical/util/DTBuilder;)Z",
+   "access": 1,
+   "offset": 2922664,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->year:I"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0007",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I"
+    },
+    {
+     "label": "L0009",
+     "op": "iget",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L000b",
+     "op": "if-eq",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "iput",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->year:I"
+    },
+    {
+     "label": "L000f",
+     "op": "iget",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->month:I"
+    },
+    {
+     "label": "L0011",
+     "op": "iput",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->month:I"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/Generators$18;->checkMonth()V"
+    },
+    {
+     "label": "L0016",
+     "op": "iput",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->i:I"
+    },
+    {
+     "label": "L0018",
+     "op": "iget",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->i:I"
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->dates:[I"
+    },
+    {
+     "label": "L001c",
+     "op": "array-length",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-lt",
+     "registers": [
+      0,
+      3
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "iput",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/Generators$18;->i:I"
+    },
+    {
+     "label": "L0024",
+     "op": "aget",
+     "registers": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "iput",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/util/com/google/ical/util/DTBuilder;->day:I"
+    },
+    {
+     "label": "L0028",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0029",
+     "op": "return",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/Generators$18;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2922764,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "byYearDayGenerator"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

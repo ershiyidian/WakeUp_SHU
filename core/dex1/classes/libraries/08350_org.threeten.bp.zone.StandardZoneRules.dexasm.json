@@ -1,0 +1,6819 @@
+{
+ "class": "Lorg/threeten/bp/zone/StandardZoneRules;",
+ "super": "Lorg/threeten/bp/zone/OooO0o;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRulesCache:Ljava/util/concurrent/ConcurrentMap;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;-><init>(Lorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V",
+   "access": 65537,
+   "offset": 6082796,
+   "registers": 10,
+   "inputs": 6,
+   "outputs": 2,
+   "debug_offset": 6164642,
+   "end": "L00ec",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ConcurrentHashMap;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/concurrent/ConcurrentHashMap;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRulesCache:Ljava/util/concurrent/ConcurrentMap;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[J"
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0018",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L001a",
+     "op": "iput-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L001c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001d",
+     "op": "aput-object",
+     "registers": [
+      5,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-ge",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0046"
+    },
+    {
+     "label": "L0026",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->toEpochSecond()J"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "aput-wide",
+     "registers": [
+      2,
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0036",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetAfter()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "aput-object",
+     "registers": [
+      5,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "move",
+     "registers": [
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L0046",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L004b",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-direct",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0056",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L005a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L008e"
+    },
+    {
+     "label": "L005d",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0060",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->isGap()Z"
+    },
+    {
+     "label": "L0066",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0078"
+    },
+    {
+     "label": "L0069",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeBefore()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L006c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L006d",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0073",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0077",
+     "op": "goto",
+     "target": "L0086"
+    },
+    {
+     "label": "L0078",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L007b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeBefore()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0082",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0083",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0086",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetAfter()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0089",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L008d",
+     "op": "goto",
+     "target": "L0057"
+    },
+    {
+     "label": "L008e",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0091",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0092",
+     "op": "new-array",
+     "registers": [
+      6,
+      6
+     ],
+     "type": "[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0094",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0097",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0098",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L009a",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L009c",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L009f",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00a0",
+     "op": "new-array",
+     "registers": [
+      5,
+      5
+     ],
+     "type": "[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L00a2",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L00a5",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00a6",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L00a8",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L00aa",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L00ad",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00ae",
+     "op": "new-array",
+     "registers": [
+      5,
+      5
+     ],
+     "type": "[J"
+    },
+    {
+     "label": "L00b0",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L00b2",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L00b5",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00b6",
+     "op": "if-ge",
+     "registers": [
+      1,
+      5
+     ],
+     "target": "L00cd"
+    },
+    {
+     "label": "L00b8",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L00ba",
+     "op": "invoke-interface",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L00bd",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00be",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L00c0",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getInstant()Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L00c3",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00c4",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getEpochSecond()J"
+    },
+    {
+     "label": "L00c7",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00c8",
+     "op": "aput-wide",
+     "registers": [
+      6,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L00ca",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00cc",
+     "op": "goto",
+     "target": "L00b2"
+    },
+    {
+     "label": "L00cd",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L00d0",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d1",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L00d3",
+     "op": "if-gt",
+     "registers": [
+      5,
+      6
+     ],
+     "target": "L00e4"
+    },
+    {
+     "label": "L00d5",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L00d8",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d9",
+     "op": "new-array",
+     "registers": [
+      5,
+      5
+     ],
+     "type": "[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L00db",
+     "op": "invoke-interface",
+     "registers": [
+      9,
+      5
+     ],
+     "method": "Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L00de",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00df",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L00e1",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L00e3",
+     "op": "return-void"
+    },
+    {
+     "label": "L00e4",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L00e6",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "Too many transition rules"
+    },
+    {
+     "label": "L00e8",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00eb",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;-><init>([J[Lorg/threeten/bp/ZoneOffset;[J[Lorg/threeten/bp/ZoneOffset;[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;)V",
+   "access": 65537,
+   "offset": 6082592,
+   "registers": 11,
+   "inputs": 6,
+   "outputs": 5,
+   "debug_offset": 6164616,
+   "end": "L005e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/ConcurrentHashMap;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/concurrent/ConcurrentHashMap;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRulesCache:Ljava/util/concurrent/ConcurrentMap;"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      7,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L000e",
+     "op": "iput-object",
+     "registers": [
+      8,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0010",
+     "op": "iput-object",
+     "registers": [
+      9,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0012",
+     "op": "iput-object",
+     "registers": [
+      10,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0014",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001a",
+     "op": "array-length",
+     "registers": [
+      10,
+      8
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-ge",
+     "registers": [
+      7,
+      10
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L001d",
+     "op": "aget-object",
+     "registers": [
+      10,
+      9,
+      7
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0021",
+     "op": "aget-object",
+     "registers": [
+      1,
+      9,
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0025",
+     "op": "aget-wide",
+     "registers": [
+      3,
+      8,
+      7
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      4,
+      10,
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(JLorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->isGap()Z"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L003f"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeBefore()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L003e",
+     "op": "goto",
+     "target": "L004d"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeBefore()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L004d",
+     "op": "move",
+     "registers": [
+      7,
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->size()I"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "new-array",
+     "registers": [
+      7,
+      7
+     ],
+     "type": "[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L005b",
+     "op": "iput-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L005d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0O0(JLorg/threeten/bp/ZoneOffset;)I",
+   "access": 9,
+   "offset": 6080484,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6110327,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "add-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide/32",
+     "registers": [
+      0
+     ],
+     "literal": 86400
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      0,
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooOo00(JJ)J"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/LocalDate;->ofEpochDay(J)Lorg/threeten/bp/LocalDate;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/LocalDate;->getYear()I"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/zone/StandardZoneRules;",
+   "access": 9,
+   "offset": 6081728,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 6,
+   "debug_offset": 6110209,
+   "end": "L005c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/io/DataInput;->readInt()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-array",
+     "registers": [
+      2,
+      0
+     ],
+     "type": "[J"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "if-ge",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->readEpochSec(Ljava/io/DataInput;)J"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "aput-wide",
+     "registers": [
+      4,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "new-array",
+     "registers": [
+      3,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0018",
+     "op": "if-ge",
+     "registers": [
+      4,
+      0
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->readOffset(Ljava/io/DataInput;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "aput-object",
+     "registers": [
+      5,
+      3,
+      4
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/io/DataInput;->readInt()I"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "new-array",
+     "registers": [
+      4,
+      0
+     ],
+     "type": "[J"
+    },
+    {
+     "label": "L0029",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002a",
+     "op": "if-ge",
+     "registers": [
+      5,
+      0
+     ],
+     "target": "L0035"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->readEpochSec(Ljava/io/DataInput;)J"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "aput-wide",
+     "registers": [
+      6,
+      4,
+      5
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "add-int/lit8",
+     "registers": [
+      5,
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0034",
+     "op": "goto",
+     "target": "L002a"
+    },
+    {
+     "label": "L0035",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0037",
+     "op": "new-array",
+     "registers": [
+      5,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0039",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003a",
+     "op": "if-ge",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->readOffset(Ljava/io/DataInput;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "aput-object",
+     "registers": [
+      7,
+      5,
+      6
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "add-int/lit8",
+     "registers": [
+      6,
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L003a"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/io/DataInput;->readByte()B"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "new-array",
+     "registers": [
+      6,
+      0
+     ],
+     "type": "[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L004b",
+     "op": "if-ge",
+     "registers": [
+      1,
+      0
+     ],
+     "target": "L0056"
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;->readExternal(Ljava/io/DataInput;)Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "aput-object",
+     "registers": [
+      7,
+      6,
+      1
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0055",
+     "op": "goto",
+     "target": "L004b"
+    },
+    {
+     "label": "L0056",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/zone/StandardZoneRules;"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-direct/range",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;-><init>([J[Lorg/threeten/bp/ZoneOffset;[J[Lorg/threeten/bp/ZoneOffset;[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;)V"
+    },
+    {
+     "label": "L005b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->writeReplace()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 6081076,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/zone/Ser;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;-><init>(BLjava/lang/Object;)V"
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;",
+   "access": 17,
+   "offset": 6082484,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRulesCache:Ljava/util/concurrent/ConcurrentMap;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0011",
+     "op": "array-length",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "array-length",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-ge",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L0018",
+     "op": "aget-object",
+     "registers": [
+      4,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;->createTransition(I)Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "aput-object",
+     "registers": [
+      4,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L0023",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 2100
+    },
+    {
+     "label": "L0025",
+     "op": "if-ge",
+     "registers": [
+      6,
+      1
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      6,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRulesCache:Ljava/util/concurrent/ConcurrentMap;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-interface",
+     "registers": [
+      6,
+      0,
+      2
+     ],
+     "method": "Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0OO(Lorg/threeten/bp/LocalDateTime;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 6080632,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6112844,
+   "end": "L00d6",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "if-lez",
+     "registers": [
+      0
+     ],
+     "target": "L0079"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0008",
+     "op": "array-length",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000b",
+     "op": "array-length",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000e",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->isAfter(Lorg/threeten/bp/chrono/OooO0OO;)Z"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0079"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->getYear()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "array-length",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0020",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0078"
+    },
+    {
+     "label": "L0022",
+     "op": "aget-object",
+     "registers": [
+      3,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeBefore()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->isGap()Z"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0049"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->isBefore(Lorg/threeten/bp/chrono/OooO0OO;)Z"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0039"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetBefore()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->isBefore(Lorg/threeten/bp/chrono/OooO0OO;)Z"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L0063"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetAfter()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->isBefore(Lorg/threeten/bp/chrono/OooO0OO;)Z"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0054"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetAfter()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getDateTimeAfter()Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L0057",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->isBefore(Lorg/threeten/bp/chrono/OooO0OO;)Z"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0063"
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetBefore()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0061",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "goto",
+     "target": "L0064"
+    },
+    {
+     "label": "L0063",
+     "op": "move-object",
+     "registers": [
+      4,
+      3
+     ]
+    },
+    {
+     "label": "L0064",
+     "op": "instance-of",
+     "registers": [
+      5,
+      4
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0066",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0077"
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetBefore()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L006f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0073"
+    },
+    {
+     "label": "L0072",
+     "op": "goto",
+     "target": "L0077"
+    },
+    {
+     "label": "L0073",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0075",
+     "op": "move-object",
+     "registers": [
+      3,
+      4
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "goto",
+     "target": "L0020"
+    },
+    {
+     "label": "L0077",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0079",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      7
+     ],
+     "method": "Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L007e",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L007f",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0080",
+     "op": "if-ne",
+     "registers": [
+      7,
+      0
+     ],
+     "target": "L0087"
+    },
+    {
+     "label": "L0082",
+     "op": "iget-object",
+     "registers": [
+      7,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0084",
+     "op": "aget-object",
+     "registers": [
+      7,
+      7,
+      1
+     ]
+    },
+    {
+     "label": "L0086",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0087",
+     "op": "if-gez",
+     "registers": [
+      7
+     ],
+     "target": "L008d"
+    },
+    {
+     "label": "L0089",
+     "op": "neg-int",
+     "registers": [
+      7,
+      7
+     ]
+    },
+    {
+     "label": "L008a",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L008c",
+     "op": "goto",
+     "target": "L00a1"
+    },
+    {
+     "label": "L008d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L008f",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0090",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0092",
+     "op": "if-ge",
+     "registers": [
+      7,
+      1
+     ],
+     "target": "L00a1"
+    },
+    {
+     "label": "L0094",
+     "op": "aget-object",
+     "registers": [
+      1,
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0096",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0098",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L009a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lorg/threeten/bp/LocalDateTime;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L009d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L009e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00a1"
+    },
+    {
+     "label": "L00a0",
+     "op": "move",
+     "registers": [
+      7,
+      2
+     ]
+    },
+    {
+     "label": "L00a1",
+     "op": "and-int/lit8",
+     "registers": [
+      0,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00a3",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L00cd"
+    },
+    {
+     "label": "L00a5",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsLocalTransitions:[Lorg/threeten/bp/LocalDateTime;"
+    },
+    {
+     "label": "L00a7",
+     "op": "aget-object",
+     "registers": [
+      1,
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L00a9",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00ab",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L00ad",
+     "op": "iget-object",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L00af",
+     "op": "div-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L00b1",
+     "op": "aget-object",
+     "registers": [
+      3,
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L00b3",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00b5",
+     "op": "aget-object",
+     "registers": [
+      7,
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L00b7",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L00ba",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L00bb",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L00be",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00bf",
+     "op": "if-le",
+     "registers": [
+      2,
+      4
+     ],
+     "target": "L00c7"
+    },
+    {
+     "label": "L00c1",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L00c3",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      3,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(Lorg/threeten/bp/LocalDateTime;Lorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L00c6",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00c7",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L00c9",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      3,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(Lorg/threeten/bp/LocalDateTime;Lorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L00cc",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00cd",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L00cf",
+     "op": "div-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L00d1",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00d3",
+     "op": "aget-object",
+     "registers": [
+      7,
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L00d5",
+     "op": "return-object",
+     "registers": [
+      7
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 6080124,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L005d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      1,
+      5
+     ],
+     "type": "Lorg/threeten/bp/zone/StandardZoneRules;"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003f"
+    },
+    {
+     "label": "L0009",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/threeten/bp/zone/StandardZoneRules;"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/Arrays;->equals([J[J)Z"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0021",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/Arrays;->equals([J[J)Z"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      3,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0033",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0035",
+     "op": "iget-object",
+     "registers": [
+      5,
+      5
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003d",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "instance-of",
+     "registers": [
+      1,
+      5
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneRules$Fixed;"
+    },
+    {
+     "label": "L0041",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->isFixedOffset()Z"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L0049",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lorg/threeten/bp/Instant;->EPOCH:Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneRules$Fixed;"
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneRules$Fixed;->getOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      5
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0058",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0059",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L005c"
+    },
+    {
+     "label": "L005b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getDaylightSavings(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/Duration;",
+   "access": 1,
+   "offset": 6081368,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0017",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getStandardOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->getTotalSeconds()I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sub-int/2addr",
+     "registers": [
+      3,
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Duration;->ofSeconds(J)Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;",
+   "access": 1,
+   "offset": 6081432,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6164591,
+   "end": "L0054",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getEpochSecond()J"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      8,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0006",
+     "op": "array-length",
+     "registers": [
+      8,
+      8
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "if-lez",
+     "registers": [
+      8
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      8,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L000b",
+     "op": "array-length",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L000e",
+     "op": "array-length",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0011",
+     "op": "aget-wide",
+     "registers": [
+      2,
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "cmp-long",
+     "registers": [
+      8,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "if-lez",
+     "registers": [
+      8
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      8,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0019",
+     "op": "array-length",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L001c",
+     "op": "aget-object",
+     "registers": [
+      8,
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0O0(JLorg/threeten/bp/ZoneOffset;)I"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      8
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0028",
+     "op": "array-length",
+     "registers": [
+      4,
+      8
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "if-ge",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L002b",
+     "op": "aget-object",
+     "registers": [
+      2,
+      8,
+      3
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->toEpochSecond()J"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "cmp-long",
+     "registers": [
+      6,
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "if-gez",
+     "registers": [
+      6
+     ],
+     "target": "L003a"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetBefore()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetAfter()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "iget-object",
+     "registers": [
+      8,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-static",
+     "registers": [
+      8,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Arrays;->binarySearch([JJ)I"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "if-gez",
+     "registers": [
+      8
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L004a",
+     "op": "neg-int",
+     "registers": [
+      8,
+      8
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "add-int/lit8",
+     "registers": [
+      8,
+      8
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L004d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L004f",
+     "op": "add-int/lit8",
+     "registers": [
+      8,
+      8
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0051",
+     "op": "aget-object",
+     "registers": [
+      8,
+      0,
+      8
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getOffset(Lorg/threeten/bp/LocalDateTime;)Lorg/threeten/bp/ZoneOffset;",
+   "access": 1,
+   "offset": 6081616,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6164608,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0OO(Lorg/threeten/bp/LocalDateTime;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getOffsetBefore()Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getStandardOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;",
+   "access": 1,
+   "offset": 6081668,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getEpochSecond()J"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Arrays;->binarySearch([JJ)I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-gez",
+     "registers": [
+      3
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000c",
+     "op": "neg-int",
+     "registers": [
+      3,
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": -2
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0011",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0013",
+     "op": "aget-object",
+     "registers": [
+      3,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getTransition(Lorg/threeten/bp/LocalDateTime;)Lorg/threeten/bp/zone/ZoneOffsetTransition;",
+   "access": 1,
+   "offset": 6081928,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0OO(Lorg/threeten/bp/LocalDateTime;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getTransitionRules()Ljava/util/List;",
+   "access": 1,
+   "offset": 6081180,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getTransitions()Ljava/util/List;",
+   "access": 1,
+   "offset": 6081220,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 5,
+   "debug_offset": 6109927,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      2,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0008",
+     "op": "array-length",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-ge",
+     "registers": [
+      1,
+      3
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L000b",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L000d",
+     "op": "aget-wide",
+     "registers": [
+      4,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      7
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0011",
+     "op": "aget-object",
+     "registers": [
+      6,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0015",
+     "op": "aget-object",
+     "registers": [
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(JLorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001d",
+     "op": "goto",
+     "target": "L0006"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->getValidOffsets(Lorg/threeten/bp/LocalDateTime;)Ljava/util/List;",
+   "access": 1,
+   "offset": 6081308,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0OO(Lorg/threeten/bp/LocalDateTime;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "instance-of",
+     "registers": [
+      0,
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->getValidOffsets()Ljava/util/List;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->hashCode()I",
+   "access": 1,
+   "offset": 6080544,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109927,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Arrays;->hashCode([J)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Arrays;->hashCode([J)I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->isDaylightSavings(Lorg/threeten/bp/Instant;)Z",
+   "access": 1,
+   "offset": 6080328,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getStandardOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getOffset(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "xor-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->isFixedOffset()Z",
+   "access": 1,
+   "offset": 6080376,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0008",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L000d",
+     "op": "aget-object",
+     "registers": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0011",
+     "op": "aget-object",
+     "registers": [
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/ZoneOffset;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->isValidOffset(Lorg/threeten/bp/LocalDateTime;Lorg/threeten/bp/ZoneOffset;)Z",
+   "access": 1,
+   "offset": 6080448,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->getValidOffsets(Lorg/threeten/bp/LocalDateTime;)Ljava/util/List;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/List;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->nextTransition(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/zone/ZoneOffsetTransition;",
+   "access": 1,
+   "offset": 6081972,
+   "registers": 12,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6112844,
+   "end": "L006b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L004b"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getEpochSecond()J"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L000c",
+     "op": "array-length",
+     "registers": [
+      2,
+      11
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000f",
+     "op": "aget-wide",
+     "registers": [
+      2,
+      11,
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "cmp-long",
+     "registers": [
+      4,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "if-ltz",
+     "registers": [
+      4
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0017",
+     "op": "array-length",
+     "registers": [
+      11,
+      11
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-nez",
+     "registers": [
+      11
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L004b"
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L001d",
+     "op": "array-length",
+     "registers": [
+      2,
+      11
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0020",
+     "op": "aget-object",
+     "registers": [
+      11,
+      11,
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0O0(JLorg/threeten/bp/ZoneOffset;)I"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "array-length",
+     "registers": [
+      3,
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002c",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002d",
+     "op": "if-ge",
+     "registers": [
+      5,
+      3
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L002f",
+     "op": "aget-object",
+     "registers": [
+      6,
+      2,
+      5
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->toEpochSecond()J"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-wide",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "cmp-long",
+     "registers": [
+      9,
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "if-gez",
+     "registers": [
+      9
+     ],
+     "target": "L003a"
+    },
+    {
+     "label": "L0039",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "add-int/lit8",
+     "registers": [
+      5,
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L003c",
+     "op": "goto",
+     "target": "L002d"
+    },
+    {
+     "label": "L003d",
+     "op": "const",
+     "registers": [
+      0
+     ],
+     "literal": 999999999
+    },
+    {
+     "label": "L0040",
+     "op": "if-ge",
+     "registers": [
+      11,
+      0
+     ],
+     "target": "L004b"
+    },
+    {
+     "label": "L0042",
+     "op": "add-int/lit8",
+     "registers": [
+      11,
+      11
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "aget-object",
+     "registers": [
+      11,
+      11,
+      4
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "return-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "const/4",
+     "registers": [
+      11
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L004c",
+     "op": "return-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Arrays;->binarySearch([JJ)I"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "if-gez",
+     "registers": [
+      11
+     ],
+     "target": "L0057"
+    },
+    {
+     "label": "L0053",
+     "op": "neg-int",
+     "registers": [
+      11,
+      11
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "add-int/lit8",
+     "registers": [
+      11,
+      11
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0056",
+     "op": "goto",
+     "target": "L0059"
+    },
+    {
+     "label": "L0057",
+     "op": "add-int/lit8",
+     "registers": [
+      11,
+      11
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0059",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L005b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L005d",
+     "op": "aget-wide",
+     "registers": [
+      2,
+      1,
+      11
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0061",
+     "op": "aget-object",
+     "registers": [
+      4,
+      1,
+      11
+     ]
+    },
+    {
+     "label": "L0063",
+     "op": "add-int/lit8",
+     "registers": [
+      11,
+      11
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0065",
+     "op": "aget-object",
+     "registers": [
+      11,
+      1,
+      11
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3,
+      4,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(JLorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L006a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->previousTransition(Lorg/threeten/bp/Instant;)Lorg/threeten/bp/zone/ZoneOffsetTransition;",
+   "access": 1,
+   "offset": 6082204,
+   "registers": 12,
+   "inputs": 2,
+   "outputs": 5,
+   "debug_offset": 6112844,
+   "end": "L0083",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L006f"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getEpochSecond()J"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getNano()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-lez",
+     "registers": [
+      11
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0010",
+     "op": "const-wide",
+     "registers": [
+      2
+     ],
+     "literal": 9223372036854775807
+    },
+    {
+     "label": "L0015",
+     "op": "cmp-long",
+     "registers": [
+      11,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-gez",
+     "registers": [
+      11
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0019",
+     "op": "const-wide/16",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001b",
+     "op": "add-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L001e",
+     "op": "array-length",
+     "registers": [
+      2,
+      11
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0021",
+     "op": "aget-wide",
+     "registers": [
+      2,
+      11,
+      2
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0025",
+     "op": "array-length",
+     "registers": [
+      11,
+      11
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-lez",
+     "registers": [
+      11
+     ],
+     "target": "L0062"
+    },
+    {
+     "label": "L0028",
+     "op": "cmp-long",
+     "registers": [
+      11,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "if-lez",
+     "registers": [
+      11
+     ],
+     "target": "L0062"
+    },
+    {
+     "label": "L002c",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L002e",
+     "op": "array-length",
+     "registers": [
+      4,
+      11
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0031",
+     "op": "aget-object",
+     "registers": [
+      11,
+      11,
+      4
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0O0(JLorg/threeten/bp/ZoneOffset;)I"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      4
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "array-length",
+     "registers": [
+      6,
+      5
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "add-int/lit8",
+     "registers": [
+      6,
+      6
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L003e",
+     "op": "if-ltz",
+     "registers": [
+      6
+     ],
+     "target": "L0050"
+    },
+    {
+     "label": "L0040",
+     "op": "aget-object",
+     "registers": [
+      7,
+      5,
+      6
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;->toEpochSecond()J"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-wide",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "cmp-long",
+     "registers": [
+      9,
+      0,
+      7
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "if-lez",
+     "registers": [
+      9
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L004a",
+     "op": "aget-object",
+     "registers": [
+      11,
+      5,
+      6
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "return-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "add-int/lit8",
+     "registers": [
+      6,
+      6
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L004f",
+     "op": "goto",
+     "target": "L003e"
+    },
+    {
+     "label": "L0050",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO0O0(JLorg/threeten/bp/ZoneOffset;)I"
+    },
+    {
+     "label": "L0053",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0056",
+     "op": "if-le",
+     "registers": [
+      4,
+      11
+     ],
+     "target": "L0062"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      4
+     ],
+     "method": "Lorg/threeten/bp/zone/StandardZoneRules;->OooO00o(I)[Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "array-length",
+     "registers": [
+      0,
+      11
+     ]
+    },
+    {
+     "label": "L005d",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L005f",
+     "op": "aget-object",
+     "registers": [
+      11,
+      11,
+      0
+     ]
+    },
+    {
+     "label": "L0061",
+     "op": "return-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "iget-object",
+     "registers": [
+      11,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-static",
+     "registers": [
+      11,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Arrays;->binarySearch([JJ)I"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "if-gez",
+     "registers": [
+      11
+     ],
+     "target": "L006d"
+    },
+    {
+     "label": "L006a",
+     "op": "neg-int",
+     "registers": [
+      11,
+      11
+     ]
+    },
+    {
+     "label": "L006b",
+     "op": "add-int/lit8",
+     "registers": [
+      11,
+      11
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L006d",
+     "op": "if-gtz",
+     "registers": [
+      11
+     ],
+     "target": "L0071"
+    },
+    {
+     "label": "L006f",
+     "op": "const/4",
+     "registers": [
+      11
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0070",
+     "op": "return-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0071",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/zone/ZoneOffsetTransition;"
+    },
+    {
+     "label": "L0073",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0075",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      11
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0077",
+     "op": "aget-wide",
+     "registers": [
+      3,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0079",
+     "op": "iget-object",
+     "registers": [
+      1,
+      10
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L007b",
+     "op": "aget-object",
+     "registers": [
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L007d",
+     "op": "aget-object",
+     "registers": [
+      11,
+      1,
+      11
+     ]
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      4,
+      2,
+      11
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransition;-><init>(JLorg/threeten/bp/ZoneOffset;Lorg/threeten/bp/ZoneOffset;)V"
+    },
+    {
+     "label": "L0082",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 6081108,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "StandardZoneRules[currentStandardOffset="
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0009",
+     "op": "array-length",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L000c",
+     "op": "aget-object",
+     "registers": [
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "]"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/zone/StandardZoneRules;->writeExternal(Ljava/io/DataOutput;)V",
+   "access": 1,
+   "offset": 6083284,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0059",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/io/DataOutput;->writeInt(I)V"
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardTransitions:[J"
+    },
+    {
+     "label": "L0008",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000d",
+     "op": "aget-wide",
+     "registers": [
+      4,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->writeEpochSec(JLjava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L000b"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->standardOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0017",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0019",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L001b",
+     "op": "aget-object",
+     "registers": [
+      4,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->writeOffset(Lorg/threeten/bp/ZoneOffset;Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0019"
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L0025",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/io/DataOutput;->writeInt(I)V"
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->savingsInstantTransitions:[J"
+    },
+    {
+     "label": "L002b",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002d",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L002f",
+     "op": "aget-wide",
+     "registers": [
+      4,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->writeEpochSec(JLjava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0034",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L002d"
+    },
+    {
+     "label": "L0037",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->wallOffsets:[Lorg/threeten/bp/ZoneOffset;"
+    },
+    {
+     "label": "L0039",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003b",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L003d",
+     "op": "aget-object",
+     "registers": [
+      4,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/Ser;->writeOffset(Lorg/threeten/bp/ZoneOffset;Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0042",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L003b"
+    },
+    {
+     "label": "L0045",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L0047",
+     "op": "array-length",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-interface",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Ljava/io/DataOutput;->writeByte(I)V"
+    },
+    {
+     "label": "L004b",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/zone/StandardZoneRules;->lastRules:[Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;"
+    },
+    {
+     "label": "L004d",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0058"
+    },
+    {
+     "label": "L0050",
+     "op": "aget-object",
+     "registers": [
+      3,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      7
+     ],
+     "method": "Lorg/threeten/bp/zone/ZoneOffsetTransitionRule;->writeExternal(Ljava/io/DataOutput;)V"
+    },
+    {
+     "label": "L0055",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0057",
+     "op": "goto",
+     "target": "L004e"
+    },
+    {
+     "label": "L0058",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

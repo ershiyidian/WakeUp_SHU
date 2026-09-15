@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+  <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextClock android:textSize="100sp" android:textStyle="0x00000001" android:gravity="0x00000011" android:id="@id/text_clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:format12Hour="HH:mm" android:format24Hour="HH:mm" app:layout_constraintBottom_toTopOf="@id/text_date" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_chainStyle="2">
+    </TextClock>
+    <TextClock android:textSize="24sp" android:id="@id/text_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp" android:format12Hour="M月d日 EEE" android:format24Hour="M月d日 EEE" app:layout_constraintEnd_toStartOf="@id/ib_settings" app:layout_constraintStart_toStartOf="@id/text_clock" app:layout_constraintTop_toBottomOf="@id/text_clock">
+    </TextClock>
+    <ImageButton android:id="@id/ib_settings" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_outline_settings_24" app:layout_constraintBottom_toBottomOf="@id/text_date" app:layout_constraintEnd_toEndOf="@id/text_clock" app:layout_constraintStart_toEndOf="@id/text_date" app:layout_constraintTop_toBottomOf="@id/text_clock" style="@style/ButtonBackground">
+    </ImageButton>
+    <LinearLayout android:orientation="1" android:id="@id/current_content" android:layout_width="280dp" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_marginEnd="32dp" app:layout_constraintBottom_toTopOf="@id/separator" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@id/text_date" app:layout_constraintVertical_chainStyle="2" app:layout_goneMarginTop="32dp">
+      <com.google.android.material.textview.MaterialTextView android:textSize="20sp" android:textStyle="0x00000001" android:id="@id/course_time" android:layout_width="wrap_content" android:layout_height="wrap_content">
+      </com.google.android.material.textview.MaterialTextView>
+      <com.suda.yzune.wakeupschedule.widget.MarqueeTextView android:textSize="22sp" android:textStyle="0x00000001" android:textColor="?attr/colorOnSurface" android:ellipsize="4" android:id="@id/current_course_name" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="-1">
+      </com.suda.yzune.wakeupschedule.widget.MarqueeTextView>
+      <com.google.android.material.textview.MaterialTextView android:textSize="20sp" android:id="@id/tv_room" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:maxLines="1">
+      </com.google.android.material.textview.MaterialTextView>
+      <com.google.android.material.textview.MaterialTextView android:textSize="20sp" android:id="@id/tv_teacher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1">
+      </com.google.android.material.textview.MaterialTextView>
+      <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:id="@id/tv_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+      </com.google.android.material.textview.MaterialTextView>
+    </LinearLayout>
+    <View android:id="@id/separator" android:background="@color/listSeparator" android:layout_width="0dp" android:layout_height="2dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toTopOf="@id/rv_list" app:layout_constraintEnd_toEndOf="@id/current_content" app:layout_constraintStart_toStartOf="@id/current_content" app:layout_constraintTop_toBottomOf="@id/current_content">
+    </View>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginBottom="32dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="@id/current_content" app:layout_constraintStart_toStartOf="@id/current_content" app:layout_constraintTop_toBottomOf="@id/separator">
+    </androidx.recyclerview.widget.RecyclerView>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

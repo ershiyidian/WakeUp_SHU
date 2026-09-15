@@ -1,0 +1,366 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->event:Lcom/huawei/agconnect/crash/internal/bean/Event;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->header:Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;-><init>()V",
+   "access": 65537,
+   "offset": 3420920,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->creatByJson(Ljava/lang/String;)Lcom/huawei/agconnect/crash/internal/bean/EventBody;",
+   "access": 9,
+   "offset": 3420760,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/c/b;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;"
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "EventBody"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "creatByJson failed"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0008",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L0009"
+      },
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L0009"
+      },
+      {
+       "type": "Ljava/lang/InstantiationException;",
+       "target": "L0009"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->getEvent()Lcom/huawei/agconnect/crash/internal/bean/Event;",
+   "access": 1,
+   "offset": 3420736,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->event:Lcom/huawei/agconnect/crash/internal/bean/Event;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->getHeader()Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;",
+   "access": 1,
+   "offset": 3420832,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->header:Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->setEvent(Lcom/huawei/agconnect/crash/internal/bean/Event;)V",
+   "access": 1,
+   "offset": 3420944,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->event:Lcom/huawei/agconnect/crash/internal/bean/Event;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->setHeader(Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;)V",
+   "access": 1,
+   "offset": 3420968,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->header:Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->toJsonString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 3420856,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/c/c;->a(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "EventBody"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "toJsonString JSONException"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/agconnect/common/api/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0004",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lorg/json/JSONException;",
+       "target": "L0005"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

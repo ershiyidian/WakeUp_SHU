@@ -1,0 +1,1421 @@
+{
+ "class": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;",
+ "super": "Ljava/lang/Object;",
+ "access": 0,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;-><init>(Lbiweekly/io/json/JCalReader;)V",
+   "access": 65538,
+   "offset": 2785416,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6136336,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;-><init>(Lbiweekly/io/json/JCalReader;Lbiweekly/io/json/JCalReader$1;)V",
+   "access": 69633,
+   "offset": 2785460,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6133398,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;-><init>(Lbiweekly/io/json/JCalReader;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->getICalendar()Lbiweekly/ICalendar;",
+   "access": 1,
+   "offset": 2785284,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L003a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Map;->isEmpty()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "method": "Lbiweekly/io/json/JCalReader;->access$1600()Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->getComponentName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0024",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "instance-of",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0027",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L002c"
+    },
+    {
+     "label": "L0029",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L002b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "method": "Lbiweekly/io/json/JCalReader;->access$1600()Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->emptyInstance()Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->addComponent(Lbiweekly/component/ICalComponent;)V"
+    },
+    {
+     "label": "L0039",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->readComponent(Ljava/util/List;Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 2785484,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1500(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      1
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getComponentScribe(Ljava/lang/String;Lbiweekly/ICalVersion;)Lbiweekly/io/scribe/component/ICalComponentScribe;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->emptyInstance()Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0018",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->addComponent(Lbiweekly/component/ICalComponent;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      3,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      1,
+      0
+     ],
+     "method": "Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->readProperty(Ljava/util/List;Ljava/lang/String;Lbiweekly/parameter/ICalParameters;Lbiweekly/ICalDataType;Lbiweekly/io/json/JCalValue;)V",
+   "access": 1,
+   "offset": 2785588,
+   "registers": 10,
+   "inputs": 6,
+   "outputs": 5,
+   "debug_offset": 6114733,
+   "end": "L00d9",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$100(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/ParseContext;->getWarnings()Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->clear()V"
+    },
+    {
+     "label": "L000e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$300(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$200(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->getLineNum()I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseContext;->setLineNumber(Ljava/lang/Integer;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$400(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Lbiweekly/io/ParseContext;->setPropertyName(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->components:Ljava/util/Map;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0036",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$500(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      6,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getPropertyScribe(Ljava/lang/String;Lbiweekly/ICalVersion;)Lbiweekly/io/scribe/property/ICalPropertyScribe;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$600(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      9,
+      8,
+      7,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$800(Lbiweekly/io/json/JCalReader;)Ljava/util/List;"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$700(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0057",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/ParseContext;->getWarnings()Ljava/util/List;"
+    },
+    {
+     "label": "L005b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/List;->addAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L005f",
+     "op": "instance-of",
+     "registers": [
+      2,
+      5
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L0061",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L007e"
+    },
+    {
+     "label": "L0063",
+     "op": "instance-of",
+     "registers": [
+      2,
+      1
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0065",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L007e"
+    },
+    {
+     "label": "L0067",
+     "op": "move-object",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/property/Version;->toICalVersion()Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L006d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L006e",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L007e"
+    },
+    {
+     "label": "L0070",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$900(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0075",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0076",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseContext;->setVersion(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0079",
+     "op": "return-void"
+    },
+    {
+     "label": "L007a",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "goto",
+     "target": "L0082"
+    },
+    {
+     "label": "L007c",
+     "op": "move-exception",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L007d",
+     "op": "goto",
+     "target": "L00b3"
+    },
+    {
+     "label": "L007e",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      1
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->addProperty(Lbiweekly/property/ICalProperty;)V"
+    },
+    {
+     "label": "L0081",
+     "op": "return-void"
+    },
+    {
+     "label": "L0082",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/scribe/property/RawPropertyScribe;"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      6
+     ],
+     "method": "Lbiweekly/io/scribe/property/RawPropertyScribe;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0087",
+     "op": "iget-object",
+     "registers": [
+      6,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0089",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1200(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L008c",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      9,
+      8,
+      7,
+      6
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->parseJson(Lbiweekly/io/json/JCalValue;Lbiweekly/ICalDataType;Lbiweekly/parameter/ICalParameters;Lbiweekly/io/ParseContext;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0090",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0091",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/RawProperty;"
+    },
+    {
+     "label": "L0093",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->addProperty(Lbiweekly/property/ICalProperty;)V"
+    },
+    {
+     "label": "L0096",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L0098",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1400(Lbiweekly/io/json/JCalReader;)Ljava/util/List;"
+    },
+    {
+     "label": "L009b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L009c",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L009e",
+     "op": "iget-object",
+     "registers": [
+      7,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L00a0",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1300(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L00a3",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L00a4",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;-><init>(Lbiweekly/io/ParseContext;)V"
+    },
+    {
+     "label": "L00a7",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->message(Lbiweekly/io/CannotParseException;)Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L00aa",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00ab",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->build()Lbiweekly/io/ParseWarning;"
+    },
+    {
+     "label": "L00ae",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00af",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00b2",
+     "op": "goto",
+     "target": "L00d8"
+    },
+    {
+     "label": "L00b3",
+     "op": "iget-object",
+     "registers": [
+      6,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L00b5",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1100(Lbiweekly/io/json/JCalReader;)Ljava/util/List;"
+    },
+    {
+     "label": "L00b8",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00b9",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L00bb",
+     "op": "iget-object",
+     "registers": [
+      8,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->this$0:Lbiweekly/io/json/JCalReader;"
+    },
+    {
+     "label": "L00bd",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;->access$1000(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L00c0",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L00c1",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      8
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;-><init>(Lbiweekly/io/ParseContext;)V"
+    },
+    {
+     "label": "L00c4",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L00c7",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00c8",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00c9",
+     "op": "new-array",
+     "registers": [
+      8,
+      8
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L00cb",
+     "op": "aput-object",
+     "registers": [
+      5,
+      8,
+      0
+     ]
+    },
+    {
+     "label": "L00cd",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      0,
+      8
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->message(I[Ljava/lang/Object;)Lbiweekly/io/ParseWarning$Builder;"
+    },
+    {
+     "label": "L00d0",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d1",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/io/ParseWarning$Builder;->build()Lbiweekly/io/ParseWarning;"
+    },
+    {
+     "label": "L00d4",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d5",
+     "op": "invoke-interface",
+     "registers": [
+      6,
+      5
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00d8",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0042",
+     "end": "L0081",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lbiweekly/io/SkipMeException;",
+       "target": "L007c"
+      },
+      {
+       "type": "Lbiweekly/io/CannotParseException;",
+       "target": "L007a"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

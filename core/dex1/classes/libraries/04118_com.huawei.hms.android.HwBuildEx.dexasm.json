@@ -1,0 +1,295 @@
+{
+ "class": "Lcom/huawei/hms/android/HwBuildEx;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/android/HwBuildEx;-><init>()V",
+   "access": 65537,
+   "offset": 3663500,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/android/HwBuildEx;->getSystemPropertiesInt(Ljava/lang/String;I)I",
+   "access": 9,
+   "offset": 3663360,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "android.os.SystemProperties"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "getInt"
+    },
+    {
+     "label": "L000b",
+     "op": "new-array",
+     "registers": [
+      5,
+      2
+     ],
+     "type": "[Ljava/lang/Class;"
+    },
+    {
+     "label": "L000d",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "aput-object",
+     "registers": [
+      6,
+      5,
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Ljava/lang/Integer;->TYPE:Ljava/lang/Class;"
+    },
+    {
+     "label": "L0013",
+     "op": "aput-object",
+     "registers": [
+      6,
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L001f",
+     "op": "aput-object",
+     "registers": [
+      7,
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "aput-object",
+     "registers": [
+      5,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3,
+      2
+     ],
+     "method": "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/Integer;->intValue()I"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "return",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "return",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L002d",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/ClassNotFoundException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/lang/NoSuchMethodException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/lang/IllegalAccessException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/lang/reflect/InvocationTargetException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/lang/ClassCastException;",
+       "target": "L002e"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

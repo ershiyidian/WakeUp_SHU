@@ -1,0 +1,659 @@
+{
+ "class": "Lbiweekly/util/com/google/ical/iter/IntSet;",
+ "super": "Ljava/lang/Object;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;-><init>()V",
+   "access": 65537,
+   "offset": 2928540,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/BitSet;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->decode(I)I",
+   "access": 10,
+   "offset": 2928328,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "ushr-int/lit8",
+     "registers": [
+      0,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "and-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0004",
+     "op": "neg-int",
+     "registers": [
+      1,
+      1
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "or-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "mul-int",
+     "registers": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->encode(I)I",
+   "access": 10,
+   "offset": 2928364,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-gez",
+     "registers": [
+      0
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0002",
+     "op": "neg-int",
+     "registers": [
+      0,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "shl-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0005",
+     "op": "add-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "shl-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->reverse([III)V",
+   "access": 10,
+   "offset": 2928616,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 0,
+   "debug_offset": 6110058,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "add-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0002",
+     "op": "if-ge",
+     "registers": [
+      3,
+      4
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0004",
+     "op": "aget",
+     "registers": [
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "aget",
+     "registers": [
+      1,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "aput",
+     "registers": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "aput",
+     "registers": [
+      0,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0000"
+    },
+    {
+     "label": "L000f",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->add(I)V",
+   "access": 1,
+   "offset": 2928580,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->encode(I)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/BitSet;->set(I)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->contains(I)Z",
+   "access": 1,
+   "offset": 2928288,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->encode(I)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/BitSet;->get(I)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->size()I",
+   "access": 1,
+   "offset": 2928404,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/BitSet;->cardinality()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/com/google/ical/iter/IntSet;->toIntArray()[I",
+   "access": 1,
+   "offset": 2928436,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L002c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->size()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-array",
+     "registers": [
+      1,
+      0
+     ],
+     "type": "[I"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0008",
+     "op": "move",
+     "registers": [
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      6,
+      8
+     ],
+     "field": "Lbiweekly/util/com/google/ical/iter/IntSet;->ints:Ljava/util/BitSet;"
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      3
+     ],
+     "method": "Ljava/util/BitSet;->nextSetBit(I)I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "if-ltz",
+     "registers": [
+      3
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->decode(I)I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "if-gez",
+     "registers": [
+      6
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001a",
+     "op": "add-int/lit8",
+     "registers": [
+      7,
+      4
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001c",
+     "op": "aput",
+     "registers": [
+      6,
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "move",
+     "registers": [
+      4,
+      7
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      5,
+      5
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0022",
+     "op": "aput",
+     "registers": [
+      6,
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->reverse([III)V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      4,
+      0
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/IntSet;->reverse([III)V"
+    },
+    {
+     "label": "L002b",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,1446 @@
+{
+ "class": "Lbiweekly/util/UtcOffset;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lbiweekly/util/UtcOffset;->millis:J",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/UtcOffset;-><init>(J)V",
+   "access": 65537,
+   "offset": 2914168,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6140584,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-wide",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;-><init>(ZII)V",
+   "access": 65537,
+   "offset": 2914084,
+   "registers": 8,
+   "inputs": 4,
+   "outputs": 2,
+   "debug_offset": 6143845,
+   "end": "L0021",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Math;->abs(I)I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/Math;->abs(I)I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "int-to-long",
+     "registers": [
+      5,
+      6
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->hoursToMillis(J)J"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-wide",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->minutesToMillis(J)J"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "add-long/2addr",
+     "registers": [
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "mul-long",
+     "registers": [
+      5,
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "iput-wide",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0020",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->hoursToMillis(J)J",
+   "access": 10,
+   "offset": 2913964,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/32",
+     "registers": [
+      0
+     ],
+     "literal": 3600000
+    },
+    {
+     "label": "L0003",
+     "op": "mul-long",
+     "registers": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->millisToHours(J)J",
+   "access": 10,
+   "offset": 2913992,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1000
+    },
+    {
+     "label": "L0002",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0005",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->millisToMinutes(J)J",
+   "access": 10,
+   "offset": 2914024,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 1000
+    },
+    {
+     "label": "L0002",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 60
+    },
+    {
+     "label": "L0005",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "rem-long/2addr",
+     "registers": [
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->minutesToMillis(J)J",
+   "access": 10,
+   "offset": 2914056,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/32",
+     "registers": [
+      0
+     ],
+     "literal": 60000
+    },
+    {
+     "label": "L0003",
+     "op": "mul-long",
+     "registers": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-wide",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->parse(Ljava/lang/String;)Lbiweekly/util/UtcOffset;",
+   "access": 9,
+   "offset": 2913416,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6143807,
+   "end": "L0045",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "^([-\\+])?(\\d{1,2})(:?(\\d{2}))?(:?(\\d{2}))?$"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/regex/Matcher;->find()Z"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "-"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "xor-int/2addr",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L0032"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      4,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/UtcOffset;-><init>(ZII)V"
+    },
+    {
+     "label": "L0037",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/Messages;->INSTANCE:Lbiweekly/Messages;"
+    },
+    {
+     "label": "L003a",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 21
+    },
+    {
+     "label": "L003c",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Ljava/lang/Object;"
+    },
+    {
+     "label": "L003e",
+     "op": "aput-object",
+     "registers": [
+      4,
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/Messages;->getIllegalArgumentException(I[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "throw",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->parse(Ljava/util/TimeZone;)Lbiweekly/util/UtcOffset;",
+   "access": 9,
+   "offset": 2913572,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6143822,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Ljava/util/TimeZone;->getOffset(J)I"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "int-to-long",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/UtcOffset;-><init>(J)V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 2913620,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L001d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "if-ne",
+     "registers": [
+      6,
+      7
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eq",
+     "registers": [
+      3,
+      2
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-wide",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0015",
+     "op": "iget-wide",
+     "registers": [
+      4,
+      7
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0017",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-eqz",
+     "registers": [
+      7
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->getMillis()J",
+   "access": 1,
+   "offset": 2913940,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-wide",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0002",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->hashCode()I",
+   "access": 1,
+   "offset": 2913696,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-wide",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L0004",
+     "op": "ushr-long",
+     "registers": [
+      2,
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "xor-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "long-to-int",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 31
+    },
+    {
+     "label": "L000a",
+     "op": "add-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 2913736,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6132325,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->toString(Z)Ljava/lang/String;"
+    },
+    {
+     "label": "L0004",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/UtcOffset;->toString(Z)Ljava/lang/String;",
+   "access": 1,
+   "offset": 2913764,
+   "registers": 11,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6143828,
+   "end": "L0050",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      9
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L0007",
+     "op": "const-wide/16",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "cmp-long",
+     "registers": [
+      5,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-ltz",
+     "registers": [
+      5
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000d",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->millisToHours(J)J"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/Math;->abs(J)J"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iget-wide",
+     "registers": [
+      4,
+      9
+     ],
+     "field": "Lbiweekly/util/UtcOffset;->millis:J"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->millisToMinutes(J)J"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/Math;->abs(J)J"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0027"
+    },
+    {
+     "label": "L0024",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 43
+    },
+    {
+     "label": "L0026",
+     "op": "goto",
+     "target": "L0029"
+    },
+    {
+     "label": "L0027",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 45
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L002c",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 48
+    },
+    {
+     "label": "L002e",
+     "op": "const-wide/16",
+     "registers": [
+      6
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L0030",
+     "op": "cmp-long",
+     "registers": [
+      8,
+      1,
+      6
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "if-gez",
+     "registers": [
+      8
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L003a",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L003c",
+     "op": "const/16",
+     "registers": [
+      10
+     ],
+     "literal": 58
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      10
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0041",
+     "op": "cmp-long",
+     "registers": [
+      10,
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "if-gez",
+     "registers": [
+      10
+     ],
+     "target": "L0048"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "return-object",
+     "registers": [
+      10
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

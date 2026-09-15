@@ -1,0 +1,773 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->EVENT_LIMIT:I",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->TAG:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;",
+   "access": 10
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->hasConnectNet:Z",
+   "access": 10
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;-><clinit>()V",
+   "access": 65544,
+   "offset": 3770212,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/concurrent/CopyOnWriteArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;-><init>()V",
+   "access": 65537,
+   "offset": 3770244,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->access$000()V",
+   "access": 4105,
+   "offset": 3770268,
+   "registers": 0,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->submitAllEvents()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->disableConnectNet()V",
+   "access": 9,
+   "offset": 3770292,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->hasConnectNet:Z"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->enableConnectNet()V",
+   "access": 9,
+   "offset": 3770316,
+   "registers": 3,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0022",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HaReport"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "sput-boolean",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->hasConnectNet:Z"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getInstance()Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getReportExecutor()Ljava/util/concurrent/ExecutorService;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/framework/common/hianalytics/InitReport$1;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/InitReport$1;-><init>()V"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;"
+    },
+    {
+     "label": "L0015",
+     "op": "return-void"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "the thread submit has fatal error!"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "the thread submit has rejectedExecutionException!"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L0015",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/util/concurrent/RejectedExecutionException;",
+       "target": "L001c"
+      }
+     ],
+     "all": "L0016"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->reportWhenInit(Ljava/lang/Runnable;)V",
+   "access": 9,
+   "offset": 3770416,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0036",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HaReport"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-boolean",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->hasConnectNet:Z"
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getInstance()Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getReportExecutor()Ljava/util/concurrent/ExecutorService;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "the thread submit has fatal error!"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0018",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "the thread submit has rejectedExecutionException!"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-void"
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L0026",
+     "op": "if-le",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0028",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "TAG"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "the event to be report when init exceed the limit!"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0030",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0035",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L0011",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/util/concurrent/RejectedExecutionException;",
+       "target": "L0018"
+      }
+     ],
+     "all": "L0012"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->submitAllEvents()V",
+   "access": 10,
+   "offset": 3770556,
+   "registers": 4,
+   "inputs": 0,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0038",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HaReport"
+    },
+    {
+     "label": "L0002",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/Runnable;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getInstance()Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/hianalytics/HianalyticsHelper;->getReportExecutor()Ljava/util/concurrent/ExecutorService;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;"
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L0020",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/framework/common/hianalytics/InitReport;->eventsToReport:Ljava/util/List;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->clear()V"
+    },
+    {
+     "label": "L0025",
+     "op": "return-void"
+    },
+    {
+     "label": "L0026",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "submit failed because of some exception"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L002b",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L002c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "event is null occured"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0031",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "submit failed of rejected execution exception"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0025",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/util/concurrent/RejectedExecutionException;",
+       "target": "L0032"
+      },
+      {
+       "type": "Ljava/lang/NullPointerException;",
+       "target": "L002c"
+      },
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L0026"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

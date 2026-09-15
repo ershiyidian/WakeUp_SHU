@@ -1,0 +1,2924 @@
+{
+ "class": "Lcom/huawei/hms/framework/common/CreateFileUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->EXTERNAL_FILE_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->EXTERNAL_INPUTSTREAM_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->EXTERNAL_OUTPUTSTREAM_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->HEX_DIGITS:[C",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->RANDOM_ACCESS_FILE_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->TAG:Ljava/lang/String;",
+   "access": 26
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;-><clinit>()V",
+   "access": 65544,
+   "offset": 3743960,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L0002",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[C"
+    },
+    {
+     "label": "L0004",
+     "op": "fill-array-data",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0007",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/framework/common/CreateFileUtil;->HEX_DIGITS:[C"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    },
+    {
+     "label": "L000a",
+     "op": "array-data-payload",
+     "element_width": 2,
+     "elements": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;-><init>()V",
+   "access": 65537,
+   "offset": 3744036,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->byteArrayToHex([B)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3743324,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "array-length",
+     "registers": [
+      0,
+      8
+     ]
+    },
+    {
+     "label": "L0001",
+     "op": "mul-int/lit8",
+     "registers": [
+      0,
+      0
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0003",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[C"
+    },
+    {
+     "label": "L0005",
+     "op": "array-length",
+     "registers": [
+      1,
+      8
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "if-ge",
+     "registers": [
+      2,
+      1
+     ],
+     "target": "L0023"
+    },
+    {
+     "label": "L000a",
+     "op": "aget-byte",
+     "registers": [
+      4,
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "add-int/lit8",
+     "registers": [
+      5,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000e",
+     "op": "sget-object",
+     "registers": [
+      6
+     ],
+     "field": "Lcom/huawei/hms/framework/common/CreateFileUtil;->HEX_DIGITS:[C"
+    },
+    {
+     "label": "L0010",
+     "op": "ushr-int/lit8",
+     "registers": [
+      7,
+      4
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0012",
+     "op": "and-int/lit8",
+     "registers": [
+      7,
+      7
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L0014",
+     "op": "aget-char",
+     "registers": [
+      7,
+      6,
+      7
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "aput-char",
+     "registers": [
+      7,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L001a",
+     "op": "and-int/lit8",
+     "registers": [
+      4,
+      4
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L001c",
+     "op": "aget-char",
+     "registers": [
+      4,
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "aput-char",
+     "registers": [
+      4,
+      0,
+      5
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "add-int/lit8",
+     "registers": [
+      2,
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0008"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Ljava/lang/String;-><init>([C)V"
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->deleteSecure(Ljava/io/File;)V",
+   "access": 9,
+   "offset": 3744060,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6151846,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/File;->exists()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/File;->delete()Z"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0010",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "deleteSecure exception"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->deleteSecure(Ljava/lang/String;)V",
+   "access": 9,
+   "offset": 3744120,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6132777,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFile(Ljava/lang/String;)Ljava/io/File;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->deleteSecure(Ljava/io/File;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->getCacheDirPath(Landroid/content/Context;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3743424,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0005"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0004",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ContextCompat;->getProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/content/Context;->getCacheDir()Ljava/io/File;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/File;->getPath()Ljava/lang/String;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->getCanonicalPath(Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3743476,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFile(Ljava/lang/String;)Ljava/io/File;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/File;->getCanonicalPath()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L000d",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0017"
+    },
+    {
+     "label": "L000f",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L001d"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "the canonicalPath has other Exception"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "the canonicalPath has securityException"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L001d",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "the canonicalPath has IOException"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0022",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L000a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L000f"
+      },
+      {
+       "type": "Ljava/lang/SecurityException;",
+       "target": "L000d"
+      },
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->getFileHashData(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+   "access": 9,
+   "offset": 3743584,
+   "registers": 12,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6111252,
+   "end": "L0088",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "Close FileInputStream failed!"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      11
+     ],
+     "method": "Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      10
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newSafeFileInputStream(Ljava/lang/String;)Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 1024
+    },
+    {
+     "label": "L000f",
+     "op": "new-array",
+     "registers": [
+      3,
+      3
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0011",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0013",
+     "op": "move-wide",
+     "registers": [
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      10,
+      3
+     ],
+     "method": "Ljava/io/FileInputStream;->read([B)I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0019",
+     "op": "if-eq",
+     "registers": [
+      8,
+      9
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      11,
+      3,
+      9,
+      8
+     ],
+     "method": "Ljava/security/MessageDigest;->update([BII)V"
+    },
+    {
+     "label": "L001f",
+     "op": "int-to-long",
+     "registers": [
+      8,
+      8
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "add-long/2addr",
+     "registers": [
+      6,
+      8
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "goto",
+     "target": "L0014"
+    },
+    {
+     "label": "L0022",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "move-object",
+     "registers": [
+      2,
+      10
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto/16",
+     "target": "L007e"
+    },
+    {
+     "label": "L0026",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "goto",
+     "target": "L0055"
+    },
+    {
+     "label": "L0028",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "goto",
+     "target": "L005d"
+    },
+    {
+     "label": "L002a",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "goto",
+     "target": "L0065"
+    },
+    {
+     "label": "L002c",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L006d"
+    },
+    {
+     "label": "L002e",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L0075"
+    },
+    {
+     "label": "L0030",
+     "op": "cmp-long",
+     "registers": [
+      3,
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "if-lez",
+     "registers": [
+      3
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      11
+     ],
+     "method": "Ljava/security/MessageDigest;->digest()[B"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-static",
+     "registers": [
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->byteArrayToHex([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Ljava/io/FileInputStream;->close()V"
+    },
+    {
+     "label": "L003f",
+     "op": "goto",
+     "target": "L007d"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L007d"
+    },
+    {
+     "label": "L0044",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "goto",
+     "target": "L007e"
+    },
+    {
+     "label": "L0046",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "move-object",
+     "registers": [
+      10,
+      2
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "goto",
+     "target": "L0055"
+    },
+    {
+     "label": "L0049",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "move-object",
+     "registers": [
+      10,
+      2
+     ]
+    },
+    {
+     "label": "L004b",
+     "op": "goto",
+     "target": "L005d"
+    },
+    {
+     "label": "L004c",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "move-object",
+     "registers": [
+      10,
+      2
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "goto",
+     "target": "L0065"
+    },
+    {
+     "label": "L004f",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0050",
+     "op": "move-object",
+     "registers": [
+      10,
+      2
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "goto",
+     "target": "L006d"
+    },
+    {
+     "label": "L0052",
+     "op": "move-exception",
+     "registers": [
+      11
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "move-object",
+     "registers": [
+      10,
+      2
+     ]
+    },
+    {
+     "label": "L0054",
+     "op": "goto",
+     "target": "L0075"
+    },
+    {
+     "label": "L0055",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getFileHashData IndexOutOfBoundsException"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3,
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L005a",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L007d"
+    },
+    {
+     "label": "L005c",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L005d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getFileHashData IllegalArgumentException"
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3,
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0062",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L007d"
+    },
+    {
+     "label": "L0064",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0065",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getFileHashData IOException"
+    },
+    {
+     "label": "L0067",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3,
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L006a",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L007d"
+    },
+    {
+     "label": "L006c",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L006d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getFileHashData FileNotFoundException"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3,
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L0072",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L007d"
+    },
+    {
+     "label": "L0074",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0075",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "getFileHashData NoSuchAlgorithmException"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      3,
+      11
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"
+    },
+    {
+     "label": "L007a",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L007d"
+    },
+    {
+     "label": "L007c",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L007d",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L007e",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0087"
+    },
+    {
+     "label": "L0080",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/io/FileInputStream;->close()V"
+    },
+    {
+     "label": "L0083",
+     "op": "goto",
+     "target": "L0087"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0087",
+     "op": "throw",
+     "registers": [
+      11
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0005",
+     "end": "L000d",
+     "handler": "H1"
+    },
+    {
+     "start": "L000f",
+     "end": "L003c",
+     "handler": "H12"
+    },
+    {
+     "start": "L003c",
+     "end": "L003f",
+     "handler": "H23"
+    },
+    {
+     "start": "L0055",
+     "end": "L007a",
+     "handler": "H27"
+    },
+    {
+     "start": "L0080",
+     "end": "L0083",
+     "handler": "H29"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0052"
+      },
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L004f"
+      },
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L004c"
+      },
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L0049"
+      },
+      {
+       "type": "Ljava/lang/IndexOutOfBoundsException;",
+       "target": "L0046"
+      }
+     ],
+     "all": "L0044"
+    },
+    {
+     "id": "H12",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L002e"
+      },
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L002c"
+      },
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L002a"
+      },
+      {
+       "type": "Ljava/lang/IllegalArgumentException;",
+       "target": "L0028"
+      },
+      {
+       "type": "Ljava/lang/IndexOutOfBoundsException;",
+       "target": "L0026"
+      }
+     ],
+     "all": "L0022"
+    },
+    {
+     "id": "H23",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0040"
+      }
+     ]
+    },
+    {
+     "id": "H27",
+     "catches": [],
+     "all": "L0022"
+    },
+    {
+     "id": "H29",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0084"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->isPVersion()Z",
+   "access": 9,
+   "offset": 3742476,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/EmuiUtil;->isUpPVersion()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFile(Ljava/lang/String;)Ljava/io/File;",
+   "access": 9,
+   "offset": 3742504,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/EmuiUtil;->isUpPVersion()Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.libcore.io.ExternalStorageFile"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ReflectionUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0018"
+    },
+    {
+     "label": "L0012",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/libcore/io/ExternalStorageFile;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/libcore/io/ExternalStorageFile;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFileInputStream(Ljava/lang/String;)Ljava/io/FileInputStream;",
+   "access": 9,
+   "offset": 3742692,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/EmuiUtil;->isUpPVersion()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.libcore.io.ExternalStorageFileInputStream"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ReflectionUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/libcore/io/ExternalStorageFileInputStream;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/libcore/io/ExternalStorageFileInputStream;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "newFileInputStream  file is null"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "file is null"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFileOutputStream(Ljava/io/File;)Ljava/io/FileOutputStream;",
+   "access": 9,
+   "offset": 3742892,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/EmuiUtil;->isUpPVersion()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.libcore.io.ExternalStorageFileOutputStream"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ReflectionUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/libcore/io/ExternalStorageFileOutputStream;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/libcore/io/ExternalStorageFileOutputStream;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/FileOutputStream;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "newFileOutputStream  file is null"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->e(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "file is null"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newRandomAccessFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/RandomAccessFile;",
+   "access": 9,
+   "offset": 3743092,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L001c"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/framework/common/EmuiUtil;->isUpPVersion()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.huawei.libcore.io.ExternalStorageRandomAccessFile"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/framework/common/ReflectionUtils;->checkCompatible(Ljava/lang/String;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/libcore/io/ExternalStorageRandomAccessFile;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/libcore/io/ExternalStorageRandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/RandomAccessFile;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "newFileOutputStream  file is null"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0025",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "file is null"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newSafeFile(Ljava/lang/String;)Ljava/io/File;",
+   "access": 9,
+   "offset": 3742580,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFile(Ljava/lang/String;)Ljava/io/File;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/File;->exists()Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFile is Throwable"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "goto",
+     "target": "L0021"
+    },
+    {
+     "label": "L001c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFile is runtimeException"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0021",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0026",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L0015",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L001c"
+      }
+     ],
+     "all": "L0016"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newSafeFileInputStream(Ljava/lang/String;)Ljava/io/FileInputStream;",
+   "access": 9,
+   "offset": 3742796,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFileInputStream(Ljava/lang/String;)Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileInputStream is Throwable"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileInputStream is runtimeException"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileInputStream is fileNotFoundException"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0006",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L0013"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L000d"
+      }
+     ],
+     "all": "L0007"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newSafeFileOutputStream(Ljava/io/File;)Ljava/io/FileOutputStream;",
+   "access": 9,
+   "offset": 3742996,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newFileOutputStream(Ljava/io/File;)Ljava/io/FileOutputStream;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileOutputStream is Throwable"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileOutputStream is runtimeException"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0013",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newFileOutputStream is fileNotFoundException"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/FileOutputStream;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0006",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L0013"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L000d"
+      }
+     ],
+     "all": "L0007"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newSafeRandomAccessFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/RandomAccessFile;",
+   "access": 9,
+   "offset": 3743196,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L002d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "CreateFileUtil"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/framework/common/CreateFileUtil;->newRandomAccessFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/RandomAccessFile;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newRandomAccessFile is Throwable"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newRandomAccessFile is runtimeException"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0014",
+     "op": "goto",
+     "target": "L001a"
+    },
+    {
+     "label": "L0015",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "newRandomAccessFile is fileNotFoundException"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/RandomAccessFile;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "newRandomAccessFile  file is null"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/framework/common/Logger;->w(Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0025",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/io/FileNotFoundException;"
+    },
+    {
+     "label": "L0027",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "file is null"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L002c",
+     "op": "throw",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L0008",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/FileNotFoundException;",
+       "target": "L0015"
+      },
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L000f"
+      }
+     ],
+     "all": "L0009"
+    }
+   ]
+  }
+ ]
+}

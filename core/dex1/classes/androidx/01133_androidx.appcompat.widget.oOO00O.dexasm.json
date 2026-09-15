@@ -1,0 +1,408 @@
+{
+ "class": "Landroidx/appcompat/widget/oOO00O;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Landroidx/appcompat/widget/oOO00O;->OooO0oO:I",
+   "access": 4113
+  },
+  {
+   "name": "Landroidx/appcompat/widget/oOO00O;->OooO0oo:Landroidx/appcompat/widget/o00O00OO;",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Landroidx/appcompat/widget/oOO00O;-><init>(Landroidx/appcompat/widget/o00O00OO;I)V",
+   "access": 69633,
+   "offset": 2148800,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6113619,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/oOO00O;->OooO0oO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/oOO00O;->OooO0oo:Landroidx/appcompat/widget/o00O00OO;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroidx/appcompat/widget/oOO00O;->run()V",
+   "access": 17,
+   "offset": 2148832,
+   "registers": 13,
+   "inputs": 1,
+   "outputs": 8,
+   "debug_offset": 6109927,
+   "end": "L0054",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget",
+     "registers": [
+      0,
+      12
+     ],
+     "field": "Landroidx/appcompat/widget/oOO00O;->OooO0oO:I"
+    },
+    {
+     "label": "L0002",
+     "op": "packed-switch",
+     "registers": [
+      0
+     ],
+     "target": "L004e"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      0,
+      12
+     ],
+     "field": "Landroidx/appcompat/widget/oOO00O;->OooO0oo:Landroidx/appcompat/widget/o00O00OO;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/appcompat/widget/o00O00OO;->OooO00o()V"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o00O00OO;->OooOO0:Landroid/view/View;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/view/View;->isEnabled()Z"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L003d"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/view/View;->isLongClickable()Z"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0019"
+    },
+    {
+     "label": "L0018",
+     "op": "goto",
+     "target": "L003d"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroidx/appcompat/widget/o00O00OO;->OooO0OO()Z"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L003d"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/view/View;->getParent()Landroid/view/ViewParent;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-static",
+     "method": "Landroid/os/SystemClock;->uptimeMillis()J"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L002d",
+     "op": "const/4",
+     "registers": [
+      9
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002e",
+     "op": "const/4",
+     "registers": [
+      10
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L002f",
+     "op": "const/4",
+     "registers": [
+      11
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0030",
+     "op": "move-wide",
+     "registers": [
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-static/range",
+     "registers": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "method": "Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Landroid/view/MotionEvent;->recycle()V"
+    },
+    {
+     "label": "L003b",
+     "op": "iput-boolean",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o00O00OO;->OooOOO0:Z"
+    },
+    {
+     "label": "L003d",
+     "op": "return-void"
+    },
+    {
+     "label": "L003e",
+     "op": "iget-object",
+     "registers": [
+      0,
+      12
+     ],
+     "field": "Landroidx/appcompat/widget/oOO00O;->OooO0oo:Landroidx/appcompat/widget/o00O00OO;"
+    },
+    {
+     "label": "L0040",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o00O00OO;->OooOO0:Landroid/view/View;"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/view/View;->getParent()Landroid/view/ViewParent;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0048",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V"
+    },
+    {
+     "label": "L004c",
+     "op": "return-void"
+    },
+    {
+     "label": "L004d",
+     "op": "nop"
+    },
+    {
+     "label": "L004e",
+     "op": "packed-switch-payload",
+     "first_key": 0,
+     "switch": "L0002",
+     "targets": [
+      "L003e"
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

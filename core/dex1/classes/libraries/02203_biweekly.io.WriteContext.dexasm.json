@@ -1,0 +1,367 @@
+{
+ "class": "Lbiweekly/io/WriteContext;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/WriteContext;->dates:Ljava/util/List;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->globalTimezone:Lbiweekly/io/TimezoneAssignment;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->parent:Lbiweekly/component/ICalComponent;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->timezoneOptions:Lbiweekly/io/TimezoneInfo;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->version:Lbiweekly/ICalVersion;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/WriteContext;-><init>(Lbiweekly/ICalVersion;Lbiweekly/io/TimezoneInfo;Lbiweekly/io/TimezoneAssignment;)V",
+   "access": 65537,
+   "offset": 2775640,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 1,
+   "debug_offset": 6110058,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->dates:Ljava/util/List;"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000c",
+     "op": "iput-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->timezoneOptions:Lbiweekly/io/TimezoneInfo;"
+    },
+    {
+     "label": "L000e",
+     "op": "iput-object",
+     "registers": [
+      4,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->globalTimezone:Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0010",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->addDate(Lbiweekly/util/ICalDate;ZLjava/util/TimeZone;)V",
+   "access": 1,
+   "offset": 2775692,
+   "registers": 5,
+   "inputs": 4,
+   "outputs": 2,
+   "debug_offset": 6110058,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/ICalDate;->hasTime()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->dates:Ljava/util/List;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->getDates()Ljava/util/List;",
+   "access": 1,
+   "offset": 2775616,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->dates:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->getGlobalTimezone()Lbiweekly/io/TimezoneAssignment;",
+   "access": 1,
+   "offset": 2775568,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->globalTimezone:Lbiweekly/io/TimezoneAssignment;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->getParent()Lbiweekly/component/ICalComponent;",
+   "access": 1,
+   "offset": 2775544,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->parent:Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->getTimezoneInfo()Lbiweekly/io/TimezoneInfo;",
+   "access": 1,
+   "offset": 2775592,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->timezoneOptions:Lbiweekly/io/TimezoneInfo;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->getVersion()Lbiweekly/ICalVersion;",
+   "access": 1,
+   "offset": 2775520,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/WriteContext;->version:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/WriteContext;->setParent(Lbiweekly/component/ICalComponent;)V",
+   "access": 1,
+   "offset": 2775744,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/WriteContext;->parent:Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

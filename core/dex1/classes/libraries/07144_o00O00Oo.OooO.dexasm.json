@@ -1,0 +1,538 @@
+{
+ "class": "Lo00O00Oo/OooO;",
+ "super": "Landroid/os/AsyncTask;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lo00O00Oo/OooO;->OooO00o:Z",
+   "access": 73
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo00O00Oo/OooO;->OooO00o()V",
+   "access": 9,
+   "offset": 5394240,
+   "registers": 10,
+   "inputs": 0,
+   "outputs": 4,
+   "debug_offset": 6109927,
+   "end": "L0047",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "sget-boolean",
+     "registers": [
+      1
+     ],
+     "field": "Lo00O00Oo/OooO;->OooO00o:Z"
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0005",
+     "op": "goto",
+     "target": "L0046"
+    },
+    {
+     "label": "L0006",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lo00o00Oo/Oooo000;->OooOOO0:Landroid/content/Context;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L000a",
+     "op": "goto",
+     "target": "L0046"
+    },
+    {
+     "label": "L000b",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O00Oo/OooO;->OooO00o:Z"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooO0o0(Landroid/content/Context;)Landroid/content/SharedPreferences;"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "lastCheckTime"
+    },
+    {
+     "label": "L0013",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "method": "Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "sub-long",
+     "registers": [
+      4,
+      6,
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const-wide/32",
+     "registers": [
+      8
+     ],
+     "literal": 432000000
+    },
+    {
+     "label": "L0022",
+     "op": "cmp-long",
+     "registers": [
+      2,
+      4,
+      8
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-lez",
+     "registers": [
+      2
+     ],
+     "target": "L0046"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooO0o0(Landroid/content/Context;)Landroid/content/SharedPreferences;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3,
+      6,
+      7
+     ],
+     "method": "Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/content/SharedPreferences$Editor;->apply()V"
+    },
+    {
+     "label": "L0035",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lo00O00Oo/OooO;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/os/AsyncTask;-><init>()V"
+    },
+    {
+     "label": "L003a",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[Landroid/content/Context;"
+    },
+    {
+     "label": "L003c",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lo00o00Oo/Oooo000;->OooOOO0:Landroid/content/Context;"
+    },
+    {
+     "label": "L003e",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003f",
+     "op": "aput-object",
+     "registers": [
+      2,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;"
+    },
+    {
+     "label": "L0046",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O00Oo/OooO;->doInBackground([Ljava/lang/Object;)Ljava/lang/Object;",
+   "access": 17,
+   "offset": 5394144,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "[Landroid/content/Context;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0006",
+     "op": "aget-object",
+     "registers": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lo00O00Oo/OooO0o;->OooO0oo(Landroid/content/Context;)Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "goto",
+     "target": "L0012"
+    },
+    {
+     "label": "L000d",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0015",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L001d"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lo00o00Oo/o00oO0o;->OooO00o(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L001a",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L001c",
+     "op": "goto",
+     "target": "L001f"
+    },
+    {
+     "label": "L001d",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L000c",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L000d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lo00O00Oo/OooO;->onPostExecute(Ljava/lang/Object;)V",
+   "access": 17,
+   "offset": 5394400,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Boolean;->booleanValue()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O00Oo/OooO;->onPreExecute()V",
+   "access": 17,
+   "offset": 5394428,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0001",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo00O00Oo/OooO;->onProgressUpdate([Ljava/lang/Object;)V",
+   "access": 17,
+   "offset": 5394448,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "[Ljava/lang/Integer;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

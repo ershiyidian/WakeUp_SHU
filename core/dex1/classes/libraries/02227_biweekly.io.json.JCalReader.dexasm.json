@@ -1,0 +1,976 @@
+{
+ "class": "Lbiweekly/io/json/JCalReader;",
+ "super": "Lbiweekly/io/StreamReader;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->icalScribe:Lbiweekly/io/scribe/component/ICalendarScribe;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><clinit>()V",
+   "access": 65544,
+   "offset": 2786520,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getICalendarScribe()Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->icalScribe:Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><init>(Lcom/fasterxml/jackson/core/JsonParser;)V",
+   "access": 65537,
+   "offset": 2786552,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6138287,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/StreamReader;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;-><init>(Lcom/fasterxml/jackson/core/JsonParser;Z)V"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L000b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/File;)V",
+   "access": 65537,
+   "offset": 2786592,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6120931,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/BufferedReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/Utf8Reader;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/util/Utf8Reader;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/InputStream;)V",
+   "access": 65537,
+   "offset": 2786636,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/Utf8Reader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/util/Utf8Reader;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/Reader;)V",
+   "access": 65537,
+   "offset": 2786672,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6133250,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/StreamReader;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 2786712,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/StringReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/io/StringReader;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalReader;-><init>(Ljava/io/Reader;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$100(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786136,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1000(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786160,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1100(Lbiweekly/io/json/JCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2786448,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1200(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786184,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1300(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786208,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1400(Lbiweekly/io/json/JCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2786472,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1500(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2786376,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$1600()Lbiweekly/io/scribe/component/ICalendarScribe;",
+   "access": 4105,
+   "offset": 2786424,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->icalScribe:Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$200(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/json/JCalRawReader;",
+   "access": 4105,
+   "offset": 2786352,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$300(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786232,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$400(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786256,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$500(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/scribe/ScribeIndex;",
+   "access": 4105,
+   "offset": 2786400,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$600(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786280,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$700(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786304,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$800(Lbiweekly/io/json/JCalReader;)Ljava/util/List;",
+   "access": 4105,
+   "offset": 2786496,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->warnings:Ljava/util/List;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->access$900(Lbiweekly/io/json/JCalReader;)Lbiweekly/io/ParseContext;",
+   "access": 4105,
+   "offset": 2786328,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      0
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->_readNext()Lbiweekly/ICalendar;",
+   "access": 1,
+   "offset": 2786056,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0020",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->eof()Z"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lbiweekly/io/StreamReader;->context:Lbiweekly/io/ParseContext;"
+    },
+    {
+     "label": "L000c",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/ICalVersion;->V2_0:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/ParseContext;->setVersion(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;-><init>(Lbiweekly/io/json/JCalReader;Lbiweekly/io/json/JCalReader$1;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->readNext(Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalReader$JCalDataStreamListenerImpl;->getICalendar()Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalReader;->close()V",
+   "access": 1,
+   "offset": 2786748,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalReader;->reader:Lbiweekly/io/json/JCalRawReader;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->close()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

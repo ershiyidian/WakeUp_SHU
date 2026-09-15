@@ -1,0 +1,735 @@
+{
+ "class": "Lcom/huawei/hms/core/aidl/MessageCodecV2;",
+ "super": "Lcom/huawei/hms/core/aidl/MessageCodec;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/core/aidl/MessageCodecV2;-><init>()V",
+   "access": 65537,
+   "offset": 3735416,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/core/aidl/MessageCodec;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/core/aidl/MessageCodecV2;->readList(Ljava/lang/reflect/Type;Landroid/os/Bundle;)Ljava/util/List;",
+   "access": 1,
+   "offset": 3735164,
+   "registers": 10,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6111252,
+   "end": "L0076",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "_list_size_"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      0
+     ],
+     "method": "Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(I)V"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000c",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000d",
+     "op": "if-ge",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0075"
+    },
+    {
+     "label": "L000f",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "_list_item_"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      4
+     ],
+     "method": "Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->isPrimitive()Z"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L006f"
+    },
+    {
+     "label": "L002b",
+     "op": "instance-of",
+     "registers": [
+      5,
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L006f"
+    },
+    {
+     "label": "L002f",
+     "op": "instance-of",
+     "registers": [
+      5,
+      4
+     ],
+     "type": "Ljava/io/Serializable;"
+    },
+    {
+     "label": "L0031",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L006f"
+    },
+    {
+     "label": "L0034",
+     "op": "instance-of",
+     "registers": [
+      5,
+      4
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0036",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L0072"
+    },
+    {
+     "label": "L0038",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L003a",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L003c",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5,
+      6
+     ],
+     "method": "Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0042",
+     "op": "if-eq",
+     "registers": [
+      5,
+      6
+     ],
+     "target": "L0067"
+    },
+    {
+     "label": "L0044",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L005f"
+    },
+    {
+     "label": "L0046",
+     "op": "move-object",
+     "registers": [
+      5,
+      8
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/reflect/ParameterizedType;"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "aget-object",
+     "registers": [
+      5,
+      5,
+      2
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/lang/Class;"
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->newInstance()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "check-cast",
+     "registers": [
+      5
+     ],
+     "type": "Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      4,
+      5
+     ],
+     "method": "Lcom/huawei/hms/core/aidl/MessageCodec;->decode(Landroid/os/Bundle;Lcom/huawei/hms/core/aidl/IMessageEntity;)Lcom/huawei/hms/core/aidl/IMessageEntity;"
+    },
+    {
+     "label": "L005a",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L005e",
+     "op": "goto",
+     "target": "L0072"
+    },
+    {
+     "label": "L005f",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/lang/InstantiationException;"
+    },
+    {
+     "label": "L0061",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "Unknown type can not be supported"
+    },
+    {
+     "label": "L0063",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      9
+     ],
+     "method": "Ljava/lang/InstantiationException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0066",
+     "op": "throw",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0067",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/lang/InstantiationException;"
+    },
+    {
+     "label": "L0069",
+     "op": "const-string",
+     "registers": [
+      9
+     ],
+     "string": "Nested List can not be supported"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      9
+     ],
+     "method": "Ljava/lang/InstantiationException;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L006e",
+     "op": "throw",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0072",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0074",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L0075",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/core/aidl/MessageCodecV2;->writeList(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V",
+   "access": 1,
+   "offset": 3735440,
+   "registers": 8,
+   "inputs": 4,
+   "outputs": 4,
+   "debug_offset": 6110058,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "_val_type_"
+    },
+    {
+     "label": "L0007",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "_list_size_"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2,
+      1
+     ],
+     "method": "Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "if-ge",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L001b",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "_list_item_"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOO0(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      6,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/core/aidl/MessageCodec;->writeValue(Ljava/lang/String;Ljava/lang/Object;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L0028",
+     "op": "add-int/lit8",
+     "registers": [
+      1,
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L002a",
+     "op": "goto",
+     "target": "L0015"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      5,
+      0
+     ],
+     "method": "Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

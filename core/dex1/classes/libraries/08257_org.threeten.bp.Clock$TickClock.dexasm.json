@@ -1,0 +1,975 @@
+{
+ "class": "Lorg/threeten/bp/Clock$TickClock;",
+ "super": "Lorg/threeten/bp/OooO00o;",
+ "access": 16,
+ "fields": [
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->serialVersionUID:J",
+   "access": 26
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;",
+   "access": 18
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;-><init>(Lorg/threeten/bp/OooO00o;J)V",
+   "access": 65537,
+   "offset": 5939400,
+   "registers": 4,
+   "inputs": 4,
+   "outputs": 1,
+   "debug_offset": 6110327,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-wide",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0007",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->equals(Ljava/lang/Object;)Z",
+   "access": 1,
+   "offset": 5938912,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "instance-of",
+     "registers": [
+      0,
+      7
+     ],
+     "type": "Lorg/threeten/bp/Clock$TickClock;"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0005",
+     "op": "check-cast",
+     "registers": [
+      7
+     ],
+     "type": "Lorg/threeten/bp/Clock$TickClock;"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      2,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-wide",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0013",
+     "op": "iget-wide",
+     "registers": [
+      4,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0015",
+     "op": "cmp-long",
+     "registers": [
+      7,
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0019",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001a",
+     "op": "return",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->getZone()Lorg/threeten/bp/ZoneId;",
+   "access": 1,
+   "offset": 5939368,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->getZone()Lorg/threeten/bp/ZoneId;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->hashCode()I",
+   "access": 1,
+   "offset": 5938984,
+   "registers": 6,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->hashCode()I"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      5
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0008",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 32
+    },
+    {
+     "label": "L000a",
+     "op": "ushr-long",
+     "registers": [
+      3,
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "xor-long/2addr",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "long-to-int",
+     "registers": [
+      2,
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "xor-int/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->instant()Lorg/threeten/bp/Instant;",
+   "access": 1,
+   "offset": 5939244,
+   "registers": 8,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6109927,
+   "end": "L0035",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-wide",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0002",
+     "op": "const-wide/32",
+     "registers": [
+      2
+     ],
+     "literal": 1000000
+    },
+    {
+     "label": "L0005",
+     "op": "rem-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "const-wide/16",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0008",
+     "op": "cmp-long",
+     "registers": [
+      6,
+      0,
+      4
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L001f"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->millis()J"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "iget-wide",
+     "registers": [
+      4,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0014",
+     "op": "div-long/2addr",
+     "registers": [
+      4,
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooOo0o(JJ)J"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "sub-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/threeten/bp/Instant;->ofEpochMilli(J)Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->instant()Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/Instant;->getNano()I"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "int-to-long",
+     "registers": [
+      1,
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "iget-wide",
+     "registers": [
+      3,
+      7
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooOo0o(JJ)J"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/Instant;->minusNanos(J)Lorg/threeten/bp/Instant;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->millis()J",
+   "access": 1,
+   "offset": 5939120,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6110028,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->millis()J"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-wide",
+     "registers": [
+      2,
+      6
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0008",
+     "op": "const-wide/32",
+     "registers": [
+      4
+     ],
+     "literal": 1000000
+    },
+    {
+     "label": "L000b",
+     "op": "div-long/2addr",
+     "registers": [
+      2,
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "method": "Lo00O00Oo/OooOO0;->OooOo0o(JJ)J"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-wide",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sub-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->toString()Ljava/lang/String;",
+   "access": 1,
+   "offset": 5939032,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0024",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "TickClock["
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000c",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": ","
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/Duration;->ofNanos(J)Lorg/threeten/bp/Duration;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "]"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lorg/threeten/bp/Clock$TickClock;->withZone(Lorg/threeten/bp/ZoneId;)Lorg/threeten/bp/OooO00o;",
+   "access": 1,
+   "offset": 5939172,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6109890,
+   "end": "L001b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->getZone()Lorg/threeten/bp/ZoneId;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lorg/threeten/bp/ZoneId;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lorg/threeten/bp/Clock$TickClock;"
+    },
+    {
+     "label": "L000f",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->baseClock:Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      4
+     ],
+     "method": "Lorg/threeten/bp/OooO00o;->withZone(Lorg/threeten/bp/ZoneId;)Lorg/threeten/bp/OooO00o;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "iget-wide",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lorg/threeten/bp/Clock$TickClock;->tickNanos:J"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      4,
+      1,
+      2
+     ],
+     "method": "Lorg/threeten/bp/Clock$TickClock;-><init>(Lorg/threeten/bp/OooO00o;J)V"
+    },
+    {
+     "label": "L001a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,936 @@
+{
+ "class": "Lcom/huawei/hms/analytics/element/i;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/element/i;->a:Landroid/view/View$OnClickListener;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/element/i;->b:Ljava/lang/ref/WeakReference;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/element/i;-><init>(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V",
+   "access": 65537,
+   "offset": 3628616,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/element/i;->a:Landroid/view/View$OnClickListener;"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/ref/WeakReference;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/element/i;->b:Ljava/lang/ref/WeakReference;"
+    },
+    {
+     "label": "L000c",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/element/i;->onClick(Landroid/view/View;)V",
+   "access": 17,
+   "offset": 3628660,
+   "registers": 13,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L00dd",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "HiAnalyticsOnClickListener"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->nanoTime()J"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "iget-object",
+     "registers": [
+      3,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/element/i;->b:Ljava/lang/ref/WeakReference;"
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L00a1"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/ref/Reference;->get()Ljava/lang/Object;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L0010",
+     "op": "goto/16",
+     "target": "L00a1"
+    },
+    {
+     "label": "L0012",
+     "op": "if-nez",
+     "registers": [
+      12
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "view is null"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->d(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "goto/16",
+     "target": "L00ba"
+    },
+    {
+     "label": "L001b",
+     "op": "move-exception",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "goto/16",
+     "target": "L00a5"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->currentTimeMillis()J"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-wide",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "sget",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/huawei/hms/analytics/element/R$id;->analytics_kit_onclick_timestamp_id:I"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      12,
+      5
+     ],
+     "method": "Landroid/view/View;->getTag(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-static",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Long;->parseLong(Ljava/lang/String;)J"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-wide",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "sub-long",
+     "registers": [
+      6,
+      3,
+      6
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "const-wide/16",
+     "registers": [
+      8
+     ],
+     "literal": 500
+    },
+    {
+     "label": "L0038",
+     "op": "cmp-long",
+     "registers": [
+      10,
+      6,
+      8
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "if-gez",
+     "registers": [
+      10
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L003c",
+     "op": "goto/16",
+     "target": "L00ba"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/String;->valueOf(J)Ljava/lang/String;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-virtual",
+     "registers": [
+      12,
+      5,
+      3
+     ],
+     "method": "Landroid/view/View;->setTag(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L0045",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "TrackElementManager"
+    },
+    {
+     "label": "L0047",
+     "op": "if-nez",
+     "registers": [
+      12
+     ],
+     "target": "L004f"
+    },
+    {
+     "label": "L0049",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "view is null, can not on event!"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L004e",
+     "op": "goto",
+     "target": "L00ba"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-static",
+     "registers": [
+      12
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/f;->a(Landroid/view/View;)Landroid/app/Activity;"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L0055",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "get activity is null"
+    },
+    {
+     "label": "L0057",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005a",
+     "op": "goto",
+     "target": "L00ba"
+    },
+    {
+     "label": "L005b",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": ""
+    },
+    {
+     "label": "L005d",
+     "op": "instance-of",
+     "registers": [
+      5,
+      12
+     ],
+     "type": "Landroid/widget/TextView;"
+    },
+    {
+     "label": "L005f",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L006c"
+    },
+    {
+     "label": "L0061",
+     "op": "move-object",
+     "registers": [
+      3,
+      12
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/widget/TextView;"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "instance-of",
+     "registers": [
+      5,
+      12
+     ],
+     "type": "Landroid/widget/ImageView;"
+    },
+    {
+     "label": "L006e",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L007b"
+    },
+    {
+     "label": "L0070",
+     "op": "move-object",
+     "registers": [
+      3,
+      12
+     ]
+    },
+    {
+     "label": "L0071",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/widget/ImageView;"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;"
+    },
+    {
+     "label": "L0076",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+     "label": "L007a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-virtual",
+     "registers": [
+      12
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L007e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L007f",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0082",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0083",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L0086",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0087",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;"
+    },
+    {
+     "label": "L008a",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L008b",
+     "op": "new-instance",
+     "registers": [
+      7
+     ],
+     "type": "Landroid/os/Bundle;"
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-direct",
+     "registers": [
+      7
+     ],
+     "method": "Landroid/os/Bundle;-><init>()V"
+    },
+    {
+     "label": "L0090",
+     "op": "const-string",
+     "registers": [
+      8
+     ],
+     "string": "$ElementType"
+    },
+    {
+     "label": "L0092",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      8,
+      5
+     ],
+     "method": "Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0095",
+     "op": "const-string",
+     "registers": [
+      8
+     ],
+     "string": "$Label"
+    },
+    {
+     "label": "L0097",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      8,
+      3
+     ],
+     "method": "Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L009a",
+     "op": "invoke-static",
+     "registers": [
+      12,
+      7,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/b;->a(Landroid/view/View;Landroid/os/Bundle;Landroid/app/Activity;)V"
+    },
+    {
+     "label": "L009d",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      5,
+      3,
+      7
+     ],
+     "method": "Lcom/huawei/hms/analytics/element/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V"
+    },
+    {
+     "label": "L00a0",
+     "op": "goto",
+     "target": "L00ba"
+    },
+    {
+     "label": "L00a1",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "mActivityWeakReference get is null"
+    },
+    {
+     "label": "L00a3",
+     "op": "goto/16",
+     "target": "L0016"
+    },
+    {
+     "label": "L00a5",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00a7",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": "track element error: "
+    },
+    {
+     "label": "L00a9",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00ac",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L00af",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L00b0",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00b3",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00b6",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L00b7",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00ba",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00bc",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "trackView time cost#"
+    },
+    {
+     "label": "L00be",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00c1",
+     "op": "invoke-static",
+     "method": "Ljava/lang/System;->nanoTime()J"
+    },
+    {
+     "label": "L00c4",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00c5",
+     "op": "sub-long/2addr",
+     "registers": [
+      4,
+      1
+     ]
+    },
+    {
+     "label": "L00c6",
+     "op": "long-to-float",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L00c7",
+     "op": "const",
+     "registers": [
+      2
+     ],
+     "literal": 1232348160
+    },
+    {
+     "label": "L00ca",
+     "op": "div-float/2addr",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L00cb",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L00ce",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L00d1",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00d2",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->d(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00d5",
+     "op": "iget-object",
+     "registers": [
+      0,
+      11
+     ],
+     "field": "Lcom/huawei/hms/analytics/element/i;->a:Landroid/view/View$OnClickListener;"
+    },
+    {
+     "label": "L00d7",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00dc"
+    },
+    {
+     "label": "L00d9",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      12
+     ],
+     "method": "Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V"
+    },
+    {
+     "label": "L00dc",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0006",
+     "end": "L0045",
+     "handler": "H1"
+    },
+    {
+     "start": "L0049",
+     "end": "L00a3",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L001b"
+    }
+   ]
+  }
+ ]
+}

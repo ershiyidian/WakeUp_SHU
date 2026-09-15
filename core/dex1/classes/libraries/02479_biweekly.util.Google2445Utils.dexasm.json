@@ -1,0 +1,2331 @@
+{
+ "class": "Lbiweekly/util/Google2445Utils;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/util/Google2445Utils;-><init>()V",
+   "access": 65538,
+   "offset": 2902160,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/ICalDate;",
+   "access": 9,
+   "offset": 2900880,
+   "registers": 5,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6143492,
+   "end": "L004b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Calendar;->clear()V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      0
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "sub-int/2addr",
+     "registers": [
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      0
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L0018",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0,
+      1
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L0020",
+     "op": "instance-of",
+     "registers": [
+      0,
+      3
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0024",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0026",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 11
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->hour()I"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      2
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L002f",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->minute()I"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      2
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L0038",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->second()I"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      1,
+      3
+     ],
+     "method": "Ljava/util/Calendar;->set(II)V"
+    },
+    {
+     "label": "L0041",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Calendar;->getTime()Ljava/util/Date;"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;-><init>(Ljava/util/Date;Z)V"
+    },
+    {
+     "label": "L004a",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/DateTimeComponents;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2901808,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 7,
+   "debug_offset": 6143508,
+   "end": "L0036",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->hasTime()Z"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getYear()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getMonth()I"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getDate()I"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getHour()I"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getMinute()I"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getSecond()I"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-direct/range",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;-><init>(IIIIII)V"
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateValueImpl;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getYear()I"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getMonth()I"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;->getDate()I"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      2,
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValueImpl;-><init>(III)V"
+    },
+    {
+     "label": "L0035",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2901932,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 7,
+   "debug_offset": 6143524,
+   "end": "L002f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->setTime(Ljava/util/Date;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;"
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      2
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "add-int/2addr",
+     "registers": [
+      2,
+      7
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "const/16",
+     "registers": [
+      7
+     ],
+     "literal": 11
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "const/16",
+     "registers": [
+      7
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "const/16",
+     "registers": [
+      7
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      7
+     ],
+     "method": "Ljava/util/Calendar;->get(I)I"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateTimeValueImpl;-><init>(IIIIII)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convertFromRawComponents(Lbiweekly/util/ICalDate;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2902044,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0010",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDate;->getRawComponents()Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L000b"
+    },
+    {
+     "label": "L0006",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;-><init>(Ljava/util/Date;)V"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/DateTimeComponents;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convertUtc(Lbiweekly/util/com/google/ical/values/DateValue;)Lbiweekly/util/ICalDate;",
+   "access": 9,
+   "offset": 2901048,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110395,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/Google2445Utils;->utc()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->convertUtc(Lbiweekly/util/ICalDate;)Lbiweekly/util/com/google/ical/values/DateValue;",
+   "access": 9,
+   "offset": 2902092,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110400,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/util/Google2445Utils;->utc()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->createRecurrenceIterable(Lbiweekly/util/Recurrence;Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterable;",
+   "access": 9,
+   "offset": 2901636,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RecurrenceIteratorFactory;->createRecurrenceIterable(Lbiweekly/util/Recurrence;Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterable;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->createRecurrenceIterator(Lbiweekly/util/Recurrence;Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;",
+   "access": 9,
+   "offset": 2901672,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110058,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->convert(Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/values/DateValue;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RecurrenceIteratorFactory;->createRecurrenceIterator(Lbiweekly/util/Recurrence;Lbiweekly/util/com/google/ical/values/DateValue;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->getDateIterator(Lbiweekly/component/ICalComponent;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/compat/javautil/DateIterator;",
+   "access": 9,
+   "offset": 2901084,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6113642,
+   "end": "L010c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/DateStart;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperty(Ljava/lang/Class;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/DateStart;"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue(Lbiweekly/property/ValuedProperty;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/util/ICalDate;->hasTime()Z"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-static",
+     "method": "Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L0021",
+     "op": "const-class",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/property/RecurrenceRule;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties(Ljava/lang/Class;)Ljava/util/List;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0047"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/RecurrenceRule;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue(Lbiweekly/property/ValuedProperty;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/Recurrence;"
+    },
+    {
+     "label": "L003d",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L002b"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-static",
+     "registers": [
+      3,
+      0,
+      6
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->createRecurrenceIterator(Lbiweekly/util/Recurrence;Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0046",
+     "op": "goto",
+     "target": "L002b"
+    },
+    {
+     "label": "L0047",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L004c",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/RecurrenceDates;"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties(Ljava/lang/Class;)Ljava/util/List;"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0055",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0059",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L006a"
+    },
+    {
+     "label": "L005c",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L005f",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0060",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/property/RecurrenceDates;"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/RecurrenceDates;->getDates()Ljava/util/List;"
+    },
+    {
+     "label": "L0065",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L0069",
+     "op": "goto",
+     "target": "L0056"
+    },
+    {
+     "label": "L006a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->isEmpty()Z"
+    },
+    {
+     "label": "L006d",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L006e",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0078"
+    },
+    {
+     "label": "L0070",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;"
+    },
+    {
+     "label": "L0072",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0078",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->isEmpty()Z"
+    },
+    {
+     "label": "L007b",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0092"
+    },
+    {
+     "label": "L007e",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0086"
+    },
+    {
+     "label": "L0080",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/util/Google2445Utils$EmptyDateIterator;"
+    },
+    {
+     "label": "L0082",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/util/Google2445Utils$EmptyDateIterator;-><init>()V"
+    },
+    {
+     "label": "L0085",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0086",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;"
+    },
+    {
+     "label": "L0088",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;"
+    },
+    {
+     "label": "L008b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L008f",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0092",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0094",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0097",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00bf"
+    },
+    {
+     "label": "L0099",
+     "op": "const-class",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/property/ExceptionRule;"
+    },
+    {
+     "label": "L009b",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties(Ljava/lang/Class;)Ljava/util/List;"
+    },
+    {
+     "label": "L009e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L009f",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L00a2",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L00a3",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L00a6",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00a7",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L00bf"
+    },
+    {
+     "label": "L00a9",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L00ac",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00ad",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/property/ExceptionRule;"
+    },
+    {
+     "label": "L00af",
+     "op": "invoke-static",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue(Lbiweekly/property/ValuedProperty;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L00b2",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00b3",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/Recurrence;"
+    },
+    {
+     "label": "L00b5",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L00a3"
+    },
+    {
+     "label": "L00b7",
+     "op": "invoke-static",
+     "registers": [
+      4,
+      0,
+      6
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->createRecurrenceIterator(Lbiweekly/util/Recurrence;Lbiweekly/util/ICalDate;Ljava/util/TimeZone;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L00ba",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L00bb",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00be",
+     "op": "goto",
+     "target": "L00a3"
+    },
+    {
+     "label": "L00bf",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L00c1",
+     "op": "invoke-direct",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L00c4",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/ExceptionDates;"
+    },
+    {
+     "label": "L00c6",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperties(Ljava/lang/Class;)Ljava/util/List;"
+    },
+    {
+     "label": "L00c9",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00ca",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L00cd",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00ce",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L00d1",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00d2",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00e2"
+    },
+    {
+     "label": "L00d4",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L00d7",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00d8",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/property/ExceptionDates;"
+    },
+    {
+     "label": "L00da",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/ListProperty;->getValues()Ljava/util/List;"
+    },
+    {
+     "label": "L00dd",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00de",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z"
+    },
+    {
+     "label": "L00e1",
+     "op": "goto",
+     "target": "L00ce"
+    },
+    {
+     "label": "L00e2",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/util/ArrayList;->isEmpty()Z"
+    },
+    {
+     "label": "L00e5",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00e6",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L00f0"
+    },
+    {
+     "label": "L00e8",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;"
+    },
+    {
+     "label": "L00ea",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/Google2445Utils$ICalDateRecurrenceIterator;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L00ed",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      5
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00f0",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->join(Ljava/util/List;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L00f3",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00f4",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/util/ArrayList;->isEmpty()Z"
+    },
+    {
+     "label": "L00f7",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00f8",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00ff"
+    },
+    {
+     "label": "L00fa",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/compat/javautil/DateIteratorFactory;->createDateIterator(Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;)Lbiweekly/util/com/google/ical/compat/javautil/DateIterator;"
+    },
+    {
+     "label": "L00fd",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00fe",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00ff",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/Google2445Utils;->join(Ljava/util/List;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0102",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0103",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RecurrenceIteratorFactory;->except(Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0106",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0107",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/util/com/google/ical/compat/javautil/DateIteratorFactory;->createDateIterator(Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;)Lbiweekly/util/com/google/ical/compat/javautil/DateIterator;"
+    },
+    {
+     "label": "L010a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L010b",
+     "op": "return-object",
+     "registers": [
+      5
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->join(Ljava/util/List;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;",
+   "access": 10,
+   "offset": 2901708,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L002a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0006",
+     "op": "if-ne",
+     "registers": [
+      0,
+      2
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L000e",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/List;->size()I"
+    },
+    {
+     "label": "L0018",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      2,
+      3
+     ],
+     "method": "Ljava/util/List;->subList(II)Ljava/util/List;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "new-array",
+     "registers": [
+      1,
+      1
+     ],
+     "type": "[Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "[Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/util/com/google/ical/iter/RecurrenceIteratorFactory;->join(Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;[Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;)Lbiweekly/util/com/google/ical/iter/RecurrenceIterator;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "return-object",
+     "registers": [
+      4
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/util/Google2445Utils;->utc()Ljava/util/TimeZone;",
+   "access": 10,
+   "offset": 2902128,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "UTC"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

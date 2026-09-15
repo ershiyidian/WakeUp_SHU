@@ -1,0 +1,519 @@
+{
+ "class": "Lcom/huawei/hms/utils/IOUtils;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;-><init>()V",
+   "access": 65538,
+   "offset": 3888624,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Closeable;)V",
+   "access": 9,
+   "offset": 3888648,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6153741,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/io/Closeable;->close()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "IOUtils"
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "An exception occurred while closing the 'Closeable' object."
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0005",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0006"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V",
+   "access": 9,
+   "offset": 3888708,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6120931,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V",
+   "access": 9,
+   "offset": 3888732,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6120909,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Reader;)V",
+   "access": 9,
+   "offset": 3888756,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Writer;)V",
+   "access": 9,
+   "offset": 3888780,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110395,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/Closeable;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J",
+   "access": 9,
+   "offset": 3888516,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6153726,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 4096
+    },
+    {
+     "label": "L0002",
+     "op": "new-array",
+     "registers": [
+      0,
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;[B)J"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-wide",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "return-wide",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;[B)J",
+   "access": 9,
+   "offset": 3888552,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6153732,
+   "end": "L001c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-wide/16",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L001b"
+    },
+    {
+     "label": "L0007",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L0009",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 4096
+    },
+    {
+     "label": "L000b",
+     "op": "new-array",
+     "registers": [
+      6,
+      6
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Ljava/io/InputStream;->read([B)I"
+    },
+    {
+     "label": "L0010",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      3,
+      2
+     ],
+     "target": "L001b"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      6,
+      3,
+      2
+     ],
+     "method": "Ljava/io/OutputStream;->write([BII)V"
+    },
+    {
+     "label": "L0018",
+     "op": "int-to-long",
+     "registers": [
+      2,
+      2
+     ]
+    },
+    {
+     "label": "L0019",
+     "op": "add-long/2addr",
+     "registers": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "goto",
+     "target": "L000d"
+    },
+    {
+     "label": "L001b",
+     "op": "return-wide",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->toByteArray(Ljava/io/InputStream;)[B",
+   "access": 9,
+   "offset": 3888444,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/ByteArrayOutputStream;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/ByteArrayOutputStream;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J"
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/ByteArrayOutputStream;->toByteArray()[B"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/IOUtils;->toInputStream([B)Ljava/io/InputStream;",
+   "access": 9,
+   "offset": 3888488,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/io/ByteArrayInputStream;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/io/ByteArrayInputStream;-><init>([B)V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

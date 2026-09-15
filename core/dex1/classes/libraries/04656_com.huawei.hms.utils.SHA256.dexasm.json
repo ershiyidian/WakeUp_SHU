@@ -1,0 +1,601 @@
+{
+ "class": "Lcom/huawei/hms/utils/SHA256;",
+ "super": "Ljava/lang/Object;",
+ "access": 1025,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/utils/SHA256;-><init>()V",
+   "access": 65537,
+   "offset": 3899640,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/SHA256;->digest(Ljava/io/File;)[B",
+   "access": 9,
+   "offset": 3899432,
+   "registers": 7,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 6154193,
+   "end": "L0049",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "SHA-256"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/io/BufferedInputStream;"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/io/FileInputStream;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      6
+     ],
+     "method": "Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4
+     ],
+     "method": "Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "const/16",
+     "registers": [
+      6
+     ],
+     "literal": 4096
+    },
+    {
+     "label": "L0014",
+     "op": "new-array",
+     "registers": [
+      6,
+      6
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      6
+     ],
+     "method": "Ljava/io/InputStream;->read([B)I"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": -1
+    },
+    {
+     "label": "L001c",
+     "op": "if-eq",
+     "registers": [
+      4,
+      5
+     ],
+     "target": "L0025"
+    },
+    {
+     "label": "L001e",
+     "op": "add-int/2addr",
+     "registers": [
+      1,
+      4
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      6,
+      0,
+      4
+     ],
+     "method": "Ljava/security/MessageDigest;->update([BII)V"
+    },
+    {
+     "label": "L0022",
+     "op": "goto",
+     "target": "L0017"
+    },
+    {
+     "label": "L0023",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "goto",
+     "target": "L0045"
+    },
+    {
+     "label": "L0025",
+     "op": "if-lez",
+     "registers": [
+      1
+     ],
+     "target": "L002f"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/security/MessageDigest;->digest()[B"
+    },
+    {
+     "label": "L002a",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L002e",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L0041"
+    },
+    {
+     "label": "L0033",
+     "op": "move-object",
+     "registers": [
+      1,
+      3
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L0035",
+     "op": "move-exception",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L0044"
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      6
+     ],
+     "string": "SHA256"
+    },
+    {
+     "label": "L0039",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "An exception occurred while computing file 'SHA-256'."
+    },
+    {
+     "label": "L003b",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "new-array",
+     "registers": [
+      6,
+      0
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "move-object",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-static",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/utils/IOUtils;->closeQuietly(Ljava/io/InputStream;)V"
+    },
+    {
+     "label": "L0048",
+     "op": "throw",
+     "registers": [
+      6
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0002",
+     "end": "L0012",
+     "handler": "H1"
+    },
+    {
+     "start": "L0014",
+     "end": "L002b",
+     "handler": "H9"
+    },
+    {
+     "start": "L0037",
+     "end": "L003e",
+     "handler": "H11"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0037"
+      },
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0037"
+      }
+     ],
+     "all": "L0035"
+    },
+    {
+     "id": "H9",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0033"
+      },
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0033"
+      }
+     ],
+     "all": "L0023"
+    },
+    {
+     "id": "H11",
+     "catches": [],
+     "all": "L0035"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/utils/SHA256;->digest([B)[B",
+   "access": 9,
+   "offset": 3899320,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6154183,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "SHA-256"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/security/MessageDigest;->digest([B)[B"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "move-exception",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "NoSuchAlgorithmException"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "SHA256"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/support/log/HMSLog;->e(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0023",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0024",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0026",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L000a",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L000b"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

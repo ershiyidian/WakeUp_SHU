@@ -1,0 +1,587 @@
+{
+ "class": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a:Lcom/huawei/hms/analytics/core/crypto/RandomUtil;",
+   "access": 10
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->b:Ljava/security/SecureRandom;",
+   "access": 18
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;-><init>()V",
+   "access": 65538,
+   "offset": 3564236,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L003e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO00o:Z"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L001f"
+    },
+    {
+     "label": "L0007",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "setBouncycastleFlag exception. "
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Throwable;->getMessage()Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "RandomUtil"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001f",
+     "op": "sget-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO00o:Z"
+    },
+    {
+     "label": "L0021",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L0023",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0025",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 26
+    },
+    {
+     "label": "L0027",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "method": "Lo000000O/OooO0O0;->OooOOO0()Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L003b"
+    },
+    {
+     "label": "L002e",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "SHA1PRNG"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/security/SecureRandom;->getInstance(Ljava/lang/String;)Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "goto",
+     "target": "L003b"
+    },
+    {
+     "label": "L0035",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0036",
+     "op": "goto",
+     "target": "L003b"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "method": "Lo00O00O/OooO00o;->OooO00o()Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "iput-object",
+     "registers": [
+      0,
+      3
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->b:Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L003d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0004",
+     "end": "L0006",
+     "handler": "H1"
+    },
+    {
+     "start": "L0023",
+     "end": "L0034",
+     "handler": "H3"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L0007"
+    },
+    {
+     "id": "H3",
+     "catches": [
+      {
+       "type": "Ljava/security/NoSuchAlgorithmException;",
+       "target": "L0035"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a()V",
+   "access": 131082,
+   "offset": 3564400,
+   "registers": 2,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0015",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-class",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "monitor-enter",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a:Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L0005",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0007",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;-><init>()V"
+    },
+    {
+     "label": "L000c",
+     "op": "sput-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a:Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L000e",
+     "op": "goto",
+     "target": "L0011"
+    },
+    {
+     "label": "L000f",
+     "op": "move-exception",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "goto",
+     "target": "L0013"
+    },
+    {
+     "label": "L0011",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "return-void"
+    },
+    {
+     "label": "L0013",
+     "op": "monitor-exit",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "throw",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0003",
+     "end": "L000e",
+     "handler": "H1"
+    },
+    {
+     "start": "L0013",
+     "end": "L0014",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [],
+     "all": "L000f"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->getInstance()Lcom/huawei/hms/analytics/core/crypto/RandomUtil;",
+   "access": 9,
+   "offset": 3564160,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a:Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a()V"
+    },
+    {
+     "label": "L0007",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->a:Lcom/huawei/hms/analytics/core/crypto/RandomUtil;"
+    },
+    {
+     "label": "L0009",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->generateSecureRandom(I)[B",
+   "access": 17,
+   "offset": 3564128,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L0008",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->b:Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0007",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->generateSecureRandomStr(I)Ljava/lang/String;",
+   "access": 17,
+   "offset": 3564196,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/hms/analytics/core/crypto/RandomUtil;->b:Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/crypto/HAHexUtil;->byteArray2HexString([B)Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

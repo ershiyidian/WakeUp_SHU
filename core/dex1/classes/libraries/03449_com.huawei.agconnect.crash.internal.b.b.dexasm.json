@@ -1,0 +1,513 @@
+{
+ "class": "Lcom/huawei/agconnect/crash/internal/b/b;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->appId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->appVer:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->clientId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->deviceType:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->eventBody:Lcom/huawei/agconnect/crash/internal/bean/EventBody;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->productId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->requestId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->resourceId:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkName:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkPlatform:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkVer:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkVersion:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->token:Ljava/lang/String;",
+   "access": 2
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->url:Ljava/lang/String;",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;-><init>(Landroid/content/Context;)V",
+   "access": 65537,
+   "offset": 3416380,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 0,
+   "end": "L003c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "https://localhost/v1/crashlogs"
+    },
+    {
+     "label": "L0005",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->url:Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "1.9.1.301"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkVersion:Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Android"
+    },
+    {
+     "label": "L000d",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkPlatform:Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "method": "Lcom/huawei/agconnect/AGConnectInstance;->getInstance()Lcom/huawei/agconnect/AGConnectInstance;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectInstance;->getOptions()Lcom/huawei/agconnect/AGConnectOptions;"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "client/app_id"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectOptions;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->appId:Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "client/product_id"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectOptions;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->productId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0027",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "service/analytics/resource_id"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectOptions;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->resourceId:Ljava/lang/String;"
+    },
+    {
+     "label": "L002f",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "client/client_id"
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/AGConnectOptions;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->clientId:Ljava/lang/String;"
+    },
+    {
+     "label": "L0037",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "agconnect-crash"
+    },
+    {
+     "label": "L0039",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkName:Ljava/lang/String;"
+    },
+    {
+     "label": "L003b",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->a(Lcom/huawei/agconnect/crash/internal/bean/EventBody;)V",
+   "access": 1,
+   "offset": 3416516,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6110400,
+   "end": "L0027",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->eventBody:Lcom/huawei/agconnect/crash/internal/bean/EventBody;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->getHeader()Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/HeaderInfo;->getRequestid()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->requestId:Ljava/lang/String;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/EventBody;->getEvent()Lcom/huawei/agconnect/crash/internal/bean/Event;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/Event;->getDeviceInfo()Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;->getAppver()Ljava/lang/String;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->appVer:Ljava/lang/String;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;->getLibver()Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->sdkVer:Ljava/lang/String;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/huawei/agconnect/crash/internal/bean/DeviceInfo;->getModel()Ljava/lang/String;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->deviceType:Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/crash/internal/b/b;->a(Ljava/lang/String;)V",
+   "access": 1,
+   "offset": 3416612,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6110395,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lcom/huawei/agconnect/crash/internal/b/b;->token:Ljava/lang/String;"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

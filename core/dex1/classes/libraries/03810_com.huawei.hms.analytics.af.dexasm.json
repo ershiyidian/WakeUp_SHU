@@ -1,0 +1,603 @@
+{
+ "class": "Lcom/huawei/hms/analytics/af;",
+ "super": "Lcom/huawei/hms/analytics/ah;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/af;-><init>(Landroid/content/Context;Lcom/huawei/hms/analytics/m$lmn;)V",
+   "access": 65537,
+   "offset": 3524692,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/huawei/hms/analytics/z;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/z;-><init>(Landroid/content/Context;Lcom/huawei/hms/analytics/m$lmn;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/ah;-><init>(Landroid/content/Context;Lcom/huawei/hms/analytics/m$lmn;Lcom/huawei/hms/analytics/ah;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/af;->ijk()Ljava/lang/String;",
+   "access": 2,
+   "offset": 3524496,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 6,
+   "debug_offset": 0,
+   "end": "L004d",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "content://com.meizu.flyme.openidsdk/"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      8
+     ],
+     "field": "Lcom/huawei/hms/analytics/ah;->klm:Landroid/content/Context;"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;"
+    },
+    {
+     "label": "L000c",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "oaid"
+    },
+    {
+     "label": "L000f",
+     "op": "filled-new-array",
+     "registers": [
+      0
+     ],
+     "type": "[Ljava/lang/String;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      4
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0015",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual/range",
+     "registers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/database/Cursor;->moveToFirst()Z"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L0022",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "value"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "if-ltz",
+     "registers": [
+      0
+     ],
+     "target": "L0034"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Landroid/database/Cursor;->getString(I)Ljava/lang/String;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/database/Cursor;->close()V"
+    },
+    {
+     "label": "L0031",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "move-exception",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0033",
+     "op": "goto",
+     "target": "L0047"
+    },
+    {
+     "label": "L0034",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/database/Cursor;->close()V"
+    },
+    {
+     "label": "L0039",
+     "op": "goto",
+     "target": "L0044"
+    },
+    {
+     "label": "L003a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "MeizHelper"
+    },
+    {
+     "label": "L003c",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "contentResolver query exception"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0044"
+    },
+    {
+     "label": "L0043",
+     "op": "goto",
+     "target": "L0036"
+    },
+    {
+     "label": "L0044",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0046",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L004c"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/database/Cursor;->close()V"
+    },
+    {
+     "label": "L004c",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0001",
+     "end": "L002e",
+     "handler": "H1"
+    },
+    {
+     "start": "L003a",
+     "end": "L0041",
+     "handler": "H6"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/Exception;",
+       "target": "L003a"
+      }
+     ],
+     "all": "L0032"
+    },
+    {
+     "id": "H6",
+     "catches": [],
+     "all": "L0032"
+    }
+   ]
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/af;->klm()Z",
+   "access": 17,
+   "offset": 3524460,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget",
+     "registers": [
+      0
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L0002",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 29
+    },
+    {
+     "label": "L0004",
+     "op": "if-lt",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0007",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/af;->lmn()V",
+   "access": 17,
+   "offset": 3524728,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L001a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/af;->ijk()Ljava/lang/String;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000a",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "meiz oid is empty, begin get gaid"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lcom/huawei/hms/analytics/ah;->lmn(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lcom/huawei/hms/analytics/ah;->lmn:Lcom/huawei/hms/analytics/m$lmn;"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0014",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "oaid"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0,
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/m$lmn;->lmn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

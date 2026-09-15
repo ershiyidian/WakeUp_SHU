@@ -1,0 +1,143 @@
+{
+ "class": "Lcom/huawei/agconnect/common/api/RandomWrapper;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RandomWrapper;-><init>()V",
+   "access": 65537,
+   "offset": 3392308,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/agconnect/common/api/RandomWrapper;->generateSecureRandom(I)[B",
+   "access": 9,
+   "offset": 3392248,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0001",
+     "op": "sput-boolean",
+     "registers": [
+      0
+     ],
+     "field": "Lo00O00O/OooO00o;->OooO00o:Z"
+    },
+    {
+     "label": "L0003",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lo00O00O/OooO00o;->OooO0O0(I)[B"
+    },
+    {
+     "label": "L0006",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0007",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0015"
+    },
+    {
+     "label": "L000a",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/security/SecureRandom;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/security/SecureRandom;-><init>()V"
+    },
+    {
+     "label": "L000f",
+     "op": "new-array",
+     "registers": [
+      2,
+      2
+     ],
+     "type": "[B"
+    },
+    {
+     "label": "L0011",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Ljava/security/SecureRandom;->nextBytes([B)V"
+    },
+    {
+     "label": "L0014",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

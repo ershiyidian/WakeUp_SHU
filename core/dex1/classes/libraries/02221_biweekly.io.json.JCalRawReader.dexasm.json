@@ -1,0 +1,3003 @@
+{
+ "class": "Lbiweekly/io/json/JCalRawReader;",
+ "super": "Ljava/lang/Object;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->VCALENDAR_COMPONENT_NAME:Ljava/lang/String;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->eof:Z",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->listener:Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;",
+   "access": 2
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->reader:Ljava/io/Reader;",
+   "access": 18
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->strict:Z",
+   "access": 2
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;-><clinit>()V",
+   "access": 65544,
+   "offset": 2782528,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getICalendarScribe()Lbiweekly/io/scribe/component/ICalendarScribe;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->getComponentName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->VCALENDAR_COMPONENT_NAME:Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;-><init>(Lcom/fasterxml/jackson/core/JsonParser;Z)V",
+   "access": 65537,
+   "offset": 2782576,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 1,
+   "debug_offset": 6140638,
+   "end": "L000e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "iput-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->eof:Z"
+    },
+    {
+     "label": "L0006",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0007",
+     "op": "iput-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->reader:Ljava/io/Reader;"
+    },
+    {
+     "label": "L0009",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L000b",
+     "op": "iput-boolean",
+     "registers": [
+      3,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->strict:Z"
+    },
+    {
+     "label": "L000d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;-><init>(Ljava/io/Reader;)V",
+   "access": 65537,
+   "offset": 2782620,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6134081,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "iput-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->eof:Z"
+    },
+    {
+     "label": "L0006",
+     "op": "iput-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->strict:Z"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->reader:Ljava/io/Reader;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->check(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V",
+   "access": 2,
+   "offset": 2782660,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0009",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-ne",
+     "registers": [
+      3,
+      2
+     ],
+     "target": "L0003"
+    },
+    {
+     "label": "L0002",
+     "op": "return-void"
+    },
+    {
+     "label": "L0003",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalParseException;"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalParseException;-><init>(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0008",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V",
+   "access": 2,
+   "offset": 2782696,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->check(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V",
+   "access": 2,
+   "offset": 2782732,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000a",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->check(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0009",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseComponent(Ljava/util/List;)V",
+   "access": 2,
+   "offset": 2782816,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0058",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->listener:Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;"
+    },
+    {
+     "label": "L000d",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      3,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;->readComponent(Ljava/util/List;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      0
+     ],
+     "method": "Ljava/util/List;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0013",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0020",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0030"
+    },
+    {
+     "label": "L0022",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseProperty(Ljava/util/List;)V"
+    },
+    {
+     "label": "L002f",
+     "op": "goto",
+     "target": "L0018"
+    },
+    {
+     "label": "L0030",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0035",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L003d",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L003f",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0041",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0044",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0049",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseComponent(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0051",
+     "op": "goto",
+     "target": "L0035"
+    },
+    {
+     "label": "L0052",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0054",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0057",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseParameters()Lbiweekly/parameter/ICalParameters;",
+   "access": 2,
+   "offset": 2781900,
+   "registers": 5,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0043",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/parameter/ICalParameters;-><init>()V"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0042"
+    },
+    {
+     "label": "L0014",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0022",
+     "op": "if-ne",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L0038"
+    },
+    {
+     "label": "L0024",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0026",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0029",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L002a",
+     "op": "sget-object",
+     "registers": [
+      3
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L002c",
+     "op": "if-eq",
+     "registers": [
+      2,
+      3
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L002e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;"
+    },
+    {
+     "label": "L0033",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "goto",
+     "target": "L0024"
+    },
+    {
+     "label": "L0038",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0041",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0042",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseProperty(Ljava/util/List;)V",
+   "access": 2,
+   "offset": 2783008,
+   "registers": 9,
+   "inputs": 2,
+   "outputs": 6,
+   "debug_offset": 6110209,
+   "end": "L003e",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseParameters()Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0015",
+     "op": "invoke-direct",
+     "registers": [
+      7,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkNext(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0018",
+     "op": "iget-object",
+     "registers": [
+      0,
+      7
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "unknown"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L0026",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0027",
+     "op": "move-object",
+     "registers": [
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/ICalDataType;->get(Ljava/lang/String;)Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "goto",
+     "target": "L0027"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-direct",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValues()Ljava/util/List;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/io/json/JCalValue;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0037",
+     "op": "iget-object",
+     "registers": [
+      1,
+      7
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->listener:Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-object",
+     "registers": [
+      2,
+      8
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-interface/range",
+     "registers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;->readProperty(Ljava/util/List;Ljava/lang/String;Lbiweekly/parameter/ICalParameters;Lbiweekly/ICalDataType;Lbiweekly/io/json/JCalValue;)V"
+    },
+    {
+     "label": "L003d",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseValue()Lbiweekly/io/json/JsonValue;",
+   "access": 2,
+   "offset": 2781784,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader$1;->$SwitchMap$com$fasterxml$jackson$core$JsonToken:[I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonToken;->ordinal()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "aget",
+     "registers": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 6
+    },
+    {
+     "label": "L000f",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L001e"
+    },
+    {
+     "label": "L0014",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValueElement()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0020",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValueObject()Ljava/util/Map;"
+    },
+    {
+     "label": "L0023",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/Map;)V"
+    },
+    {
+     "label": "L0027",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-direct",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValueArray()Ljava/util/List;"
+    },
+    {
+     "label": "L002d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JsonValue;-><init>(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0031",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseValueArray()Ljava/util/List;",
+   "access": 2,
+   "offset": 2782284,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eq",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValue()Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "goto",
+     "target": "L0005"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseValueElement()Ljava/lang/Object;",
+   "access": 2,
+   "offset": 2782124,
+   "registers": 3,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6109927,
+   "end": "L0047",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader$1;->$SwitchMap$com$fasterxml$jackson$core$JsonToken:[I"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonToken;->ordinal()I"
+    },
+    {
+     "label": "L000b",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "aget",
+     "registers": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0011",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 2
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L0014",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 3
+    },
+    {
+     "label": "L0015",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0017",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 4
+    },
+    {
+     "label": "L0018",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0026"
+    },
+    {
+     "label": "L001a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 5
+    },
+    {
+     "label": "L001b",
+     "op": "if-eq",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0024"
+    },
+    {
+     "label": "L001d",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0025",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getLongValue()J"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getDoubleValue()D"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-wide",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getBooleanValue()Z"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseValueObject()Ljava/util/Map;",
+   "access": 2,
+   "offset": 2782412,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 3,
+   "debug_offset": 6109927,
+   "end": "L0032",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/HashMap;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/HashMap;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000a",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0012",
+     "op": "if-eq",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0014",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->FIELD_NAME:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      1
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->checkCurrent(Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001b",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;"
+    },
+    {
+     "label": "L001e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001f",
+     "op": "iget-object",
+     "registers": [
+      2,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValue()Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0030",
+     "op": "goto",
+     "target": "L000a"
+    },
+    {
+     "label": "L0031",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->parseValues()Ljava/util/List;",
+   "access": 2,
+   "offset": 2782348,
+   "registers": 4,
+   "inputs": 1,
+   "outputs": 2,
+   "debug_offset": 6110028,
+   "end": "L0018",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "iget-object",
+     "registers": [
+      1,
+      3
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L000d",
+     "op": "if-eq",
+     "registers": [
+      1,
+      2
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseValue()Lbiweekly/io/json/JsonValue;"
+    },
+    {
+     "label": "L0012",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0016",
+     "op": "goto",
+     "target": "L0005"
+    },
+    {
+     "label": "L0017",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->close()V",
+   "access": 1,
+   "offset": 2782768,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->close()V"
+    },
+    {
+     "label": "L0007",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->reader:Ljava/io/Reader;"
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L000e"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/io/Reader;->close()V"
+    },
+    {
+     "label": "L000e",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->eof()Z",
+   "access": 1,
+   "offset": 2782052,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0003",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-boolean",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->eof:Z"
+    },
+    {
+     "label": "L0002",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->getLineNum()I",
+   "access": 1,
+   "offset": 2782076,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L000f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0006"
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentLocation()Lcom/fasterxml/jackson/core/JsonLocation;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonLocation;->getLineNr()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/json/JCalRawReader;->readNext(Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;)V",
+   "access": 1,
+   "offset": 2783148,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6112844,
+   "end": "L0089",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0002",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lcom/fasterxml/jackson/core/JsonFactory;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonFactory;-><init>()V"
+    },
+    {
+     "label": "L0009",
+     "op": "iget-object",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->reader:Ljava/io/Reader;"
+    },
+    {
+     "label": "L000b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonFactory;->createParser(Ljava/io/Reader;)Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L000e",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "iput-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0011",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->isClosed()Z"
+    },
+    {
+     "label": "L0016",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L001a"
+    },
+    {
+     "label": "L0019",
+     "op": "return-void"
+    },
+    {
+     "label": "L001a",
+     "op": "iput-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->listener:Lbiweekly/io/json/JCalRawReader$JCalDataStreamListener;"
+    },
+    {
+     "label": "L001c",
+     "op": "iget-object",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0021",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0022",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L007a"
+    },
+    {
+     "label": "L002a",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L002c",
+     "op": "if-ne",
+     "registers": [
+      5,
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L002e",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0030",
+     "op": "if-ne",
+     "registers": [
+      0,
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0032",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->VCALENDAR_COMPONENT_NAME:Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0036",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0039",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0041"
+    },
+    {
+     "label": "L0040",
+     "op": "goto",
+     "target": "L007a"
+    },
+    {
+     "label": "L0041",
+     "op": "iget-boolean",
+     "registers": [
+      1,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->strict:Z"
+    },
+    {
+     "label": "L0043",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0078"
+    },
+    {
+     "label": "L0045",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0047",
+     "op": "if-ne",
+     "registers": [
+      5,
+      1
+     ],
+     "target": "L0070"
+    },
+    {
+     "label": "L0049",
+     "op": "sget-object",
+     "registers": [
+      5
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L004b",
+     "op": "if-eq",
+     "registers": [
+      0,
+      5
+     ],
+     "target": "L0055"
+    },
+    {
+     "label": "L004d",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/io/json/JCalParseException;"
+    },
+    {
+     "label": "L004f",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      1,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalParseException;-><init>(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0054",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Lbiweekly/io/json/JCalParseException;"
+    },
+    {
+     "label": "L0057",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/lang/StringBuilder;"
+    },
+    {
+     "label": "L0059",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "Invalid value for first token: expected \"vcalendar\" , was \""
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L005e",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->parser:Lcom/fasterxml/jackson/core/JsonParser;"
+    },
+    {
+     "label": "L0060",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lcom/fasterxml/jackson/core/JsonParser;->getValueAsString()Ljava/lang/String;"
+    },
+    {
+     "label": "L0063",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0064",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "\""
+    },
+    {
+     "label": "L0066",
+     "op": "invoke-static",
+     "registers": [
+      1,
+      2,
+      3
+     ],
+     "method": "LOooO0o/OooOOOO;->OooOOOo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0069",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L006a",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-direct",
+     "registers": [
+      5,
+      1,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/json/JCalParseException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L006f",
+     "op": "throw",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0070",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/io/json/JCalParseException;"
+    },
+    {
+     "label": "L0072",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lcom/fasterxml/jackson/core/JsonToken;->START_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;"
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      5
+     ],
+     "method": "Lbiweekly/io/json/JCalParseException;-><init>(Lcom/fasterxml/jackson/core/JsonToken;Lcom/fasterxml/jackson/core/JsonToken;)V"
+    },
+    {
+     "label": "L0077",
+     "op": "throw",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0078",
+     "op": "move-object",
+     "registers": [
+      5,
+      0
+     ]
+    },
+    {
+     "label": "L0079",
+     "op": "goto",
+     "target": "L0022"
+    },
+    {
+     "label": "L007a",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0080"
+    },
+    {
+     "label": "L007c",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L007d",
+     "op": "iput-boolean",
+     "registers": [
+      5,
+      4
+     ],
+     "field": "Lbiweekly/io/json/JCalRawReader;->eof:Z"
+    },
+    {
+     "label": "L007f",
+     "op": "return-void"
+    },
+    {
+     "label": "L0080",
+     "op": "new-instance",
+     "registers": [
+      5
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0082",
+     "op": "invoke-direct",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0085",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/io/json/JCalRawReader;->parseComponent(Ljava/util/List;)V"
+    },
+    {
+     "label": "L0088",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

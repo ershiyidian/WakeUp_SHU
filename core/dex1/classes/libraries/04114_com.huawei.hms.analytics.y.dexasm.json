@@ -1,0 +1,286 @@
+{
+ "class": "Lcom/huawei/hms/analytics/y;",
+ "super": "Lcom/huawei/hms/common/internal/TaskApiCall;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lcom/huawei/hms/analytics/y;-><init>(Ljava/lang/String;Ljava/lang/String;)V",
+   "access": 65537,
+   "offset": 3662772,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 0,
+   "end": "L0005",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0001",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      2,
+      3,
+      0
+     ],
+     "method": "Lcom/huawei/hms/common/internal/TaskApiCall;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0004",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/y;->doExecute(Lcom/huawei/hms/common/internal/AnyClient;Lcom/huawei/hms/common/internal/ResponseErrorCode;Ljava/lang/String;Lo00O0000/OooOO0;)V",
+   "access": 4113,
+   "offset": 3662800,
+   "registers": 6,
+   "inputs": 5,
+   "outputs": 3,
+   "debug_offset": 6112552,
+   "end": "L0037",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "HiAnalyticsTaskApiRequire"
+    },
+    {
+     "label": "L0002",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0031"
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0007"
+    },
+    {
+     "label": "L0006",
+     "op": "goto",
+     "target": "L0031"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ResponseErrorCode;->getErrorCode()I"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "if-nez",
+     "registers": [
+      4
+     ],
+     "target": "L0016"
+    },
+    {
+     "label": "L000d",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "HMS API call succeed."
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->i(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      3
+     ],
+     "method": "Lo00O0000/OooOO0;->OooO0O0(Ljava/lang/Object;)V"
+    },
+    {
+     "label": "L0015",
+     "op": "return-void"
+    },
+    {
+     "label": "L0016",
+     "op": "const-string",
+     "registers": [
+      4
+     ],
+     "string": "HMS API call failed. header.getErrorCode() != CommonCode.OK "
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L001b",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lcom/huawei/hms/common/ApiException;"
+    },
+    {
+     "label": "L001d",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lcom/huawei/hms/support/api/client/Status;"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ResponseErrorCode;->getErrorCode()I"
+    },
+    {
+     "label": "L0022",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Lcom/huawei/hms/common/internal/ResponseErrorCode;->getErrorReason()Ljava/lang/String;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      0,
+      3
+     ],
+     "method": "Lcom/huawei/hms/support/api/client/Status;-><init>(ILjava/lang/String;)V"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      4
+     ],
+     "method": "Lcom/huawei/hms/common/ApiException;-><init>(Lcom/huawei/hms/support/api/client/Status;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Lo00O0000/OooOO0;->OooO00o(Ljava/lang/Exception;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "return-void"
+    },
+    {
+     "label": "L0031",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "HMS API call failed. header or taskCompletionSource is null"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-static",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lcom/huawei/hms/analytics/core/log/HiLog;->w(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0036",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lcom/huawei/hms/analytics/y;->getMinApkVersion()I",
+   "access": 17,
+   "offset": 3662748,
+   "registers": 2,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const",
+     "registers": [
+      0
+     ],
+     "literal": 40000000
+    },
+    {
+     "label": "L0003",
+     "op": "return",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "class": "Lo000ooOO/o000O000;",
+ "super": "Landroid/os/Binder;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "Lo000ooOO/o000O000;->OooO0o:I",
+   "access": 4121
+  },
+  {
+   "name": "Lo000ooOO/o000O000;->OooO0o0:Lo000ooo0/OooOO0O;",
+   "access": 4113
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lo000ooOO/o000O000;-><init>(Lo000ooo0/OooOO0O;)V",
+   "access": 65537,
+   "offset": 5386208,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lo000ooOO/o000O000;->OooO0o0:Lo000ooo0/OooOO0O;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/os/Binder;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "com.hihonor.brain.kitservice.feedback.IKitFeedbackCallback"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      0,
+      1
+     ],
+     "method": "Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000ooOO/o000O000;->asBinder()Landroid/os/IBinder;",
+   "access": 17,
+   "offset": 5386100,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0001",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lo000ooOO/o000O000;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z",
+   "access": 17,
+   "offset": 5386120,
+   "registers": 8,
+   "inputs": 5,
+   "outputs": 5,
+   "debug_offset": 6112552,
+   "end": "L0023",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "com.hihonor.brain.kitservice.feedback.IKitFeedbackCallback"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0003",
+     "op": "if-eq",
+     "registers": [
+      4,
+      1
+     ],
+     "target": "L0013"
+    },
+    {
+     "label": "L0005",
+     "op": "const",
+     "registers": [
+      2
+     ],
+     "literal": 1598968902
+    },
+    {
+     "label": "L0008",
+     "op": "if-eq",
+     "registers": [
+      4,
+      2
+     ],
+     "target": "L000f"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-super",
+     "registers": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "return",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L000f",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Landroid/os/Parcel;->writeString(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0012",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-virtual",
+     "registers": [
+      5,
+      0
+     ],
+     "method": "Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/os/Parcel;->readInt()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "iget-object",
+     "registers": [
+      5,
+      3
+     ],
+     "field": "Lo000ooOO/o000O000;->OooO0o0:Lo000ooo0/OooOO0O;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Lo000ooo0/OooOO0O;->onResult(I)V"
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/os/Parcel;->writeNoException()V"
+    },
+    {
+     "label": "L0022",
+     "op": "return",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

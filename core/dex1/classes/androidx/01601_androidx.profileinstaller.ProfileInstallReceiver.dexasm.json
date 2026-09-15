@@ -1,0 +1,1022 @@
+{
+ "class": "Landroidx/profileinstaller/ProfileInstallReceiver;",
+ "super": "Landroid/content/BroadcastReceiver;",
+ "access": 1,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Landroidx/profileinstaller/ProfileInstallReceiver;-><init>()V",
+   "access": 65537,
+   "offset": 2462788,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/content/BroadcastReceiver;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Landroidx/profileinstaller/ProfileInstallReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V",
+   "access": 17,
+   "offset": 2462812,
+   "registers": 7,
+   "inputs": 3,
+   "outputs": 4,
+   "debug_offset": 6113642,
+   "end": "L00fb",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "goto/16",
+     "target": "L00fa"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "androidx.profileinstaller.action.INSTALL_PROFILE"
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0022"
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "LOooOO0O/OooO00o;"
+    },
+    {
+     "label": "L0012",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0013",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "LOooOO0O/OooO00o;-><init>(I)V"
+    },
+    {
+     "label": "L0016",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lo0000O0/oo0o0Oo;"
+    },
+    {
+     "label": "L0018",
+     "op": "const/16",
+     "registers": [
+      1
+     ],
+     "literal": 17
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      4
+     ],
+     "method": "Lo0000O0/oo0o0Oo;-><init>(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L001d",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      6,
+      0,
+      1
+     ],
+     "method": "Lo0OoOo0/OooO;->OooO0oO(Landroid/content/Context;Ljava/util/concurrent/Executor;Lo0OoOo0/OooO0o;Z)V"
+    },
+    {
+     "label": "L0021",
+     "op": "return-void"
+    },
+    {
+     "label": "L0022",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "androidx.profileinstaller.action.SKIP_FILE"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0027",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0028",
+     "op": "const/16",
+     "registers": [
+      2
+     ],
+     "literal": 10
+    },
+    {
+     "label": "L002a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L007f"
+    },
+    {
+     "label": "L002c",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Intent;->getExtras()Landroid/os/Bundle;"
+    },
+    {
+     "label": "L002f",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0030",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00fa"
+    },
+    {
+     "label": "L0032",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "EXTRA_SKIP_FILE_OPERATION"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "WRITE_SKIP_FILE"
+    },
+    {
+     "label": "L003a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L003d",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L003e",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0063"
+    },
+    {
+     "label": "L0040",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getApplicationContext()Landroid/content/Context;"
+    },
+    {
+     "label": "L0043",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0044",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0047",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L004d",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6,
+      1
+     ],
+     "method": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"
+    },
+    {
+     "label": "L0050",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0051",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getFilesDir()Ljava/io/File;"
+    },
+    {
+     "label": "L0054",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0055",
+     "op": "invoke-static",
+     "registers": [
+      6,
+      5
+     ],
+     "method": "Lo0OoOo0/OooO;->OooO0OO(Landroid/content/pm/PackageInfo;Ljava/io/File;)V"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L005b",
+     "op": "goto/16",
+     "target": "L00fa"
+    },
+    {
+     "label": "L005d",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 7
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L0061",
+     "op": "goto/16",
+     "target": "L00fa"
+    },
+    {
+     "label": "L0063",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DELETE_SKIP_FILE"
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0068",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00fa"
+    },
+    {
+     "label": "L006b",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getFilesDir()Ljava/io/File;"
+    },
+    {
+     "label": "L006e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006f",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Ljava/io/File;"
+    },
+    {
+     "label": "L0071",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "profileinstaller_profileWrittenFor_lastUpdateTime.dat"
+    },
+    {
+     "label": "L0073",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      5,
+      0
+     ],
+     "method": "Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0076",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Ljava/io/File;->delete()Z"
+    },
+    {
+     "label": "L0079",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 11
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L007e",
+     "op": "return-void"
+    },
+    {
+     "label": "L007f",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "androidx.profileinstaller.action.SAVE_PROFILE"
+    },
+    {
+     "label": "L0081",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0084",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0085",
+     "op": "const/16",
+     "registers": [
+      3
+     ],
+     "literal": 24
+    },
+    {
+     "label": "L0087",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00a0"
+    },
+    {
+     "label": "L0089",
+     "op": "sget",
+     "registers": [
+      5
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L008b",
+     "op": "if-lt",
+     "registers": [
+      5,
+      3
+     ],
+     "target": "L009a"
+    },
+    {
+     "label": "L008d",
+     "op": "invoke-static",
+     "method": "Landroid/os/Process;->myPid()I"
+    },
+    {
+     "label": "L0090",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0091",
+     "op": "invoke-static",
+     "registers": [
+      5,
+      2
+     ],
+     "method": "Landroid/os/Process;->sendSignal(II)V"
+    },
+    {
+     "label": "L0094",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 12
+    },
+    {
+     "label": "L0096",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L0099",
+     "op": "return-void"
+    },
+    {
+     "label": "L009a",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 13
+    },
+    {
+     "label": "L009c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L009f",
+     "op": "return-void"
+    },
+    {
+     "label": "L00a0",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+    },
+    {
+     "label": "L00a2",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00a5",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L00a6",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L00fa"
+    },
+    {
+     "label": "L00a8",
+     "op": "invoke-virtual",
+     "registers": [
+      6
+     ],
+     "method": "Landroid/content/Intent;->getExtras()Landroid/os/Bundle;"
+    },
+    {
+     "label": "L00ab",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00ac",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00fa"
+    },
+    {
+     "label": "L00ae",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "EXTRA_BENCHMARK_OPERATION"
+    },
+    {
+     "label": "L00b0",
+     "op": "invoke-virtual",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
+     "label": "L00b3",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00b4",
+     "op": "const-string",
+     "registers": [
+      0
+     ],
+     "string": "DROP_SHADER_CACHE"
+    },
+    {
+     "label": "L00b6",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      6
+     ],
+     "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00b9",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L00ba",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L00f5"
+    },
+    {
+     "label": "L00bc",
+     "op": "sget",
+     "registers": [
+      6
+     ],
+     "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+    },
+    {
+     "label": "L00be",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 34
+    },
+    {
+     "label": "L00c0",
+     "op": "if-lt",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L00cb"
+    },
+    {
+     "label": "L00c2",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lo00o00Oo/OooOOO;->OooO00o(Landroid/content/Context;)Landroid/content/Context;"
+    },
+    {
+     "label": "L00c5",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00c6",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getCacheDir()Ljava/io/File;"
+    },
+    {
+     "label": "L00c9",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00ca",
+     "op": "goto",
+     "target": "L00e3"
+    },
+    {
+     "label": "L00cb",
+     "op": "if-lt",
+     "registers": [
+      6,
+      3
+     ],
+     "target": "L00d6"
+    },
+    {
+     "label": "L00cd",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lo00o00Oo/OooOOO;->OooO00o(Landroid/content/Context;)Landroid/content/Context;"
+    },
+    {
+     "label": "L00d0",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d1",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;"
+    },
+    {
+     "label": "L00d4",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00d5",
+     "op": "goto",
+     "target": "L00e3"
+    },
+    {
+     "label": "L00d6",
+     "op": "const/16",
+     "registers": [
+      0
+     ],
+     "literal": 23
+    },
+    {
+     "label": "L00d8",
+     "op": "if-ne",
+     "registers": [
+      6,
+      0
+     ],
+     "target": "L00df"
+    },
+    {
+     "label": "L00da",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;"
+    },
+    {
+     "label": "L00dd",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00de",
+     "op": "goto",
+     "target": "L00e3"
+    },
+    {
+     "label": "L00df",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/content/Context;->getCacheDir()Ljava/io/File;"
+    },
+    {
+     "label": "L00e2",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00e3",
+     "op": "invoke-static",
+     "registers": [
+      5
+     ],
+     "method": "Lo0OoOo0/OooO;->OooO0O0(Ljava/io/File;)Z"
+    },
+    {
+     "label": "L00e6",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L00e7",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L00ef"
+    },
+    {
+     "label": "L00e9",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 14
+    },
+    {
+     "label": "L00eb",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L00ee",
+     "op": "return-void"
+    },
+    {
+     "label": "L00ef",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 15
+    },
+    {
+     "label": "L00f1",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L00f4",
+     "op": "return-void"
+    },
+    {
+     "label": "L00f5",
+     "op": "const/16",
+     "registers": [
+      5
+     ],
+     "literal": 16
+    },
+    {
+     "label": "L00f7",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Landroid/content/BroadcastReceiver;->setResultCode(I)V"
+    },
+    {
+     "label": "L00fa",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L004d",
+     "end": "L0051",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Landroid/content/pm/PackageManager$NameNotFoundException;",
+       "target": "L005d"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,225 @@
+{
+ "class": "Lbiweekly/parameter/VersionedEnumParameterValue;",
+ "super": "Lbiweekly/parameter/EnumParameterValue;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/parameter/VersionedEnumParameterValue;->allVersions:[Lbiweekly/ICalVersion;",
+   "access": 26
+  },
+  {
+   "name": "Lbiweekly/parameter/VersionedEnumParameterValue;->supportedVersions:[Lbiweekly/ICalVersion;",
+   "access": 20
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/parameter/VersionedEnumParameterValue;-><clinit>()V",
+   "access": 65544,
+   "offset": 2865152,
+   "registers": 1,
+   "inputs": 0,
+   "outputs": 0,
+   "debug_offset": 6110028,
+   "end": "L0007",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "method": "Lbiweekly/ICalVersion;->values()[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "sput-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/parameter/VersionedEnumParameterValue;->allVersions:[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0006",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/parameter/VersionedEnumParameterValue;-><init>(Ljava/lang/String;[Lbiweekly/ICalVersion;)V",
+   "access": 65665,
+   "offset": 2865184,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/parameter/EnumParameterValue;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "array-length",
+     "registers": [
+      1,
+      2
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0008"
+    },
+    {
+     "label": "L0006",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/parameter/VersionedEnumParameterValue;->allVersions:[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0008",
+     "op": "iput-object",
+     "registers": [
+      2,
+      0
+     ],
+     "field": "Lbiweekly/parameter/VersionedEnumParameterValue;->supportedVersions:[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/parameter/VersionedEnumParameterValue;->isSupported(Lbiweekly/ICalVersion;)Z",
+   "access": 1,
+   "offset": 2865100,
+   "registers": 7,
+   "inputs": 2,
+   "outputs": 0,
+   "debug_offset": 6109890,
+   "end": "L0011",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      5
+     ],
+     "field": "Lbiweekly/parameter/VersionedEnumParameterValue;->supportedVersions:[Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L0002",
+     "op": "array-length",
+     "registers": [
+      1,
+      0
+     ]
+    },
+    {
+     "label": "L0003",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0004",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0005",
+     "op": "if-ge",
+     "registers": [
+      3,
+      1
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L0007",
+     "op": "aget-object",
+     "registers": [
+      4,
+      0,
+      3
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "if-ne",
+     "registers": [
+      4,
+      6
+     ],
+     "target": "L000d"
+    },
+    {
+     "label": "L000b",
+     "op": "const/4",
+     "registers": [
+      6
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000c",
+     "op": "return",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L000d",
+     "op": "add-int/lit8",
+     "registers": [
+      3,
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L000f",
+     "op": "goto",
+     "target": "L0005"
+    },
+    {
+     "label": "L0010",
+     "op": "return",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

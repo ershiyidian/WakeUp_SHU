@@ -1,0 +1,2134 @@
+{
+ "class": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;",
+ "super": "Lbiweekly/io/xml/XCalWriterBase;",
+ "access": 1,
+ "fields": [
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;",
+   "access": 4112
+  }
+ ],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;-><init>(Lbiweekly/io/xml/XCalDocument;)V",
+   "access": 65537,
+   "offset": 2845936,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L0006",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iput-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalWriterBase;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildAndAppendElement(Ljava/lang/String;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845000,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6113619,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "urn:ietf:params:xml:ns:icalendar-2.0"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0,
+      4
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildAndAppendElement(Ljavax/xml/namespace/QName;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildAndAppendElement(Ljavax/xml/namespace/QName;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845040,
+   "registers": 5,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6142646,
+   "end": "L0016",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$300(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;->getNamespaceURI()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Lorg/w3c/dom/Document;->createElementNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0015",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildComponentElement(Lbiweekly/component/ICalComponent;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845100,
+   "registers": 10,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6112844,
+   "end": "L00a9",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      8
+     ],
+     "field": "Lbiweekly/io/StreamWriter;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getComponentScribe(Lbiweekly/component/ICalComponent;)Lbiweekly/io/scribe/component/ICalComponentScribe;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->getComponentName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljava/lang/String;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "sget-object",
+     "registers": [
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalQNames;->PROPERTIES:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0017",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0018",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->getProperties(Lbiweekly/component/ICalComponent;)Ljava/util/List;"
+    },
+    {
+     "label": "L001b",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L001c",
+     "op": "instance-of",
+     "registers": [
+      4,
+      9
+     ],
+     "type": "Lbiweekly/ICalendar;"
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0021",
+     "op": "const-class",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L0023",
+     "op": "invoke-virtual",
+     "registers": [
+      9,
+      6
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getProperty(Ljava/lang/Class;)Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0026",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0029",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/Version;"
+    },
+    {
+     "label": "L002b",
+     "op": "iget-object",
+     "registers": [
+      7,
+      8
+     ],
+     "field": "Lbiweekly/io/xml/XCalWriterBase;->targetVersion:Lbiweekly/ICalVersion;"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      7
+     ],
+     "method": "Lbiweekly/property/Version;-><init>(Lbiweekly/ICalVersion;)V"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      5,
+      6
+     ],
+     "method": "Ljava/util/List;->add(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0036",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0037",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L003a",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L003b",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0052"
+    },
+    {
+     "label": "L003d",
+     "op": "invoke-interface",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0040",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L0041",
+     "op": "iget-object",
+     "registers": [
+      7,
+      8
+     ],
+     "field": "Lbiweekly/io/StreamWriter;->context:Lbiweekly/io/WriteContext;"
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-virtual",
+     "registers": [
+      7,
+      9
+     ],
+     "method": "Lbiweekly/io/WriteContext;->setParent(Lbiweekly/component/ICalComponent;)V"
+    },
+    {
+     "label": "L0046",
+     "op": "check-cast",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/ICalProperty;"
+    },
+    {
+     "label": "L0048",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      6
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildPropertyElement(Lbiweekly/property/ICalProperty;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L004b",
+     "op": "move-result-object",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L004c",
+     "op": "if-eqz",
+     "registers": [
+      6
+     ],
+     "target": "L0037"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      6
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0051",
+     "op": "goto",
+     "target": "L0037"
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-interface",
+     "registers": [
+      2
+     ],
+     "method": "Lorg/w3c/dom/Node;->hasChildNodes()Z"
+    },
+    {
+     "label": "L0055",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L005b"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      2
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      9
+     ],
+     "method": "Lbiweekly/io/scribe/component/ICalComponentScribe;->getComponents(Lbiweekly/component/ICalComponent;)Ljava/util/List;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L007f"
+    },
+    {
+     "label": "L0061",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->getTimezoneComponents()Ljava/util/Collection;"
+    },
+    {
+     "label": "L0064",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Collection;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0068",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0069",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L006c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L006d",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L007f"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0072",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0073",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/component/VTimezone;"
+    },
+    {
+     "label": "L0075",
+     "op": "invoke-interface",
+     "registers": [
+      9,
+      2
+     ],
+     "method": "Ljava/util/List;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0078",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0079",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L0069"
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-interface",
+     "registers": [
+      9,
+      5,
+      2
+     ],
+     "method": "Ljava/util/List;->add(ILjava/lang/Object;)V"
+    },
+    {
+     "label": "L007e",
+     "op": "goto",
+     "target": "L0069"
+    },
+    {
+     "label": "L007f",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalQNames;->COMPONENTS:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0081",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0084",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0085",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0088",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0089",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L008c",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L008d",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L009f"
+    },
+    {
+     "label": "L008f",
+     "op": "invoke-interface",
+     "registers": [
+      9
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0092",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0093",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/component/ICalComponent;"
+    },
+    {
+     "label": "L0095",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildComponentElement(Lbiweekly/component/ICalComponent;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0098",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0099",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L0089"
+    },
+    {
+     "label": "L009b",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L009e",
+     "op": "goto",
+     "target": "L0089"
+    },
+    {
+     "label": "L009f",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/w3c/dom/Node;->hasChildNodes()Z"
+    },
+    {
+     "label": "L00a2",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L00a3",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L00a8"
+    },
+    {
+     "label": "L00a5",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      0
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L00a8",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljava/lang/String;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845456,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110400,
+   "end": "L000c",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0002",
+     "op": "const-string",
+     "registers": [
+      1
+     ],
+     "string": "urn:ietf:params:xml:ns:icalendar-2.0"
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0007",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L000a",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000b",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845496,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110395,
+   "end": "L0013",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$300(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;->getNamespaceURI()Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1,
+      3
+     ],
+     "method": "Lorg/w3c/dom/Document;->createElementNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "return-object",
+     "registers": [
+      3
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildParametersElement(Lbiweekly/parameter/ICalParameters;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845552,
+   "registers": 8,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0058",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "sget-object",
+     "registers": [
+      0
+     ],
+     "field": "Lbiweekly/io/xml/XCalQNames;->PARAMETERS:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0057"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-interface",
+     "registers": [
+      7
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/Map$Entry;"
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L001c",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L001f",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      3,
+      6
+     ],
+     "field": "Lbiweekly/io/xml/XCalWriterBase;->parameterDataTypes:Ljava/util/Map;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      3,
+      2
+     ],
+     "method": "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/ICalDataType;"
+    },
+    {
+     "label": "L0028",
+     "op": "if-nez",
+     "registers": [
+      3
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L002a",
+     "op": "const-string",
+     "registers": [
+      3
+     ],
+     "string": "unknown"
+    },
+    {
+     "label": "L002c",
+     "op": "goto",
+     "target": "L0035"
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Lbiweekly/ICalDataType;->getName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "invoke-virtual",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    },
+    {
+     "label": "L0034",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      2,
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildAndAppendElement(Ljava/lang/String;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L003d",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Ljava/util/List;"
+    },
+    {
+     "label": "L003f",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0042",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0043",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0046",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0047",
+     "op": "if-eqz",
+     "registers": [
+      4
+     ],
+     "target": "L000a"
+    },
+    {
+     "label": "L0049",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L004c",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004d",
+     "op": "check-cast",
+     "registers": [
+      4
+     ],
+     "type": "Ljava/lang/String;"
+    },
+    {
+     "label": "L004f",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      3,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildAndAppendElement(Ljava/lang/String;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0052",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-interface",
+     "registers": [
+      5,
+      4
+     ],
+     "method": "Lorg/w3c/dom/Node;->setTextContent(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0056",
+     "op": "goto",
+     "target": "L0043"
+    },
+    {
+     "label": "L0057",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildPropertyElement(Lbiweekly/property/ICalProperty;)Lorg/w3c/dom/Element;",
+   "access": 2,
+   "offset": 2845744,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 4,
+   "debug_offset": 6110209,
+   "end": "L004f",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "Lbiweekly/io/StreamWriter;->index:Lbiweekly/io/scribe/ScribeIndex;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5
+     ],
+     "method": "Lbiweekly/io/scribe/ScribeIndex;->getPropertyScribe(Lbiweekly/property/ICalProperty;)Lbiweekly/io/scribe/property/ICalPropertyScribe;"
+    },
+    {
+     "label": "L0005",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0006",
+     "op": "instance-of",
+     "registers": [
+      1,
+      5
+     ],
+     "type": "Lbiweekly/property/Xml;"
+    },
+    {
+     "label": "L0008",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0009",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0029"
+    },
+    {
+     "label": "L000b",
+     "op": "move-object",
+     "registers": [
+      1,
+      5
+     ]
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Xml;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0014",
+     "op": "if-nez",
+     "registers": [
+      1
+     ],
+     "target": "L0017"
+    },
+    {
+     "label": "L0016",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$300(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-interface",
+     "registers": [
+      2,
+      1,
+      3
+     ],
+     "method": "Lorg/w3c/dom/Document;->importNode(Lorg/w3c/dom/Node;Z)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "check-cast",
+     "registers": [
+      1
+     ],
+     "type": "Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0028",
+     "op": "goto",
+     "target": "L0036"
+    },
+    {
+     "label": "L0029",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->getQName()Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L002c",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002d",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0030",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0031",
+     "op": "iget-object",
+     "registers": [
+      3,
+      4
+     ],
+     "field": "Lbiweekly/io/StreamWriter;->context:Lbiweekly/io/WriteContext;"
+    },
+    {
+     "label": "L0033",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->writeXml(Lbiweekly/property/ICalProperty;Lorg/w3c/dom/Element;Lbiweekly/io/WriteContext;)V"
+    },
+    {
+     "label": "L0036",
+     "op": "iget-object",
+     "registers": [
+      2,
+      4
+     ],
+     "field": "Lbiweekly/io/StreamWriter;->context:Lbiweekly/io/WriteContext;"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      5,
+      2
+     ],
+     "method": "Lbiweekly/io/scribe/property/ICalPropertyScribe;->prepareParameters(Lbiweekly/property/ICalProperty;Lbiweekly/io/WriteContext;)Lbiweekly/parameter/ICalParameters;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      5
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->isEmpty()Z"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L004d"
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-direct",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildParametersElement(Lbiweekly/parameter/ICalParameters;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0045",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0046",
+     "op": "invoke-interface",
+     "registers": [
+      1
+     ],
+     "method": "Lorg/w3c/dom/Node;->getFirstChild()Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0049",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L004a",
+     "op": "invoke-interface",
+     "registers": [
+      1,
+      5,
+      0
+     ],
+     "method": "Lorg/w3c/dom/Node;->insertBefore(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L004d",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L004e",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0031",
+     "end": "L0036",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Lbiweekly/io/SkipMeException;",
+       "target": "L004e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->_write(Lbiweekly/ICalendar;)V",
+   "access": 1,
+   "offset": 2845964,
+   "registers": 4,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6110209,
+   "end": "L0046",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildComponentElement(Lbiweekly/component/ICalComponent;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$200(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L003c"
+    },
+    {
+     "label": "L000c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L000e",
+     "op": "sget-object",
+     "registers": [
+      1
+     ],
+     "field": "Lbiweekly/io/xml/XCalQNames;->ICALENDAR:Ljavax/xml/namespace/QName;"
+    },
+    {
+     "label": "L0010",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->buildElement(Ljavax/xml/namespace/QName;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0013",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-static",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$202(Lbiweekly/io/xml/XCalDocument;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0017",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$300(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "invoke-interface",
+     "registers": [
+      0
+     ],
+     "method": "Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0020",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0021",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0033"
+    },
+    {
+     "label": "L0023",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$300(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Document;"
+    },
+    {
+     "label": "L0028",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0029",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L002b",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$200(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L002e",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L002f",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0032",
+     "op": "goto",
+     "target": "L003c"
+    },
+    {
+     "label": "L0033",
+     "op": "iget-object",
+     "registers": [
+      1,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-static",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$200(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L003c",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->this$0:Lbiweekly/io/xml/XCalDocument;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-static",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/io/xml/XCalDocument;->access$200(Lbiweekly/io/xml/XCalDocument;)Lorg/w3c/dom/Element;"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "invoke-interface",
+     "registers": [
+      0,
+      3
+     ],
+     "method": "Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;"
+    },
+    {
+     "label": "L0045",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->close()V",
+   "access": 1,
+   "offset": 2846120,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 0,
+   "debug_offset": 0,
+   "end": "L0001",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->registerParameterDataType(Ljava/lang/String;Lbiweekly/ICalDataType;)V",
+   "access": 4161,
+   "offset": 2846140,
+   "registers": 3,
+   "inputs": 3,
+   "outputs": 3,
+   "debug_offset": 6110327,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1,
+      2
+     ],
+     "method": "Lbiweekly/io/xml/XCalWriterBase;->registerParameterDataType(Ljava/lang/String;Lbiweekly/ICalDataType;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/xml/XCalDocument$XCalDocumentStreamWriter;->write(Lbiweekly/ICalendar;)V",
+   "access": 1,
+   "offset": 2846164,
+   "registers": 2,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-super",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Lbiweekly/io/StreamWriter;->write(Lbiweekly/ICalendar;)V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0000",
+     "end": "L0003",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/io/IOException;",
+       "target": "L0003"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

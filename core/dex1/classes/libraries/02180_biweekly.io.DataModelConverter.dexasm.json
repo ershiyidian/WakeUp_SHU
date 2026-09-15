@@ -1,0 +1,1913 @@
+{
+ "class": "Lbiweekly/io/DataModelConverter;",
+ "super": "Ljava/lang/Object;",
+ "access": 17,
+ "fields": [],
+ "methods": [
+  {
+   "name": "Lbiweekly/io/DataModelConverter;-><init>()V",
+   "access": 65538,
+   "offset": 2766052,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6110028,
+   "end": "L0004",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;-><init>()V"
+    },
+    {
+     "label": "L0003",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/DataModelConverter;->convert(Ljava/util/List;Lbiweekly/property/Timezone;)Lbiweekly/component/VTimezone;",
+   "access": 9,
+   "offset": 2765048,
+   "registers": 10,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6140243,
+   "end": "L009b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue(Lbiweekly/property/ValuedProperty;)Ljava/lang/Object;"
+    },
+    {
+     "label": "L0003",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      9
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000b",
+     "op": "if-eqz",
+     "registers": [
+      0
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000d",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0010"
+    },
+    {
+     "label": "L000f",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/component/VTimezone;"
+    },
+    {
+     "label": "L0012",
+     "op": "const-string",
+     "registers": [
+      2
+     ],
+     "string": "TZ"
+    },
+    {
+     "label": "L0014",
+     "op": "invoke-direct",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Lbiweekly/component/VTimezone;-><init>(Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0017",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L001a",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L001b",
+     "op": "if-eqz",
+     "registers": [
+      2
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L002e"
+    },
+    {
+     "label": "L001f",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lbiweekly/component/StandardTime;"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-direct",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/component/StandardTime;-><init>()V"
+    },
+    {
+     "label": "L0024",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      9
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetFrom(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetFrom;"
+    },
+    {
+     "label": "L0027",
+     "op": "invoke-virtual",
+     "registers": [
+      8,
+      9
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetTo(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetTo;"
+    },
+    {
+     "label": "L002a",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      8
+     ],
+     "method": "Lbiweekly/component/VTimezone;->addStandardTime(Lbiweekly/component/StandardTime;)V"
+    },
+    {
+     "label": "L002d",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L0035",
+     "op": "move-result",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0036",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L008f"
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "check-cast",
+     "registers": [
+      9
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L003e",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->isDaylight()Z"
+    },
+    {
+     "label": "L0041",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0042",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L0032"
+    },
+    {
+     "label": "L0045",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->getOffset()Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0048",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0049",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L004b",
+     "op": "invoke-virtual",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/util/UtcOffset;->getMillis()J"
+    },
+    {
+     "label": "L004e",
+     "op": "move-result-wide",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L004f",
+     "op": "const-wide/32",
+     "registers": [
+      6
+     ],
+     "literal": 3600000
+    },
+    {
+     "label": "L0052",
+     "op": "sub-long/2addr",
+     "registers": [
+      4,
+      6
+     ]
+    },
+    {
+     "label": "L0053",
+     "op": "invoke-direct",
+     "registers": [
+      3,
+      4,
+      5
+     ],
+     "method": "Lbiweekly/util/UtcOffset;-><init>(J)V"
+    },
+    {
+     "label": "L0056",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/component/DaylightSavingsTime;"
+    },
+    {
+     "label": "L0058",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/component/DaylightSavingsTime;-><init>()V"
+    },
+    {
+     "label": "L005b",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->getStart()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L005e",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L005f",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/component/Observance;->setDateStart(Lbiweekly/util/ICalDate;)Lbiweekly/property/DateStart;"
+    },
+    {
+     "label": "L0062",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetFrom(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetFrom;"
+    },
+    {
+     "label": "L0065",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetTo(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetTo;"
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->getDaylightName()Ljava/lang/String;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/component/Observance;->addTimezoneName(Ljava/lang/String;)Lbiweekly/property/TimezoneName;"
+    },
+    {
+     "label": "L006f",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/component/VTimezone;->addDaylightSavingsTime(Lbiweekly/component/DaylightSavingsTime;)V"
+    },
+    {
+     "label": "L0072",
+     "op": "new-instance",
+     "registers": [
+      4
+     ],
+     "type": "Lbiweekly/component/StandardTime;"
+    },
+    {
+     "label": "L0074",
+     "op": "invoke-direct",
+     "registers": [
+      4
+     ],
+     "method": "Lbiweekly/component/StandardTime;-><init>()V"
+    },
+    {
+     "label": "L0077",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->getEnd()Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L007a",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L007b",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      5
+     ],
+     "method": "Lbiweekly/component/Observance;->setDateStart(Lbiweekly/util/ICalDate;)Lbiweekly/property/DateStart;"
+    },
+    {
+     "label": "L007e",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      2
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetFrom(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetFrom;"
+    },
+    {
+     "label": "L0081",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      3
+     ],
+     "method": "Lbiweekly/component/Observance;->setTimezoneOffsetTo(Lbiweekly/util/UtcOffset;)Lbiweekly/property/TimezoneOffsetTo;"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/property/Daylight;->getStandardName()Ljava/lang/String;"
+    },
+    {
+     "label": "L0087",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L0088",
+     "op": "invoke-virtual",
+     "registers": [
+      4,
+      9
+     ],
+     "method": "Lbiweekly/component/Observance;->addTimezoneName(Ljava/lang/String;)Lbiweekly/property/TimezoneName;"
+    },
+    {
+     "label": "L008b",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      4
+     ],
+     "method": "Lbiweekly/component/VTimezone;->addStandardTime(Lbiweekly/component/StandardTime;)V"
+    },
+    {
+     "label": "L008e",
+     "op": "goto",
+     "target": "L0032"
+    },
+    {
+     "label": "L008f",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/component/ICalComponent;->getComponents()Lbiweekly/util/ListMultimap;"
+    },
+    {
+     "label": "L0092",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0093",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/ListMultimap;->isEmpty()Z"
+    },
+    {
+     "label": "L0096",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0097",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L009a"
+    },
+    {
+     "label": "L0099",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L009a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/component/VTimezone;Ljava/util/List;)Lbiweekly/io/DataModelConverter$VCalTimezoneProperties;",
+   "access": 9,
+   "offset": 2765376,
+   "registers": 21,
+   "inputs": 2,
+   "outputs": 7,
+   "debug_offset": 6140273,
+   "end": "L0104",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Ljava/util/ArrayList;"
+    },
+    {
+     "label": "L0002",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;-><init>()V"
+    },
+    {
+     "label": "L0005",
+     "op": "invoke-interface/range",
+     "registers": [
+      20
+     ],
+     "method": "Ljava/util/List;->isEmpty()Z"
+    },
+    {
+     "label": "L0008",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0009",
+     "op": "const/4",
+     "registers": [
+      2
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L000a",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0012"
+    },
+    {
+     "label": "L000c",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/DataModelConverter$VCalTimezoneProperties;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      2
+     ],
+     "method": "Lbiweekly/io/DataModelConverter$VCalTimezoneProperties;-><init>(Ljava/util/List;Lbiweekly/property/Timezone;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/ICalTimeZone;"
+    },
+    {
+     "label": "L0014",
+     "op": "move-object/from16",
+     "registers": [
+      3,
+      19
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      3
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone;-><init>(Lbiweekly/component/VTimezone;)V"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-static/range",
+     "registers": [
+      20
+     ],
+     "method": "Ljava/util/Collections;->sort(Ljava/util/List;)V"
+    },
+    {
+     "label": "L001c",
+     "op": "new-instance",
+     "registers": [
+      3
+     ],
+     "type": "Ljava/util/HashSet;"
+    },
+    {
+     "label": "L001e",
+     "op": "invoke-direct",
+     "registers": [
+      3
+     ],
+     "method": "Ljava/util/HashSet;-><init>()V"
+    },
+    {
+     "label": "L0021",
+     "op": "invoke-interface/range",
+     "registers": [
+      20
+     ],
+     "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+    },
+    {
+     "label": "L0024",
+     "op": "move-result-object",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0025",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0026",
+     "op": "move-object",
+     "registers": [
+      6,
+      2
+     ]
+    },
+    {
+     "label": "L0027",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->hasNext()Z"
+    },
+    {
+     "label": "L002b",
+     "op": "move-result",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L002c",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L00dc"
+    },
+    {
+     "label": "L002e",
+     "op": "invoke-interface",
+     "registers": [
+      4
+     ],
+     "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0031",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0032",
+     "op": "check-cast",
+     "registers": [
+      8
+     ],
+     "type": "Ljava/util/Date;"
+    },
+    {
+     "label": "L0034",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone;->getObservanceBoundary(Ljava/util/Date;)Lbiweekly/io/ICalTimeZone$Boundary;"
+    },
+    {
+     "label": "L0037",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0038",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceIn()Lbiweekly/component/Observance;"
+    },
+    {
+     "label": "L003b",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L003c",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceAfter()Lbiweekly/component/Observance;"
+    },
+    {
+     "label": "L003f",
+     "op": "move-result-object",
+     "registers": [
+      10
+     ]
+    },
+    {
+     "label": "L0040",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0042",
+     "op": "if-nez",
+     "registers": [
+      10
+     ],
+     "target": "L0045"
+    },
+    {
+     "label": "L0044",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0045",
+     "op": "const/4",
+     "registers": [
+      11
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0046",
+     "op": "if-nez",
+     "registers": [
+      9
+     ],
+     "target": "L0088"
+    },
+    {
+     "label": "L0048",
+     "op": "instance-of",
+     "registers": [
+      9,
+      10
+     ],
+     "type": "Lbiweekly/component/StandardTime;"
+    },
+    {
+     "label": "L004a",
+     "op": "if-eqz",
+     "registers": [
+      9
+     ],
+     "target": "L0074"
+    },
+    {
+     "label": "L004c",
+     "op": "if-nez",
+     "registers": [
+      7
+     ],
+     "target": "L0074"
+    },
+    {
+     "label": "L004e",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Lbiweekly/component/Observance;->getTimezoneOffsetFrom()Lbiweekly/property/TimezoneOffsetFrom;"
+    },
+    {
+     "label": "L0051",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L0052",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->getOffset(Lbiweekly/property/UtcOffsetProperty;)Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0055",
+     "op": "move-result-object",
+     "registers": [
+      14
+     ]
+    },
+    {
+     "label": "L0056",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceAfterStart()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L0059",
+     "op": "move-result-object",
+     "registers": [
+      7
+     ]
+    },
+    {
+     "label": "L005a",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5,
+      5
+     ],
+     "method": "Ljava/util/TimeZone;->getDisplayName(ZI)Ljava/lang/String;"
+    },
+    {
+     "label": "L005d",
+     "op": "move-result-object",
+     "registers": [
+      17
+     ]
+    },
+    {
+     "label": "L005e",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      11,
+      5
+     ],
+     "method": "Ljava/util/TimeZone;->getDisplayName(ZI)Ljava/lang/String;"
+    },
+    {
+     "label": "L0061",
+     "op": "move-result-object",
+     "registers": [
+      18
+     ]
+    },
+    {
+     "label": "L0062",
+     "op": "new-instance",
+     "registers": [
+      12
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L0064",
+     "op": "invoke-static",
+     "registers": [
+      2
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;)Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0067",
+     "op": "move-result-object",
+     "registers": [
+      15
+     ]
+    },
+    {
+     "label": "L0068",
+     "op": "invoke-static",
+     "registers": [
+      7
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;)Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L006b",
+     "op": "move-result-object",
+     "registers": [
+      16
+     ]
+    },
+    {
+     "label": "L006c",
+     "op": "const/4",
+     "registers": [
+      13
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L006d",
+     "op": "invoke-direct/range",
+     "registers": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+     ],
+     "method": "Lbiweekly/property/Daylight;-><init>(ZLbiweekly/util/UtcOffset;Lbiweekly/util/ICalDate;Lbiweekly/util/ICalDate;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L0070",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      12
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L0073",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0074",
+     "op": "instance-of",
+     "registers": [
+      8,
+      10
+     ],
+     "type": "Lbiweekly/component/DaylightSavingsTime;"
+    },
+    {
+     "label": "L0076",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0078",
+     "op": "invoke-virtual",
+     "registers": [
+      10
+     ],
+     "method": "Lbiweekly/component/Observance;->getTimezoneOffsetFrom()Lbiweekly/property/TimezoneOffsetFrom;"
+    },
+    {
+     "label": "L007b",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L007c",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->getOffset(Lbiweekly/property/UtcOffsetProperty;)Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L007f",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0080",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0082",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/Timezone;"
+    },
+    {
+     "label": "L0084",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      8
+     ],
+     "method": "Lbiweekly/property/Timezone;-><init>(Lbiweekly/util/UtcOffset;)V"
+    },
+    {
+     "label": "L0087",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L0088",
+     "op": "instance-of",
+     "registers": [
+      12,
+      9
+     ],
+     "type": "Lbiweekly/component/StandardTime;"
+    },
+    {
+     "label": "L008a",
+     "op": "if-eqz",
+     "registers": [
+      12
+     ],
+     "target": "L009c"
+    },
+    {
+     "label": "L008c",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/component/Observance;->getTimezoneOffsetTo()Lbiweekly/property/TimezoneOffsetTo;"
+    },
+    {
+     "label": "L008f",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0090",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->getOffset(Lbiweekly/property/UtcOffsetProperty;)Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L0093",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0094",
+     "op": "if-eqz",
+     "registers": [
+      8
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L0096",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/Timezone;"
+    },
+    {
+     "label": "L0098",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      8
+     ],
+     "method": "Lbiweekly/property/Timezone;-><init>(Lbiweekly/util/UtcOffset;)V"
+    },
+    {
+     "label": "L009b",
+     "op": "goto",
+     "target": "L0028"
+    },
+    {
+     "label": "L009c",
+     "op": "instance-of",
+     "registers": [
+      12,
+      9
+     ],
+     "type": "Lbiweekly/component/DaylightSavingsTime;"
+    },
+    {
+     "label": "L009e",
+     "op": "if-eqz",
+     "registers": [
+      12
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L00a0",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceInStart()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L00a3",
+     "op": "move-result-object",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L00a4",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      12
+     ],
+     "method": "Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00a7",
+     "op": "move-result",
+     "registers": [
+      12
+     ]
+    },
+    {
+     "label": "L00a8",
+     "op": "if-nez",
+     "registers": [
+      12
+     ],
+     "target": "L0028"
+    },
+    {
+     "label": "L00aa",
+     "op": "invoke-virtual",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/component/Observance;->getTimezoneOffsetTo()Lbiweekly/property/TimezoneOffsetTo;"
+    },
+    {
+     "label": "L00ad",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L00ae",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->getOffset(Lbiweekly/property/UtcOffsetProperty;)Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L00b1",
+     "op": "move-result-object",
+     "registers": [
+      14
+     ]
+    },
+    {
+     "label": "L00b2",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceInStart()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L00b5",
+     "op": "move-result-object",
+     "registers": [
+      9
+     ]
+    },
+    {
+     "label": "L00b6",
+     "op": "if-eqz",
+     "registers": [
+      10
+     ],
+     "target": "L00bd"
+    },
+    {
+     "label": "L00b8",
+     "op": "invoke-virtual",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone$Boundary;->getObservanceAfterStart()Lbiweekly/util/com/google/ical/values/DateTimeValue;"
+    },
+    {
+     "label": "L00bb",
+     "op": "move-result-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L00bc",
+     "op": "goto",
+     "target": "L00be"
+    },
+    {
+     "label": "L00bd",
+     "op": "move-object",
+     "registers": [
+      8,
+      2
+     ]
+    },
+    {
+     "label": "L00be",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5,
+      5
+     ],
+     "method": "Ljava/util/TimeZone;->getDisplayName(ZI)Ljava/lang/String;"
+    },
+    {
+     "label": "L00c1",
+     "op": "move-result-object",
+     "registers": [
+      17
+     ]
+    },
+    {
+     "label": "L00c2",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      11,
+      5
+     ],
+     "method": "Ljava/util/TimeZone;->getDisplayName(ZI)Ljava/lang/String;"
+    },
+    {
+     "label": "L00c5",
+     "op": "move-result-object",
+     "registers": [
+      18
+     ]
+    },
+    {
+     "label": "L00c6",
+     "op": "new-instance",
+     "registers": [
+      12
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L00c8",
+     "op": "invoke-static",
+     "registers": [
+      9
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;)Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L00cb",
+     "op": "move-result-object",
+     "registers": [
+      15
+     ]
+    },
+    {
+     "label": "L00cc",
+     "op": "invoke-static",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;)Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L00cf",
+     "op": "move-result-object",
+     "registers": [
+      16
+     ]
+    },
+    {
+     "label": "L00d0",
+     "op": "const/4",
+     "registers": [
+      13
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L00d1",
+     "op": "invoke-direct/range",
+     "registers": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+     ],
+     "method": "Lbiweekly/property/Daylight;-><init>(ZLbiweekly/util/UtcOffset;Lbiweekly/util/ICalDate;Lbiweekly/util/ICalDate;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+     "label": "L00d4",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      12
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00d7",
+     "op": "invoke-virtual",
+     "registers": [
+      3,
+      9
+     ],
+     "method": "Ljava/util/HashSet;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00da",
+     "op": "goto/16",
+     "target": "L0028"
+    },
+    {
+     "label": "L00dc",
+     "op": "if-nez",
+     "registers": [
+      6
+     ],
+     "target": "L00ed"
+    },
+    {
+     "label": "L00de",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/io/ICalTimeZone;->getRawOffset()I"
+    },
+    {
+     "label": "L00e1",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00e2",
+     "op": "new-instance",
+     "registers": [
+      2
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L00e4",
+     "op": "int-to-long",
+     "registers": [
+      3,
+      1
+     ]
+    },
+    {
+     "label": "L00e5",
+     "op": "invoke-direct",
+     "registers": [
+      2,
+      3,
+      4
+     ],
+     "method": "Lbiweekly/util/UtcOffset;-><init>(J)V"
+    },
+    {
+     "label": "L00e8",
+     "op": "new-instance",
+     "registers": [
+      6
+     ],
+     "type": "Lbiweekly/property/Timezone;"
+    },
+    {
+     "label": "L00ea",
+     "op": "invoke-direct",
+     "registers": [
+      6,
+      2
+     ],
+     "method": "Lbiweekly/property/Timezone;-><init>(Lbiweekly/util/UtcOffset;)V"
+    },
+    {
+     "label": "L00ed",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/util/ArrayList;->isEmpty()Z"
+    },
+    {
+     "label": "L00f0",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L00f1",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L00fe"
+    },
+    {
+     "label": "L00f3",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/property/Daylight;"
+    },
+    {
+     "label": "L00f5",
+     "op": "invoke-direct",
+     "registers": [
+      1
+     ],
+     "method": "Lbiweekly/property/Daylight;-><init>()V"
+    },
+    {
+     "label": "L00f8",
+     "op": "invoke-virtual",
+     "registers": [
+      1,
+      5
+     ],
+     "method": "Lbiweekly/property/Daylight;->setDaylight(Z)V"
+    },
+    {
+     "label": "L00fb",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1
+     ],
+     "method": "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    },
+    {
+     "label": "L00fe",
+     "op": "new-instance",
+     "registers": [
+      1
+     ],
+     "type": "Lbiweekly/io/DataModelConverter$VCalTimezoneProperties;"
+    },
+    {
+     "label": "L0100",
+     "op": "invoke-direct",
+     "registers": [
+      1,
+      0,
+      6
+     ],
+     "method": "Lbiweekly/io/DataModelConverter$VCalTimezoneProperties;-><init>(Ljava/util/List;Lbiweekly/property/Timezone;)V"
+    },
+    {
+     "label": "L0103",
+     "op": "return-object",
+     "registers": [
+      1
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/DataModelConverter;->convert(Lbiweekly/util/com/google/ical/values/DateTimeValue;)Lbiweekly/util/ICalDate;",
+   "access": 10,
+   "offset": 2765912,
+   "registers": 9,
+   "inputs": 1,
+   "outputs": 8,
+   "debug_offset": 6140320,
+   "end": "L0029",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      8
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      8
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/DateTimeComponents;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->year()I"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->month()I"
+    },
+    {
+     "label": "L000d",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/DateValue;->day()I"
+    },
+    {
+     "label": "L0011",
+     "op": "move-result",
+     "registers": [
+      3
+     ]
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->hour()I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      4
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->minute()I"
+    },
+    {
+     "label": "L0019",
+     "op": "move-result",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L001a",
+     "op": "invoke-interface",
+     "registers": [
+      8
+     ],
+     "method": "Lbiweekly/util/com/google/ical/values/TimeValue;->second()I"
+    },
+    {
+     "label": "L001d",
+     "op": "move-result",
+     "registers": [
+      6
+     ]
+    },
+    {
+     "label": "L001e",
+     "op": "const/4",
+     "registers": [
+      7
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L001f",
+     "op": "invoke-direct/range",
+     "registers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "method": "Lbiweekly/util/DateTimeComponents;-><init>(IIIIIIZ)V"
+    },
+    {
+     "label": "L0022",
+     "op": "new-instance",
+     "registers": [
+      8
+     ],
+     "type": "Lbiweekly/util/ICalDate;"
+    },
+    {
+     "label": "L0024",
+     "op": "const/4",
+     "registers": [
+      1
+     ],
+     "literal": 1
+    },
+    {
+     "label": "L0025",
+     "op": "invoke-direct",
+     "registers": [
+      8,
+      0,
+      1
+     ],
+     "method": "Lbiweekly/util/ICalDate;-><init>(Lbiweekly/util/DateTimeComponents;Z)V"
+    },
+    {
+     "label": "L0028",
+     "op": "return-object",
+     "registers": [
+      8
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "Lbiweekly/io/DataModelConverter;->getOffset(Lbiweekly/property/UtcOffsetProperty;)Lbiweekly/util/UtcOffset;",
+   "access": 10,
+   "offset": 2766012,
+   "registers": 1,
+   "inputs": 1,
+   "outputs": 1,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "if-nez",
+     "registers": [
+      0
+     ],
+     "target": "L0004"
+    },
+    {
+     "label": "L0002",
+     "op": "const/4",
+     "registers": [
+      0
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0003",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0004",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Lbiweekly/property/ValuedProperty;->getValue()Ljava/lang/Object;"
+    },
+    {
+     "label": "L0007",
+     "op": "move-result-object",
+     "registers": [
+      0
+     ]
+    },
+    {
+     "label": "L0008",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Lbiweekly/util/UtcOffset;"
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}

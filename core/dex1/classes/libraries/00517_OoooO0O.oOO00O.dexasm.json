@@ -1,0 +1,475 @@
+{
+ "class": "LOoooO0O/oOO00O;",
+ "super": "Landroid/widget/Filter;",
+ "access": 17,
+ "fields": [
+  {
+   "name": "LOoooO0O/oOO00O;->OooO00o:LOoooO0O/o00O00O;",
+   "access": 1
+  }
+ ],
+ "methods": [
+  {
+   "name": "LOoooO0O/oOO00O;->convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;",
+   "access": 17,
+   "offset": 1853104,
+   "registers": 3,
+   "inputs": 2,
+   "outputs": 2,
+   "debug_offset": 6109890,
+   "end": "L000b",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroid/database/Cursor;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      1
+     ],
+     "field": "LOoooO0O/oOO00O;->OooO00o:LOoooO0O/o00O00O;"
+    },
+    {
+     "label": "L0004",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroidx/appcompat/widget/o0O000O;"
+    },
+    {
+     "label": "L0006",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      2
+     ],
+     "method": "Landroidx/appcompat/widget/o0O000O;->OooO0OO(Landroid/database/Cursor;)Ljava/lang/String;"
+    },
+    {
+     "label": "L0009",
+     "op": "move-result-object",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L000a",
+     "op": "return-object",
+     "registers": [
+      2
+     ]
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  },
+  {
+   "name": "LOoooO0O/oOO00O;->performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;",
+   "access": 17,
+   "offset": 1852936,
+   "registers": 6,
+   "inputs": 2,
+   "outputs": 3,
+   "debug_offset": 6110209,
+   "end": "L0044",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      0,
+      4
+     ],
+     "field": "LOoooO0O/oOO00O;->OooO00o:LOoooO0O/o00O00O;"
+    },
+    {
+     "label": "L0002",
+     "op": "check-cast",
+     "registers": [
+      0
+     ],
+     "type": "Landroidx/appcompat/widget/o0O000O;"
+    },
+    {
+     "label": "L0004",
+     "op": "if-nez",
+     "registers": [
+      5
+     ],
+     "target": "L0009"
+    },
+    {
+     "label": "L0006",
+     "op": "const-string",
+     "registers": [
+      5
+     ],
+     "string": ""
+    },
+    {
+     "label": "L0008",
+     "op": "goto",
+     "target": "L0010"
+    },
+    {
+     "label": "L0009",
+     "op": "invoke-virtual",
+     "registers": [
+      0
+     ],
+     "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    },
+    {
+     "label": "L000c",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Ljava/lang/CharSequence;->toString()Ljava/lang/String;"
+    },
+    {
+     "label": "L000f",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0010",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o0O000O;->OooOOo0:Landroidx/appcompat/widget/SearchView;"
+    },
+    {
+     "label": "L0012",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/view/View;->getVisibility()I"
+    },
+    {
+     "label": "L0015",
+     "op": "move-result",
+     "registers": [
+      2
+     ]
+    },
+    {
+     "label": "L0016",
+     "op": "const/4",
+     "registers": [
+      3
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L0017",
+     "op": "if-nez",
+     "registers": [
+      2
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L0019",
+     "op": "invoke-virtual",
+     "registers": [
+      1
+     ],
+     "method": "Landroid/view/View;->getWindowVisibility()I"
+    },
+    {
+     "label": "L001c",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L001d",
+     "op": "if-eqz",
+     "registers": [
+      1
+     ],
+     "target": "L0020"
+    },
+    {
+     "label": "L001f",
+     "op": "goto",
+     "target": "L002d"
+    },
+    {
+     "label": "L0020",
+     "op": "iget-object",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroidx/appcompat/widget/o0O000O;->OooOOo:Landroid/app/SearchableInfo;"
+    },
+    {
+     "label": "L0022",
+     "op": "invoke-virtual",
+     "registers": [
+      0,
+      1,
+      5
+     ],
+     "method": "Landroidx/appcompat/widget/o0O000O;->OooO0oO(Landroid/app/SearchableInfo;Ljava/lang/String;)Landroid/database/Cursor;"
+    },
+    {
+     "label": "L0025",
+     "op": "move-result-object",
+     "registers": [
+      5
+     ]
+    },
+    {
+     "label": "L0026",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L002d"
+    },
+    {
+     "label": "L0028",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/database/Cursor;->getCount()I"
+    },
+    {
+     "label": "L002b",
+     "op": "goto",
+     "target": "L002e"
+    },
+    {
+     "label": "L002c",
+     "op": "nop"
+    },
+    {
+     "label": "L002d",
+     "op": "move-object",
+     "registers": [
+      5,
+      3
+     ]
+    },
+    {
+     "label": "L002e",
+     "op": "new-instance",
+     "registers": [
+      0
+     ],
+     "type": "Landroid/widget/Filter$FilterResults;"
+    },
+    {
+     "label": "L0030",
+     "op": "invoke-direct",
+     "registers": [
+      0
+     ],
+     "method": "Landroid/widget/Filter$FilterResults;-><init>()V"
+    },
+    {
+     "label": "L0033",
+     "op": "if-eqz",
+     "registers": [
+      5
+     ],
+     "target": "L003e"
+    },
+    {
+     "label": "L0035",
+     "op": "invoke-interface",
+     "registers": [
+      5
+     ],
+     "method": "Landroid/database/Cursor;->getCount()I"
+    },
+    {
+     "label": "L0038",
+     "op": "move-result",
+     "registers": [
+      1
+     ]
+    },
+    {
+     "label": "L0039",
+     "op": "iput",
+     "registers": [
+      1,
+      0
+     ],
+     "field": "Landroid/widget/Filter$FilterResults;->count:I"
+    },
+    {
+     "label": "L003b",
+     "op": "iput-object",
+     "registers": [
+      5,
+      0
+     ],
+     "field": "Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;"
+    },
+    {
+     "label": "L003d",
+     "op": "goto",
+     "target": "L0043"
+    },
+    {
+     "label": "L003e",
+     "op": "const/4",
+     "registers": [
+      5
+     ],
+     "literal": 0
+    },
+    {
+     "label": "L003f",
+     "op": "iput",
+     "registers": [
+      5,
+      0
+     ],
+     "field": "Landroid/widget/Filter$FilterResults;->count:I"
+    },
+    {
+     "label": "L0041",
+     "op": "iput-object",
+     "registers": [
+      3,
+      0
+     ],
+     "field": "Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0043",
+     "op": "return-object",
+     "registers": [
+      0
+     ]
+    }
+   ],
+   "tries": [
+    {
+     "start": "L0020",
+     "end": "L002b",
+     "handler": "H1"
+    }
+   ],
+   "handlers": [
+    {
+     "id": "H1",
+     "catches": [
+      {
+       "type": "Ljava/lang/RuntimeException;",
+       "target": "L002c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LOoooO0O/oOO00O;->publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V",
+   "access": 17,
+   "offset": 1853144,
+   "registers": 4,
+   "inputs": 3,
+   "outputs": 2,
+   "debug_offset": 6110327,
+   "end": "L0012",
+   "instructions": [
+    {
+     "label": "L0000",
+     "op": "iget-object",
+     "registers": [
+      2,
+      1
+     ],
+     "field": "LOoooO0O/oOO00O;->OooO00o:LOoooO0O/o00O00O;"
+    },
+    {
+     "label": "L0002",
+     "op": "iget-object",
+     "registers": [
+      0,
+      2
+     ],
+     "field": "LOoooO0O/o00O00O;->OooO:Landroid/database/Cursor;"
+    },
+    {
+     "label": "L0004",
+     "op": "iget-object",
+     "registers": [
+      3,
+      3
+     ],
+     "field": "Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;"
+    },
+    {
+     "label": "L0006",
+     "op": "if-eqz",
+     "registers": [
+      3
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L0008",
+     "op": "if-eq",
+     "registers": [
+      3,
+      0
+     ],
+     "target": "L0011"
+    },
+    {
+     "label": "L000a",
+     "op": "check-cast",
+     "registers": [
+      3
+     ],
+     "type": "Landroid/database/Cursor;"
+    },
+    {
+     "label": "L000c",
+     "op": "check-cast",
+     "registers": [
+      2
+     ],
+     "type": "Landroidx/appcompat/widget/o0O000O;"
+    },
+    {
+     "label": "L000e",
+     "op": "invoke-virtual",
+     "registers": [
+      2,
+      3
+     ],
+     "method": "Landroidx/appcompat/widget/o0O000O;->OooO0O0(Landroid/database/Cursor;)V"
+    },
+    {
+     "label": "L0011",
+     "op": "return-void"
+    }
+   ],
+   "tries": [],
+   "handlers": []
+  }
+ ]
+}
